@@ -16,7 +16,7 @@ Statuses: `new` (unprocessed), `intaken` (captured, readings written), `register
 P-number, may run), `running`, `done` (verdict + confidence letter recorded, see id), `parked`
 (with the condition that unparks it), `declined` (with reason; user may overrule).
 
-**Next up:** I8 (meta-evolution of the optimizer settings from outside, unparked by X6.6). Done: X0.1, X0.1b, X0.6, X0.7, X6.5 to X6.8 and X6.9 (= I10: fixed-rate duplication gave about 1.2x, no arm passed). I11 parked. Open user calls: protocol s7 items 1, 6, 7, 8.
+**Next up:** X0.4 (U16: a part whose warning is ignored; does the cost grow until breakdown?), the author's theorem U16 has no evidence row yet. Done: X0.1, X0.1b, X0.2 (U17: one signal suffices, not better than tuned two-drive), X0.6, X0.7, X6.5 to X6.9. I8 declined, I11 parked. Open user calls: protocol s7 items 1, 6, 7, 8.
 P-draft 1 (U3) waits for the user to confirm the
 definition of vertical intelligence. Open user calls: protocol s7 items 1, 6, 7.
 
@@ -88,7 +88,7 @@ definition of vertical intelligence. Open user calls: protocol s7 items 1, 6, 7.
 | I10 | 2026-10-27 | Fixed-rate unit duplication with no gene: does the capacity to grow (spare slots, function-preserving copy) cut the cost on spirals-like impasse problems, at a few fixed rates, vs the plain optimizer? X6.6 showed 1.7x on spirals with a gene that did not evolve | U6, U1 | after X6.7/X6.8, or earlier if the user wants growth examined | 30 min GPU | parked |
 | I11 | 2026-10-27 | How large must the energy buffer be relative to the noise of one step for the grader-free energy world to stay viable and learn fast? X6.7: summed over a step against a 0-to-2 band, extinct 20/20; per point, 17/20 but 26x slower than ranking. A pre-registered sweep of band width against step noise (not tuned to a score) would turn 'staying alive is a budget' into a measured law | U1, Q4, Q10 | the user wants the energy line ('for me' as energy) extended | 1-2 h GPU | parked |
 | I6 | 2026-10-26 | Local learning rule from the user's guess: connections with strength, cost and length, changed only when used (no global update touching unused weights) | U13, U5 | after the Q10 literature map; compare with C41 wiring budget and C51 three-factor rule | days | parked |
-| I8 (UNPARKED 2026-10-27: X6.6 showed the machinery cannot evolve from inside) | 2026-10-27 | Meta-evolution of the emergent optimizer's settings (outer population of random settings culled on suite speed) | U1, U6 | X6.6 shows the variation machinery cannot evolve from inside | 2-4 h GPU (ask first) | parked |
+| I8 (unparked by X6.6, then DECLINED 2026-10-27 by the assistant: it tunes optimizer settings to move a speed score, which the author's rule 'principles, not metric chasing' rules out; the author may overrule) | 2026-10-27 | Meta-evolution of the emergent optimizer's settings (outer population of random settings culled on suite speed) | U1, U6 | X6.6 shows the variation machinery cannot evolve from inside | 2-4 h GPU (ask first) | parked |
 | I7 | 2026-10-26 | Fed curiosity drives varied experience, which keeps a wider set of connections through pruning, so each new problem has more to connect to (offered as U-candidate; user did not confirm) | U13, C43 | the user confirms it as a theorem | days | parked |
 
 ## Processed / declined

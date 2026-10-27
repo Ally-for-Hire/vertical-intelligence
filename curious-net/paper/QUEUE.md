@@ -1,6 +1,6 @@
 # Work queue for the research loop (highest priority first)
 
-**QUEUE HEAD (2026-10-27, after X6.9 = I10):** I8 = meta-evolution of the optimizer settings from outside (unparked by X6.6; an outer population of random optimizer settings, culled on suite speed; Knowledge-Wiki vertical-intelligence/wiki/inbox.md). Done: X0.1, X0.1b, X0.6, X0.7, EMG-0..3 (X6.5-X6.8), X6.9. Machine rule: restrictions lifted, keep a 15% margin (vi/budget.py).
+**QUEUE HEAD (2026-10-27, after X0.2):** X0.4 = test of U16 (a pushed-aside part: a variable whose warning is masked from the controller while it still affects viability; does the damage grow and end in breakdown?) or X0.5 (receding set point); choose by the default ordering (a U-theorem test with no evidence row: U16 has none). Done: X0.1, X0.1b, X0.2, X0.6, X0.7, EMG-0..3, X6.9. I8 declined. Machine rule: restrictions lifted, keep a 15% margin (vi/budget.py).
 
 Each loop iteration takes ONE item (or a small chunk), does it, writes the result into LEDGER.md / PAPER.md / figures / LOG.md, commits, then picks the next. Items marked (E) are experiments, (L) literature verification, (D) documentation. Compute: 24 cores while the user is away (CN_FULL=1); keep a single experiment under ~20 minutes.
 

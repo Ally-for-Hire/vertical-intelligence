@@ -3,7 +3,7 @@ Style follows the dataviz method: one accent hue plus grays for emphasis, thin m
 a title that states the finding, light AND dark variants (GitHub picks by the viewer theme); alt text and
 a data table live in the README.
 
-Usage: python figures.py [x06 | x07 | x66 | x67 | x68 | x69 | all]       -> ../results/figures/vi_<name>_{light,dark}.png"""
+Usage: python figures.py [x02 | x06 | x07 | x66 | x67 | x68 | x69 | all]       -> ../results/figures/vi_<name>_{light,dark}.png"""
 import json, os, sys
 import matplotlib
 matplotlib.use("Agg")
@@ -227,7 +227,34 @@ def fig_x69(theme):
     return _save(fig, "x69_growth", theme)
 
 
-FIGS = {"x06": fig_x06, "x07": fig_x07, "x66": fig_x66, "x67": fig_x67, "x68": fig_x68, "x69": fig_x69}
+def fig_x02(theme):
+    d = json.load(open(os.path.join(RES, "x0_2_run.json")))["result"]["summary"]
+    worlds = ["0.01", "0.05", "0.25"]; xl = ["Mild threat" + chr(10) + "(staying out still pays)", "Medium threat", "Severe threat" + chr(10) + "(only home is sensible)"]
+    series = [("TWOF", "Two drives, no switch"), ("TWOS", "Two drives, hand-built switch"), ("B0", "Random exploring"), ("ONE", "One signal (no weight, no switch)")]
+    t = THEMES[theme]
+    fig, ax = plt.subplots(figsize=(10.0, 4.9), dpi=200)
+    fig.patch.set_facecolor(t["surface"]); ax.set_facecolor(t["surface"])
+    fig.subplots_adjust(left=0.09, right=0.70, top=0.76, bottom=0.17)
+    for k, lab in series:
+        ys = [100 * d[w]["explore_threat"][k] for w in worlds]; hl = k == "ONE"
+        ax.plot([0, 1, 2], ys, color=t["accent"] if hl else t["gray"], lw=3.0 if hl else 1.8, marker="o", ms=7 if hl else 5, zorder=3 if hl else 2, solid_capstyle="round")
+        ly = {"B0": 2.6, "TWOF": 1.4, "ONE": 0.2, "TWOS": -1.0}[k]
+        ax.annotate(lab, xy=(2.0, ys[-1]), xytext=(2.14, ly), ha="left", va="center", fontsize=9.5, color=t["ink"] if hl else t["ink2"], fontweight="bold" if hl else "normal",
+                    arrowprops=dict(arrowstyle="-", color=t["ink2"], lw=0.7, shrinkA=2, shrinkB=4), annotation_clip=False)
+    ax.set_xlim(-0.2, 2.2); ax.set_ylim(-1.5, 11.0); ax.set_xticks([0, 1, 2]); ax.set_xticklabels(xl, fontsize=9, color=t["ink2"])
+    ax.set_ylabel("share of threat ticks spent exploring (%)", fontsize=9, color=t["ink2"])
+    ax.tick_params(axis="y", colors=t["ink2"], labelsize=8.5, length=0); ax.tick_params(axis="x", length=0)
+    ax.yaxis.grid(True, color=t["grid"], lw=0.8); ax.set_axisbelow(True)
+    for sp in ("top", "right", "left", "bottom"):
+        ax.spines[sp].set_visible(False)
+    fig.text(0.03, 0.935, "One signal explores under threat only when staying out pays", fontsize=13.5, fontweight="bold", color=t["ink"], ha="left")
+    fig.text(0.03, 0.875, "It retreats in proportion to the stakes with no weight and no switch; hand-built versions need constants.", fontsize=10, color=t["ink2"], ha="left")
+    fig.text(0.03, 0.84, "Share of threat ticks spent visiting a patch other than the one believed best, median of 48 simulated worlds.", fontsize=9, color=t["ink2"], ha="left")
+    fig.text(0.97, 0.025, "experiment X0.2 · toy worlds · a tuned two-drive agent still had slightly lower regret in the medium and severe worlds", fontsize=7.4, color=t["ink2"], ha="right")
+    return _save(fig, "x02_secure_base", theme)
+
+
+FIGS = {"x02": fig_x02, "x06": fig_x06, "x07": fig_x07, "x66": fig_x66, "x67": fig_x67, "x68": fig_x68, "x69": fig_x69}
 
 if __name__ == "__main__":
     which = sys.argv[1] if len(sys.argv) > 1 else "all"

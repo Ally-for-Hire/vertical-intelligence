@@ -195,7 +195,7 @@ speed). Worth testing if X6.6 shows the machinery cannot evolve from inside; cos
 | X5.4 | Abstention as a learned faculty | an explicit "unknown" output trained from the learner's own errors; max-softmax; temperature scaling | abstention on unseen outside regions | U3, C31 |
 | X5.5 | Is the curriculum saving order, or self-selection? | ambiguity-driven self-chosen queries; fixed easy-to-hard; random | cost to criterion (vs C53's 2.4x) | U3, U15 |
 
-**Status (2026-10-27):** X0.1, X0.1b, X0.6 and X0.7 are DONE (results in [[findings-map]] section 0; X0.7: a weakest-link margin works without designer numbers, and ignoring a need is what kills).
+**Status (2026-10-27):** X0.1, X0.1b, X0.2, X0.6 and X0.7 are DONE (results in [[findings-map]] section 0; X0.7: a weakest-link margin works without designer numbers, and ignoring a need is what kills).
 New from X0.6:
 
 | Id | Question | Arms | Main metric | Serves |
@@ -245,3 +245,9 @@ u = 0.1, 0.3, 0.5, 1.0; judge seeds 700-709 (70 runs per arm), budget 1e7: all a
 the plain optimizer 1.16x, 1.03x, 1.23x, 1.17x (pass line 1.25x); spirals 1.16x to 1.43x; width 23 to 30;
 checker3 unsolved. Verdicts P234 FAILED (1.23x), P235 FAILED (1.43x), P236 PASSED, P237 PASSED, P238 N/A.
 Next: I8.
+
+**X0.2 result (2026-10-27): DONE; mixed.** World W1 (home, six patches away, visible threats; mild, medium
+and severe damage), 48 worlds per type. P239 PASSED (one signal gives the secure-base pattern, no switch),
+P242 PASSED (beats random exploring), P240, P241, P243 FAILED (it is slightly worse than a tuned
+two-drive agent in the medium and severe worlds; the hand-set weight transferred across worlds). U17 is
+not falsified and not shown superior. Next: X0.4 (U16).

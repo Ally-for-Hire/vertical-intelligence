@@ -1,0 +1,192 @@
+{
+ "mode": "check",
+ "seconds": 2.2,
+ "result": {
+  "0.01": {
+   "ONE": {
+    "regret": 0.001768893346507166,
+    "calm_away": 1.0,
+    "explore_calm": 0.042518127883981544,
+    "explore_threat": 0.0431095406360424,
+    "threat_away": 1.0,
+    "resume": 0.0,
+    "deaths": 0.0,
+    "threat_share": 0.15722222222222224
+   },
+   "TWOF": {
+    "regret": 0.004714948845192983,
+    "calm_away": 1.0,
+    "explore_calm": 0.0005273566249176005,
+    "explore_threat": 0.0,
+    "threat_away": 1.0,
+    "resume": 0.0,
+    "deaths": 0.0,
+    "threat_share": 0.15722222222222224
+   },
+   "TWOS": {
+    "regret": 0.00480924673020881,
+    "calm_away": 1.0,
+    "explore_calm": 0.000988793671720501,
+    "explore_threat": 0.0,
+    "threat_away": 1.0,
+    "resume": 0.0,
+    "deaths": 0.0,
+    "threat_share": 0.15722222222222224
+   },
+   "B0": {
+    "regret": 0.005356216747662202,
+    "calm_away": 0.9877389584706658,
+    "explore_calm": 0.07020435069215557,
+    "explore_threat": 0.07809187279151944,
+    "threat_away": 0.9840989399293286,
+    "resume": 0.0,
+    "deaths": 0.0,
+    "threat_share": 0.15722222222222224
+   },
+   "ORACLE": {
+    "regret": 0.0,
+    "calm_away": 1.0,
+    "explore_calm": 0.0,
+    "explore_threat": 0.0,
+    "threat_away": 1.0,
+    "resume": 0.0,
+    "deaths": 0.0,
+    "threat_share": 0.15722222222222224
+   },
+   "RANDOM": {
+    "regret": 0.028794310824398078,
+    "calm_away": 0.8554383651944627,
+    "explore_calm": 0.719116677653263,
+    "explore_threat": 0.7095406360424028,
+    "threat_away": 0.8618374558303887,
+    "resume": 0.0,
+    "deaths": 0.0,
+    "threat_share": 0.15722222222222224
+   }
+  },
+  "0.05": {
+   "ONE": {
+    "regret": 0.0017281689941199547,
+    "calm_away": 1.0,
+    "explore_calm": 0.06301911667765327,
+    "explore_threat": 0.0035335689045936395,
+    "threat_away": 0.009187279151943463,
+    "resume": 0.0,
+    "deaths": 0.0,
+    "threat_share": 0.15722222222222224
+   },
+   "TWOF": {
+    "regret": 0.004003787753646358,
+    "calm_away": 1.0,
+    "explore_calm": 0.0006591957811470006,
+    "explore_threat": 0.0,
+    "threat_away": 0.0,
+    "resume": 0.0,
+    "deaths": 0.0,
+    "threat_share": 0.15722222222222224
+   },
+   "TWOS": {
+    "regret": 0.004144087130825846,
+    "calm_away": 1.0,
+    "explore_calm": 0.0008569545154911008,
+    "explore_threat": 0.0,
+    "threat_away": 0.0,
+    "resume": 0.0,
+    "deaths": 0.0,
+    "threat_share": 0.15722222222222224
+   },
+   "B0": {
+    "regret": 0.00468805943588556,
+    "calm_away": 0.9880026367831246,
+    "explore_calm": 0.07237969676994067,
+    "explore_threat": 0.0706713780918728,
+    "threat_away": 0.08551236749116607,
+    "resume": 0.0,
+    "deaths": 0.0,
+    "threat_share": 0.15722222222222224
+   },
+   "ORACLE": {
+    "regret": 0.0,
+    "calm_away": 1.0,
+    "explore_calm": 0.0,
+    "explore_threat": 0.0,
+    "threat_away": 0.0,
+    "resume": 0.0,
+    "deaths": 0.0,
+    "threat_share": 0.15722222222222224
+   },
+   "RANDOM": {
+    "regret": 0.029350757840205473,
+    "calm_away": 0.8554383651944627,
+    "explore_calm": 0.719116677653263,
+    "explore_threat": 0.7095406360424028,
+    "threat_away": 0.8618374558303887,
+    "resume": 0.0,
+    "deaths": 55.0,
+    "threat_share": 0.15722222222222224
+   }
+  },
+  "0.25": {
+   "ONE": {
+    "regret": 0.0020245467954953743,
+    "calm_away": 1.0,
+    "explore_calm": 0.06743572841133817,
+    "explore_threat": 0.0,
+    "threat_away": 0.0,
+    "resume": 0.0,
+    "deaths": 0.0,
+    "threat_share": 0.15722222222222224
+   },
+   "TWOF": {
+    "regret": 0.004003787753646358,
+    "calm_away": 1.0,
+    "explore_calm": 0.0006591957811470006,
+    "explore_threat": 0.0,
+    "threat_away": 0.0,
+    "resume": 0.0,
+    "deaths": 0.0,
+    "threat_share": 0.15722222222222224
+   },
+   "TWOS": {
+    "regret": 0.004144087130825846,
+    "calm_away": 1.0,
+    "explore_calm": 0.0008569545154911008,
+    "explore_threat": 0.0,
+    "threat_away": 0.0,
+    "resume": 0.0,
+    "deaths": 0.0,
+    "threat_share": 0.15722222222222224
+   },
+   "B0": {
+    "regret": 0.007376948324774449,
+    "calm_away": 0.9880026367831246,
+    "explore_calm": 0.07237969676994067,
+    "explore_threat": 0.0706713780918728,
+    "threat_away": 0.08551236749116607,
+    "resume": 0.0,
+    "deaths": 22.0,
+    "threat_share": 0.15722222222222224
+   },
+   "ORACLE": {
+    "regret": 0.0,
+    "calm_away": 1.0,
+    "explore_calm": 0.0,
+    "explore_threat": 0.0,
+    "threat_away": 0.0,
+    "resume": 0.0,
+    "deaths": 0.0,
+    "threat_share": 0.15722222222222224
+   },
+   "RANDOM": {
+    "regret": 0.05645075784020547,
+    "calm_away": 0.8554383651944627,
+    "explore_calm": 0.719116677653263,
+    "explore_threat": 0.7095406360424028,
+    "threat_away": 0.8618374558303887,
+    "resume": 0.0,
+    "deaths": 459.5,
+    "threat_share": 0.15722222222222224
+   }
+  }
+ }
+}

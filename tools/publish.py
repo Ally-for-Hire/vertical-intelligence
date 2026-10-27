@@ -26,7 +26,7 @@ SECRETS = [re.compile(p) for p in (
     r'gh[pousr]_[A-Za-z0-9]{20,}', r'sk-[A-Za-z0-9]{20,}', r'-----BEGIN [A-Z ]*PRIVATE KEY-----', r'AKIA[0-9A-Z]{16}',
     r'(?i)(api[_-]?key|secret|passw(or)?d|auth[_-]?token|access[_-]?token)\s*[:=]\s*[\'"]?[A-Za-z0-9_\-]{16,}',
     r'(?i)wandb[^\n]{0,40}[0-9a-f]{40}')]
-EMAIL = re.compile(r'[A-Za-z0-9._%+-]+@[A-Za-z0-9-]+\.[A-Za-z0-9.-]+')
+EMAIL = re.compile(r'[A-Za-z0-9._%+-]+@[A-Za-z0-9-]+(?:\.[A-Za-z0-9-]+)*\.[A-Za-z]{2,}')   # a real address ends in a letters-only domain (keys like TWOF@0.01 are not addresses)
 EMAIL_OK = ('anthropic.com', 'example.com', 'users.noreply.github.com')
 LOCAL_PATH = re.compile(r'(?i)(c:[\\/]+' + 'users[\\/]|/c/' + 'users/)')   # built in pieces so this file does not match itself
 

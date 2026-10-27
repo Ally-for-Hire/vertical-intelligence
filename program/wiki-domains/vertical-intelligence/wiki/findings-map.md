@@ -76,6 +76,16 @@ principles in miniature, not facts about brains or LLMs. Ids point to `curious-n
     11 to 15 deaths per 10k) and 4.7 times more often in the gentle world. The data side of "no part
     left behind" (U10) and of a neglected part's warning (U16). Untested: how this scales with
     many variables of different scales (idea I9).
+  - **X0.2 (2026-10-27, 48 worlds per world type; P239-P243) tests U17 (comfort and growth are one
+    hunger):** a single quantity, expected change for me with uncertainty-driven sampling and a known
+    threat penalty, **is sufficient to produce the secure-base pattern** with no weight and no switch:
+    it explores while calm (10.4% of ticks), retreats under severe threat (0.0% exploring), resumes at
+    once, and retreats in proportion to the stakes (it keeps exploring under mild threat, 9.8%, where
+    staying out still pays). It beats random exploration in all three worlds. It is **not better** than
+    a two-drive agent with one tuned weight and a hand-built switch (regret 0.0018 vs 0.0015 to 0.0016
+    in the medium and severe worlds), and the predicted advantage of needing no tuning did not appear:
+    the best weight (2.0) was the same in every world. So U17 is not falsified and not shown superior;
+    the difference is parsimony (0 constants vs 1 to 2). Confounded with Thompson sampling vs a bonus.
   - Before X0.1 there was nothing direct. The nearest result is NeuroBlock's energy
   economy (`ENERGY_FINDINGS.md`): brains with diversified income stayed viable 90% of the time,
   while growth-only income starved (26-37% good, offline half the time), which the log calls

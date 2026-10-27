@@ -101,6 +101,30 @@ _r("gpu_cap", 0.7, "MEASURED", "budget", "max NB_GPU_FRAC: 1 - margin - the ~0.1
 _r("gpu_min", 0.1, "NUMERICAL", "budget", "smallest GPU fraction ever returned")
 _r("filetime_shift", 32, "NUMERICAL", "budget", "Windows FILETIME high/low word shift")
 
+# ---- W1 / experiment X0.2 (U17: are comfort and growth one hunger?) ----------------------------------------------
+_r("w1_patches", 6, "WORLD", "x0_2", "patches away from home")
+_r("w1_mu_lo", -0.01, "WORLD", "x0_2", "lowest true mean gain per visit of a patch (some patches are poor)")
+_r("w1_mu_hi", 0.05, "WORLD", "x0_2", "highest true mean gain per visit of a patch")
+_r("w1_noise", 0.02, "WORLD", "x0_2", "sd of the observed gain of one visit")
+_r("w1_season_len", 3000, "WORLD", "x0_2", "ticks per season; patch values are redrawn at each season swap, so what was learned goes stale")
+_r("w1_p_on", 0.01, "WORLD", "x0_2", "per-tick chance that a threat starts (visible to the agent)")
+_r("w1_p_off", 0.05, "WORLD", "x0_2", "per-tick chance that a threat ends (episodes last about 20 ticks)")
+_r("w1_deltas", (0.01, 0.05, 0.25), "WORLD", "x0_2", "damage per tick for being away during a threat: mild, medium, severe")
+_r("x02_tune_delta", 0.05, "WORLD", "x0_2", "the medium world, where the hand-weighted arms are tuned (then frozen for the other worlds)")
+_r("x02_ticks", 20000, "ARBITRARY", "x0_2", "ticks per run")
+_r("x02_warmup", 2000, "ARBITRARY", "x0_2", "ticks ignored at the start of each run for the metrics")
+_r("ag_sigma", 0.02, "ARBITRARY", "x0_2", "the agents' assumed noise of one visit (set equal to the world's)")
+_r("ag_n0", 1.0, "ARBITRARY", "x0_2", "prior strength (pseudo-visits at mean 0)")
+_r("ag_lambda", 0.998, "ARBITRARY", "x0_2", "per-tick forgetting of visit evidence (memory about 500 ticks), shared by all arms")
+_r("w_grid", (0.25, 0.5, 1.0, 2.0, 4.0), "ARBITRARY", "x0_2", "tuning grid for the curiosity weight of the two-drive arms")
+_r("eps_grid", (0.01, 0.03, 0.1, 0.3), "ARBITRARY", "x0_2", "tuning grid for the random-exploration rate of the baseline")
+_r("x02_stream_stride", 1000, "NUMERICAL", "x0_2", "seed stride that gives every arm its own noise and sampling stream")
+_r("x02_worker_gb", 0.3, "NUMERICAL", "x0_2", "memory per worker process, for the machine budget")
+_r("x02_resume_cap", 200, "NUMERICAL", "x0_2", "cap on the measured lag before exploring resumes after a threat ends")
+_r("x02_seed0", 80000, "USER", "x0_2", "fresh seed block for the X0.2 scored run")
+_r("x02_tune_seed0", 81000, "USER", "x0_2", "seed block for X0.2 tuning")
+_r("x02_check_seed", 82000, "USER", "x0_2", "seed for bug checks (not scored)")
+
 
 def C(name):
     return REG[name]["value"]

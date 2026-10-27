@@ -21,9 +21,31 @@ about large AI systems.
 
 ## Latest update: 27 October 2026
 
-**At a glance: 236 pre-registered predictions, 101 passed, 127 failed, 0 awaiting results** (8 more were voided or not applicable).
+**At a glance: 241 pre-registered predictions, 103 passed, 130 failed, 0 awaiting results** (8 more were voided or not applicable).
 Every success rule is written down *before* an experiment runs, and every failure is kept and
 reported next to the successes.
+
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="curious-net/results/figures/vi_x02_secure_base_dark.png">
+  <img alt="Line chart of the share of threat ticks spent exploring in three worlds. The one-signal agent (highlighted) explores 9.8 percent of threat ticks under mild threat, 0.6 percent under medium threat and none under severe threat. Random exploring stays near 2 percent in every world; two-drive agents are at 3.8 and 0 percent in the mild world and 0 in the others." src="curious-net/results/figures/vi_x02_secure_base_light.png" width="900">
+</picture>
+
+<details><summary>Data behind the chart (experiment X0.2, median of 48 worlds per type)</summary>
+
+| Agent | Exploring under threat (mild / medium / severe world) | Exploring while calm | Regret per tick (medium world) |
+|---|---|---|---|
+| **One signal: expected change for me, sampled; no weight, no switch** | **9.8% / 0.6% / 0.0%** | 10.7% | 0.0018 |
+| Two drives, hand-built switch (one tuned weight) | 0.0% / 0.0% / 0.0% | 3.9% | 0.0016 |
+| Two drives, no switch (one tuned weight) | 3.8% / 0.0% / 0.0% | 4.0% | 0.0017 |
+| Random exploring (one tuned rate) | 2.1% / 2.1% / 2.1% | 2.1% | 0.0042 |
+
+A signal that combines the safety cost and the value of learning into one expected-change-for-me
+produced the toddler pattern (explore when safe, retreat under threat, resume at once, and retreat
+in proportion to the stakes) with nothing to tune. It was not better than a two-drive agent with one
+tuned weight, which had slightly lower regret; the hand-set weight happened to transfer across all
+three worlds. So one hunger is enough, but not shown to be better.
+
+</details>
 
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="curious-net/results/figures/vi_x69_growth_dark.png">
@@ -159,7 +181,10 @@ The food-only learner is tuned on food, its own objective; with default settings
   survives is whether it attends to *all* its needs (X0.7).
 - **Also finished:** letting the search grow its own parts by copying hidden units (X6.9) helps by
   about 1.2 times, but is not the missing ingredient.
-- **Next:** tuning the search's own settings from outside, with an outer population.
+- **Also finished:** a test of the author's theorem that comfort-seeking and growth are one hunger
+  (X0.2): a single "expected change for me" signal is enough to explore when safe and retreat under
+  threat, with nothing to tune, though not better than a tuned two-drive design.
+- **Next:** what happens when a part's warning is ignored: does the cost grow until breakdown (X0.4)?
 
 ## What has been found so far
 

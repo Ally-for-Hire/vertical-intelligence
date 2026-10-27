@@ -201,6 +201,20 @@ principles in miniature, not facts about brains or LLMs. Ids point to `curious-n
     lineages, and refilling from random always stayed at baseline (selfscore series, closed).
   - Selection math: Price identity exact (C1, not novel); interior optimum cull 75-95% under
     noisy scoring (C4); the multi-generation law was refuted (C5).
+  - **X6.8 (2026-10-27, 20 runs per arm, budget 1e7 including every stage; P230-P233): stepping
+    stones do NOT help.** The direct optimizer solved 10/20 (spirals 10/10, checkerboard 0/10); the
+    self-paced ramp also 10/20 (faster at the median on spirals, 0.95M vs 1.35M, but heavy-tailed,
+    0.5M to 6.0M), the fixed ramp 4/20 and the mixed stages 0/20 (both worse); **the checkerboard
+    was unsolved in all 40 ramp runs**. A plausible reason (untested): a population converged on an
+    easy stage has lost the variety and noise size it needs to move on.
+  - **Reading across X6.5 to X6.8 (assistant; for the author to correct):** none of the things
+    added to blind variation plus culling closed the gap to gradient descent: its tricks did not
+    evolve themselves (X6.6), selection without any grader works but at about 26 times the cost
+    (X6.7), and stepping stones did not help (X6.8); the repaired benchmark is about 11 times behind
+    tuned gradient descent (X6.5). This fits U18: gradient descent is probably the fastest way to pick
+    up a problem, and what is missing is what manages it. What the evolutionary side does show is
+    that selection alone, with no grader, is enough to find solutions, so the grader is a convenience,
+    not a requirement.
   - **X6.7 (2026-10-27, 20 seeds, budget 3e6; P225-P229): selection with NO grader works, slowly.**
     A population with nothing ranking anything (food shared among the nets that answer correctly,
     a living cost, split at energy 2, die at 0) solved a noisy XOR to 0.95 in **17 of 20 runs**

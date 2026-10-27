@@ -3,7 +3,7 @@ Style follows the dataviz method: one accent hue plus grays for emphasis, thin m
 a title that states the finding, light AND dark variants (GitHub picks by the viewer theme); alt text and
 a data table live in the README.
 
-Usage: python figures.py [x06 | x07 | x66 | x67 | all]       -> ../results/figures/vi_<name>_{light,dark}.png"""
+Usage: python figures.py [x06 | x07 | x66 | x67 | x68 | all]       -> ../results/figures/vi_<name>_{light,dark}.png"""
 import json, os, sys
 import matplotlib
 matplotlib.use("Agg")
@@ -169,7 +169,37 @@ def fig_x67(theme):
     return _save(fig, "x67_nograder", theme)
 
 
-FIGS = {"x06": fig_x06, "x07": fig_x07, "x66": fig_x66, "x67": fig_x67}
+def fig_x68(theme):
+    d = json.load(open(os.path.join(HERE, "..", "..", "neuroblock-research", "emergent", "runs", "x68_stones.json")))["summary"]
+    names = {"a": "Direct (the full problem only)", "b": "Fixed ramp (easy stages on a timer)", "c": "Self-paced ramp (advance when solved)", "d": "Mixed (all stages at once)"}
+    t = THEMES[theme]
+    fig, ax = plt.subplots(figsize=(10.4, 4.9), dpi=200)
+    fig.patch.set_facecolor(t["surface"]); ax.set_facecolor(t["surface"])
+    fig.subplots_adjust(left=0.37, right=0.97, top=0.76, bottom=0.14)
+    arms = ["a", "b", "c", "d"]; n = len(arms)
+    for i, k in enumerate(arms):
+        o = d[k]; y = n - 1 - i; hl = k == "c"
+        if o["solved"] > 0:
+            ax.barh(y, o["solved"], height=0.36, color=t["accent"] if hl else t["gray"], linewidth=0)
+        ax.text(-0.4, y, names[k], ha="right", va="center", fontsize=10, color=t["ink"] if hl else t["ink2"], fontweight="bold" if hl else "normal")
+        ax.text(max(o["solved"], 0) + 0.5, y + 0.1, f"solved {o['solved']}/{o['total']}", ha="left", va="center", fontsize=9.5, color=t["ink"] if hl else t["ink2"], fontweight="bold" if hl else "normal")
+        sp, ck = o["solved_by_problem"]["spirals"], o["solved_by_problem"]["checker3"]
+        med = o["median_cost"]["spirals"]
+        tail = f"spiral median cost {med:,.0f}" if sp >= 5 else "spirals mostly unsolved at 10,000,000"
+        ax.text(max(o["solved"], 0) + 0.5, y - 0.18, f"spirals {sp}/10 · checkerboard {ck}/10 · {tail}", ha="left", va="center", fontsize=7.8, color=t["ink2"])
+    ax.set_xlim(0, 32); ax.set_ylim(-0.6, n - 0.3); ax.set_yticks([]); ax.set_xticks([0, 5, 10, 15, 20])
+    ax.tick_params(axis="x", colors=t["ink2"], labelsize=8.5, length=0)
+    ax.xaxis.grid(True, color=t["grid"], lw=0.8); ax.set_axisbelow(True)
+    for sp_ in ("top", "right", "left", "bottom"):
+        ax.spines[sp_].set_visible(False)
+    fig.text(0.03, 0.935, "Stepping stones did not help, and the checkerboard stayed unsolved", fontsize=13.5, fontweight="bold", color=t["ink"], ha="left")
+    fig.text(0.03, 0.875, "Easier versions solved first, with their cost counted: two of three ramps made things worse.", fontsize=10, color=t["ink2"], ha="left")
+    fig.text(0.03, 0.84, "Runs solved out of 20 (10 spirals, 10 checkerboard) within a budget of 10,000,000 (higher is better).", fontsize=9, color=t["ink2"], ha="left")
+    fig.text(0.97, 0.025, "experiment X6.8 · toy problems · no ramp arm passed the registered rule", fontsize=7.6, color=t["ink2"], ha="right")
+    return _save(fig, "x68_stones", theme)
+
+
+FIGS = {"x06": fig_x06, "x07": fig_x07, "x66": fig_x66, "x67": fig_x67, "x68": fig_x68}
 
 if __name__ == "__main__":
     which = sys.argv[1] if len(sys.argv) > 1 else "all"

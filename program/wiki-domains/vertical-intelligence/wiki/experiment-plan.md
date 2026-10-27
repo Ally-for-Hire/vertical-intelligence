@@ -157,6 +157,13 @@ sensitivity arm (e, registered before running because the plan does not fix the 
 solved 17/20 (needs 18) at a median 1,367,392, 26.5x the graded cull. Manipulation checks passed
 (accuracy predicts offspring in every run; unlimited food explodes). Next in order: X6.8.
 
+**X6.8 result (2026-10-27): DONE; no ramp arm passed.** Seeds 600-609 per problem, budget 1e7
+counting every stage. Solved of 20 runs: direct 10 (spirals 10/10, checker3 0/10), fixed ramp 4,
+self-paced ramp 10, mixed 0; geometric-mean cost vs direct 0.37x, 1.19x, 0.37x (pass: more solved or
+1.5x cheaper). checker3 unsolved in all 40 ramp runs. Manipulation checks passed (direct fails 10/20;
+the self-paced ramp reaches the full problem in 20/20; parity 3/3). The four evolution items (X6.5 to
+X6.8) are complete. Next: I10 (fixed-rate duplication), then I8 (meta-evolution).
+
 Parked, I8: a meta-evolution of the optimizer's settings (an outer population culled on suite
 speed). Worth testing if X6.6 shows the machinery cannot evolve from inside; cost 2-4 h GPU
 (over budget, ask first).

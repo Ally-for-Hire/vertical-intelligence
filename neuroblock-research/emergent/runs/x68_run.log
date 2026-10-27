@@ -1,0 +1,157 @@
+80 runs, 6 workers, budget 1e+07
+[1/80] arm a spirals seed 600: cost 2,007,680 solved True stage 4 (9.9s, 14s elapsed)
+[2/80] arm a spirals seed 601: cost 1,046,400 solved True stage 4 (5.4s, 14s elapsed)
+[3/80] arm a spirals seed 602: cost 1,389,440 solved True stage 4 (6.7s, 14s elapsed)
+[4/80] arm a spirals seed 603: cost 759,040 solved True stage 4 (4.2s, 14s elapsed)
+[5/80] arm a spirals seed 604: cost 1,411,840 solved True stage 4 (7.3s, 14s elapsed)
+[6/80] arm a spirals seed 605: cost 1,095,040 solved True stage 4 (5.8s, 14s elapsed)
+[7/80] arm a spirals seed 606: cost 432,640 solved True stage 4 (1.9s, 14s elapsed)
+[8/80] arm a spirals seed 607: cost 1,304,960 solved True stage 4 (6.0s, 15s elapsed)
+[9/80] arm a spirals seed 608: cost 1,510,400 solved True stage 4 (6.6s, 16s elapsed)
+[10/80] arm a spirals seed 609: cost 1,946,880 solved True stage 4 (8.3s, 18s elapsed)
+[11/80] arm b spirals seed 600: cost 5,676,800 solved True stage 4 (20.7s, 31s elapsed)
+[12/80] arm b spirals seed 601: cost 10,000,000 solved False stage 4 (40.3s, 51s elapsed)
+[13/80] arm b spirals seed 602: cost 4,656,000 solved True stage 4 (16.6s, 51s elapsed)
+[14/80] arm b spirals seed 603: cost 10,000,000 solved False stage 4 (40.1s, 55s elapsed)
+[15/80] arm b spirals seed 604: cost 5,118,080 solved True stage 4 (17.6s, 55s elapsed)
+[16/80] arm b spirals seed 605: cost 10,000,000 solved False stage 4 (40.2s, 58s elapsed)
+[17/80] arm b spirals seed 606: cost 10,000,000 solved False stage 4 (40.0s, 70s elapsed)
+[18/80] arm b spirals seed 607: cost 10,000,000 solved False stage 4 (40.3s, 71s elapsed)
+[19/80] arm b spirals seed 608: cost 10,000,000 solved False stage 4 (40.3s, 74s elapsed)
+[20/80] arm b spirals seed 609: cost 6,259,200 solved True stage 4 (23.3s, 75s elapsed)
+[21/80] arm c spirals seed 600: cost 768,000 solved True stage 4 (3.4s, 75s elapsed)
+[22/80] arm c spirals seed 601: cost 508,160 solved True stage 4 (2.2s, 75s elapsed)
+[23/80] arm c spirals seed 602: cost 2,045,440 solved True stage 4 (9.3s, 75s elapsed)
+[24/80] arm c spirals seed 603: cost 6,035,840 solved True stage 4 (27.1s, 88s elapsed)
+[25/80] arm c spirals seed 604: cost 1,090,560 solved True stage 4 (5.0s, 88s elapsed)
+[26/80] arm c spirals seed 605: cost 623,360 solved True stage 4 (3.0s, 88s elapsed)
+[27/80] arm c spirals seed 606: cost 5,453,440 solved True stage 4 (24.3s, 96s elapsed)
+[28/80] arm c spirals seed 607: cost 809,600 solved True stage 4 (3.5s, 96s elapsed)
+[29/80] arm c spirals seed 608: cost 1,200,640 solved True stage 4 (5.5s, 96s elapsed)
+[30/80] arm c spirals seed 609: cost 650,240 solved True stage 4 (3.0s, 96s elapsed)
+[31/80] arm d spirals seed 600: cost 10,000,000 solved False stage 4 (44.4s, 119s elapsed)
+[32/80] arm d spirals seed 601: cost 10,000,000 solved False stage 4 (44.8s, 121s elapsed)
+[33/80] arm d spirals seed 602: cost 10,000,000 solved False stage 4 (45.3s, 122s elapsed)
+[34/80] arm d spirals seed 603: cost 10,000,000 solved False stage 4 (45.0s, 124s elapsed)
+[35/80] arm d spirals seed 604: cost 10,000,000 solved False stage 4 (44.7s, 132s elapsed)
+[36/80] arm d spirals seed 605: cost 10,000,000 solved False stage 4 (45.3s, 141s elapsed)
+[37/80] arm d spirals seed 606: cost 10,000,000 solved False stage 4 (44.4s, 164s elapsed)
+[38/80] arm d spirals seed 607: cost 10,000,000 solved False stage 4 (44.8s, 166s elapsed)
+[39/80] arm d spirals seed 608: cost 10,000,000 solved False stage 4 (45.3s, 168s elapsed)
+[40/80] arm d spirals seed 609: cost 10,000,000 solved False stage 4 (45.3s, 169s elapsed)
+[41/80] arm a checker3 seed 600: cost 10,000,000 solved False stage 1 (45.3s, 178s elapsed)
+[42/80] arm a checker3 seed 601: cost 10,000,000 solved False stage 1 (45.2s, 186s elapsed)
+[43/80] arm a checker3 seed 602: cost 10,000,000 solved False stage 1 (45.0s, 209s elapsed)
+[44/80] arm a checker3 seed 603: cost 10,000,000 solved False stage 1 (45.4s, 211s elapsed)
+[45/80] arm a checker3 seed 604: cost 10,000,000 solved False stage 1 (45.3s, 213s elapsed)
+[46/80] arm a checker3 seed 605: cost 10,000,000 solved False stage 1 (44.9s, 214s elapsed)
+[47/80] arm a checker3 seed 606: cost 10,000,000 solved False stage 1 (45.1s, 223s elapsed)
+[48/80] arm a checker3 seed 607: cost 10,000,000 solved False stage 1 (45.6s, 232s elapsed)
+[49/80] arm a checker3 seed 608: cost 10,000,000 solved False stage 1 (46.1s, 255s elapsed)
+[50/80] arm a checker3 seed 609: cost 10,000,000 solved False stage 1 (46.4s, 258s elapsed)
+[51/80] arm b checker3 seed 600: cost 10,000,000 solved False stage 1 (45.1s, 258s elapsed)
+[52/80] arm b checker3 seed 601: cost 10,000,000 solved False stage 1 (45.2s, 259s elapsed)
+[53/80] arm b checker3 seed 602: cost 10,000,000 solved False stage 1 (45.0s, 268s elapsed)
+[54/80] arm b checker3 seed 603: cost 10,000,000 solved False stage 1 (45.2s, 277s elapsed)
+[55/80] arm b checker3 seed 604: cost 10,000,000 solved False stage 1 (44.0s, 299s elapsed)
+[56/80] arm b checker3 seed 605: cost 10,000,000 solved False stage 1 (44.5s, 302s elapsed)
+[57/80] arm b checker3 seed 606: cost 10,000,000 solved False stage 1 (45.2s, 303s elapsed)
+[58/80] arm b checker3 seed 607: cost 10,000,000 solved False stage 1 (44.5s, 304s elapsed)
+[59/80] arm b checker3 seed 608: cost 10,000,000 solved False stage 1 (44.6s, 312s elapsed)
+[60/80] arm b checker3 seed 609: cost 10,000,000 solved False stage 1 (44.0s, 321s elapsed)
+[61/80] arm c checker3 seed 600: cost 10,000,000 solved False stage 1 (45.5s, 344s elapsed)
+[62/80] arm c checker3 seed 601: cost 10,000,000 solved False stage 1 (45.5s, 348s elapsed)
+[63/80] arm c checker3 seed 602: cost 10,000,000 solved False stage 1 (46.0s, 349s elapsed)
+[64/80] arm c checker3 seed 603: cost 10,000,000 solved False stage 1 (46.3s, 350s elapsed)
+[65/80] arm c checker3 seed 604: cost 10,000,000 solved False stage 1 (45.1s, 358s elapsed)
+[66/80] arm c checker3 seed 605: cost 10,000,000 solved False stage 1 (45.6s, 366s elapsed)
+[67/80] arm c checker3 seed 606: cost 10,000,000 solved False stage 1 (45.1s, 389s elapsed)
+[68/80] arm c checker3 seed 607: cost 10,000,000 solved False stage 1 (45.3s, 393s elapsed)
+[69/80] arm c checker3 seed 608: cost 10,000,000 solved False stage 1 (45.7s, 395s elapsed)
+[70/80] arm c checker3 seed 609: cost 10,000,000 solved False stage 1 (45.8s, 396s elapsed)
+[71/80] arm d checker3 seed 600: cost 10,000,000 solved False stage 1 (45.5s, 403s elapsed)
+[72/80] arm d checker3 seed 601: cost 10,000,000 solved False stage 1 (45.6s, 412s elapsed)
+[73/80] arm d checker3 seed 602: cost 10,000,000 solved False stage 1 (46.3s, 436s elapsed)
+[74/80] arm d checker3 seed 603: cost 10,000,000 solved False stage 1 (45.9s, 439s elapsed)
+[75/80] arm d checker3 seed 604: cost 10,000,000 solved False stage 1 (46.0s, 441s elapsed)
+[76/80] arm d checker3 seed 605: cost 10,000,000 solved False stage 1 (45.9s, 442s elapsed)
+[77/80] arm d checker3 seed 606: cost 10,000,000 solved False stage 1 (43.3s, 446s elapsed)
+[78/80] arm d checker3 seed 607: cost 10,000,000 solved False stage 1 (38.7s, 451s elapsed)
+[79/80] arm d checker3 seed 608: cost 10,000,000 solved False stage 1 (22.9s, 458s elapsed)
+[80/80] arm d checker3 seed 609: cost 10,000,000 solved False stage 1 (20.4s, 459s elapsed)
+{
+ "a": {
+  "solved": 10,
+  "total": 20,
+  "solved_by_problem": {
+   "spirals": 10,
+   "checker3": 0
+  },
+  "median_cost": {
+   "spirals": 1347200.0,
+   "checker3": 10000000.0
+  },
+  "gm_cost": 3670422.3190254336,
+  "reached_full": 20,
+  "cheaper_than_a": 1.0,
+  "more_solved": false,
+  "pass": null
+ },
+ "b": {
+  "solved": 4,
+  "total": 20,
+  "solved_by_problem": {
+   "spirals": 4,
+   "checker3": 0
+  },
+  "median_cost": {
+   "spirals": 10000000.0,
+   "checker3": 10000000.0
+  },
+  "gm_cost": 10000000.000000006,
+  "reached_full": 20,
+  "cheaper_than_a": 0.36704223190254315,
+  "more_solved": false,
+  "pass": false
+ },
+ "c": {
+  "solved": 10,
+  "total": 20,
+  "solved_by_problem": {
+   "spirals": 10,
+   "checker3": 0
+  },
+  "median_cost": {
+   "spirals": 950080.0,
+   "checker3": 10000000.0
+  },
+  "gm_cost": 3082336.775889356,
+  "reached_full": 20,
+  "cheaper_than_a": 1.1907921119250169,
+  "more_solved": false,
+  "pass": false
+ },
+ "d": {
+  "solved": 0,
+  "total": 20,
+  "solved_by_problem": {
+   "spirals": 0,
+   "checker3": 0
+  },
+  "median_cost": {
+   "spirals": 10000000.0,
+   "checker3": 10000000.0
+  },
+  "gm_cost": 10000000.000000006,
+  "reached_full": 20,
+  "cheaper_than_a": 0.36704223190254315,
+  "more_solved": false,
+  "pass": null
+ },
+ "checks": {
+  "a_fails": 10,
+  "a_impasse": true,
+  "c_reached_full": 20,
+  "c_traversed": true
+ }
+}

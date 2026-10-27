@@ -21,9 +21,29 @@ about large AI systems.
 
 ## Latest update: 27 October 2026
 
-**At a glance: 227 pre-registered predictions, 99 passed, 121 failed, 0 awaiting results** (7 more were voided or not applicable).
+**At a glance: 231 pre-registered predictions, 99 passed, 125 failed, 0 awaiting results** (7 more were voided or not applicable).
 Every success rule is written down *before* an experiment runs, and every failure is kept and
 reported next to the successes.
+
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="curious-net/results/figures/vi_x68_stones_dark.png">
+  <img alt="Bar chart of runs solved out of 20 within a budget of 10,000,000: direct 10, fixed ramp 4, self-paced ramp 10 (highlighted), mixed stages 0. Spirals were solved in 10 of 10 runs by the direct and self-paced arms; the checkerboard was solved in none of the 40 ramp runs." src="curious-net/results/figures/vi_x68_stones_light.png" width="900">
+</picture>
+
+<details><summary>Data behind the chart (experiment X6.8, 10 runs per problem per arm)</summary>
+
+| Approach | Solved (of 20) | Spirals | Checkerboard |
+|---|---|---|---|
+| Direct: the full problem only | 10 | 10/10 (median cost 1,347,200) | 0/10 |
+| Fixed ramp: easy stages on a timer | 4 | 4/10 | 0/10 |
+| Self-paced ramp: advance when the stage is solved | 10 | 10/10 (median cost 950,080, from 508k to 6.0M) | 0/10 |
+| Mixed: all stages at once | 0 | 0/10 | 0/10 |
+
+Every stage's cost is counted. The easier versions were a quarter turn growing to 1.6 turns for the
+spirals, and a 2x2 grid then 3x3 for the checkerboard. None of the three stepping-stone arms met the
+registered pass rule (more runs solved, or 1.5x cheaper).
+
+</details>
 
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="curious-net/results/figures/vi_x67_nograder_dark.png">
@@ -111,12 +131,13 @@ The food-only learner is tuned on food, its own objective; with default settings
 </details>
 
 - **Finished this week:** the first experiments on the "good or bad *for me*" question (X0.1,
-  X0.1b, X0.6, X0.7); a repair of the evolution benchmark (X6.5), which corrected an earlier, more
-  flattering number; and two tests of how nature could have searched before gradient descent: its
-  search tricks did not improve themselves (X6.6), but selection with no grader at all does work,
-  at about 26 times the cost of ranking (X6.7). The main result on "for me": what decides whether a
-  simulated creature survives is whether it attends to *all* its needs (X0.7).
-- **Next:** X6.8, do stepping stones reach problems that are too hard to reach directly?
+  X0.1b, X0.6, X0.7), and a four-part test of how nature could have searched before gradient
+  descent (X6.5 to X6.8): a repaired benchmark, search tricks that did not improve themselves,
+  selection with no grader at all (it works, at about 26 times the cost of ranking), and stepping
+  stones (they did not help). The main result on "for me": what decides whether a simulated creature
+  survives is whether it attends to *all* its needs (X0.7).
+- **Next:** growth by copying parts of the learner (the one thing that helped, in X6.6), and
+  tuning the search from outside.
 
 ## What has been found so far
 

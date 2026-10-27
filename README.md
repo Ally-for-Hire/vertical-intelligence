@@ -21,9 +21,33 @@ about large AI systems.
 
 ## Latest update: 27 October 2026
 
-**At a glance: 246 pre-registered predictions, 107 passed, 131 failed, 0 awaiting results** (8 more were voided or not applicable).
+**At a glance: 250 pre-registered predictions, 111 passed, 131 failed, 0 awaiting results** (8 more were voided or not applicable).
 Every success rule is written down *before* an experiment runs, and every failure is kept and
 reported next to the successes.
+
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="curious-net/results/figures/vi_x12_optimism_dark.png">
+  <img alt="Horizontal bars on a log scale of ticks to learn a newly opened learnable region: perfect learner 16, learning progress with optimism 16 (highlighted, 53 percent of the time in the traps), seeking surprise with optimism 17 (96 percent in the traps), random 58, plain learning progress 336, minimizing surprise 575, plain seeking surprise 578." src="curious-net/results/figures/vi_x12_optimism_light.png" width="900">
+</picture>
+
+<details><summary>Data behind the chart (experiment X1.2, median of 48 worlds)</summary>
+
+| Drive | Ticks to learn the newly opened region | Time in the dark room or the noise (first half) |
+|---|---|---|
+| Perfect learner (ceiling) | 16 | rests in the dark room once everything is learned |
+| **Learning progress + optimism** | **16** | **53%** |
+| Seek surprise + optimism | 17 | 96% |
+| Choose at random | 58.5 | 66% |
+| Learning progress (plain) | 336.5 | 53% |
+| Minimize surprise | 575 | 97% |
+| Seek surprise (plain) | 577.5 | 95% |
+
+An untried region starts at the best reward the drive could pay (nothing tuned). Learning progress
+with that start finds a newly opened learnable region as fast as a perfect learner and still avoids
+the traps; seeking surprise finds it just as fast and then camps in the noise. Optimism governs
+*finding* new things; the drive governs where you *stay*.
+
+</details>
 
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="curious-net/results/figures/vi_x11_dark_room_dark.png">
@@ -208,7 +232,11 @@ The food-only learner is tuned on food, its own objective; with default settings
 - **Also finished:** the "dark room" test of the author's theorem that the drive is not uncertainty
   reduction (X1.1): a drive that minimizes surprise sits in a perfectly predictable room, one that
   seeks surprise gets stuck on noise, and one that chases learning progress avoids both.
-- **Next:** adding optimism about untried regions to learning progress (X1.2), the gap X1.1 exposed.
+- **Also finished:** adding optimism about untried regions to learning progress (X1.2) fixed the slow
+  discovery X1.1 exposed: stay where the error is falling, move on when it stops, and try what you
+  have not tried.
+- **Next:** open. The sequenced experiments and their follow-ups are complete; the author chooses the
+  next direction (candidates are listed in the research notebook's inbox).
 
 ## What has been found so far
 

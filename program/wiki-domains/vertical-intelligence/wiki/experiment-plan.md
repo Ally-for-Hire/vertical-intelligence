@@ -257,3 +257,9 @@ halfway), 48 worlds. P244, P245, P246, P248 PASSED; P247 FAILED. Surprise minimi
 room (93%), error-seeking in the noise (92%), learning progress avoids both but is 6x slower than random at
 finding the new learnable region. Next: X1.2 (learning progress plus optimism toward under-visited regions).
 X0.4 (U16) is deferred: as planned it is tautological.
+
+**X1.2 result (2026-10-27): DONE; all four predictions passed (expected confirmations of a derived fix).**
+Learning progress with an optimistic start (untried regions start at the largest reward the drive can pay)
+learns a newly opened region in 16 ticks vs 336 for plain learning progress and 58.5 for random, keeping the
+trap avoidance; error-seeking with the same start still camps in the noise (91%). The sequenced and diagnosed
+work is complete; the next choice of direction is the author's.

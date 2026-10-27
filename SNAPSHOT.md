@@ -4,11 +4,11 @@ Refreshed 2026-10-27 by `python tools/sync.py` from the canonical local repos (e
 
 | Folder here | Source | Source commit | Uncommitted files in source | New | Updated |
 |---|---|---|---|---|---|
-| `curious-net/` | curious-net | `df5722a` | 8 | 6 | 5 |
+| `curious-net/` | curious-net | `f92599f` | 8 | 5 | 6 |
 | `neuroblock-research/` | neuroblock-research | `5208c49` | 412 | 0 | 0 |
-| `program/wiki-domains/vertical-intelligence/` | Knowledge-Wiki/domains/vertical-intelligence | `d76ad12` | 0 | 0 | 3 |
-| `program/wiki-domains/curious-net/` | Knowledge-Wiki/domains/curious-net | `d76ad12` | 0 | 0 | 0 |
-| `program/wiki-domains/neuroblock-research/` | Knowledge-Wiki/domains/neuroblock-research | `d76ad12` | 0 | 0 | 0 |
+| `program/wiki-domains/vertical-intelligence/` | Knowledge-Wiki/domains/vertical-intelligence | `f62575f` | 0 | 0 | 3 |
+| `program/wiki-domains/curious-net/` | Knowledge-Wiki/domains/curious-net | `f62575f` | 0 | 0 | 0 |
+| `program/wiki-domains/neuroblock-research/` | Knowledge-Wiki/domains/neuroblock-research | `f62575f` | 0 | 0 | 0 |
 
 Uncommitted files are copied as they were on disk; runs that were live may be partial.
 Excluded: .err, .out, .pt, .pyc, .tmp files and __pycache__, data, wandb/ folders, and 2 private draft(s).

@@ -3,7 +3,7 @@ Style follows the dataviz method: one accent hue plus grays for emphasis, thin m
 a title that states the finding, light AND dark variants (GitHub picks by the viewer theme); alt text and
 a data table live in the README.
 
-Usage: python figures.py [x11 | x02 | x06 | x07 | x66 | x67 | x68 | x69 | all]       -> ../results/figures/vi_<name>_{light,dark}.png"""
+Usage: python figures.py [x12 | x11 | x02 | x06 | x07 | x66 | x67 | x68 | x69 | all]       -> ../results/figures/vi_<name>_{light,dark}.png"""
 import json, os, sys
 import matplotlib
 matplotlib.use("Agg")
@@ -286,7 +286,33 @@ def fig_x11(theme):
     return _save(fig, "x11_dark_room", theme)
 
 
-FIGS = {"x11": fig_x11, "x02": fig_x02, "x06": fig_x06, "x07": fig_x07, "x66": fig_x66, "x67": fig_x67, "x68": fig_x68, "x69": fig_x69}
+def fig_x12(theme):
+    S = json.load(open(os.path.join(RES, "x1_2_run.json")))["summary"]
+    names = {"ORACLE": "Perfect learner (ceiling)", "LPO": "Learning progress + optimism", "NOVO": "Seek surprise + optimism", "RANDOM": "Choose at random",
+             "LP": "Learning progress (plain)", "UR": "Minimize surprise", "NOV": "Seek surprise (plain)"}
+    order = sorted(names, key=lambda k: S["t_l2"][k]); t = THEMES[theme]
+    fig, ax = plt.subplots(figsize=(10.4, 5.0), dpi=200)
+    fig.patch.set_facecolor(t["surface"]); ax.set_facecolor(t["surface"])
+    fig.subplots_adjust(left=0.27, right=0.97, top=0.76, bottom=0.14)
+    n = len(order); lo, hi = 5.0, 40000.0
+    ax.set_xscale("log"); ax.set_xlim(lo, hi); ax.set_ylim(-0.6, n - 0.4); ax.set_yticks([]); ax.set_xticks([10, 100, 1000]); ax.set_xticklabels(["10", "100", "1,000"]); ax.minorticks_off()
+    for i, k in enumerate(order):
+        y = n - 1 - i; v = S["t_l2"][k]; hl = k == "LPO"
+        ax.barh(y, v - lo, left=lo, height=0.4, color=t["accent"] if hl else t["gray"], linewidth=0)
+        ax.text(lo * 0.9, y, names[k], ha="right", va="center", fontsize=9.8, color=t["ink"] if hl else t["ink2"], fontweight="bold" if hl else "normal", clip_on=False)
+        trap = 100 * S["trap_a"][k]
+        ax.text(v * 1.15, y, (f"{v:,.0f} ticks (rests in the dark room once everything is learned)" if k == "ORACLE" else f"{v:,.0f} ticks · {trap:.0f}% of the time in the traps"), ha="left", va="center", fontsize=8.8, color=t["ink"] if hl else t["ink2"], fontweight="bold" if hl else "normal", zorder=5, bbox=dict(facecolor=t["surface"], edgecolor="none", pad=1.5))
+    ax.tick_params(axis="x", colors=t["ink2"], labelsize=8.5, length=0); ax.xaxis.grid(True, color=t["grid"], lw=0.8); ax.set_axisbelow(True)
+    for sp in ("top", "right", "left", "bottom"):
+        ax.spines[sp].set_visible(False)
+    fig.text(0.03, 0.935, f"An optimistic start fixes learning progress: {S['t_l2']['LP'] / S['t_l2']['LPO']:.0f}× faster at finding a new thing to learn", fontsize=13.5, fontweight="bold", color=t["ink"], ha="left")
+    fig.text(0.03, 0.875, "Untried regions start at the best reward the drive could pay, with nothing tuned; the trap avoidance is kept.", fontsize=10, color=t["ink2"], ha="left")
+    fig.text(0.03, 0.84, "Ticks to learn a newly opened learnable region (median of 48 worlds, log scale; lower is better) and time spent in the traps.", fontsize=9, color=t["ink2"], ha="left")
+    fig.text(0.97, 0.025, "experiment X1.2 · toy world · traps = the perfectly predictable dark room and the unlearnable noise, first half of the run", fontsize=7.6, color=t["ink2"], ha="right")
+    return _save(fig, "x12_optimism", theme)
+
+
+FIGS = {"x12": fig_x12, "x11": fig_x11, "x02": fig_x02, "x06": fig_x06, "x07": fig_x07, "x66": fig_x66, "x67": fig_x67, "x68": fig_x68, "x69": fig_x69}
 
 if __name__ == "__main__":
     which = sys.argv[1] if len(sys.argv) > 1 else "all"

@@ -115,6 +115,14 @@ principles in miniature, not facts about brains or LLMs. Ids point to `curious-n
     (389 vs 65 ticks): an unvisited region has no value and a one-shot learner shows no progress until a
     first pass is done, so it needs optimism toward untried regions. Supports U12 and Q9 (the edge is
     where error is falling) and bears on protocol s7 item 8; the learning-progress drive alone is not enough.
+  - **X1.2 (2026-10-27, 48 fresh worlds; P249-P252): an optimistic start is the missing ingredient for
+    learning progress.** Untried regions start at the largest reward the drive can pay (1.0, derived, not
+    tuned). Learning progress with optimism found and learned the newly opened region in 16 ticks (plain
+    learning progress 336, random 58.5, the perfect learner 16) while keeping the trap avoidance (53% of
+    the first half in the dark room or noise vs 95 to 97%). It does not rescue error-seeking: that drive
+    finds the new region in 17 ticks and then camps in the noise (91%): optimism governs FINDING, the drive
+    governs where the agent STAYS. Together: stay where the error is falling, move on when it stops, try
+    what you have not tried (the toy form of Q9 and of 'curiosity is part of the answer, not the answer').
   - NeuroBlock's "always try to expand" drive did nothing: 25 expansions per run, no gain
     (sweep, contradicts). A drive with no signal of where growth pays is noise.
 - **Disconnect:** gradient descent has no drive. It learns whatever the loss demands, cannot

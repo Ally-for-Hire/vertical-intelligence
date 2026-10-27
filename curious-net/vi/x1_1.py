@@ -22,7 +22,7 @@ sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 from constants import C
 import x0_1 as X
 
-ARMS = ("UR", "NOV", "LP", "ORACLE", "RANDOM")
+ARMS = ("UR", "NOV", "LP", "ORACLE", "RANDOM", "LPO", "NOVO")      # LPO / NOVO = LP / NOV with an OPTIMISTIC start (X1.2); new arms are appended so the old arms keep their random streams
 DARK, NOISE, L1, L2 = 0, 1, 2, 3
 OUT = X.OUT
 
@@ -41,8 +41,11 @@ def run(seed, arm):
     table = {r: ra.integers(0, S, S) for r in range(4)}             # each arm's own initial guesses
     prev = {r: 0 for r in range(4)}; v = np.zeros(4); fast = np.full(4, 1 - 1 / S); slow = np.full(4, 1 - 1 / S)
     acc = lambda r: float((table[r] == f[r]).mean())
+    opt = arm in ("LPO", "NOVO")
+    if opt: v[[DARK, NOISE, L1]] = C("opt_value")                      # untried regions start at the largest reward the drive can pay
     visits = np.zeros((T, 4), bool); errs = np.zeros((T, 4)); acc1_half = 0.0; t_l2 = None; err_hist = {r: [] for r in range(4)}
     for t in range(T):
+        if opt and t == half: v[L2] = C("opt_value")
         avail = [DARK, NOISE, L1] + ([L2] if t >= half else [])
         if arm == "RANDOM" or ra.random() < C("d_eps"):
             r = int(ra.choice(avail))
@@ -53,7 +56,7 @@ def run(seed, arm):
         nxt = 0 if r == DARK else int(ra.integers(0, S)) if r == NOISE else int(f[r][prev[r]])
         err = float(table[r][prev[r]] != nxt); table[r][prev[r]] = nxt; prev[r] = nxt
         fast[r] += C("lp_fast") * (err - fast[r]); slow[r] += C("lp_slow") * (err - slow[r])
-        rew = -err if arm == "UR" else err if arm == "NOV" else (slow[r] - fast[r])
+        rew = -err if arm == "UR" else err if arm in ("NOV", "NOVO") else (slow[r] - fast[r])
         v[r] += C("d_alpha") * (rew - v[r])
         visits[t, r] = True; err_hist[r].append(err)
         if t == half - 1: acc1_half = acc(L1)

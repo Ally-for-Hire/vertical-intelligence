@@ -137,6 +137,11 @@ _r("d_acc", 0.95, "ARBITRARY", "x1_1", "accuracy of the learned next-symbol tabl
 _r("x11_seed0", 83000, "USER", "x1_1", "fresh seed block for the X1.1 scored run")
 _r("x11_check_seed", 84000, "USER", "x1_1", "seed for bug checks (not scored)")
 
+# ---- experiment X1.2 (learning progress + optimism toward the untried) -------------------------------------------
+_r("opt_value", 1.0, "DERIVED", "x1_2", "optimistic starting value of an untried region = the largest reward the drive can pay (the prediction error is in [0, 1])")
+_r("x12_seed0", 85000, "USER", "x1_2", "fresh seed block for the X1.2 scored run")
+_r("x12_check_seed", 86000, "USER", "x1_2", "seed for bug checks (not scored)")
+
 
 def C(name):
     return REG[name]["value"]

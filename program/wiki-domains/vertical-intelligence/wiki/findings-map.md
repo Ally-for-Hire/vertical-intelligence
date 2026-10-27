@@ -65,6 +65,7 @@ principles in miniature, not facts about brains or LLMs. Ids point to `curious-n
     supplies it by evolved interoceptive signals; the next candidate with no setpoint and no
     weights is the margin of the weakest essential variable (X0.7), which also formalises "no
     part left behind" (U10) and the neglected part's warning (U16).
+  - **[FLAGGED: NEEDS MORE STUDY (author, 2026-10-27); see the inbox list and I9]**
   - **X0.7 (2026-10-27, 48 worlds per world type; P214-P219):** a **weakest-link margin** (reward =
     change in the lowest essential variable; no setpoints, no weights, only that 0 means death)
     gives what X0.6 lacked, a graded warning: it beats the viability learned from deaths (2.0 vs 18.7

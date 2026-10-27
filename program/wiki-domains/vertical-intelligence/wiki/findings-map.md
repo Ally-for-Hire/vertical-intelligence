@@ -200,6 +200,14 @@ principles in miniature, not facts about brains or LLMs. Ids point to `curious-n
     lineages, and refilling from random always stayed at baseline (selfscore series, closed).
   - Selection math: Price identity exact (C1, not novel); interior optimum cull 75-95% under
     noisy scoring (C4); the multi-generation law was refuted (C5).
+  - **X6.6 (2026-10-27, 70 runs per arm, budget 1e7; P220-P224):** nature's variation machinery
+    does **not** evolve itself here. Three blind, heritable mechanisms (a direction gene, a
+    recombination gene, a duplication gene) were each tried alone and together; **no arm passed**
+    (pass = as many solved and 1.25x cheaper) and the genes drifted without detectable direction
+    (sign tests p = 0.19, 0.72, 0.47); the one that moved significantly, momentum, was selected
+    AGAINST (p = 0.0035). The one benefit: unit duplication solved spirals 1.7x faster and grew the
+    nets to width 28, with a gene that did not evolve, so the capacity to grow helps but its rate
+    was not evolved. Unparks meta-evolution from outside (I8) and a fixed-rate duplication test (I10).
 - **Reading (assistant):** randomness *with selection* can build what randomness alone cannot.
   Blind variation is far less efficient than gradient, and score-ranked selection destroys
   depth and diversity. This sharpens U6: randomness used well must be **aimed**, not blind.

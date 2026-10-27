@@ -141,6 +141,14 @@ time, after X0.7 finishes.
 
 **X6.5 result (2026-10-27): DONE, parity PASSED.** 60/70 solved for both settings (was 58 and 59); all 10 unsolved are checker3. Geometric mean 0.60x default Adam / 11.2x tuned for the best (90% cull), 0.87x / 16.2x for the 80% cull. Series 3's 0.51x / 9.4x is superseded. All 58 and 59 runs solved under 3e6 reproduced bit-identically. Next in order: X6.6.
 
+**X6.6 result (2026-10-27): DONE; no arm passed.** Judge seeds 400-409, 70 runs per arm: solved a 60,
+b 51, c 60, d 60, e 57; cost vs (a): b 0.79x, c 1.07x, d 1.22x, e 1.07x (pass line 1.25x). The
+manipulation check failed for every arm (genes not under selection at p < 0.01; only m in (e)
+moved significantly, downward), so b, c, d and e are VOID. Duplication (d) still solved spirals 1.7x
+faster with nets growing to width 28: the capacity helps, its evolved rate did not. No confirmation
+run (nothing passed). Next in order: X6.7. Follow-ups parked in [[inbox]]: I8 (meta-evolution from
+outside, now unparked) and I10 (fixed-rate duplication).
+
 Parked, I8: a meta-evolution of the optimizer's settings (an outer population culled on suite
 speed). Worth testing if X6.6 shows the machinery cannot evolve from inside; cost 2-4 h GPU
 (over budget, ask first).

@@ -16,7 +16,7 @@ Statuses: `new` (unprocessed), `intaken` (captured, readings written), `register
 P-number, may run), `running`, `done` (verdict + confidence letter recorded, see id), `parked`
 (with the condition that unparks it), `declined` (with reason; user may overrule).
 
-**Next up:** EMG-1 = X6.6 (can the variation machinery evolve itself), then X6.7, X6.8 ([[experiment-plan]] section 6; user sequencing 2026-10-27). Done: X0.1, X0.1b, X0.6, X0.7 ([[findings-map]] s0) and X6.5 (benchmark repaired). Open user calls: protocol s7 items 1, 6, 7, 8.
+**Next up:** EMG-2 = X6.7 (selection with no grader), then X6.8 ([[experiment-plan]] section 6). Done: X0.1, X0.1b, X0.6, X0.7, X6.5, X6.6. X6.6 unparked I8 and added I10. Open user calls: protocol s7 items 1, 6, 7, 8.
 P-draft 1 (U3) waits for the user to confirm the
 definition of vertical intelligence. Open user calls: protocol s7 items 1, 6, 7.
 
@@ -85,8 +85,9 @@ definition of vertical intelligence. Open user calls: protocol s7 items 1, 6, 7.
 | I5 | 2026-10-26 | Spontaneous thought (the user's 'part that keeps going', U8): the learner idles between tasks, generating its own internal simulations (structured noise run through its world model), and keeps whatever improves the model (default-mode / replay analogue) | U6, U8 | P-draft 7 shows directed variation beats undirected | days | parked |
 | I4 | 2026-10-26 | Rocks to sensors to thinkers: a toy open-ended world with only replication, energy cost and random variation (nothing designed in). Does sensing appear, then prediction? | U1, Q4 | artificial-life prior art (Tierra, Avida [u]) is read and a world small enough for CPU is found | weeks | parked |
 | I9 | 2026-10-27 | How does the aggregation of needs (sum, setpoints, weakest link) scale with MANY essential variables of different scales and rates? X0.7 had two; with equal weights a sum breaks when units differ, a weakest-link margin needs normalised ranges | U10, U16, Q10 | the user wants the 'no part left behind' line extended | days | parked |
+| I10 | 2026-10-27 | Fixed-rate unit duplication with no gene: does the capacity to grow (spare slots, function-preserving copy) cut the cost on spirals-like impasse problems, at a few fixed rates, vs the plain optimizer? X6.6 showed 1.7x on spirals with a gene that did not evolve | U6, U1 | after X6.7/X6.8, or earlier if the user wants growth examined | 30 min GPU | parked |
 | I6 | 2026-10-26 | Local learning rule from the user's guess: connections with strength, cost and length, changed only when used (no global update touching unused weights) | U13, U5 | after the Q10 literature map; compare with C41 wiring budget and C51 three-factor rule | days | parked |
-| I8 | 2026-10-27 | Meta-evolution of the emergent optimizer's settings (outer population of random settings culled on suite speed) | U1, U6 | X6.6 shows the variation machinery cannot evolve from inside | 2-4 h GPU (ask first) | parked |
+| I8 (UNPARKED 2026-10-27: X6.6 showed the machinery cannot evolve from inside) | 2026-10-27 | Meta-evolution of the emergent optimizer's settings (outer population of random settings culled on suite speed) | U1, U6 | X6.6 shows the variation machinery cannot evolve from inside | 2-4 h GPU (ask first) | parked |
 | I7 | 2026-10-26 | Fed curiosity drives varied experience, which keeps a wider set of connections through pruning, so each new problem has more to connect to (offered as U-candidate; user did not confirm) | U13, C43 | the user confirms it as a theorem | days | parked |
 
 ## Processed / declined

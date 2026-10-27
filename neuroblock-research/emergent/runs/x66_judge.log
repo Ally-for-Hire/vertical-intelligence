@@ -1,0 +1,512 @@
+350 runs, 6 workers, budget 1e+07
+[1/350] arm a spirals seed 400: cost 1,153,920 solved True (6.2s, 10s elapsed)
+[2/350] arm a spirals seed 401: cost 1,682,560 solved True (8.8s, 13s elapsed)
+[3/350] arm a spirals seed 402: cost 1,441,920 solved True (7.3s, 13s elapsed)
+[4/350] arm a spirals seed 403: cost 2,649,600 solved True (12.5s, 17s elapsed)
+[5/350] arm a spirals seed 404: cost 1,248,640 solved True (6.6s, 17s elapsed)
+[6/350] arm a spirals seed 405: cost 1,479,680 solved True (7.6s, 17s elapsed)
+[7/350] arm a spirals seed 406: cost 1,846,400 solved True (8.2s, 19s elapsed)
+[8/350] arm a spirals seed 407: cost 1,610,240 solved True (7.2s, 19s elapsed)
+[9/350] arm a spirals seed 408: cost 3,846,400 solved True (17.5s, 29s elapsed)
+[10/350] arm a spirals seed 409: cost 2,033,920 solved True (9.1s, 29s elapsed)
+[11/350] arm b spirals seed 400: cost 10,000,000 solved False (55.7s, 69s elapsed)
+[12/350] arm b spirals seed 401: cost 10,000,000 solved False (55.5s, 72s elapsed)
+[13/350] arm b spirals seed 402: cost 10,000,000 solved False (55.3s, 73s elapsed)
+[14/350] arm b spirals seed 403: cost 5,947,520 solved True (33.2s, 73s elapsed)
+[15/350] arm b spirals seed 404: cost 10,000,000 solved False (56.0s, 77s elapsed)
+[16/350] arm b spirals seed 405: cost 10,000,000 solved False (56.3s, 85s elapsed)
+[17/350] arm b spirals seed 406: cost 10,000,000 solved False (56.2s, 108s elapsed)
+[18/350] arm b spirals seed 407: cost 10,000,000 solved False (55.9s, 124s elapsed)
+[19/350] arm b spirals seed 408: cost 10,000,000 solved False (55.7s, 128s elapsed)
+[20/350] arm b spirals seed 409: cost 10,000,000 solved False (56.2s, 130s elapsed)
+[21/350] arm c spirals seed 400: cost 1,307,520 solved True (7.2s, 130s elapsed)
+[22/350] arm c spirals seed 401: cost 1,602,560 solved True (9.2s, 130s elapsed)
+[23/350] arm c spirals seed 402: cost 846,080 solved True (4.8s, 130s elapsed)
+[24/350] arm c spirals seed 403: cost 1,070,080 solved True (6.0s, 130s elapsed)
+[25/350] arm c spirals seed 404: cost 1,302,400 solved True (7.6s, 130s elapsed)
+[26/350] arm c spirals seed 405: cost 1,422,720 solved True (8.1s, 130s elapsed)
+[27/350] arm c spirals seed 406: cost 935,680 solved True (5.3s, 130s elapsed)
+[28/350] arm c spirals seed 407: cost 778,240 solved True (4.3s, 130s elapsed)
+[29/350] arm c spirals seed 408: cost 936,960 solved True (5.1s, 130s elapsed)
+[30/350] arm c spirals seed 409: cost 867,840 solved True (5.1s, 130s elapsed)
+[31/350] arm d spirals seed 400: cost 809,600 solved True (5.9s, 130s elapsed)
+[32/350] arm d spirals seed 401: cost 866,560 solved True (6.5s, 130s elapsed)
+[33/350] arm d spirals seed 402: cost 999,680 solved True (7.0s, 130s elapsed)
+[34/350] arm d spirals seed 403: cost 1,515,520 solved True (10.4s, 130s elapsed)
+[35/350] arm d spirals seed 404: cost 1,242,880 solved True (8.7s, 130s elapsed)
+[36/350] arm d spirals seed 405: cost 481,280 solved True (3.7s, 130s elapsed)
+[37/350] arm d spirals seed 406: cost 1,888,640 solved True (13.3s, 137s elapsed)
+[38/350] arm d spirals seed 407: cost 929,920 solved True (6.8s, 137s elapsed)
+[39/350] arm d spirals seed 408: cost 999,680 solved True (6.9s, 137s elapsed)
+[40/350] arm d spirals seed 409: cost 844,800 solved True (5.8s, 137s elapsed)
+[41/350] arm e spirals seed 400: cost 10,000,000 solved False (91.9s, 220s elapsed)
+[42/350] arm e spirals seed 401: cost 2,887,040 solved True (27.4s, 220s elapsed)
+[43/350] arm e spirals seed 402: cost 10,000,000 solved False (91.4s, 223s elapsed)
+[44/350] arm e spirals seed 403: cost 1,872,640 solved True (17.5s, 223s elapsed)
+[45/350] arm e spirals seed 404: cost 481,920 solved True (4.4s, 223s elapsed)
+[46/350] arm e spirals seed 405: cost 3,606,400 solved True (33.3s, 223s elapsed)
+[47/350] arm e spirals seed 406: cost 1,686,400 solved True (15.5s, 223s elapsed)
+[48/350] arm e spirals seed 407: cost 10,000,000 solved False (90.4s, 239s elapsed)
+[49/350] arm e spirals seed 408: cost 1,903,360 solved True (17.5s, 240s elapsed)
+[50/350] arm e spirals seed 409: cost 667,520 solved True (6.2s, 240s elapsed)
+[51/350] arm a checker3 seed 400: cost 10,000,000 solved False (47.5s, 240s elapsed)
+[52/350] arm a checker3 seed 401: cost 10,000,000 solved False (48.5s, 240s elapsed)
+[53/350] arm a checker3 seed 402: cost 10,000,000 solved False (47.9s, 240s elapsed)
+[54/350] arm a checker3 seed 403: cost 10,000,000 solved False (47.3s, 258s elapsed)
+[55/350] arm a checker3 seed 404: cost 10,000,000 solved False (46.7s, 265s elapsed)
+[56/350] arm a checker3 seed 405: cost 10,000,000 solved False (47.2s, 266s elapsed)
+[57/350] arm a checker3 seed 406: cost 10,000,000 solved False (47.2s, 267s elapsed)
+[58/350] arm a checker3 seed 407: cost 10,000,000 solved False (46.5s, 269s elapsed)
+[59/350] arm a checker3 seed 408: cost 10,000,000 solved False (47.4s, 287s elapsed)
+[60/350] arm a checker3 seed 409: cost 10,000,000 solved False (46.6s, 305s elapsed)
+[61/350] arm b checker3 seed 400: cost 10,000,000 solved False (56.0s, 321s elapsed)
+[62/350] arm b checker3 seed 401: cost 10,000,000 solved False (56.6s, 322s elapsed)
+[63/350] arm b checker3 seed 402: cost 10,000,000 solved False (56.9s, 324s elapsed)
+[64/350] arm b checker3 seed 403: cost 10,000,000 solved False (56.1s, 325s elapsed)
+[65/350] arm b checker3 seed 404: cost 10,000,000 solved False (56.6s, 343s elapsed)
+[66/350] arm b checker3 seed 405: cost 10,000,000 solved False (55.7s, 360s elapsed)
+[67/350] arm b checker3 seed 406: cost 10,000,000 solved False (56.4s, 377s elapsed)
+[68/350] arm b checker3 seed 407: cost 10,000,000 solved False (56.3s, 379s elapsed)
+[69/350] arm b checker3 seed 408: cost 10,000,000 solved False (56.3s, 380s elapsed)
+[70/350] arm b checker3 seed 409: cost 10,000,000 solved False (56.4s, 382s elapsed)
+[71/350] arm c checker3 seed 400: cost 10,000,000 solved False (56.9s, 400s elapsed)
+[72/350] arm c checker3 seed 401: cost 10,000,000 solved False (57.4s, 418s elapsed)
+[73/350] arm c checker3 seed 402: cost 10,000,000 solved False (57.5s, 435s elapsed)
+[74/350] arm c checker3 seed 403: cost 10,000,000 solved False (58.2s, 437s elapsed)
+[75/350] arm c checker3 seed 404: cost 10,000,000 solved False (57.6s, 438s elapsed)
+[76/350] arm c checker3 seed 405: cost 10,000,000 solved False (57.3s, 439s elapsed)
+[77/350] arm c checker3 seed 406: cost 10,000,000 solved False (57.2s, 458s elapsed)
+[78/350] arm c checker3 seed 407: cost 10,000,000 solved False (58.0s, 476s elapsed)
+[79/350] arm c checker3 seed 408: cost 10,000,000 solved False (58.7s, 493s elapsed)
+[80/350] arm c checker3 seed 409: cost 10,000,000 solved False (59.1s, 496s elapsed)
+[81/350] arm d checker3 seed 400: cost 10,000,000 solved False (71.5s, 509s elapsed)
+[82/350] arm d checker3 seed 401: cost 10,000,000 solved False (70.4s, 510s elapsed)
+[83/350] arm d checker3 seed 402: cost 10,000,000 solved False (71.3s, 529s elapsed)
+[84/350] arm d checker3 seed 403: cost 10,000,000 solved False (71.2s, 547s elapsed)
+[85/350] arm d checker3 seed 404: cost 10,000,000 solved False (72.2s, 566s elapsed)
+[86/350] arm d checker3 seed 405: cost 10,000,000 solved False (72.1s, 568s elapsed)
+[87/350] arm d checker3 seed 406: cost 10,000,000 solved False (72.4s, 582s elapsed)
+[88/350] arm d checker3 seed 407: cost 10,000,000 solved False (71.5s, 582s elapsed)
+[89/350] arm d checker3 seed 408: cost 10,000,000 solved False (71.6s, 601s elapsed)
+[90/350] arm d checker3 seed 409: cost 10,000,000 solved False (72.8s, 620s elapsed)
+[91/350] arm e checker3 seed 400: cost 10,000,000 solved False (91.9s, 658s elapsed)
+[92/350] arm e checker3 seed 401: cost 10,000,000 solved False (92.0s, 660s elapsed)
+[93/350] arm e checker3 seed 402: cost 10,000,000 solved False (93.1s, 674s elapsed)
+[94/350] arm e checker3 seed 403: cost 10,000,000 solved False (93.7s, 675s elapsed)
+[95/350] arm e checker3 seed 404: cost 10,000,000 solved False (94.0s, 695s elapsed)
+[96/350] arm e checker3 seed 405: cost 10,000,000 solved False (94.2s, 714s elapsed)
+[97/350] arm e checker3 seed 406: cost 10,000,000 solved False (93.3s, 751s elapsed)
+[98/350] arm e checker3 seed 407: cost 10,000,000 solved False (93.2s, 753s elapsed)
+[99/350] arm e checker3 seed 408: cost 10,000,000 solved False (88.0s, 762s elapsed)
+[100/350] arm e checker3 seed 409: cost 10,000,000 solved False (87.8s, 763s elapsed)
+[101/350] arm a parity4 seed 400: cost 20,480 solved True (0.1s, 763s elapsed)
+[102/350] arm a parity4 seed 401: cost 18,560 solved True (0.1s, 763s elapsed)
+[103/350] arm a parity4 seed 402: cost 75,520 solved True (0.4s, 763s elapsed)
+[104/350] arm a parity4 seed 403: cost 138,240 solved True (0.6s, 764s elapsed)
+[105/350] arm a parity4 seed 404: cost 54,400 solved True (0.3s, 764s elapsed)
+[106/350] arm a parity4 seed 405: cost 81,280 solved True (0.4s, 764s elapsed)
+[107/350] arm a parity4 seed 406: cost 78,080 solved True (0.4s, 764s elapsed)
+[108/350] arm a parity4 seed 407: cost 130,560 solved True (0.7s, 764s elapsed)
+[109/350] arm a parity4 seed 408: cost 52,480 solved True (0.3s, 764s elapsed)
+[110/350] arm a parity4 seed 409: cost 35,200 solved True (0.1s, 764s elapsed)
+[111/350] arm b parity4 seed 400: cost 55,040 solved True (0.3s, 764s elapsed)
+[112/350] arm b parity4 seed 401: cost 104,960 solved True (0.7s, 765s elapsed)
+[113/350] arm b parity4 seed 402: cost 108,160 solved True (0.6s, 765s elapsed)
+[114/350] arm b parity4 seed 403: cost 50,560 solved True (0.3s, 765s elapsed)
+[115/350] arm b parity4 seed 404: cost 32,000 solved True (0.2s, 765s elapsed)
+[116/350] arm b parity4 seed 405: cost 39,680 solved True (0.2s, 765s elapsed)
+[117/350] arm b parity4 seed 406: cost 44,160 solved True (0.3s, 765s elapsed)
+[118/350] arm b parity4 seed 407: cost 79,360 solved True (0.4s, 765s elapsed)
+[119/350] arm b parity4 seed 408: cost 165,120 solved True (1.0s, 765s elapsed)
+[120/350] arm b parity4 seed 409: cost 34,560 solved True (0.2s, 765s elapsed)
+[121/350] arm c parity4 seed 400: cost 20,480 solved True (0.1s, 765s elapsed)
+[122/350] arm c parity4 seed 401: cost 64,000 solved True (0.4s, 766s elapsed)
+[123/350] arm c parity4 seed 402: cost 178,560 solved True (1.1s, 766s elapsed)
+[124/350] arm c parity4 seed 403: cost 165,120 solved True (1.0s, 766s elapsed)
+[125/350] arm c parity4 seed 404: cost 59,520 solved True (0.4s, 766s elapsed)
+[126/350] arm c parity4 seed 405: cost 89,600 solved True (0.5s, 766s elapsed)
+[127/350] arm c parity4 seed 406: cost 90,880 solved True (0.5s, 766s elapsed)
+[128/350] arm c parity4 seed 407: cost 103,040 solved True (0.6s, 766s elapsed)
+[129/350] arm c parity4 seed 408: cost 32,000 solved True (0.2s, 766s elapsed)
+[130/350] arm c parity4 seed 409: cost 38,400 solved True (0.2s, 766s elapsed)
+[131/350] arm d parity4 seed 400: cost 142,720 solved True (1.1s, 767s elapsed)
+[132/350] arm d parity4 seed 401: cost 140,800 solved True (1.1s, 767s elapsed)
+[133/350] arm d parity4 seed 402: cost 64,000 solved True (0.5s, 767s elapsed)
+[134/350] arm d parity4 seed 403: cost 32,640 solved True (0.3s, 767s elapsed)
+[135/350] arm d parity4 seed 404: cost 23,680 solved True (0.2s, 767s elapsed)
+[136/350] arm d parity4 seed 405: cost 48,000 solved True (0.3s, 767s elapsed)
+[137/350] arm d parity4 seed 406: cost 36,480 solved True (0.3s, 767s elapsed)
+[138/350] arm d parity4 seed 407: cost 45,440 solved True (0.5s, 767s elapsed)
+[139/350] arm d parity4 seed 408: cost 96,640 solved True (0.7s, 767s elapsed)
+[140/350] arm d parity4 seed 409: cost 61,440 solved True (0.5s, 767s elapsed)
+[141/350] arm e parity4 seed 400: cost 39,040 solved True (0.5s, 768s elapsed)
+[142/350] arm e parity4 seed 401: cost 28,160 solved True (0.4s, 768s elapsed)
+[143/350] arm e parity4 seed 402: cost 35,200 solved True (0.4s, 768s elapsed)
+[144/350] arm e parity4 seed 403: cost 80,640 solved True (0.8s, 768s elapsed)
+[145/350] arm e parity4 seed 404: cost 16,000 solved True (0.2s, 768s elapsed)
+[146/350] arm e parity4 seed 405: cost 56,960 solved True (0.7s, 768s elapsed)
+[147/350] arm e parity4 seed 406: cost 40,960 solved True (0.4s, 768s elapsed)
+[148/350] arm e parity4 seed 407: cost 121,600 solved True (1.3s, 768s elapsed)
+[149/350] arm e parity4 seed 408: cost 55,680 solved True (0.7s, 768s elapsed)
+[150/350] arm e parity4 seed 409: cost 208,640 solved True (2.1s, 768s elapsed)
+[151/350] arm a moons seed 400: cost 19,200 solved True (0.1s, 769s elapsed)
+[152/350] arm a moons seed 401: cost 37,760 solved True (0.2s, 769s elapsed)
+[153/350] arm a moons seed 402: cost 51,840 solved True (0.3s, 769s elapsed)
+[154/350] arm a moons seed 403: cost 96,640 solved True (0.5s, 769s elapsed)
+[155/350] arm a moons seed 404: cost 39,680 solved True (0.2s, 769s elapsed)
+[156/350] arm a moons seed 405: cost 97,280 solved True (0.5s, 769s elapsed)
+[157/350] arm a moons seed 406: cost 37,760 solved True (0.2s, 769s elapsed)
+[158/350] arm a moons seed 407: cost 171,520 solved True (0.9s, 769s elapsed)
+[159/350] arm a moons seed 408: cost 64,000 solved True (0.4s, 769s elapsed)
+[160/350] arm a moons seed 409: cost 240,640 solved True (1.2s, 769s elapsed)
+[161/350] arm b moons seed 400: cost 78,720 solved True (0.5s, 770s elapsed)
+[162/350] arm b moons seed 401: cost 31,360 solved True (0.2s, 770s elapsed)
+[163/350] arm b moons seed 402: cost 40,960 solved True (0.3s, 770s elapsed)
+[164/350] arm b moons seed 403: cost 151,040 solved True (0.9s, 770s elapsed)
+[165/350] arm b moons seed 404: cost 42,240 solved True (0.2s, 770s elapsed)
+[166/350] arm b moons seed 405: cost 82,560 solved True (0.5s, 770s elapsed)
+[167/350] arm b moons seed 406: cost 10,240 solved True (0.1s, 770s elapsed)
+[168/350] arm b moons seed 407: cost 127,360 solved True (0.8s, 770s elapsed)
+[169/350] arm b moons seed 408: cost 13,440 solved True (0.1s, 770s elapsed)
+[170/350] arm b moons seed 409: cost 53,760 solved True (0.4s, 770s elapsed)
+[171/350] arm c moons seed 400: cost 30,080 solved True (0.2s, 770s elapsed)
+[172/350] arm c moons seed 401: cost 8,960 solved True (0.0s, 771s elapsed)
+[173/350] arm c moons seed 402: cost 108,800 solved True (0.7s, 771s elapsed)
+[174/350] arm c moons seed 403: cost 16,000 solved True (0.1s, 771s elapsed)
+[175/350] arm c moons seed 404: cost 24,960 solved True (0.2s, 771s elapsed)
+[176/350] arm c moons seed 405: cost 77,440 solved True (0.5s, 771s elapsed)
+[177/350] arm c moons seed 406: cost 39,040 solved True (0.2s, 771s elapsed)
+[178/350] arm c moons seed 407: cost 135,040 solved True (0.9s, 771s elapsed)
+[179/350] arm c moons seed 408: cost 40,320 solved True (0.2s, 771s elapsed)
+[180/350] arm c moons seed 409: cost 24,320 solved True (0.1s, 771s elapsed)
+[181/350] arm d moons seed 400: cost 26,880 solved True (0.3s, 771s elapsed)
+[182/350] arm d moons seed 401: cost 21,120 solved True (0.2s, 772s elapsed)
+[183/350] arm d moons seed 402: cost 28,800 solved True (0.3s, 772s elapsed)
+[184/350] arm d moons seed 403: cost 33,280 solved True (0.3s, 772s elapsed)
+[185/350] arm d moons seed 404: cost 52,480 solved True (0.5s, 772s elapsed)
+[186/350] arm d moons seed 405: cost 67,200 solved True (0.5s, 772s elapsed)
+[187/350] arm d moons seed 406: cost 20,480 solved True (0.2s, 772s elapsed)
+[188/350] arm d moons seed 407: cost 42,240 solved True (0.4s, 772s elapsed)
+[189/350] arm d moons seed 408: cost 24,960 solved True (0.3s, 772s elapsed)
+[190/350] arm d moons seed 409: cost 28,160 solved True (0.3s, 772s elapsed)
+[191/350] arm e moons seed 400: cost 17,920 solved True (0.2s, 772s elapsed)
+[192/350] arm e moons seed 401: cost 79,360 solved True (0.8s, 772s elapsed)
+[193/350] arm e moons seed 402: cost 94,720 solved True (1.0s, 773s elapsed)
+[194/350] arm e moons seed 403: cost 14,080 solved True (0.2s, 773s elapsed)
+[195/350] arm e moons seed 404: cost 21,760 solved True (0.3s, 773s elapsed)
+[196/350] arm e moons seed 405: cost 56,960 solved True (0.6s, 773s elapsed)
+[197/350] arm e moons seed 406: cost 12,800 solved True (0.1s, 773s elapsed)
+[198/350] arm e moons seed 407: cost 17,920 solved True (0.2s, 773s elapsed)
+[199/350] arm e moons seed 408: cost 33,920 solved True (0.5s, 773s elapsed)
+[200/350] arm e moons seed 409: cost 14,080 solved True (0.1s, 773s elapsed)
+[201/350] arm a circles seed 400: cost 28,160 solved True (0.1s, 773s elapsed)
+[202/350] arm a circles seed 401: cost 25,600 solved True (0.2s, 773s elapsed)
+[203/350] arm a circles seed 402: cost 24,960 solved True (0.1s, 773s elapsed)
+[204/350] arm a circles seed 403: cost 38,400 solved True (0.2s, 774s elapsed)
+[205/350] arm a circles seed 404: cost 22,400 solved True (0.1s, 774s elapsed)
+[206/350] arm a circles seed 405: cost 32,000 solved True (0.2s, 774s elapsed)
+[207/350] arm a circles seed 406: cost 18,560 solved True (0.1s, 774s elapsed)
+[208/350] arm a circles seed 407: cost 24,960 solved True (0.1s, 774s elapsed)
+[209/350] arm a circles seed 408: cost 28,160 solved True (0.1s, 774s elapsed)
+[210/350] arm a circles seed 409: cost 35,840 solved True (0.2s, 774s elapsed)
+[211/350] arm b circles seed 400: cost 20,480 solved True (0.1s, 774s elapsed)
+[212/350] arm b circles seed 401: cost 23,040 solved True (0.2s, 774s elapsed)
+[213/350] arm b circles seed 402: cost 40,320 solved True (0.2s, 774s elapsed)
+[214/350] arm b circles seed 403: cost 35,200 solved True (0.2s, 775s elapsed)
+[215/350] arm b circles seed 404: cost 25,600 solved True (0.2s, 775s elapsed)
+[216/350] arm b circles seed 405: cost 35,200 solved True (0.2s, 775s elapsed)
+[217/350] arm b circles seed 406: cost 23,040 solved True (0.1s, 775s elapsed)
+[218/350] arm b circles seed 407: cost 32,640 solved True (0.2s, 775s elapsed)
+[219/350] arm b circles seed 408: cost 44,800 solved True (0.2s, 775s elapsed)
+[220/350] arm b circles seed 409: cost 35,200 solved True (0.2s, 775s elapsed)
+[221/350] arm c circles seed 400: cost 66,560 solved True (0.4s, 775s elapsed)
+[222/350] arm c circles seed 401: cost 37,760 solved True (0.2s, 775s elapsed)
+[223/350] arm c circles seed 402: cost 54,400 solved True (0.3s, 775s elapsed)
+[224/350] arm c circles seed 403: cost 40,320 solved True (0.2s, 775s elapsed)
+[225/350] arm c circles seed 404: cost 31,360 solved True (0.2s, 776s elapsed)
+[226/350] arm c circles seed 405: cost 24,960 solved True (0.2s, 776s elapsed)
+[227/350] arm c circles seed 406: cost 19,840 solved True (0.1s, 776s elapsed)
+[228/350] arm c circles seed 407: cost 46,720 solved True (0.3s, 776s elapsed)
+[229/350] arm c circles seed 408: cost 50,560 solved True (0.3s, 776s elapsed)
+[230/350] arm c circles seed 409: cost 31,360 solved True (0.2s, 776s elapsed)
+[231/350] arm d circles seed 400: cost 69,120 solved True (0.5s, 776s elapsed)
+[232/350] arm d circles seed 401: cost 34,560 solved True (0.3s, 776s elapsed)
+[233/350] arm d circles seed 402: cost 35,840 solved True (0.3s, 776s elapsed)
+[234/350] arm d circles seed 403: cost 23,680 solved True (0.2s, 776s elapsed)
+[235/350] arm d circles seed 404: cost 36,480 solved True (0.3s, 776s elapsed)
+[236/350] arm d circles seed 405: cost 23,680 solved True (0.2s, 777s elapsed)
+[237/350] arm d circles seed 406: cost 95,360 solved True (0.8s, 777s elapsed)
+[238/350] arm d circles seed 407: cost 56,960 solved True (0.5s, 777s elapsed)
+[239/350] arm d circles seed 408: cost 39,040 solved True (0.4s, 777s elapsed)
+[240/350] arm d circles seed 409: cost 32,640 solved True (0.3s, 777s elapsed)
+[241/350] arm e circles seed 400: cost 101,760 solved True (1.0s, 777s elapsed)
+[242/350] arm e circles seed 401: cost 30,080 solved True (0.3s, 777s elapsed)
+[243/350] arm e circles seed 402: cost 32,640 solved True (0.4s, 777s elapsed)
+[244/350] arm e circles seed 403: cost 32,640 solved True (0.4s, 777s elapsed)
+[245/350] arm e circles seed 404: cost 36,480 solved True (0.4s, 777s elapsed)
+[246/350] arm e circles seed 405: cost 36,480 solved True (0.5s, 777s elapsed)
+[247/350] arm e circles seed 406: cost 77,440 solved True (0.7s, 778s elapsed)
+[248/350] arm e circles seed 407: cost 52,480 solved True (0.6s, 778s elapsed)
+[249/350] arm e circles seed 408: cost 45,440 solved True (0.5s, 778s elapsed)
+[250/350] arm e circles seed 409: cost 51,200 solved True (0.5s, 778s elapsed)
+[251/350] arm a xorgauss seed 400: cost 18,560 solved True (0.1s, 778s elapsed)
+[252/350] arm a xorgauss seed 401: cost 49,920 solved True (0.3s, 778s elapsed)
+[253/350] arm a xorgauss seed 402: cost 12,160 solved True (0.1s, 778s elapsed)
+[254/350] arm a xorgauss seed 403: cost 27,520 solved True (0.1s, 778s elapsed)
+[255/350] arm a xorgauss seed 404: cost 44,160 solved True (0.2s, 778s elapsed)
+[256/350] arm a xorgauss seed 405: cost 14,720 solved True (0.1s, 778s elapsed)
+[257/350] arm a xorgauss seed 406: cost 33,920 solved True (0.2s, 779s elapsed)
+[258/350] arm a xorgauss seed 407: cost 105,600 solved True (0.5s, 779s elapsed)
+[259/350] arm a xorgauss seed 408: cost 16,000 solved True (0.1s, 779s elapsed)
+[260/350] arm a xorgauss seed 409: cost 9,600 solved True (0.0s, 779s elapsed)
+[261/350] arm b xorgauss seed 400: cost 29,440 solved True (0.2s, 779s elapsed)
+[262/350] arm b xorgauss seed 401: cost 27,520 solved True (0.2s, 779s elapsed)
+[263/350] arm b xorgauss seed 402: cost 53,120 solved True (0.3s, 779s elapsed)
+[264/350] arm b xorgauss seed 403: cost 96,640 solved True (0.5s, 779s elapsed)
+[265/350] arm b xorgauss seed 404: cost 24,320 solved True (0.1s, 779s elapsed)
+[266/350] arm b xorgauss seed 405: cost 12,800 solved True (0.1s, 779s elapsed)
+[267/350] arm b xorgauss seed 406: cost 16,000 solved True (0.1s, 779s elapsed)
+[268/350] arm b xorgauss seed 407: cost 23,040 solved True (0.1s, 780s elapsed)
+[269/350] arm b xorgauss seed 408: cost 9,600 solved True (0.1s, 780s elapsed)
+[270/350] arm b xorgauss seed 409: cost 25,600 solved True (0.1s, 780s elapsed)
+[271/350] arm c xorgauss seed 400: cost 47,360 solved True (0.2s, 780s elapsed)
+[272/350] arm c xorgauss seed 401: cost 10,880 solved True (0.1s, 780s elapsed)
+[273/350] arm c xorgauss seed 402: cost 23,040 solved True (0.1s, 780s elapsed)
+[274/350] arm c xorgauss seed 403: cost 69,120 solved True (0.4s, 780s elapsed)
+[275/350] arm c xorgauss seed 404: cost 46,080 solved True (0.3s, 780s elapsed)
+[276/350] arm c xorgauss seed 405: cost 14,080 solved True (0.1s, 780s elapsed)
+[277/350] arm c xorgauss seed 406: cost 22,400 solved True (0.1s, 780s elapsed)
+[278/350] arm c xorgauss seed 407: cost 33,920 solved True (0.2s, 781s elapsed)
+[279/350] arm c xorgauss seed 408: cost 25,600 solved True (0.2s, 781s elapsed)
+[280/350] arm c xorgauss seed 409: cost 92,160 solved True (0.6s, 781s elapsed)
+[281/350] arm d xorgauss seed 400: cost 35,200 solved True (0.3s, 781s elapsed)
+[282/350] arm d xorgauss seed 401: cost 14,720 solved True (0.2s, 781s elapsed)
+[283/350] arm d xorgauss seed 402: cost 24,320 solved True (0.2s, 781s elapsed)
+[284/350] arm d xorgauss seed 403: cost 33,920 solved True (0.3s, 781s elapsed)
+[285/350] arm d xorgauss seed 404: cost 12,160 solved True (0.1s, 781s elapsed)
+[286/350] arm d xorgauss seed 405: cost 73,600 solved True (0.6s, 781s elapsed)
+[287/350] arm d xorgauss seed 406: cost 9,600 solved True (0.1s, 781s elapsed)
+[288/350] arm d xorgauss seed 407: cost 12,800 solved True (0.1s, 781s elapsed)
+[289/350] arm d xorgauss seed 408: cost 38,400 solved True (0.4s, 782s elapsed)
+[290/350] arm d xorgauss seed 409: cost 16,640 solved True (0.1s, 782s elapsed)
+[291/350] arm e xorgauss seed 400: cost 21,120 solved True (0.3s, 782s elapsed)
+[292/350] arm e xorgauss seed 401: cost 32,640 solved True (0.4s, 782s elapsed)
+[293/350] arm e xorgauss seed 402: cost 21,760 solved True (0.2s, 782s elapsed)
+[294/350] arm e xorgauss seed 403: cost 1,118,080 solved True (10.5s, 782s elapsed)
+[295/350] arm e xorgauss seed 404: cost 5,120 solved True (0.1s, 782s elapsed)
+[296/350] arm e xorgauss seed 405: cost 4,292,480 solved True (28.0s, 782s elapsed)
+[297/350] arm e xorgauss seed 406: cost 31,360 solved True (0.4s, 782s elapsed)
+[298/350] arm e xorgauss seed 407: cost 3,111,680 solved True (17.4s, 782s elapsed)
+[299/350] arm e xorgauss seed 408: cost 38,400 solved True (0.4s, 782s elapsed)
+[300/350] arm e xorgauss seed 409: cost 134,400 solved True (1.3s, 783s elapsed)
+[301/350] arm a blobs3 seed 400: cost 4,480 solved True (0.0s, 783s elapsed)
+[302/350] arm a blobs3 seed 401: cost 2,560 solved True (0.0s, 783s elapsed)
+[303/350] arm a blobs3 seed 402: cost 4,480 solved True (0.0s, 783s elapsed)
+[304/350] arm a blobs3 seed 403: cost 7,680 solved True (0.0s, 783s elapsed)
+[305/350] arm a blobs3 seed 404: cost 4,480 solved True (0.0s, 783s elapsed)
+[306/350] arm a blobs3 seed 405: cost 3,840 solved True (0.0s, 783s elapsed)
+[307/350] arm a blobs3 seed 406: cost 3,200 solved True (0.0s, 783s elapsed)
+[308/350] arm a blobs3 seed 407: cost 11,520 solved True (0.1s, 783s elapsed)
+[309/350] arm a blobs3 seed 408: cost 3,200 solved True (0.0s, 783s elapsed)
+[310/350] arm a blobs3 seed 409: cost 5,120 solved True (0.0s, 784s elapsed)
+[311/350] arm b blobs3 seed 400: cost 3,840 solved True (0.0s, 784s elapsed)
+[312/350] arm b blobs3 seed 401: cost 5,120 solved True (0.0s, 784s elapsed)
+[313/350] arm b blobs3 seed 402: cost 11,520 solved True (0.1s, 784s elapsed)
+[314/350] arm b blobs3 seed 403: cost 1,920 solved True (0.0s, 784s elapsed)
+[315/350] arm b blobs3 seed 404: cost 4,480 solved True (0.0s, 784s elapsed)
+[316/350] arm b blobs3 seed 405: cost 3,200 solved True (0.0s, 784s elapsed)
+[317/350] arm b blobs3 seed 406: cost 3,200 solved True (0.0s, 784s elapsed)
+[318/350] arm b blobs3 seed 407: cost 7,040 solved True (0.1s, 784s elapsed)
+[319/350] arm b blobs3 seed 408: cost 16,640 solved True (0.1s, 784s elapsed)
+[320/350] arm b blobs3 seed 409: cost 3,840 solved True (0.0s, 785s elapsed)
+[321/350] arm c blobs3 seed 400: cost 2,560 solved True (0.0s, 785s elapsed)
+[322/350] arm c blobs3 seed 401: cost 3,840 solved True (0.0s, 785s elapsed)
+[323/350] arm c blobs3 seed 402: cost 3,200 solved True (0.0s, 785s elapsed)
+[324/350] arm c blobs3 seed 403: cost 3,200 solved True (0.0s, 785s elapsed)
+[325/350] arm c blobs3 seed 404: cost 7,680 solved True (0.1s, 785s elapsed)
+[326/350] arm c blobs3 seed 405: cost 3,840 solved True (0.0s, 785s elapsed)
+[327/350] arm c blobs3 seed 406: cost 5,120 solved True (0.0s, 785s elapsed)
+[328/350] arm c blobs3 seed 407: cost 2,560 solved True (0.0s, 785s elapsed)
+[329/350] arm c blobs3 seed 408: cost 4,480 solved True (0.0s, 785s elapsed)
+[330/350] arm c blobs3 seed 409: cost 3,200 solved True (0.0s, 785s elapsed)
+[331/350] arm d blobs3 seed 400: cost 3,840 solved True (0.0s, 786s elapsed)
+[332/350] arm d blobs3 seed 401: cost 3,840 solved True (0.0s, 786s elapsed)
+[333/350] arm d blobs3 seed 402: cost 3,200 solved True (0.0s, 786s elapsed)
+[334/350] arm d blobs3 seed 403: cost 3,840 solved True (0.0s, 786s elapsed)
+[335/350] arm d blobs3 seed 404: cost 1,920 solved True (0.0s, 786s elapsed)
+[336/350] arm d blobs3 seed 405: cost 10,880 solved True (0.1s, 786s elapsed)
+[337/350] arm d blobs3 seed 406: cost 640 solved True (0.0s, 786s elapsed)
+[338/350] arm d blobs3 seed 407: cost 1,920 solved True (0.0s, 786s elapsed)
+[339/350] arm d blobs3 seed 408: cost 5,120 solved True (0.0s, 786s elapsed)
+[340/350] arm d blobs3 seed 409: cost 3,840 solved True (0.0s, 786s elapsed)
+[341/350] arm e blobs3 seed 400: cost 18,560 solved True (0.2s, 787s elapsed)
+[342/350] arm e blobs3 seed 401: cost 3,200 solved True (0.0s, 787s elapsed)
+[343/350] arm e blobs3 seed 402: cost 7,040 solved True (0.1s, 787s elapsed)
+[344/350] arm e blobs3 seed 403: cost 1,280 solved True (0.0s, 787s elapsed)
+[345/350] arm e blobs3 seed 404: cost 4,480 solved True (0.0s, 787s elapsed)
+[346/350] arm e blobs3 seed 405: cost 9,600 solved True (0.1s, 787s elapsed)
+[347/350] arm e blobs3 seed 406: cost 640 solved True (0.0s, 787s elapsed)
+[348/350] arm e blobs3 seed 407: cost 2,560 solved True (0.0s, 787s elapsed)
+[349/350] arm e blobs3 seed 408: cost 3,200 solved True (0.0s, 787s elapsed)
+[350/350] arm e blobs3 seed 409: cost 1,920 solved True (0.0s, 787s elapsed)
+{
+ "a": {
+  "solved": 60,
+  "total": 70,
+  "gm_cost": 108043.82586331085,
+  "median_cost": {
+   "xorgauss": 23040.0,
+   "moons": 57920.0,
+   "circles": 26880.0,
+   "spirals": 1646400.0,
+   "blobs3": 4480.0,
+   "checker3": 10000000.0,
+   "parity4": 64960.0
+  },
+  "genes": {},
+  "gene_valid": true,
+  "evolvability_median": 0.6739893076639822,
+  "width": 16.0,
+  "cheaper_than_a": 1.0,
+  "solved_ge_a": true,
+  "pass": null,
+  "hard_vs_rest": {
+   "hard": 1.0,
+   "rest": 1.0
+  }
+ },
+ "b": {
+  "solved": 51,
+  "total": 70,
+  "gm_cost": 136713.0099315677,
+  "median_cost": {
+   "xorgauss": 24960.0,
+   "moons": 48000.0,
+   "circles": 33920.0,
+   "spirals": 10000000.0,
+   "blobs3": 4160.0,
+   "checker3": 10000000.0,
+   "parity4": 52800.0
+  },
+  "genes": {
+   "m": {
+    "median_shift": -0.11987845599651337,
+    "p": 0.18821620302302766,
+    "mean_final": 0.40600539477808134
+   }
+  },
+  "gene_valid": false,
+  "evolvability_median": -0.052376414895226694,
+  "width": 16.0,
+  "cheaper_than_a": 0.7902965922364862,
+  "solved_ge_a": false,
+  "pass": false,
+  "hard_vs_rest": {
+   "hard": 0.40575854889330426,
+   "rest": 1.0318084530313927
+  }
+ },
+ "c": {
+  "solved": 60,
+  "total": 70,
+  "gm_cost": 101229.39155447054,
+  "median_cost": {
+   "xorgauss": 29760.0,
+   "moons": 34560.0,
+   "circles": 39040.0,
+   "spirals": 1003520.0,
+   "blobs3": 3520.0,
+   "checker3": 10000000.0,
+   "parity4": 76800.0
+  },
+  "genes": {
+   "r": {
+    "median_shift": -0.030011996626853943,
+    "p": 0.7202027723528612,
+    "mean_final": 0.49965147035462515
+   }
+  },
+  "gene_valid": false,
+  "evolvability_median": 0.6510830829762273,
+  "width": 16.0,
+  "cheaper_than_a": 1.0673167565684076,
+  "solved_ge_a": true,
+  "pass": false,
+  "hard_vs_rest": {
+   "hard": 1.2808688457449497,
+   "rest": 0.9922218667825288
+  }
+ },
+ "d": {
+  "solved": 60,
+  "total": 70,
+  "gm_cost": 88570.18803875904,
+  "median_cost": {
+   "xorgauss": 20480.0,
+   "moons": 28480.0,
+   "circles": 36160.0,
+   "spirals": 964800.0,
+   "blobs3": 3840.0,
+   "checker3": 10000000.0,
+   "parity4": 54720.0
+  },
+  "genes": {
+   "u": {
+    "median_shift": 0.05301514267921448,
+    "p": 0.47036853185814453,
+    "mean_final": 0.4834898339850562
+   }
+  },
+  "gene_valid": false,
+  "evolvability_median": 0.3893602863643088,
+  "width": 27.828214372907365,
+  "cheaper_than_a": 1.2198667323143764,
+  "solved_ge_a": true,
+  "pass": false,
+  "hard_vs_rest": {
+   "hard": 1.3063183615380831,
+   "rest": 1.1869098392722501
+  }
+ },
+ "e": {
+  "solved": 57,
+  "total": 70,
+  "gm_cost": 100958.2686696233,
+  "median_cost": {
+   "xorgauss": 35520.0,
+   "moons": 19840.0,
+   "circles": 40960.0,
+   "spirals": 2395200.0,
+   "blobs3": 3200.0,
+   "checker3": 10000000.0,
+   "parity4": 48320.0
+  },
+  "genes": {
+   "m": {
+    "median_shift": -0.1467219814658165,
+    "p": 0.0035448128470210523,
+    "mean_final": 0.3636281420077596
+   },
+   "r": {
+    "median_shift": 0.17364360392093658,
+    "p": 0.029493493531317295,
+    "mean_final": 0.5906335517764092
+   },
+   "u": {
+    "median_shift": 0.14311937987804413,
+    "p": 0.029493493531317295,
+    "mean_final": 0.5873086365738085
+   }
+  },
+  "gene_valid": false,
+  "evolvability_median": 0.22276021548791436,
+  "width": 28.28392870766776,
+  "cheaper_than_a": 1.0701830299494772,
+  "solved_ge_a": false,
+  "pass": false,
+  "hard_vs_rest": {
+   "hard": 0.8290806652545927,
+   "rest": 1.1852298186109007
+  }
+ }
+}

@@ -21,9 +21,29 @@ about large AI systems.
 
 ## Latest update: 27 October 2026
 
-**At a glance: 217 pre-registered predictions, 97 passed, 116 failed, 0 awaiting results** (4 more were voided or left undecided).
+**At a glance: 222 pre-registered predictions, 97 passed, 119 failed, 0 awaiting results** (6 more were voided or not applicable).
 Every success rule is written down *before* an experiment runs, and every failure is kept and
 reported next to the successes.
+
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="curious-net/results/figures/vi_x66_machinery_dark.png">
+  <img alt="Bar chart of how many times cheaper than the plain evolutionary search each self-improving mechanism was: keep going the parent's way 0.79, mix two parents 1.07, grow by copying a unit 1.22 (highlighted), all three together 1.07, against a pass line of 1.25. None passed, and the genes behind them mostly did not evolve." src="curious-net/results/figures/vi_x66_machinery_light.png" width="900">
+</picture>
+
+<details><summary>Data behind the chart (experiment X6.6, 70 runs per arm)</summary>
+
+| Search trick (each inheritable and blind) | Solved | Cheaper than plain search | Gene moved away from its random start? |
+|---|---|---|---|
+| Keep going the parent's way | 51/70 | 0.79x | no (p = 0.19) |
+| Mix two parents | 60/70 | 1.07x | no (p = 0.72) |
+| Grow by copying a unit | 60/70 | 1.22x | no (p = 0.47) |
+| All three together | 57/70 | 1.07x | one did, downward (p = 0.0035); two did not (p = 0.03) |
+
+Plain search solves 60/70. A trick passes with at least as many solved, 1.25x cheaper, and genes
+shown to be under selection (p < 0.01). The growth trick still solved the spiral problem 1.7x
+faster, with a gene that did not evolve: the *capacity* to grow helped; its evolved rate did not.
+
+</details>
 
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="curious-net/results/figures/vi_x07_needs_dark.png">
@@ -67,12 +87,12 @@ The food-only learner is tuned on food, its own objective; with default settings
 </details>
 
 - **Finished this week:** the first experiments on the "good or bad *for me*" question (X0.1,
-  X0.1b, X0.6, X0.7) and a repair of the evolution benchmark (X6.5), which corrected an earlier,
-  more flattering number. The main result so far: what decides whether a simulated creature
+  X0.1b, X0.6, X0.7); a repair of the evolution benchmark (X6.5), which corrected an earlier, more
+  flattering number; and the first test of whether nature's search tricks can improve themselves
+  (X6.6), which says no. The main result on "for me": what decides whether a simulated creature
   survives is whether it attends to *all* its needs; how it combines them barely matters (X0.7).
-- **Next:** X6.6 to X6.8, three tests of how nature could have improved its own search method
-  with no gradient descent: can the variation machinery evolve itself, can selection work with no
-  grader, and do stepping stones reach problems that are too hard to reach directly?
+- **Next:** X6.7 and X6.8: can selection work with no grader at all (only "what keeps being copied
+  while resources are limited"), and do stepping stones reach problems too hard to reach directly?
 
 ## What has been found so far
 

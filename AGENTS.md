@@ -19,7 +19,7 @@ holds pointers, not results. Current state always lives in the files it points t
 
 | Record | Path |
 |---|---|
-| Author's words, verbatim (append-only) | `program/wiki-domains/*/raw/` |
+| Author's words, verbatim (append-only); personal reflections are summarized, verbatim kept private | `program/wiki-domains/*/raw/` |
 | Charter, givens, open conflicts | `program/wiki-domains/vertical-intelligence/wiki/research-protocol.md` |
 | Intake: theorems, P-drafts, ideas, questions | `.../vertical-intelligence/wiki/inbox.md` |
 | Planned experiments (arms, metrics, thresholds) | `.../vertical-intelligence/wiki/experiment-plan.md` |

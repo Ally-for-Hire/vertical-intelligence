@@ -10,7 +10,7 @@ updated: 2026-10-26
 
 Read this if: you are continuing the user's argument with Claude about what intelligence is,
 or you need the framework it produced. The user's words are verbatim in
-`raw/2026-10-26-dialogue-prediction-randomness-self.md`; this page states the positions as
+`raw/2026-10-26-dialogue-summary.md` (public summary; the verbatim transcript is kept in the author's private notes); this page states the positions as
 they were left and what remains open. The dialogue is ongoing (the user wants to continue).
 
 Five-line summary: the user argued that an LLM "just predicts the next word". Claude argued
@@ -124,7 +124,7 @@ desire to fear in stressful settings, Reynolds and Berridge 2008).
 | Rule guess | Reaction to repeated inputs; cost and strength; connections of variable length that self-improve and are **untouched unless used** | Local learning vs backprop touching every weight (catastrophic forgetting) | I6 |
 | Time | Time is not required: slow thinkers can be very intelligent | Agree for speed; relative order may still matter (STDP). Refines the Oct 22 "genius = motivation + processing speed" | **U14** |
 | Drive | Snap (whole brain rushes in) -> wall -> subconscious. Genius is drive keeping the problem alive past the wall (3 a.m.); mostly learned | Impasse theory (Ohlsson): the wall means the representation cannot contain the answer; the breakthrough is a re-representation | **U15** |
-| Lived evidence | The user's breakthrough two weeks earlier: "seeing differently", which came from love and unconditional safety; becoming whole made past experience make sense; moving from autopilot to the pilot seat | Self-leadership (IFS). The knowledge was already there and its representation changed, so this supports U13. Candidate for Q7: the Self is what lets every part's knowledge share one representation | supports U10, U13 |
+| Lived evidence | A personal experience the author described, of suddenly seeing problems differently, which they link to a period of felt safety (details not published); they read it as knowledge that was already there being re-organised | Self-leadership (IFS). The knowledge was already there and its representation changed, so this supports U13. Candidate for Q7: the Self is what lets every part's knowledge share one representation | supports U10, U13 |
 | Intuition | The "something is wrong" feeling is a part warning that you push part of yourself aside; it grows until breakdowns end facades; quick wins and drugs fail in the downtime | Iowa Gambling Task (Bechara et al. 1997): the body warns before understanding. Homeostatic drive: a deficit signal grows with the gap | **U16** |
 | Never off | The light dims but never turns off; maybe nobody is ever fully themselves | A set point that recedes as you approach it is an engine, not a thermostat; perhaps "be more" and "be whole" are one hunger | — |
 | One hunger | Comfort-seeking and growth are the same need | Bowlby: two systems on a seesaw; active inference: one quantity (information + preferred states) [u]; then E. coli: one receptor array, one signal for food and poison: **valence** (Schneirla) | **U17** |

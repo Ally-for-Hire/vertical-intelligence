@@ -35,6 +35,6 @@ starts.
 
 - `raw/2026-10-26-three-theorems.md` - the user's three theorems, verbatim.
 - `raw/2026-10-26-harmony-theorems-and-questions.md` - U4, U5 and the six main questions, verbatim.
-- `raw/2026-10-26-dialogue-prediction-randomness-self.md` - Dialogue 1, the user's turns verbatim.
+- `raw/2026-10-26-dialogue-summary.md` - Dialogue 1: a public summary of the author's reflections and what led to each theorem. The verbatim transcript is kept in the author's private notes, not published.
 - `domains/curious-net/raw/2026-10-22-vision-statement.md` - the earlier vision statement.
 - `~/neuroblock-research/FOUNDATIONS.md` - the original foundations.

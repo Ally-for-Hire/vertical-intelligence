@@ -77,7 +77,13 @@ four root documents (README.md, AGENTS.md, CREDITS.md, CLAUDE.md) and `tools/` i
 
 Credentials, account tokens and e-mail addresses; family names and private terms (the redaction list);
 local paths; third-party drafts (the `private` list in `redact.local.json`); raw third-party data.
-Personal statements of the author are the author's decision: see the log for any open question.
+Personal statements of the author are summarized for the public, not quoted (author's decision,
+2026-10-27): the verbatim transcript of Dialogue 1 stays in the private wiki and is on the redaction
+`private` list; its public stand-in is `raw/2026-10-26-dialogue-summary.md`, which describes what led to
+each claim only at the level needed. New raw statements that contain personal reflections get the same
+treatment (verbatim in the private wiki, summary in the public tree). Older commits of the public repo
+still contain the earlier verbatim file; clearing them needs a history rewrite and a force-push, which
+is done only on the author's explicit request.
 
 ## 6. The private archive (`vertical-learning`)
 
@@ -87,11 +93,12 @@ apart from its six root files (README, AGENTS, CREDITS, CLAUDE, SNAPSHOT, `tools
 live in the public repo. What was folded into this wiki: the credits ([[credits]]), the publishing
 procedure (this page), the findings summary ([[findings-map]], curious-net `synthesis`).
 
-**Not retired, on purpose.** curious-net and neuroblock-research have no git remote, so this private
-repo is currently the only offsite copy of their code and raw results. Its `main` is out of date by
-every commit since 2026-10-27. Before it could be archived or deleted, those two repos would need
-their own private remotes (a decision for the author). Do not delete, archive or rewrite it without
-asking.
+**Not retired, on purpose.** Until 2026-10-27 curious-net and neuroblock-research had no git remote,
+so this private repo was the only offsite copy of their code and raw results. They now have their own
+private remotes (`Ally-for-Hire/curious-net` and `Ally-for-Hire/neuroblock-research`, branch `master`;
+created 2026-10-27 at the author's request). Committed history is backed up there; uncommitted working
+files are not, so commit work you want kept. This archive's `main` is out of date; do not delete,
+archive or rewrite it without asking.
 
 ## 7. Cadence
 

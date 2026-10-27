@@ -133,7 +133,7 @@ If you want to see the raw work, each line's `LOG.md` records every experiment i
 
 | Folder | What is inside |
 |---|---|
-| `program/` | The research notebook: charter, plan, findings, literature, and the author's own statements in `raw/` (word for word) |
+| `program/` | The research notebook: charter, plan, findings, literature, and the author's own statements in `raw/` (word for word, except personal reflections, which are summarized) |
 | `curious-net/` | The main experimental code: curiosity, teaching, self-doubt, discovering laws from data, and `vi/` (the newest experiments, X0.x) |
 | `neuroblock-research/` | The earlier line: a brain-like simulator with parts, sleep and mastery, plus the evolution experiments in `emergent/` |
 | `tools/` | `sync.py` refreshes this repository from the working copies; `publish.py` checks it for anything that should not go public and publishes it |

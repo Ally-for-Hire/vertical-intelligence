@@ -48,7 +48,7 @@ Ideas are **I-numbers** in the inbox. Pieces keep their existing C/CTX/B/E ids.
   reaction before intelligence; the IFS end goal is the Self holding everything as parts.**
 - **U8. Simulation inside the mind, and the drive to improve that simulation, are
   foundational.** (U6-U8 from Dialogue 1, 2026-10-26; verbatim in
-  `raw/2026-10-26-dialogue-prediction-randomness-self.md`; readings and evidence in
+  `raw/2026-10-26-dialogue-summary.md` (public summary; verbatim kept private); readings and evidence in
   [[dialogue-prediction-is-not-the-whole-story]] s3)
 - **U9. Boredom is the want to learn plus the inability to learn; the need to learn is a
   requirement, not a choice.**
@@ -129,7 +129,7 @@ shared structure (C43 already shows this dose-response).
 
 | Kind of record | Home | Rule |
 |---|---|---|
-| The user's words (theorems, redirects) | `domains/<line>/raw/YYYY-MM-DD-*.md` | Verbatim, append-only, dated |
+| The user's words (theorems, redirects) | `domains/<line>/raw/YYYY-MM-DD-*.md` | Verbatim, append-only, dated. Personal reflections: verbatim only in the private wiki; a summary goes in the public tree ([[publishing]] section 5) |
 | Intake of new theorems / tests / ideas | [[domains/vertical-intelligence/wiki/inbox]] | Processed top to bottom; status column |
 | Open research questions (Q-numbers) | inbox Questions table; notes in section 1 here | A question closes only with ids of the results that answer it |
 | Code and experiment scripts | `~/curious-net` (current), `~/neuroblock-research` (older), course repo for growth | One script per experiment, named after its id |

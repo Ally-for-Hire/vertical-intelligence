@@ -1,6 +1,6 @@
 # Work queue for the research loop (highest priority first)
 
-**QUEUE HEAD (2026-10-27, after X0.2):** X0.4 = test of U16 (a pushed-aside part: a variable whose warning is masked from the controller while it still affects viability; does the damage grow and end in breakdown?) or X0.5 (receding set point); choose by the default ordering (a U-theorem test with no evidence row: U16 has none). Done: X0.1, X0.1b, X0.2, X0.6, X0.7, EMG-0..3, X6.9. I8 declined. Machine rule: restrictions lifted, keep a 15% margin (vi/budget.py).
+**QUEUE HEAD (2026-10-27, after X1.1):** X1.2 = learning progress plus OPTIMISM toward under-visited regions (the diagnosed gap from X1.1: LP was 6x slower than random at finding a newly opened learnable region): arms LP, LP + a visit-count optimism term, RANDOM; metric = ticks to learn the new region and the dark-room and noise shares; the optimism term must be derived (an upper-confidence form) or swept and registered, not hand-set. X0.4 (U16) deferred: as planned it is tautological; needs a hidden-need redesign that can fail. Done: X0.1, X0.1b, X0.2, X0.6, X0.7, X1.1, EMG-0..3, X6.9. I8 declined. Machine rule: restrictions lifted, keep a 15% margin (vi/budget.py).
 
 Each loop iteration takes ONE item (or a small chunk), does it, writes the result into LEDGER.md / PAPER.md / figures / LOG.md, commits, then picks the next. Items marked (E) are experiments, (L) literature verification, (D) documentation. Compute: 24 cores while the user is away (CN_FULL=1); keep a single experiment under ~20 minutes.
 

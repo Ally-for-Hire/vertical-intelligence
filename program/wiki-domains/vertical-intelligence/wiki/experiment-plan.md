@@ -251,3 +251,9 @@ and severe damage), 48 worlds per type. P239 PASSED (one signal gives the secure
 P242 PASSED (beats random exploring), P240, P241, P243 FAILED (it is slightly worse than a tuned
 two-drive agent in the medium and severe worlds; the hand-set weight transferred across worlds). U17 is
 not falsified and not shown superior. Next: X0.4 (U16).
+
+**X1.1 (= P-draft 9) result (2026-10-27): DONE.** World D (dark room, noise, two learnable regions, one opening
+halfway), 48 worlds. P244, P245, P246, P248 PASSED; P247 FAILED. Surprise minimisation parks in the dark
+room (93%), error-seeking in the noise (92%), learning progress avoids both but is 6x slower than random at
+finding the new learnable region. Next: X1.2 (learning progress plus optimism toward under-visited regions).
+X0.4 (U16) is deferred: as planned it is tautological.

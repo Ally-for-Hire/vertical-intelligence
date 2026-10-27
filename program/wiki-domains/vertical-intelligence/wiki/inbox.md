@@ -16,7 +16,7 @@ Statuses: `new` (unprocessed), `intaken` (captured, readings written), `register
 P-number, may run), `running`, `done` (verdict + confidence letter recorded, see id), `parked`
 (with the condition that unparks it), `declined` (with reason; user may overrule).
 
-**Next up:** X0.4 (U16: a part whose warning is ignored; does the cost grow until breakdown?), the author's theorem U16 has no evidence row yet. Done: X0.1, X0.1b, X0.2 (U17: one signal suffices, not better than tuned two-drive), X0.6, X0.7, X6.5 to X6.9. I8 declined, I11 parked. Open user calls: protocol s7 items 1, 6, 7, 8.
+**Next up:** X1.2 (learning progress plus optimism toward under-visited regions, the gap X1.1 exposed). Done: X0.1, X0.1b, X0.2, X0.6, X0.7, X1.1 (U12: the dark room is real; learning progress avoids both traps), X6.5 to X6.9. X0.4 (U16) deferred as tautological as planned. I8 declined, I11 parked. Open user calls: protocol s7 items 1, 6, 7, 8 (item 8, U12 vs the first design rule, now has evidence from X1.1).
 P-draft 1 (U3) waits for the user to confirm the
 definition of vertical intelligence. Open user calls: protocol s7 items 1, 6, 7.
 

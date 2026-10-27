@@ -106,6 +106,15 @@ principles in miniature, not facts about brains or LLMs. Ids point to `curious-n
     S/P).
   - **Motivation plus curiosity** beats either alone: filter by learnability, then persist on
     the hardest learnable thing (C52, R). This is the closest existing result to U15.
+  - **X1.1 (2026-10-27, 48 worlds; P244-P248): the dark room is real for a surprise-minimising drive.**
+    With a perfectly predictable room, an unlearnable noise region and learnable regions (one opening
+    halfway), minimising surprise (the program's first design rule) parked in the dark room 93% of
+    the time; error-seeking sat in the noise 92%; **learning progress** (the slope of the error) avoided
+    both (53% of the first half in the traps vs 96 to 97%) and spent 69% of the second half on the
+    learnable regions. But it was **6 times slower than random** at learning the newly opened region
+    (389 vs 65 ticks): an unvisited region has no value and a one-shot learner shows no progress until a
+    first pass is done, so it needs optimism toward untried regions. Supports U12 and Q9 (the edge is
+    where error is falling) and bears on protocol s7 item 8; the learning-progress drive alone is not enough.
   - NeuroBlock's "always try to expand" drive did nothing: 25 expansions per run, no gain
     (sweep, contradicts). A drive with no signal of where growth pays is noise.
 - **Disconnect:** gradient descent has no drive. It learns whatever the loss demands, cannot

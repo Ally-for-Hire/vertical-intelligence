@@ -21,9 +21,30 @@ about large AI systems.
 
 ## Latest update: 27 October 2026
 
-**At a glance: 241 pre-registered predictions, 103 passed, 130 failed, 0 awaiting results** (8 more were voided or not applicable).
+**At a glance: 246 pre-registered predictions, 107 passed, 131 failed, 0 awaiting results** (8 more were voided or not applicable).
 Every success rule is written down *before* an experiment runs, and every failure is kept and
 reported next to the successes.
+
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="curious-net/results/figures/vi_x11_dark_room_dark.png">
+  <img alt="Stacked bars of where each drive spends its time after a second learnable region opens. Minimizing surprise: 92 percent in the dark room. Seeking surprise: 92 percent in the unlearnable noise. Chasing learning progress: 27 percent in the dark room, about 4 percent in the noise, 69 percent in the learnable regions. Choosing at random: 25, 25 and 50 percent." src="curious-net/results/figures/vi_x11_dark_room_light.png" width="900">
+</picture>
+
+<details><summary>Data behind the chart (experiment X1.1, median of 48 worlds)</summary>
+
+| Drive | Dark room | Noise | Learnable regions | Ticks to learn the newly opened region |
+|---|---|---|---|---|
+| Minimize surprise (the program's first design rule) | 92% | 2% | 5% | 566 |
+| Seek surprise | 3% | 92% | 5% | 574 |
+| **Chase learning progress** (how fast the error is falling) | **27%** | **4%** | **69%** | **389** |
+| Choose at random | 25% | 25% | 50% | 65 |
+
+Minimizing surprise parks in a perfectly predictable room, and seeking surprise gets stuck watching
+unlearnable noise. Chasing learning progress avoids both, but it was about six times slower than
+random at finding a newly opened region, because a region it has never tried has no value to it.
+Curiosity needs an "optimism about the untried" ingredient as well.
+
+</details>
 
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="curious-net/results/figures/vi_x02_secure_base_dark.png">
@@ -184,7 +205,10 @@ The food-only learner is tuned on food, its own objective; with default settings
 - **Also finished:** a test of the author's theorem that comfort-seeking and growth are one hunger
   (X0.2): a single "expected change for me" signal is enough to explore when safe and retreat under
   threat, with nothing to tune, though not better than a tuned two-drive design.
-- **Next:** what happens when a part's warning is ignored: does the cost grow until breakdown (X0.4)?
+- **Also finished:** the "dark room" test of the author's theorem that the drive is not uncertainty
+  reduction (X1.1): a drive that minimizes surprise sits in a perfectly predictable room, one that
+  seeks surprise gets stuck on noise, and one that chases learning progress avoids both.
+- **Next:** adding optimism about untried regions to learning progress (X1.2), the gap X1.1 exposed.
 
 ## What has been found so far
 

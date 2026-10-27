@@ -125,6 +125,18 @@ _r("x02_seed0", 80000, "USER", "x0_2", "fresh seed block for the X0.2 scored run
 _r("x02_tune_seed0", 81000, "USER", "x0_2", "seed block for X0.2 tuning")
 _r("x02_check_seed", 82000, "USER", "x0_2", "seed for bug checks (not scored)")
 
+# ---- experiment X1.1 (U12 / Q9: which drive avoids the dark room and the noise?) -----------------------------------
+_r("d_symbols", 16, "WORLD", "x1_1", "symbols per region; a learnable region is a random single cycle over them (a deterministic next-symbol rule)")
+_r("d_ticks", 3000, "ARBITRARY", "x1_1", "ticks per run")
+_r("d_open", 0.5, "WORLD", "x1_1", "fraction of the run after which the second learnable region opens")
+_r("d_eps", 0.1, "ARBITRARY", "x1_1", "random-region rate, identical for every arm")
+_r("d_alpha", 0.1, "ARBITRARY", "x1_1", "learning rate of each arm's per-region value estimate, identical for every arm")
+_r("lp_fast", 0.3, "ARBITRARY", "x1_1", "fast average of a region's prediction error (learning-progress arm)")
+_r("lp_slow", 0.05, "ARBITRARY", "x1_1", "slow average of a region's prediction error (learning-progress arm)")
+_r("d_acc", 0.95, "ARBITRARY", "x1_1", "accuracy of the learned next-symbol table that counts as 'learned'")
+_r("x11_seed0", 83000, "USER", "x1_1", "fresh seed block for the X1.1 scored run")
+_r("x11_check_seed", 84000, "USER", "x1_1", "seed for bug checks (not scored)")
+
 
 def C(name):
     return REG[name]["value"]

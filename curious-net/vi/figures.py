@@ -3,7 +3,7 @@ Style follows the dataviz method: one accent hue plus grays for emphasis, thin m
 a title that states the finding, light AND dark variants (GitHub picks by the viewer theme); alt text and
 a data table live in the README.
 
-Usage: python figures.py [x02 | x06 | x07 | x66 | x67 | x68 | x69 | all]       -> ../results/figures/vi_<name>_{light,dark}.png"""
+Usage: python figures.py [x11 | x02 | x06 | x07 | x66 | x67 | x68 | x69 | all]       -> ../results/figures/vi_<name>_{light,dark}.png"""
 import json, os, sys
 import matplotlib
 matplotlib.use("Agg")
@@ -254,7 +254,39 @@ def fig_x02(theme):
     return _save(fig, "x02_secure_base", theme)
 
 
-FIGS = {"x02": fig_x02, "x06": fig_x06, "x07": fig_x07, "x66": fig_x66, "x67": fig_x67, "x68": fig_x68, "x69": fig_x69}
+def fig_x11(theme):
+    S = json.load(open(os.path.join(RES, "x1_1_run.json")))["result"]["summary"]
+    t = THEMES[theme]
+    arms = [("UR", "Minimize surprise"), ("NOV", "Seek surprise"), ("LP", "Chase learning progress"), ("RANDOM", "Choose at random")]
+    fig, ax = plt.subplots(figsize=(10.0, 4.9), dpi=200)
+    fig.patch.set_facecolor(t["surface"]); ax.set_facecolor(t["surface"])
+    fig.subplots_adjust(left=0.24, right=0.97, top=0.70, bottom=0.14)
+    n = len(arms); cols = (("Dark room (nothing to learn)", "dark_b", t["gray"]), ("Noise (unlearnable)", "noise_b", t["accent2"]), ("Learnable regions", None, t["accent"]))
+    for i, (k, lab) in enumerate(arms):
+        y = n - 1 - i; left = 0.0
+        parts = [S["dark_b"][k], S["noise_b"][k], S["l1_b"][k] + S["l2_b"][k]]
+        tot = sum(parts); parts = [100 * p / tot for p in parts]
+        for (name, _, col), w in zip(cols, parts):
+            ax.barh(y, w, left=left, height=0.5, color=col, edgecolor=t["surface"], linewidth=1.5)
+            if w >= 7:
+                ax.text(left + w / 2, y, f"{w:.0f}%", ha="center", va="center", fontsize=9.5, color="#ffffff" if col != t["gray"] else t["ink"], fontweight="bold")
+            left += w
+        ax.text(-1.5, y, lab, ha="right", va="center", fontsize=10, color=t["ink"] if k == "LP" else t["ink2"], fontweight="bold" if k == "LP" else "normal")
+    ax.set_xlim(0, 100); ax.set_ylim(-0.6, n - 0.4); ax.set_yticks([]); ax.set_xticks([0, 25, 50, 75, 100]); ax.set_xticklabels(["0%", "25%", "50%", "75%", "100%"])
+    ax.tick_params(axis="x", colors=t["ink2"], labelsize=8.5, length=0)
+    for sp in ("top", "right", "left", "bottom"):
+        ax.spines[sp].set_visible(False)
+    x0 = 0.24
+    for name, _, col in cols:
+        fig.patches.append(plt.Rectangle((x0, 0.755), 0.018, 0.028, transform=fig.transFigure, facecolor=col, edgecolor="none"))
+        fig.text(x0 + 0.024, 0.769, name, fontsize=9, color=t["ink2"], va="center"); x0 += 0.25
+    fig.text(0.03, 0.935, "Only learning progress avoids both the dark room and the noisy TV", fontsize=13.5, fontweight="bold", color=t["ink"], ha="left")
+    fig.text(0.03, 0.885, "Where each drive spends its time once a second learnable region has opened (median of 48 simulated worlds).", fontsize=10, color=t["ink2"], ha="left")
+    fig.text(0.97, 0.025, f"experiment X1.1 · toy world · learning progress took about {S['t_l2']['LP'] / S['t_l2']['RANDOM']:.0f}× longer than random to learn the newly opened region", fontsize=7.6, color=t["ink2"], ha="right")
+    return _save(fig, "x11_dark_room", theme)
+
+
+FIGS = {"x11": fig_x11, "x02": fig_x02, "x06": fig_x06, "x07": fig_x07, "x66": fig_x66, "x67": fig_x67, "x68": fig_x68, "x69": fig_x69}
 
 if __name__ == "__main__":
     which = sys.argv[1] if len(sys.argv) > 1 else "all"

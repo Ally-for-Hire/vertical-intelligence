@@ -65,7 +65,7 @@ def _dup(task, child, actc, ud, g, dev):
     actc[ri, dst] = True
 
 
-def evolve(task, cfg, seed, budget, feats=()):
+def evolve(task, cfg, seed, budget, feats=(), fixed=None):
     """returns dict(cost, solved, gen, genes=final population means, start=initial means, width=mean active width, trace=[(cost, best score)])"""
     import torch
     dev = task.Xtr.device
@@ -73,7 +73,8 @@ def evolve(task, cfg, seed, budget, feats=()):
         g = torch.Generator(device=dev).manual_seed(seed); rn = lambda *s: torch.randn(*s, device=dev, generator=g); ru = lambda *s: torch.rand(*s, device=dev, generator=g)
         P, n = cfg['P'], task.n; nk = max(1, int(round(P * (1 - cfg['cull'])))); nc = P - nk; tau = 1.0 / math.sqrt(n)
         th = rn(P, n) * cfg['init']; sig = 10 ** (-2.0 + 2.0 * ru(P))
-        gene = {f: ru(P) for f in feats if f in GENES}                       # drawn after the baseline draws; none when feats is empty
+        fixed = fixed or {}                                                  # a feature in `fixed` has a CONSTANT value (no gene: not heritable, not mutated, no random draw)
+        gene = {f: (torch.full((P,), float(fixed[f]), device=dev) if f in fixed else ru(P)) for f in feats if f in GENES}   # drawn after the baseline draws; none when feats is empty
         start = {GENES[f]: float(gene[f].mean()) for f in gene}
         grow = 'dup' in feats
         act = None
@@ -94,7 +95,7 @@ def evolve(task, cfg, seed, budget, feats=()):
             if task.done(th[order[0]:order[0] + 1]): return finish(True)
             keep = order[:nk]
             pa = keep[torch.randint(0, nk, (nc,), device=dev, generator=g)]; cs = sig[pa] * torch.exp(tau * rn(nc)); z = rn(nc, n)
-            base = th[pa]; cgene = {f: (gene[f][pa] + tau * rn(nc)).clamp(0, 1) for f in gene}
+            base = th[pa]; cgene = {f: (torch.full((nc,), float(fixed[f]), device=dev) if f in fixed else (gene[f][pa] + tau * rn(nc)).clamp(0, 1)) for f in gene}
             if 'rec' in feats:
                 pb = keep[torch.randint(0, nk, (nc,), device=dev, generator=g)]
                 use_b = (ru(nc) < gene['rec'][pa])[:, None] & (ru(nc, n) < 0.5)

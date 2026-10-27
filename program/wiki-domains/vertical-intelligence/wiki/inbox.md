@@ -16,7 +16,7 @@ Statuses: `new` (unprocessed), `intaken` (captured, readings written), `register
 P-number, may run), `running`, `done` (verdict + confidence letter recorded, see id), `parked`
 (with the condition that unparks it), `declined` (with reason; user may overrule).
 
-**Next up:** I10 (fixed-rate unit duplication, the lone positive of X6.6), then I8 (meta-evolution of the optimizer settings from outside). The four evolution items X6.5 to X6.8 and X0.1, X0.1b, X0.6, X0.7 are DONE ([[findings-map]]). I11 parked. Open user calls: protocol s7 items 1, 6, 7, 8.
+**Next up:** I8 (meta-evolution of the optimizer settings from outside, unparked by X6.6). Done: X0.1, X0.1b, X0.6, X0.7, X6.5 to X6.8 and X6.9 (= I10: fixed-rate duplication gave about 1.2x, no arm passed). I11 parked. Open user calls: protocol s7 items 1, 6, 7, 8.
 P-draft 1 (U3) waits for the user to confirm the
 definition of vertical intelligence. Open user calls: protocol s7 items 1, 6, 7.
 

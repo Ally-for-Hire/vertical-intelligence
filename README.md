@@ -21,9 +21,30 @@ about large AI systems.
 
 ## Latest update: 27 October 2026
 
-**At a glance: 231 pre-registered predictions, 99 passed, 125 failed, 0 awaiting results** (7 more were voided or not applicable).
+**At a glance: 236 pre-registered predictions, 101 passed, 127 failed, 0 awaiting results** (8 more were voided or not applicable).
 Every success rule is written down *before* an experiment runs, and every failure is kept and
 reported next to the successes.
+
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="curious-net/results/figures/vi_x69_growth_dark.png">
+  <img alt="Bar chart of how many times cheaper than the plain evolutionary search four fixed rates of growing a network by copying a hidden unit were: 10 percent of children 1.16, 30 percent 1.03, 50 percent 1.23 (highlighted), every child 1.17, against a pass line of 1.25. None passed; on spirals alone the gains were 1.16 to 1.43 times; the checkerboard stayed unsolved." src="curious-net/results/figures/vi_x69_growth_light.png" width="900">
+</picture>
+
+<details><summary>Data behind the chart (experiment X6.9, 70 runs per arm)</summary>
+
+| Growth rate (copy a hidden unit, same output) | Solved | Cheaper overall | Cheaper on spirals | Final net width |
+|---|---|---|---|---|
+| None (plain search) | 60/70 | 1.00x | 1.00x | 16 |
+| 10% of children | 60/70 | 1.16x | 1.16x | 23 |
+| 30% of children | 60/70 | 1.03x | 1.43x | 28 |
+| **50% of children** | **60/70** | **1.23x** | **1.30x** | **29** |
+| Every child | 60/70 | 1.17x | 1.39x | 30 |
+
+The pass line registered in advance was 1.25x overall; the best arm missed it by 0.02. The
+checkerboard stayed unsolved at every rate, even with nets grown to width 30. Letting the search
+grow its own parts helps a little; it is not the missing ingredient.
+
+</details>
 
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="curious-net/results/figures/vi_x68_stones_dark.png">
@@ -136,8 +157,9 @@ The food-only learner is tuned on food, its own objective; with default settings
   selection with no grader at all (it works, at about 26 times the cost of ranking), and stepping
   stones (they did not help). The main result on "for me": what decides whether a simulated creature
   survives is whether it attends to *all* its needs (X0.7).
-- **Next:** growth by copying parts of the learner (the one thing that helped, in X6.6), and
-  tuning the search from outside.
+- **Also finished:** letting the search grow its own parts by copying hidden units (X6.9) helps by
+  about 1.2 times, but is not the missing ingredient.
+- **Next:** tuning the search's own settings from outside, with an outer population.
 
 ## What has been found so far
 

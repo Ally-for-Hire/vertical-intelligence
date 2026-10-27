@@ -3,7 +3,7 @@ Style follows the dataviz method: one accent hue plus grays for emphasis, thin m
 a title that states the finding, light AND dark variants (GitHub picks by the viewer theme); alt text and
 a data table live in the README.
 
-Usage: python figures.py [x06 | x07 | x66 | x67 | x68 | all]       -> ../results/figures/vi_<name>_{light,dark}.png"""
+Usage: python figures.py [x06 | x07 | x66 | x67 | x68 | x69 | all]       -> ../results/figures/vi_<name>_{light,dark}.png"""
 import json, os, sys
 import matplotlib
 matplotlib.use("Agg")
@@ -199,7 +199,35 @@ def fig_x68(theme):
     return _save(fig, "x68_stones", theme)
 
 
-FIGS = {"x06": fig_x06, "x07": fig_x07, "x66": fig_x66, "x67": fig_x67, "x68": fig_x68}
+def fig_x69(theme):
+    d = json.load(open(os.path.join(HERE, "..", "..", "neuroblock-research", "emergent", "runs", "x69_growth.json")))["summary_judge"]
+    names = {"g10": "Copy a unit in 10% of children", "g30": "Copy a unit in 30% of children", "g50": "Copy a unit in 50% of children", "g100": "Copy a unit in every child"}
+    t = THEMES[theme]
+    fig, ax = plt.subplots(figsize=(10.0, 4.9), dpi=200)
+    fig.patch.set_facecolor(t["surface"]); ax.set_facecolor(t["surface"])
+    fig.subplots_adjust(left=0.30, right=0.97, top=0.76, bottom=0.14)
+    arms = ["g10", "g30", "g50", "g100"]; n = len(arms)
+    best = max(arms, key=lambda k: d[k]["cheaper_than_a"])
+    for i, k in enumerate(arms):
+        o = d[k]; y = n - 1 - i; hl = k == best; v = o["cheaper_than_a"]
+        ax.barh(y, v, height=0.36, color=t["accent"] if hl else t["gray"], linewidth=0)
+        ax.text(-0.02, y, names[k], ha="right", va="center", fontsize=10, color=t["ink"] if hl else t["ink2"], fontweight="bold" if hl else "normal")
+        ax.text(1.42, y + 0.1, f"{v:.2f}× cheaper overall · solved {o['solved']}/{o['total']}", ha="left", va="center", fontsize=9.5, color=t["ink"] if hl else t["ink2"], fontweight="bold" if hl else "normal")
+        ax.text(1.42, y - 0.18, f"spirals {o['spirals_vs_a']:.2f}× cheaper · net width grew to {o['width']:.0f}", ha="left", va="center", fontsize=7.8, color=t["ink2"])
+    for x, lab, ha, dx in ((1.0, "plain baseline", "right", -0.02), (1.25, "pass line", "left", 0.02)):
+        ax.axvline(x, color=t["ink2"], lw=0.9, ls=(0, (4, 3))); ax.text(x + dx, n - 0.45, lab, ha=ha, va="bottom", fontsize=8, color=t["ink2"])
+    ax.set_xlim(0, 2.75); ax.set_ylim(-0.6, n - 0.25); ax.set_yticks([]); ax.set_xticks([0, 0.5, 1.0, 1.5])
+    ax.tick_params(axis="x", colors=t["ink2"], labelsize=8.5, length=0); ax.xaxis.grid(True, color=t["grid"], lw=0.8); ax.set_axisbelow(True)
+    for sp in ("top", "right", "left", "bottom"):
+        ax.spines[sp].set_visible(False)
+    fig.text(0.03, 0.935, "Letting the search grow its own parts helps a little, and none reach the pass line", fontsize=13.5, fontweight="bold", color=t["ink"], ha="left")
+    fig.text(0.03, 0.875, "Copying a hidden unit (without changing what the network computes) at a fixed rate, with no gene to evolve.", fontsize=10, color=t["ink2"], ha="left")
+    fig.text(0.03, 0.84, "How many times cheaper than the plain evolutionary search (higher is better), 70 runs per arm.", fontsize=9, color=t["ink2"], ha="left")
+    fig.text(0.97, 0.025, "experiment X6.9 · toy benchmark · the best arm missed the registered 1.25× line by 0.02 · the checkerboard stayed unsolved", fontsize=7.4, color=t["ink2"], ha="right")
+    return _save(fig, "x69_growth", theme)
+
+
+FIGS = {"x06": fig_x06, "x07": fig_x07, "x66": fig_x66, "x67": fig_x67, "x68": fig_x68, "x69": fig_x69}
 
 if __name__ == "__main__":
     which = sys.argv[1] if len(sys.argv) > 1 else "all"

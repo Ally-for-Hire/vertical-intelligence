@@ -162,7 +162,7 @@ counting every stage. Solved of 20 runs: direct 10 (spirals 10/10, checker3 0/10
 self-paced ramp 10, mixed 0; geometric-mean cost vs direct 0.37x, 1.19x, 0.37x (pass: more solved or
 1.5x cheaper). checker3 unsolved in all 40 ramp runs. Manipulation checks passed (direct fails 10/20;
 the self-paced ramp reaches the full problem in 20/20; parity 3/3). The four evolution items (X6.5 to
-X6.8) are complete. Next: I10 (fixed-rate duplication), then I8 (meta-evolution).
+X6.8) are complete. Next: I10 (done, below), then I8 (meta-evolution).
 
 Parked, I8: a meta-evolution of the optimizer's settings (an outer population culled on suite
 speed). Worth testing if X6.6 shows the machinery cannot evolve from inside; cost 2-4 h GPU
@@ -239,3 +239,9 @@ New from X0.6:
 5. X9.1 once at least one block from each of sections 0, 1, 2 and 3 has passed.
 
 Every result goes back into [[findings-map]] under its section, including failures.
+
+**X6.9 = I10 result (2026-10-27): DONE; no arm passed (just short).** Fixed-rate unit duplication, no gene,
+u = 0.1, 0.3, 0.5, 1.0; judge seeds 700-709 (70 runs per arm), budget 1e7: all arms 60/70 solved; cost vs
+the plain optimizer 1.16x, 1.03x, 1.23x, 1.17x (pass line 1.25x); spirals 1.16x to 1.43x; width 23 to 30;
+checker3 unsolved. Verdicts P234 FAILED (1.23x), P235 FAILED (1.43x), P236 PASSED, P237 PASSED, P238 N/A.
+Next: I8.

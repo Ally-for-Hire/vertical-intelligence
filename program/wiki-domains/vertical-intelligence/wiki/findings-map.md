@@ -207,6 +207,13 @@ principles in miniature, not facts about brains or LLMs. Ids point to `curious-n
     0.5M to 6.0M), the fixed ramp 4/20 and the mixed stages 0/20 (both worse); **the checkerboard
     was unsolved in all 40 ramp runs**. A plausible reason (untested): a population converged on an
     easy stage has lost the variety and noise size it needs to move on.
+  - **X6.9 = I10 (2026-10-27, 70 runs per arm, budget 1e7; P234-P238): the capacity to grow gives a
+    modest, consistent gain.** Function-preserving unit duplication at a fixed rate with no gene
+    (u = 0.1, 0.3, 0.5, 1.0): all arms solved 60/70 like the baseline; cost 1.16x, 1.03x, **1.23x**,
+    1.17x cheaper overall (pass line 1.25x, missed by 0.02) and 1.16x to 1.43x on spirals; nets grew to
+    width 23 to 30; the checkerboard stayed unsolved at every rate. Same gain as the heritable-gene arm
+    of X6.6 (1.22x): growth helps a little, it is not the missing ingredient, and the differences between
+    rates are within noise at 10 seeds.
   - **Reading across X6.5 to X6.8 (assistant; for the author to correct):** none of the things
     added to blind variation plus culling closed the gap to gradient descent: its tricks did not
     evolve themselves (X6.6), selection without any grader works but at about 26 times the cost

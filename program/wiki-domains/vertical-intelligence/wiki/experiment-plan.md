@@ -149,6 +149,14 @@ faster with nets growing to width 28: the capacity helps, its evolved rate did n
 run (nothing passed). Next in order: X6.7. Follow-ups parked in [[inbox]]: I8 (meta-evolution from
 outside, now unparked) and I10 (fixed-rate duplication).
 
+**X6.7 result (2026-10-27): DONE; the registered pass rule was missed.** Seeds 500-519, xorgauss,
+target 0.95, budget 3e6. Graded cull 20/20 (median 51,520); default Adam 20/20 (54,240), tuned
+Adam 3,840; random search 0/20; unlimited food exploded in 20/20; the energy world as literally
+specified (b, energy summed over the step) went EXTINCT in 20/20 (0/20 solved); the per-point
+sensitivity arm (e, registered before running because the plan does not fix the energy granularity)
+solved 17/20 (needs 18) at a median 1,367,392, 26.5x the graded cull. Manipulation checks passed
+(accuracy predicts offspring in every run; unlimited food explodes). Next in order: X6.8.
+
 Parked, I8: a meta-evolution of the optimizer's settings (an outer population culled on suite
 speed). Worth testing if X6.6 shows the machinery cannot evolve from inside; cost 2-4 h GPU
 (over budget, ask first).

@@ -21,9 +21,33 @@ about large AI systems.
 
 ## Latest update: 27 October 2026
 
-**At a glance: 222 pre-registered predictions, 97 passed, 119 failed, 0 awaiting results** (6 more were voided or not applicable).
+**At a glance: 227 pre-registered predictions, 99 passed, 121 failed, 0 awaiting results** (7 more were voided or not applicable).
 Every success rule is written down *before* an experiment runs, and every failure is kept and
 reported next to the successes.
+
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="curious-net/results/figures/vi_x67_nograder_dark.png">
+  <img alt="Horizontal bar chart on a log scale of the cost to reach 95 percent accuracy on a noisy XOR: tuned gradient descent 3,840; graded cull 51,520; default gradient descent 54,240; the energy world with nothing ranking anything 1,367,392 (highlighted, solved 17 of 20). Three arms were not solved: the energy world with literal units went extinct in 20 of 20 runs, unlimited food exploded in 20 of 20, and random search solved none." src="curious-net/results/figures/vi_x67_nograder_light.png" width="900">
+</picture>
+
+<details><summary>Data behind the chart (experiment X6.7, 20 runs per arm)</summary>
+
+| Learner | Solved | Median cost to 95% |
+|---|---|---|
+| Tuned gradient descent | 20/20 | 3,840 |
+| Graded cull (a grader ranks and culls) | 20/20 | 51,520 |
+| Default gradient descent | 20/20 | 54,240 |
+| **Energy world, per-point energy (nothing ranks anything)** | **17/20** | **1,367,392** |
+| Energy world, literal per-step energy | 0/20 (population went extinct in 20/20) | n/a |
+| Unlimited food | 0/20 (population exploded in 20/20) | n/a |
+| Random search | 0/20 | n/a |
+
+In the energy world, food is shared among the learners that answer correctly, living costs energy,
+a learner with spare energy splits in two and one with none dies. Accuracy predicted the number of
+offspring in every run. The registered pass mark was 18/20, so the energy world missed it by one
+run; the literal reading of the units collapsed, so the energy scale matters.
+
+</details>
 
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="curious-net/results/figures/vi_x66_machinery_dark.png">
@@ -88,11 +112,11 @@ The food-only learner is tuned on food, its own objective; with default settings
 
 - **Finished this week:** the first experiments on the "good or bad *for me*" question (X0.1,
   X0.1b, X0.6, X0.7); a repair of the evolution benchmark (X6.5), which corrected an earlier, more
-  flattering number; and the first test of whether nature's search tricks can improve themselves
-  (X6.6), which says no. The main result on "for me": what decides whether a simulated creature
-  survives is whether it attends to *all* its needs; how it combines them barely matters (X0.7).
-- **Next:** X6.7 and X6.8: can selection work with no grader at all (only "what keeps being copied
-  while resources are limited"), and do stepping stones reach problems too hard to reach directly?
+  flattering number; and two tests of how nature could have searched before gradient descent: its
+  search tricks did not improve themselves (X6.6), but selection with no grader at all does work,
+  at about 26 times the cost of ranking (X6.7). The main result on "for me": what decides whether a
+  simulated creature survives is whether it attends to *all* its needs (X0.7).
+- **Next:** X6.8, do stepping stones reach problems that are too hard to reach directly?
 
 ## What has been found so far
 

@@ -1,0 +1,299 @@
+200 runs, 6 workers, budget 3e+06
+[1/200] a seed 500: cost 52480.0 solved True (1.2s, 5s elapsed)
+[2/200] a seed 501: cost 190080.0 solved True (1.6s, 6s elapsed)
+[3/200] a seed 502: cost 39040.0 solved True (1.1s, 6s elapsed)
+[4/200] a seed 503: cost 29440.0 solved True (1.0s, 6s elapsed)
+[5/200] a seed 504: cost 27520.0 solved True (0.9s, 6s elapsed)
+[6/200] a seed 505: cost 31360.0 solved True (1.1s, 6s elapsed)
+[7/200] a seed 506: cost 97920.0 solved True (0.1s, 6s elapsed)
+[8/200] a seed 507: cost 65280.0 solved True (0.1s, 6s elapsed)
+[9/200] a seed 508: cost 60160.0 solved True (0.2s, 6s elapsed)
+[10/200] a seed 509: cost 68480.0 solved True (0.3s, 6s elapsed)
+[11/200] a seed 510: cost 60800.0 solved True (0.3s, 6s elapsed)
+[12/200] a seed 511: cost 26240.0 solved True (0.1s, 6s elapsed)
+[13/200] a seed 512: cost 23040.0 solved True (0.1s, 6s elapsed)
+[14/200] a seed 513: cost 32000.0 solved True (0.2s, 6s elapsed)
+[15/200] a seed 514: cost 85120.0 solved True (0.3s, 6s elapsed)
+[16/200] a seed 515: cost 50560.0 solved True (0.2s, 6s elapsed)
+[17/200] a seed 516: cost 30080.0 solved True (0.1s, 6s elapsed)
+[18/200] a seed 517: cost 204160.0 solved True (0.5s, 6s elapsed)
+[19/200] a seed 518: cost 40320.0 solved True (0.2s, 6s elapsed)
+[20/200] a seed 519: cost 55040.0 solved True (0.2s, 6s elapsed)
+[21/200] b seed 500: cost 38208.0 solved False (2.0s, 7s elapsed)
+[22/200] b seed 501: cost 27584.0 solved False (2.1s, 8s elapsed)
+[23/200] b seed 502: cost 20256.0 solved False (2.1s, 8s elapsed)
+[24/200] b seed 503: cost 41648.0 solved False (2.3s, 8s elapsed)
+[25/200] b seed 504: cost 27856.0 solved False (2.2s, 8s elapsed)
+[26/200] b seed 505: cost 32672.0 solved False (2.2s, 8s elapsed)
+[27/200] b seed 506: cost 41552.0 solved False (0.2s, 8s elapsed)
+[28/200] b seed 507: cost 88304.0 solved False (0.9s, 8s elapsed)
+[29/200] b seed 508: cost 82560.0 solved False (0.8s, 8s elapsed)
+[30/200] b seed 509: cost 30736.0 solved False (0.3s, 8s elapsed)
+[31/200] b seed 510: cost 20784.0 solved False (0.2s, 8s elapsed)
+[32/200] b seed 511: cost 36848.0 solved False (0.4s, 8s elapsed)
+[33/200] b seed 512: cost 47424.0 solved False (0.5s, 8s elapsed)
+[34/200] b seed 513: cost 29696.0 solved False (0.4s, 8s elapsed)
+[35/200] b seed 514: cost 41888.0 solved False (0.5s, 8s elapsed)
+[36/200] b seed 515: cost 36992.0 solved False (0.4s, 9s elapsed)
+[37/200] b seed 516: cost 24048.0 solved False (0.2s, 9s elapsed)
+[38/200] b seed 517: cost 47024.0 solved False (0.5s, 9s elapsed)
+[39/200] b seed 518: cost 33728.0 solved False (0.4s, 9s elapsed)
+[40/200] b seed 519: cost 26288.0 solved False (0.3s, 9s elapsed)
+[41/200] c seed 500: cost 119632.0 solved False (0.1s, 9s elapsed)
+[42/200] c seed 501: cost 103424.0 solved False (0.1s, 9s elapsed)
+[43/200] c seed 502: cost 128400.0 solved False (0.1s, 9s elapsed)
+[44/200] c seed 503: cost 96112.0 solved False (0.1s, 9s elapsed)
+[45/200] c seed 504: cost 130688.0 solved False (0.1s, 9s elapsed)
+[46/200] c seed 505: cost 100624.0 solved False (0.1s, 9s elapsed)
+[47/200] c seed 506: cost 102960.0 solved False (0.1s, 9s elapsed)
+[48/200] c seed 507: cost 92800.0 solved False (0.1s, 9s elapsed)
+[49/200] c seed 508: cost 87696.0 solved False (0.1s, 9s elapsed)
+[50/200] c seed 509: cost 83328.0 solved False (0.1s, 9s elapsed)
+[51/200] c seed 510: cost 111888.0 solved False (0.1s, 9s elapsed)
+[52/200] c seed 511: cost 152640.0 solved False (0.1s, 9s elapsed)
+[53/200] c seed 512: cost 100160.0 solved False (0.1s, 9s elapsed)
+[54/200] c seed 513: cost 147024.0 solved False (0.1s, 9s elapsed)
+[55/200] c seed 514: cost 126288.0 solved False (0.1s, 9s elapsed)
+[56/200] c seed 515: cost 108608.0 solved False (0.1s, 9s elapsed)
+[57/200] c seed 516: cost 104656.0 solved False (0.1s, 9s elapsed)
+[58/200] c seed 517: cost 131472.0 solved False (0.1s, 9s elapsed)
+[59/200] c seed 518: cost 137280.0 solved False (0.1s, 9s elapsed)
+[60/200] c seed 519: cost 143808.0 solved False (0.1s, 9s elapsed)
+[61/200] d seed 500: cost 3000320.0 solved False (7.4s, 16s elapsed)
+[62/200] d seed 501: cost 3000320.0 solved False (7.6s, 17s elapsed)
+[63/200] d seed 502: cost 3000320.0 solved False (7.3s, 17s elapsed)
+[64/200] d seed 503: cost 3000320.0 solved False (7.3s, 17s elapsed)
+[65/200] d seed 504: cost 3000320.0 solved False (7.5s, 17s elapsed)
+[66/200] d seed 505: cost 3000320.0 solved False (7.3s, 17s elapsed)
+[67/200] d seed 506: cost 3000320.0 solved False (7.5s, 24s elapsed)
+[68/200] d seed 507: cost 3000320.0 solved False (7.3s, 24s elapsed)
+[69/200] d seed 508: cost 3000320.0 solved False (7.6s, 24s elapsed)
+[70/200] d seed 509: cost 3000320.0 solved False (7.6s, 24s elapsed)
+[71/200] d seed 510: cost 3000320.0 solved False (7.5s, 24s elapsed)
+[72/200] d seed 511: cost 3000320.0 solved False (7.5s, 24s elapsed)
+[73/200] d seed 512: cost 3000320.0 solved False (7.5s, 31s elapsed)
+[74/200] d seed 513: cost 3000320.0 solved False (7.4s, 31s elapsed)
+[75/200] d seed 514: cost 3000320.0 solved False (7.5s, 31s elapsed)
+[76/200] d seed 515: cost 3000320.0 solved False (7.5s, 31s elapsed)
+[77/200] d seed 516: cost 3000320.0 solved False (7.4s, 31s elapsed)
+[78/200] d seed 517: cost 3000320.0 solved False (7.4s, 31s elapsed)
+[79/200] d seed 518: cost 3000320.0 solved False (7.8s, 39s elapsed)
+[80/200] d seed 519: cost 3000320.0 solved False (7.6s, 39s elapsed)
+[81/200] e seed 500: cost 3000368.0 solved False (23.2s, 55s elapsed)
+[82/200] e seed 501: cost 3000368.0 solved False (23.2s, 55s elapsed)
+[83/200] e seed 502: cost 735712.0 solved True (6.1s, 55s elapsed)
+[84/200] e seed 503: cost 2305296.0 solved True (18.0s, 55s elapsed)
+[85/200] e seed 504: cost 940000.0 solved True (8.0s, 55s elapsed)
+[86/200] e seed 505: cost 1272144.0 solved True (10.5s, 55s elapsed)
+[87/200] e seed 506: cost 1089024.0 solved True (10.6s, 55s elapsed)
+[88/200] e seed 507: cost 1299648.0 solved True (11.0s, 57s elapsed)
+[89/200] e seed 508: cost 2548672.0 solved True (20.3s, 70s elapsed)
+[90/200] e seed 509: cost 1060992.0 solved True (9.2s, 70s elapsed)
+[91/200] e seed 510: cost 1527968.0 solved True (12.6s, 70s elapsed)
+[92/200] e seed 511: cost 1435136.0 solved True (12.5s, 70s elapsed)
+[93/200] e seed 512: cost 3000464.0 solved False (22.5s, 77s elapsed)
+[94/200] e seed 513: cost 1700432.0 solved True (13.7s, 77s elapsed)
+[95/200] e seed 514: cost 183856.0 solved True (1.7s, 77s elapsed)
+[96/200] e seed 515: cost 1061056.0 solved True (9.5s, 77s elapsed)
+[97/200] e seed 516: cost 855472.0 solved True (7.6s, 77s elapsed)
+[98/200] e seed 517: cost 1905216.0 solved True (12.7s, 80s elapsed)
+[99/200] e seed 518: cost 2733824.0 solved True (14.6s, 84s elapsed)
+[100/200] e seed 519: cost 757296.0 solved True (5.4s, 84s elapsed)
+[101/200] adam0.001 seed 500: cost 78720.0 solved True (4.1s, 84s elapsed)
+[102/200] adam0.001 seed 501: cost 77760.0 solved True (4.3s, 84s elapsed)
+[103/200] adam0.001 seed 502: cost 33600.0 solved True (0.7s, 84s elapsed)
+[104/200] adam0.001 seed 503: cost 40320.0 solved True (0.7s, 84s elapsed)
+[105/200] adam0.001 seed 504: cost 24960.0 solved True (0.4s, 84s elapsed)
+[106/200] adam0.001 seed 505: cost 38400.0 solved True (3.4s, 84s elapsed)
+[107/200] adam0.001 seed 506: cost 55680.0 solved True (0.9s, 84s elapsed)
+[108/200] adam0.001 seed 507: cost 138240.0 solved True (2.1s, 84s elapsed)
+[109/200] adam0.001 seed 508: cost 65280.0 solved True (1.0s, 84s elapsed)
+[110/200] adam0.001 seed 509: cost 29760.0 solved True (0.5s, 84s elapsed)
+[111/200] adam0.001 seed 510: cost 49920.0 solved True (3.3s, 84s elapsed)
+[112/200] adam0.001 seed 511: cost 66240.0 solved True (0.9s, 84s elapsed)
+[113/200] adam0.001 seed 512: cost 52800.0 solved True (0.7s, 84s elapsed)
+[114/200] adam0.001 seed 513: cost 40320.0 solved True (0.6s, 84s elapsed)
+[115/200] adam0.001 seed 514: cost 48000.0 solved True (0.7s, 84s elapsed)
+[116/200] adam0.001 seed 515: cost 73920.0 solved True (1.1s, 84s elapsed)
+[117/200] adam0.001 seed 516: cost 51840.0 solved True (0.7s, 84s elapsed)
+[118/200] adam0.001 seed 517: cost 82560.0 solved True (1.2s, 84s elapsed)
+[119/200] adam0.001 seed 518: cost 59520.0 solved True (0.8s, 84s elapsed)
+[120/200] adam0.001 seed 519: cost 72960.0 solved True (1.1s, 84s elapsed)
+[121/200] adam0.003 seed 500: cost 25920.0 solved True (2.9s, 84s elapsed)
+[122/200] adam0.003 seed 501: cost 27840.0 solved True (0.4s, 84s elapsed)
+[123/200] adam0.003 seed 502: cost 11520.0 solved True (0.2s, 84s elapsed)
+[124/200] adam0.003 seed 503: cost 17280.0 solved True (0.3s, 84s elapsed)
+[125/200] adam0.003 seed 504: cost 14400.0 solved True (0.2s, 84s elapsed)
+[126/200] adam0.003 seed 505: cost 12480.0 solved True (0.2s, 84s elapsed)
+[127/200] adam0.003 seed 506: cost 19200.0 solved True (0.3s, 84s elapsed)
+[128/200] adam0.003 seed 507: cost 49920.0 solved True (0.7s, 84s elapsed)
+[129/200] adam0.003 seed 508: cost 23040.0 solved True (0.3s, 84s elapsed)
+[130/200] adam0.003 seed 509: cost 12480.0 solved True (0.2s, 84s elapsed)
+[131/200] adam0.003 seed 510: cost 16320.0 solved True (0.2s, 84s elapsed)
+[132/200] adam0.003 seed 511: cost 26880.0 solved True (0.4s, 84s elapsed)
+[133/200] adam0.003 seed 512: cost 19200.0 solved True (0.2s, 84s elapsed)
+[134/200] adam0.003 seed 513: cost 17280.0 solved True (0.3s, 84s elapsed)
+[135/200] adam0.003 seed 514: cost 20160.0 solved True (0.3s, 84s elapsed)
+[136/200] adam0.003 seed 515: cost 24000.0 solved True (0.4s, 84s elapsed)
+[137/200] adam0.003 seed 516: cost 20160.0 solved True (0.3s, 84s elapsed)
+[138/200] adam0.003 seed 517: cost 31680.0 solved True (0.4s, 84s elapsed)
+[139/200] adam0.003 seed 518: cost 16320.0 solved True (0.2s, 84s elapsed)
+[140/200] adam0.003 seed 519: cost 30720.0 solved True (0.4s, 84s elapsed)
+[141/200] adam0.01 seed 500: cost 8640.0 solved True (0.1s, 84s elapsed)
+[142/200] adam0.01 seed 501: cost 11520.0 solved True (0.2s, 84s elapsed)
+[143/200] adam0.01 seed 502: cost 4800.0 solved True (0.1s, 84s elapsed)
+[144/200] adam0.01 seed 503: cost 5760.0 solved True (0.1s, 84s elapsed)
+[145/200] adam0.01 seed 504: cost 5760.0 solved True (0.1s, 84s elapsed)
+[146/200] adam0.01 seed 505: cost 6720.0 solved True (0.1s, 84s elapsed)
+[147/200] adam0.01 seed 506: cost 7680.0 solved True (0.1s, 84s elapsed)
+[148/200] adam0.01 seed 507: cost 16320.0 solved True (0.2s, 84s elapsed)
+[149/200] adam0.01 seed 508: cost 8640.0 solved True (0.1s, 84s elapsed)
+[150/200] adam0.01 seed 509: cost 5760.0 solved True (0.1s, 84s elapsed)
+[151/200] adam0.01 seed 510: cost 10560.0 solved True (0.2s, 84s elapsed)
+[152/200] adam0.01 seed 511: cost 7680.0 solved True (0.1s, 84s elapsed)
+[153/200] adam0.01 seed 512: cost 8640.0 solved True (0.1s, 84s elapsed)
+[154/200] adam0.01 seed 513: cost 8640.0 solved True (0.2s, 84s elapsed)
+[155/200] adam0.01 seed 514: cost 5760.0 solved True (0.1s, 84s elapsed)
+[156/200] adam0.01 seed 515: cost 7680.0 solved True (0.1s, 84s elapsed)
+[157/200] adam0.01 seed 516: cost 7680.0 solved True (0.1s, 84s elapsed)
+[158/200] adam0.01 seed 517: cost 13440.0 solved True (0.2s, 84s elapsed)
+[159/200] adam0.01 seed 518: cost 6720.0 solved True (0.1s, 84s elapsed)
+[160/200] adam0.01 seed 519: cost 12480.0 solved True (0.2s, 84s elapsed)
+[161/200] adam0.03 seed 500: cost 4800.0 solved True (0.1s, 84s elapsed)
+[162/200] adam0.03 seed 501: cost 5760.0 solved True (0.1s, 84s elapsed)
+[163/200] adam0.03 seed 502: cost 4800.0 solved True (0.1s, 84s elapsed)
+[164/200] adam0.03 seed 503: cost 3840.0 solved True (0.1s, 84s elapsed)
+[165/200] adam0.03 seed 504: cost 3840.0 solved True (0.1s, 84s elapsed)
+[166/200] adam0.03 seed 505: cost 4800.0 solved True (0.1s, 84s elapsed)
+[167/200] adam0.03 seed 506: cost 2880.0 solved True (0.0s, 84s elapsed)
+[168/200] adam0.03 seed 507: cost 9600.0 solved True (0.2s, 84s elapsed)
+[169/200] adam0.03 seed 508: cost 3840.0 solved True (0.1s, 84s elapsed)
+[170/200] adam0.03 seed 509: cost 3840.0 solved True (0.1s, 84s elapsed)
+[171/200] adam0.03 seed 510: cost 9600.0 solved True (0.2s, 84s elapsed)
+[172/200] adam0.03 seed 511: cost 3840.0 solved True (0.1s, 84s elapsed)
+[173/200] adam0.03 seed 512: cost 6720.0 solved True (0.1s, 84s elapsed)
+[174/200] adam0.03 seed 513: cost 5760.0 solved True (0.1s, 84s elapsed)
+[175/200] adam0.03 seed 514: cost 5760.0 solved True (0.1s, 84s elapsed)
+[176/200] adam0.03 seed 515: cost 4800.0 solved True (0.1s, 84s elapsed)
+[177/200] adam0.03 seed 516: cost 2880.0 solved True (0.0s, 84s elapsed)
+[178/200] adam0.03 seed 517: cost 8640.0 solved True (0.1s, 84s elapsed)
+[179/200] adam0.03 seed 518: cost 4800.0 solved True (0.1s, 84s elapsed)
+[180/200] adam0.03 seed 519: cost 7680.0 solved True (0.1s, 84s elapsed)
+[181/200] adam0.1 seed 500: cost 3840.0 solved True (0.1s, 84s elapsed)
+[182/200] adam0.1 seed 501: cost 5760.0 solved True (0.1s, 84s elapsed)
+[183/200] adam0.1 seed 502: cost 2880.0 solved True (0.0s, 84s elapsed)
+[184/200] adam0.1 seed 503: cost 1920.0 solved True (0.0s, 84s elapsed)
+[185/200] adam0.1 seed 504: cost 4800.0 solved True (0.1s, 84s elapsed)
+[186/200] adam0.1 seed 505: cost 3840.0 solved True (0.1s, 84s elapsed)
+[187/200] adam0.1 seed 506: cost 4800.0 solved True (0.1s, 84s elapsed)
+[188/200] adam0.1 seed 507: cost 6720.0 solved True (0.1s, 84s elapsed)
+[189/200] adam0.1 seed 508: cost 6720.0 solved True (0.1s, 84s elapsed)
+[190/200] adam0.1 seed 509: cost 2880.0 solved True (0.0s, 84s elapsed)
+[191/200] adam0.1 seed 510: cost 3840.0 solved True (0.1s, 84s elapsed)
+[192/200] adam0.1 seed 511: cost 1920.0 solved True (0.0s, 84s elapsed)
+[193/200] adam0.1 seed 512: cost 2880.0 solved True (0.0s, 84s elapsed)
+[194/200] adam0.1 seed 513: cost 3840.0 solved True (0.1s, 84s elapsed)
+[195/200] adam0.1 seed 514: cost 9600.0 solved True (0.1s, 84s elapsed)
+[196/200] adam0.1 seed 515: cost 16320.0 solved True (0.2s, 84s elapsed)
+[197/200] adam0.1 seed 516: cost 1920.0 solved True (0.0s, 84s elapsed)
+[198/200] adam0.1 seed 517: cost 5760.0 solved True (0.1s, 84s elapsed)
+[199/200] adam0.1 seed 518: cost 2880.0 solved True (0.1s, 84s elapsed)
+[200/200] adam0.1 seed 519: cost 3840.0 solved True (0.1s, 84s elapsed)
+{
+ "a": {
+  "solved": 20,
+  "total": 20,
+  "median_cost": 51520.0,
+  "median_solved_cost": 51520.0
+ },
+ "b": {
+  "solved": 0,
+  "total": 20,
+  "median_cost": 35288.0,
+  "median_solved_cost": null,
+  "exploded": 0,
+  "extinct": 20,
+  "rho_median": 0.37420968679888345,
+  "rho_positive": 20,
+  "rho_n": 20,
+  "peak_median": 138.5,
+  "cost_vs_a": 0.6849378881987578,
+  "cost_vs_default_adam": 0.6505899705014749
+ },
+ "c": {
+  "solved": 0,
+  "total": 20,
+  "median_cost": 110248.0,
+  "median_solved_cost": null,
+  "exploded": 20,
+  "extinct": 0,
+  "rho_median": 0.5090144088660729,
+  "rho_positive": 20,
+  "rho_n": 20,
+  "peak_median": 4952.0,
+  "cost_vs_a": 2.1399068322981365
+ },
+ "d": {
+  "solved": 0,
+  "total": 20,
+  "median_cost": 3000320.0,
+  "median_solved_cost": null,
+  "cost_vs_a": 58.2360248447205
+ },
+ "e": {
+  "solved": 17,
+  "total": 20,
+  "median_cost": 1367392.0,
+  "median_solved_cost": 1272144.0,
+  "exploded": 0,
+  "extinct": 0,
+  "rho_median": 0.29768890469880654,
+  "rho_positive": 20,
+  "rho_n": 20,
+  "peak_median": 46.5,
+  "cost_vs_a": 26.540993788819875
+ },
+ "adam0.001": {
+  "solved": 20,
+  "total": 20,
+  "median_cost": 54240.0,
+  "median_solved_cost": 54240.0
+ },
+ "adam0.003": {
+  "solved": 20,
+  "total": 20,
+  "median_cost": 19680.0,
+  "median_solved_cost": 19680.0
+ },
+ "adam0.01": {
+  "solved": 20,
+  "total": 20,
+  "median_cost": 7680.0,
+  "median_solved_cost": 7680.0
+ },
+ "adam0.03": {
+  "solved": 20,
+  "total": 20,
+  "median_cost": 4800.0,
+  "median_solved_cost": 4800.0
+ },
+ "adam0.1": {
+  "solved": 20,
+  "total": 20,
+  "median_cost": 3840.0,
+  "median_solved_cost": 3840.0
+ },
+ "adam_tuned": {
+  "solved": 20,
+  "total": 20,
+  "median_cost": 3840.0,
+  "median_solved_cost": 3840.0,
+  "lr": "adam0.1"
+ },
+ "checks": {
+  "pass_b": false,
+  "rho_positive": true,
+  "c_explodes_or_fails": true,
+  "b_void": false
+ }
+}

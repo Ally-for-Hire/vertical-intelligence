@@ -36,6 +36,7 @@ principles in miniature, not facts about brains or LLMs. Ids point to `curious-n
   (comfort and growth are one hunger, grown from one better/worse-for-me signal), U10
   (wholeness first).
 - **What experiments tell us:**
+  - **Energy as viability (X6.7, 2026-10-27):** a population whose only pressure is staying alive on limited food found a solution without any grader (17/20); too little energy buffer against the noise of one step drove it extinct in 20/20 (see section 6).
   - **X0.1 (2026-10-26, 48 worlds; curious-net `vi/x0_1.py`, P199-P203):** one gradient-descent
     learner, with only the value signal varied. Value defined through the self (drive reduction,
     HOMEO) gives **need-dependent valence**: it takes energy-for-damage food when starving and
@@ -200,6 +201,15 @@ principles in miniature, not facts about brains or LLMs. Ids point to `curious-n
     lineages, and refilling from random always stayed at baseline (selfscore series, closed).
   - Selection math: Price identity exact (C1, not novel); interior optimum cull 75-95% under
     noisy scoring (C4); the multi-generation law was refuted (C5).
+  - **X6.7 (2026-10-27, 20 seeds, budget 3e6; P225-P229): selection with NO grader works, slowly.**
+    A population with nothing ranking anything (food shared among the nets that answer correctly,
+    a living cost, split at energy 2, die at 0) solved a noisy XOR to 0.95 in **17 of 20 runs**
+    (needs 18), at a median cost of 1.37M, **about 26 times the graded cull** (51.5k) and 25 times
+    default Adam (54.2k). Random search solved 0/20; unlimited food made the population explode
+    in 20/20 (so competition for the limited resource is what selects); accuracy predicted offspring
+    in every run (Spearman 0.30). **The units matter:** with the energy change summed over a whole
+    step against a 0-to-2 band, the population went extinct in 20/20 runs. Energy as a budget must be
+    large relative to the noise of one step.
   - **X6.6 (2026-10-27, 70 runs per arm, budget 1e7; P220-P224):** nature's variation machinery
     does **not** evolve itself here. Three blind, heritable mechanisms (a direction gene, a
     recombination gene, a duplication gene) were each tried alone and together; **no arm passed**

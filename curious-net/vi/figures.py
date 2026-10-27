@@ -3,7 +3,7 @@ Style follows the dataviz method: one accent hue plus grays for emphasis, thin m
 a title that states the finding, light AND dark variants (GitHub picks by the viewer theme); alt text and
 a data table live in the README.
 
-Usage: python figures.py [x06 | x07 | x66 | all]       -> ../results/figures/vi_<name>_{light,dark}.png"""
+Usage: python figures.py [x06 | x07 | x66 | x67 | all]       -> ../results/figures/vi_<name>_{light,dark}.png"""
 import json, os, sys
 import matplotlib
 matplotlib.use("Agg")
@@ -131,7 +131,45 @@ def fig_x66(theme):
     return _save(fig, "x66_machinery", theme)
 
 
-FIGS = {"x06": fig_x06, "x07": fig_x07, "x66": fig_x66}
+def fig_x67(theme):
+    d = json.load(open(os.path.join(HERE, "..", "..", "neuroblock-research", "emergent", "runs", "x67_energy.json")))["summary"]
+    t = THEMES[theme]
+    solved = [("Tuned gradient descent", d["adam_tuned"]["median_cost"], d["adam_tuned"]["solved"], False),
+              ("Graded cull (a grader ranks and culls)", d["a"]["median_cost"], d["a"]["solved"], False),
+              ("Default gradient descent", d["adam0.001"]["median_cost"], d["adam0.001"]["solved"], False),
+              ("Energy world (nothing ranks anything)", d["e"]["median_cost"], d["e"]["solved"], True)]
+    unsolved = [("Energy world, literal units", f"not solved: the population went extinct in {d['b']['extinct']}/{d['b']['total']} runs"),
+                ("Unlimited food", f"not solved: the population exploded in {d['c']['exploded']}/{d['c']['total']} runs"),
+                ("Random search", f"not solved in {d['d']['total']}/{d['d']['total']} runs within 3,000,000")]
+    rows = solved + [(a, None, None, False) for a, _ in unsolved]
+    n = len(rows); lo, hi = 1e3, 6e7
+    ratio = d["e"]["median_cost"] / d["a"]["median_cost"]
+    fig, ax = plt.subplots(figsize=(10.4, 5.2), dpi=200)
+    fig.patch.set_facecolor(t["surface"]); ax.set_facecolor(t["surface"])
+    fig.subplots_adjust(left=0.33, right=0.97, top=0.75, bottom=0.14)
+    ax.set_xscale("log"); ax.set_xlim(lo, hi); ax.set_ylim(-0.7, n - 0.3); ax.set_yticks([])
+    for i, (label, v, k, hl) in enumerate(rows):
+        y = n - 1 - i
+        ax.text(lo * 0.82, y, label, ha="right", va="center", fontsize=9.5, color=t["ink"] if hl else t["ink2"], fontweight="bold" if hl else "normal", clip_on=False)
+        if v is not None:
+            ax.barh(y, v - lo, left=lo, height=0.38, color=t["accent"] if hl else t["gray"], linewidth=0)
+            ax.text(v * 1.12, y, f"{v:,.0f} · solved {k}/20", ha="left", va="center", fontsize=9.5, color=t["ink"] if hl else t["ink2"], fontweight="bold" if hl else "normal", zorder=5, bbox=dict(facecolor=t["surface"], edgecolor="none", pad=2.0))
+        else:
+            ax.text(lo * 1.15, y, dict(unsolved)[label], ha="left", va="center", fontsize=9, color=t["ink2"], style="italic")
+    ax.axvline(3e6, color=t["ink2"], lw=0.9, ls=(0, (4, 3))); ax.text(3e6 * 0.9, n - 0.4, "run budget", ha="right", va="bottom", fontsize=8, color=t["ink2"])
+    ax.set_xticks([1e3, 1e4, 1e5, 1e6, 1e7]); ax.minorticks_off()
+    ax.tick_params(axis="x", colors=t["ink2"], labelsize=8.5, length=0, which="both")
+    ax.xaxis.grid(True, color=t["grid"], lw=0.8, which="major"); ax.set_axisbelow(True)
+    for sp in ("top", "right", "left", "bottom"):
+        ax.spines[sp].set_visible(False)
+    fig.text(0.03, 0.935, f"Selection with no grader works, but is about {ratio:.0f}× costlier than ranking", fontsize=13.5, fontweight="bold", color=t["ink"], ha="left")
+    fig.text(0.03, 0.875, "In the energy world nothing ranks the learners: they split when they have energy to spare and die without it.", fontsize=10, color=t["ink2"], ha="left")
+    fig.text(0.03, 0.84, "Cost to reach 95% accuracy on a noisy XOR, median of 20 runs (log scale; lower is better).", fontsize=9, color=t["ink2"], ha="left")
+    fig.text(0.97, 0.025, "experiment X6.7 · toy problem · the energy world misses the registered 18/20 by one run", fontsize=7.6, color=t["ink2"], ha="right")
+    return _save(fig, "x67_nograder", theme)
+
+
+FIGS = {"x06": fig_x06, "x07": fig_x07, "x66": fig_x66, "x67": fig_x67}
 
 if __name__ == "__main__":
     which = sys.argv[1] if len(sys.argv) > 1 else "all"

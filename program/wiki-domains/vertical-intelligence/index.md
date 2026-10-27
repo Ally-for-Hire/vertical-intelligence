@@ -27,7 +27,7 @@ starts.
 
 ## Published snapshot
 
-- Private GitHub repo `Ally-for-Hire/vertical-learning` (local `~/vertical-learning`): 2026-10-26 snapshot of this domain, the curious-net and neuroblock wiki domains, and both code repos (curious-net 8958979; neuroblock 5e85392 plus uncommitted work). A snapshot, not canonical: the source repos stay primary. Refresh by re-copying.
+- A public snapshot of this program exists. Its location and the rule for updating it (never edit it directly; edit the canonical repos and wiki, then run the sync tool; commit and push only when the user asks) are in the charter: [[wiki/research-protocol]] section 2, row "Published snapshot". This replaces an earlier note here that said to refresh the snapshot by re-copying by hand (superseded 2026-10-27).
 
 ## Sources
 

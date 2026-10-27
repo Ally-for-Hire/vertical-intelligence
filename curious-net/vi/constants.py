@@ -95,6 +95,12 @@ _r("x07_tune_seed0", 78000, "USER", "x0_7", "seed block for X0.7 tuning")
 _r("x07_check_seed", 79000, "USER", "x0_7", "seed for the world-feasibility pre-check (oracle and random only; no learner)")
 _r("x07_feasible_frac", 0.5, "ARBITRARY", "x0_7", "manipulation check: ORACLE deaths must be below this fraction of RANDOM deaths in each world")
 
+# ---- machine budget (budget.py) --------------------------------------------------------------------------------
+_r("margin", 0.15, "USER", "budget", "user 2026-10-27: keep at least 15% of CPU, RAM and GPU memory free so the PC does not crash")
+_r("gpu_cap", 0.7, "MEASURED", "budget", "max NB_GPU_FRAC: 1 - margin - the ~0.11 the desktop already uses (nvidia-smi 2026-10-27) = 0.74, rounded down")
+_r("gpu_min", 0.1, "NUMERICAL", "budget", "smallest GPU fraction ever returned")
+_r("filetime_shift", 32, "NUMERICAL", "budget", "Windows FILETIME high/low word shift")
+
 
 def C(name):
     return REG[name]["value"]

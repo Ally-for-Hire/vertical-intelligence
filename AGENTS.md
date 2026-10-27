@@ -51,6 +51,9 @@ copied, or not written yet.
   over 30 min of GPU. CPU toy-world defaults are in the protocol, section 3.
 - Report outcome first, then evidence, in plain language. Toy-world results are principles in
   miniature, not facts about brains or LLMs.
+- Leave it easier than you found it: update the surrounding docs a change affects (this file,
+  READMEs, indexes, queue, logs), and fix stale paths, wrong commands or misleading pointers at
+  their source when you find them.
 - Commit only when asked; push only when asked.
 
 ## Editing: this repo is a snapshot

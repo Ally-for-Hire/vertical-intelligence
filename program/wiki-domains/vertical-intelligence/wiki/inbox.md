@@ -17,7 +17,7 @@ P-number, may run), `running`, `done` (verdict + confidence letter recorded, see
 (with the condition that unparks it), `declined` (with reason; user may overrule).
 
 **Next up (user direction, 2026-10-26):** Q10. X0.1, X0.1b, X0.6 DONE ([[findings-map]] s0: a learned self-model beats the raw death signal, but the need-dependent signature needs a graded warning that the learner does not get from deaths alone). Next: **X0.7** (weakest-link margin drive, no designer values). Then P-draft 4 and the U12 call (s7 item 8). Queued by the user 2026-10-27 (the user sequences it against the X0.7 line): **X6.5-X6.8**, nature's optimizer before gradients (P-draft 12; GPU, one job at a time).
-definitions, and answers the newest question. P-draft 1 (U3) waits for the user to confirm the
+P-draft 1 (U3) waits for the user to confirm the
 definition of vertical intelligence. Open user calls: protocol s7 items 1, 6, 7.
 
 ## Theorems (U-numbers)

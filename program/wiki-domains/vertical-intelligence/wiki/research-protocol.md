@@ -188,6 +188,13 @@ changing, merging or dropping a given; changing the definition of vertical intel
 spending money or credits; adding to the course repo's `main`; contacting people; deleting any
 file that holds a result.
 
+**Compute (user, 2026-10-27, supersedes the one-thread default and the 30-minute GPU ask-first):**
+all machine-usage restrictions are lifted; use as many threads and runs as useful, but keep a 15%
+margin so the PC does not crash: total CPU <= 85%, free RAM >= 15% of total, GPU memory <= 85%
+(including the desktop's ~11%; NeuroBlock `NB_GPU_FRAC` <= 0.7). `curious-net/vi/budget.py`
+computes the worker count and GPU fraction from the live load. The limits on pushing, public
+actions, money and focus-stealing (srcds) are unchanged.
+
 **Reporting.** Each session ends with: outcome in one paragraph, verdicts with ids, what
 changed in belief (or "nothing"), the one question for the user if there is one, and the next
 queue head. No checklists narrated.

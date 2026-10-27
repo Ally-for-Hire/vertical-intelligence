@@ -8,6 +8,8 @@ starts.
 ## Pages
 
 - [[wiki/research-protocol]] - START HERE: charter and operating manual: givens (U1-U5), agenda (Q1-Q6), record map, intake rules, autonomy grant and stop lines, requirements per kind of work, speed rules, open conflicts, session checklists.
+- [[wiki/publishing]] - how the public repo is kept current (standing grant, procedure, front-page quality bar, what never goes public, the private archive).
+- [[wiki/credits]] - who did what.
 - [[wiki/findings-map]] - EVERYTHING sorted by what it tells us: 9 building-block sections (0 = 'for me', current direction), engineering-only, method lessons, and the gradient-descent disconnect list. New tests must name a section.
 - [[wiki/experiment-plan]] - one test per findings-map item (36), all in one shared world W0 against one baseline B0, so passing blocks can be combined (X9). Order: build W0, then 'for me' (X0.x).
 - [[wiki/literature-map]] - published experiments per section, verified/unverified, corrections to chat claims, gaps nobody has tested.

@@ -64,6 +64,17 @@ principles in miniature, not facts about brains or LLMs. Ids point to `curious-n
     supplies it by evolved interoceptive signals; the next candidate with no setpoint and no
     weights is the margin of the weakest essential variable (X0.7), which also formalises "no
     part left behind" (U10) and the neglected part's warning (U16).
+  - **X0.7 (2026-10-27, 48 worlds per world type; P214-P219):** a **weakest-link margin** (reward =
+    change in the lowest essential variable; no setpoints, no weights, only that 0 means death)
+    gives what X0.6 lacked, a graded warning: it beats the viability learned from deaths (2.0 vs 18.7
+    deaths per 10k), is at least as safe as designer setpoints (2.0 vs 4.0) and shows need-dependent
+    valence (0.51 vs 0.02 for a plain sum; P214-P216 PASSED). But in a world where needs conflict it
+    is **not** safer than a plain sum or than setpoints (14.7 vs 11.3 vs 10.7; P217-P219 FAILED).
+  - **What decides survival is attending to every need, not how they are combined:** the learner
+    that ignores one need (food only) dies 11 to 15 times more often when needs conflict (155 vs
+    11 to 15 deaths per 10k) and 4.7 times more often in the gentle world. The data side of "no part
+    left behind" (U10) and of a neglected part's warning (U16). Untested: how this scales with
+    many variables of different scales (idea I9).
   - Before X0.1 there was nothing direct. The nearest result is NeuroBlock's energy
   economy (`ENERGY_FINDINGS.md`): brains with diversified income stayed viable 90% of the time,
   while growth-only income starved (26-37% good, offline half the time), which the log calls

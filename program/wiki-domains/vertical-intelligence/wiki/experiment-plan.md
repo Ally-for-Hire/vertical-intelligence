@@ -172,7 +172,7 @@ speed). Worth testing if X6.6 shows the machinery cannot evolve from inside; cos
 | X5.4 | Abstention as a learned faculty | an explicit "unknown" output trained from the learner's own errors; max-softmax; temperature scaling | abstention on unseen outside regions | U3, C31 |
 | X5.5 | Is the curriculum saving order, or self-selection? | ambiguity-driven self-chosen queries; fixed easy-to-hard; random | cost to criterion (vs C53's 2.4x) | U3, U15 |
 
-**Status (2026-10-27):** X0.1, X0.1b and X0.6 are DONE (results in [[findings-map]] section 0).
+**Status (2026-10-27):** X0.1, X0.1b, X0.6 and X0.7 are DONE (results in [[findings-map]] section 0; X0.7: a weakest-link margin works without designer numbers, and ignoring a need is what kills).
 New from X0.6:
 
 | Id | Question | Arms | Main metric | Serves |

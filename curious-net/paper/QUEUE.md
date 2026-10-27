@@ -1,6 +1,6 @@
 # Work queue for the research loop (highest priority first)
 
-**QUEUE HEAD (2026-10-27, vertical-intelligence plan, `vi/`):** X0.7: a graded warning with no designer values. MARGIN arm = drive on the weakest essential variable, min_i h_i (only given: a variable at 0 means death), vs learned VIAB, HOMEO, SUM, DEATH, ORACLE in the same orthogonal W0; also a world variant where one-variable trade-offs are deadly (to tell weakest-link from sum). X0.6 DONE (only P209 passed). Plan: Knowledge-Wiki vertical-intelligence/wiki/experiment-plan.md.
+**QUEUE HEAD (2026-10-27, after X0.7 and EMG-0):** EMG-1 = X6.6 (can the variation machinery evolve itself; arms, manipulation check and thresholds in Knowledge-Wiki vertical-intelligence/wiki/experiment-plan.md section 6), then EMG-2 (X6.7), EMG-3 (X6.8). X0.1, X0.1b, X0.6, X0.7 and EMG-0 are DONE. Machine rule: restrictions lifted, keep a 15% margin (vi/budget.py).
 
 Each loop iteration takes ONE item (or a small chunk), does it, writes the result into LEDGER.md / PAPER.md / figures / LOG.md, commits, then picks the next. Items marked (E) are experiments, (L) literature verification, (D) documentation. Compute: 24 cores while the user is away (CN_FULL=1); keep a single experiment under ~20 minutes.
 

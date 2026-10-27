@@ -21,9 +21,31 @@ about large AI systems.
 
 ## Latest update: 27 October 2026
 
-**At a glance: 218 pre-registered predictions, 94 passed, 114 failed, 6 awaiting results.**
+**At a glance: 217 pre-registered predictions, 97 passed, 116 failed, 0 awaiting results** (4 more were voided or left undecided).
 Every success rule is written down *before* an experiment runs, and every failure is kept and
 reported next to the successes.
+
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="curious-net/results/figures/vi_x07_needs_dark.png">
+  <img alt="Two bar charts of deaths per 10,000 ticks by learner type, lower is better. In a gentle world the learner that watches only food dies 9.3 times, others between 0.7 and 4.0; in a trade-off world where needs conflict, food only dies 155.3 times against 10.7 to 14.7 for learners that watch both needs." src="curious-net/results/figures/vi_x07_needs_light.png" width="900">
+</picture>
+
+<details><summary>Data behind the chart (experiment X0.7, median of 48 simulated worlds per column)</summary>
+
+| Learner | Gentle world | Trade-off world |
+|---|---|---|
+| Perfect policy (exact ceiling) | 0.0 | 0.0 |
+| Adds both needs together | 0.7 | 11.3 |
+| Weakest need first (no hand-picked numbers) | 2.0 | 14.7 |
+| Hand-picked targets | 4.0 | 10.7 |
+| **Food only (ignores one need)** | **9.3** | **155.3** |
+| Learns from deaths alone | 18.7 | 37.3 |
+| Random choices | 86.3 | 95.0 |
+
+The food-only learner is tuned on food, its own objective; with default settings it dies 43.3 per
+10,000 ticks in the trade-off world, still about four times more than the others.
+
+</details>
 
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="curious-net/results/figures/vi_x06_deaths_dark.png">
@@ -45,10 +67,9 @@ reported next to the successes.
 </details>
 
 - **Finished this week:** the first experiments on the "good or bad *for me*" question (X0.1,
-  X0.1b, X0.6) and a repair of the evolution benchmark (X6.5), which corrected an earlier,
-  more flattering number.
-- **Running now:** X0.7, whether a simple "weakest part first" warning signal, with no
-  hand-picked numbers, gives a learner what it needs to stay alive.
+  X0.1b, X0.6, X0.7) and a repair of the evolution benchmark (X6.5), which corrected an earlier,
+  more flattering number. The main result so far: what decides whether a simulated creature
+  survives is whether it attends to *all* its needs; how it combines them barely matters (X0.7).
 - **Next:** X6.6 to X6.8, three tests of how nature could have improved its own search method
   with no gradient descent: can the variation machinery evolve itself, can selection work with no
   grader, and do stepping stones reach problems that are too hard to reach directly?
@@ -80,11 +101,12 @@ Each result has an id (like C43) and a confidence letter: **R** = replicated on 
   behind well-tuned gradient descent; one problem (a 3x3 checkerboard) it never solves. These are
   the repaired numbers from X6.5, which replaced an earlier, more flattering 0.5x and 9x.
   Current question: how could nature have optimized life before anything like gradient descent existed?
-- **The sense of "good or bad for me."** In a simulated world a creature that learns its own
-  sense of survival from experience of dying dies 2.4x less often than one given only "dying is
-  bad", but still more often than one given hand-picked targets (X0.6). Defining value through
-  the self makes the same food good or bad depending on the creature's state, but only when a
-  graded warning comes with it; deaths alone are too rare to teach it (X0.1, X0.6).
+- **Attending to every need is what keeps a creature alive.** In simulated worlds a creature that
+  ignores one of its two needs dies 2 to 14 times more often in a gentle world and 11 to 15 times
+  more often when the needs conflict; how the needs are combined (a sum, hand-picked targets, "weakest
+  first" with no hand-picked numbers) barely matters (X0.7). A creature that must learn its own
+  sense of survival from experience of dying does half as badly as one given only "dying is bad",
+  but deaths alone are too rare to teach it well (X0.6).
 
 Failures are kept and reported alongside successes; the logs record every attempt.
 
@@ -114,7 +136,7 @@ If you want to see the raw work, each line's `LOG.md` records every experiment i
 | `program/` | The research notebook: charter, plan, findings, literature, and the author's own statements in `raw/` (word for word) |
 | `curious-net/` | The main experimental code: curiosity, teaching, self-doubt, discovering laws from data, and `vi/` (the newest experiments, X0.x) |
 | `neuroblock-research/` | The earlier line: a brain-like simulator with parts, sleep and mastery, plus the evolution experiments in `emergent/` |
-| `tools/` | `sync.py`, which refreshes this repository from the working copies |
+| `tools/` | `sync.py` refreshes this repository from the working copies; `publish.py` checks it for anything that should not go public and publishes it |
 
 ## Words used in the notes
 

@@ -141,7 +141,7 @@ shared structure (C43 already shows this dose-response).
 | Cross-session timeline | `Knowledge-Wiki/log.md` | One entry per session or iteration |
 | Literature | repo `paper/LITERATURE.md`; wiki related-work pages | Mark `[u]` if not read in full |
 | Independent review | repo `paper/FABLE_REVIEW.md` | Corrections go in LOG as CORRECTION entries |
-| Published snapshot (for other agents and readers) | **Public** GitHub repo `Ally-for-Hire/vertical-intelligence` (branch `main`), local clone `~/vertical-learning` (branch `public`; the older private repo `Ally-for-Hire/vertical-learning` keeps the unredacted history); human entry `README.md`, agent entry `AGENTS.md` | Never edited directly: edit the canonical repos and wiki, then `python tools/sync.py` (copies, never deletes, redacts private terms via the gitignored `tools/redact.local.json`, writes `SNAPSHOT.md`); read SNAPSHOT.md, then commit and push only when the user asks. Anything written in the canonical repos can become public: no secrets, account names or third-party drafts outside the redaction list |
+| Published snapshot (for other agents and readers) | **Public** GitHub repo `Ally-for-Hire/vertical-intelligence` (branch `main`), local clone `~/vertical-learning` (branch `public`; the older private repo `Ally-for-Hire/vertical-learning` keeps the unredacted history); human entry `README.md`, agent entry `AGENTS.md` | Never edited directly: edit the canonical repos and wiki, then `python tools/sync.py` (copies, never deletes, redacts private terms via the gitignored `tools/redact.local.json`, writes `SNAPSHOT.md`); then `python tools/publish.py` (dry run) and `--push "message"` (standing grant, see [[publishing]]). Anything written in the canonical repos can become public: no secrets, account names or third-party drafts outside the redaction list |
 
 Do not create a second home for any of these. If a record does not fit, add a row here first.
 
@@ -182,7 +182,8 @@ reorder queue items under the default ordering; write and commit wiki pages, LOG
 predictions and verdicts; commit code to the research repos; read literature and file it;
 replicate S results; write CORRECTION entries; park ideas; pick defaults from section 6.
 
-**Ask first:** any push or public GitHub action; any job over the budget defaults or that
+**Ask first:** any push or public GitHub action other than the standing public-repo publish
+(below); any job over the budget defaults or that
 needs the user's GPU for more than 30 min; anything that steals the user's screen or focus;
 changing, merging or dropping a given; changing the definition of vertical intelligence;
 spending money or credits; adding to the course repo's `main`; contacting people; deleting any
@@ -194,6 +195,14 @@ margin so the PC does not crash: total CPU <= 85%, free RAM >= 15% of total, GPU
 (including the desktop's ~11%; NeuroBlock `NB_GPU_FRAC` <= 0.7). `curious-net/vi/budget.py`
 computes the worker count and GPU fraction from the live load. The limits on pushing, public
 actions, money and focus-stealing (srcds) are unchanged.
+
+**Publishing (user, 2026-10-27, standing):** keep the public repo actively updated with progress.
+After each recorded result (or a coherent batch), run `python tools/publish.py` in the public clone
+(a dry run), then `--push "message"`. That pushes only to the public remote's `main`, after hard
+checks (branch, remote, PUBLIC visibility, and a scan for private terms, secrets, e-mails, local
+paths). Still ask first: force pushes or history rewrites, changing a repo's visibility, creating
+or deleting repos or branches, any push to the old private archive, and anything that would put
+personal or third-party material into the public tree. Procedure and quality bar: [[publishing]].
 
 **Reporting.** Each session ends with: outcome in one paragraph, verdicts with ids, what
 changed in belief (or "nothing"), the one question for the user if there is one, and the next
@@ -302,5 +311,5 @@ repo `LOG.md` top entry and `QUEUE.md` head. State in one line what will be test
 U-theorem it serves. If the inbox has unprocessed items, intake them first (section 3).
 
 **End.** Section 5 requirements met for everything touched; inbox statuses updated; queue
-head and "Next up" written; wiki and repo committed (push only when asked); report per
+head and "Next up" written; wiki and repo committed; if a result was recorded, publish per [[publishing]] (the public repo is pushed under the standing grant; nothing else without asking); report per
 section 4. Reading-only sessions log as `Wiki: log-only`.

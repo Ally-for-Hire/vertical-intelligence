@@ -47,21 +47,25 @@ copied, or not written yet.
 - Never delete a result. Failures, voids and corrections stay; a wrong number gets a CORRECTION
   entry, not an edit.
 - No hand-tuned constants: derive a value or measure it with a recorded sweep (`curious-net/CONSTANTS.md`, `vi/constants.py`).
-- Compute: one GPU job at a time (the author's PC crashed twice during GPU runs, cause unknown); ask before any job
-  over 30 min of GPU. CPU toy-world defaults are in the protocol, section 3.
+- Compute (author, 2026-10-27): machine-usage limits are lifted, but keep a 15% margin because the author's PC
+  crashed twice during GPU runs (cause unknown): total CPU <= 85%, free RAM >= 15% of total, GPU memory <= 85%.
+  `curious-net/vi/budget.py` sizes worker pools from the live load. Toy-world defaults are in the protocol, section 3.
 - Report outcome first, then evidence, in plain language. Toy-world results are principles in
   miniature, not facts about brains or LLMs.
 - Leave it easier than you found it: update the surrounding docs a change affects (this file,
   READMEs, indexes, queue, logs), and fix stale paths, wrong commands or misleading pointers at
   their source when you find them.
-- Commit only when asked; push only when asked.
+- Publishing: on the author's machine the public repo is updated only through `python tools/publish.py`
+  (a dry run), then `--push "message"` (a standing grant from the author, 2026-10-27; see
+  `program/wiki-domains/vertical-intelligence/wiki/publishing.md`). Anywhere else, or for anything
+  other than that, commit and push only when asked.
 
 ## Editing: this repo is a snapshot
 
 The canonical working copies are separate local repos on the author's machine (`curious-net`,
 `neuroblock-research`, and the private Knowledge-Wiki domains). **Edit those**, then run
-`python tools/sync.py` here to refresh this repo (it copies, never deletes, and rewrites
-`SNAPSHOT.md`). **This repo is public:** the sync replaces private terms and local paths using
+`python tools/publish.py` here to refresh and publish this repo (it runs `tools/sync.py`, which copies,
+never deletes, and rewrites `SNAPSHOT.md`, then scans for private terms, secrets, e-mails and local paths). **This repo is public:** the sync replaces private terms and local paths using
 `tools/redact.local.json` (gitignored, on the author's machine only) and refuses to run without
 it. Read `SNAPSHOT.md` before committing; never commit the redaction file, credentials, or
 session details. If you only have this repo, work on a branch here and say so; the author merges it back.

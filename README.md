@@ -19,6 +19,40 @@ measurements of that time, works out on its own that something like quantum theo
 on a laptop. The results are principles shown in miniature, not claims about real brains or
 about large AI systems.
 
+## Latest update: 27 October 2026
+
+**At a glance: 218 pre-registered predictions, 94 passed, 114 failed, 6 awaiting results.**
+Every success rule is written down *before* an experiment runs, and every failure is kept and
+reported next to the successes.
+
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="curious-net/results/figures/vi_x06_deaths_dark.png">
+  <img alt="Horizontal bar chart of deaths per 10,000 ticks by learner type, lower is better: perfect policy 0, adds both needs together 0.7, hand-picked targets 3.3, food only 9.3, learns its own sense of survival 16.0 (highlighted), only 'dying is bad' 38.3, random choices 85.0." src="curious-net/results/figures/vi_x06_deaths_light.png" width="780">
+</picture>
+
+<details><summary>Data behind the chart (experiment X0.6, median of 48 simulated worlds)</summary>
+
+| Learner | Deaths per 10,000 ticks |
+|---|---|
+| Perfect policy (exact ceiling) | 0.0 |
+| Adds both needs together | 0.7 |
+| Hand-picked targets | 3.3 |
+| Food only | 9.3 |
+| **Learns its own sense of survival, from deaths alone** | **16.0** |
+| Only "dying is bad" | 38.3 |
+| Random choices | 85.0 |
+
+</details>
+
+- **Finished this week:** the first experiments on the "good or bad *for me*" question (X0.1,
+  X0.1b, X0.6) and a repair of the evolution benchmark (X6.5), which corrected an earlier,
+  more flattering number.
+- **Running now:** X0.7, whether a simple "weakest part first" warning signal, with no
+  hand-picked numbers, gives a learner what it needs to stay alive.
+- **Next:** X6.6 to X6.8, three tests of how nature could have improved its own search method
+  with no gradient descent: can the variation machinery evolve itself, can selection work with no
+  grader, and do stepping stones reach problems that are too hard to reach directly?
+
 ## What has been found so far
 
 Each result has an id (like C43) and a confidence letter: **R** = replicated on fresh data,
@@ -41,12 +75,16 @@ Each result has an id (like C43) and a confidence letter: **R** = replicated on 
   and deliberately wrong theories were rejected (C57).
 - **Evolution without calculus.** Starting from pure random networks, blind random changes plus
   "survival of the fittest" solve learning problems with no gradient descent (the calculus-based
-  method that trains modern AI). On seven test problems it reached its targets at about half the
-  cost of gradient descent with standard settings, though still about 9x behind well-tuned
-  gradient descent. Current question: how could nature have optimized life before anything
-  like gradient descent existed?
-- **The sense of "good or bad for me."** A simulated creature that learns a model of its own
-  survival dies half as often as one that only learns from deaths (X0.6).
+  method that trains modern AI). On seven test problems it solved 60 of 70 runs within its
+  budget, at about 0.6x the cost of gradient descent with standard settings, but still about 11x
+  behind well-tuned gradient descent; one problem (a 3x3 checkerboard) it never solves. These are
+  the repaired numbers from X6.5, which replaced an earlier, more flattering 0.5x and 9x.
+  Current question: how could nature have optimized life before anything like gradient descent existed?
+- **The sense of "good or bad for me."** In a simulated world a creature that learns its own
+  sense of survival from experience of dying dies 2.4x less often than one given only "dying is
+  bad", but still more often than one given hand-picked targets (X0.6). Defining value through
+  the self makes the same food good or bad depending on the creature's state, but only when a
+  graded warning comes with it; deaths alone are too rare to teach it (X0.1, X0.6).
 
 Failures are kept and reported alongside successes; the logs record every attempt.
 

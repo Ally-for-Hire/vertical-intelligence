@@ -181,7 +181,7 @@ principles in miniature, not facts about brains or LLMs. Ids point to `curious-n
     + a 50% cull solve noisy XOR 5/5 (linear: 0.515), with at least 280x fewer evaluations than
     random search, which never got there (emergent attempts 1-2). With a smooth score it matches
     **default** Adam on fresh seeds (0.90x), but is still about **12x slower than tuned Adam**
-    (series 2). It reaches 0.51x default / 9.4x tuned across 7 problems (series 3).
+    (series 2). Series 3 reported 0.51x default / 9.4x tuned on 7 problems at a 3e6 budget; **X6.5 repaired the benchmark (budget 1e7, 70 runs per setting): 60/70 solved, best setting 0.60x default Adam / 11.2x tuned (80% cull: 0.87x / 16.2x); all 10 unsolved runs are checker3, which neither setting solves even at 1e7 (its cost is a lower bound); default Adam also fails spirals and checker3 in 20,000 steps, so those two ratios compare censored costs; parity: all 58 and 59 runs solved under 3e6 reproduce bit-identically.**
   - Greedy rules (undo + barred change types, the separate stack) are **worse** than noise on
     all weights: they stall where no single change helps (attempts 3-4).
   - Random-cull multi-problem brains plateaued at the **linear ceiling** (0.55-0.61 vs 0.973 for a

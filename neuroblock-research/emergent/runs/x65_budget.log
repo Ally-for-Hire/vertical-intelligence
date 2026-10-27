@@ -19,3 +19,177 @@
 [18/140] best_cull90 spirals seed 7: cost 2,487,680 solved True (11.3s, 46s elapsed)
 [19/140] best_cull90 spirals seed 8: cost 942,720 solved True (4.3s, 46s elapsed)
 [20/140] best_cull90 spirals seed 9: cost 1,155,840 solved True (5.4s, 46s elapsed)
+[21/140] round0_cull80 checker3 seed 0: cost 10,000,000 solved False (46.3s, 83s elapsed)
+[22/140] round0_cull80 checker3 seed 1: cost 10,000,000 solved False (45.9s, 83s elapsed)
+[23/140] round0_cull80 checker3 seed 2: cost 10,000,000 solved False (45.4s, 84s elapsed)
+[24/140] round0_cull80 checker3 seed 3: cost 10,000,000 solved False (46.1s, 88s elapsed)
+[25/140] round0_cull80 checker3 seed 4: cost 10,000,000 solved False (45.7s, 91s elapsed)
+[26/140] round0_cull80 checker3 seed 5: cost 10,000,000 solved False (46.2s, 92s elapsed)
+[27/140] round0_cull80 checker3 seed 6: cost 10,000,000 solved False (45.7s, 128s elapsed)
+[28/140] round0_cull80 checker3 seed 7: cost 10,000,000 solved False (46.4s, 129s elapsed)
+[29/140] round0_cull80 checker3 seed 8: cost 10,000,000 solved False (45.2s, 129s elapsed)
+[30/140] round0_cull80 checker3 seed 9: cost 10,000,000 solved False (45.6s, 134s elapsed)
+[31/140] best_cull90 checker3 seed 0: cost 10,000,000 solved False (45.6s, 136s elapsed)
+[32/140] best_cull90 checker3 seed 1: cost 10,000,000 solved False (46.1s, 138s elapsed)
+[33/140] best_cull90 checker3 seed 2: cost 10,000,000 solved False (47.6s, 176s elapsed)
+[34/140] best_cull90 checker3 seed 3: cost 10,000,000 solved False (46.2s, 176s elapsed)
+[35/140] best_cull90 checker3 seed 4: cost 10,000,000 solved False (47.0s, 176s elapsed)
+[36/140] best_cull90 checker3 seed 5: cost 10,000,000 solved False (47.0s, 181s elapsed)
+[37/140] best_cull90 checker3 seed 6: cost 10,000,000 solved False (47.1s, 183s elapsed)
+[38/140] best_cull90 checker3 seed 7: cost 10,000,000 solved False (46.8s, 185s elapsed)
+[39/140] best_cull90 checker3 seed 8: cost 10,000,000 solved False (24.0s, 199s elapsed)
+[40/140] best_cull90 checker3 seed 9: cost 10,000,000 solved False (23.6s, 200s elapsed)
+[41/140] round0_cull80 parity4 seed 0: cost 40,960 solved True (0.2s, 200s elapsed)
+[42/140] round0_cull80 parity4 seed 1: cost 218,880 solved True (1.0s, 200s elapsed)
+[43/140] round0_cull80 parity4 seed 2: cost 49,920 solved True (0.2s, 200s elapsed)
+[44/140] round0_cull80 parity4 seed 3: cost 96,000 solved True (0.5s, 200s elapsed)
+[45/140] round0_cull80 parity4 seed 4: cost 152,320 solved True (0.7s, 200s elapsed)
+[46/140] round0_cull80 parity4 seed 5: cost 67,840 solved True (0.3s, 200s elapsed)
+[47/140] round0_cull80 parity4 seed 6: cost 88,320 solved True (0.5s, 200s elapsed)
+[48/140] round0_cull80 parity4 seed 7: cost 431,360 solved True (2.0s, 200s elapsed)
+[49/140] round0_cull80 parity4 seed 8: cost 48,640 solved True (0.2s, 200s elapsed)
+[50/140] round0_cull80 parity4 seed 9: cost 69,120 solved True (0.3s, 200s elapsed)
+[51/140] best_cull90 parity4 seed 0: cost 44,160 solved True (0.2s, 200s elapsed)
+[52/140] best_cull90 parity4 seed 1: cost 74,880 solved True (0.4s, 200s elapsed)
+[53/140] best_cull90 parity4 seed 2: cost 29,440 solved True (0.2s, 200s elapsed)
+[54/140] best_cull90 parity4 seed 3: cost 42,880 solved True (0.2s, 200s elapsed)
+[55/140] best_cull90 parity4 seed 4: cost 119,680 solved True (0.5s, 200s elapsed)
+[56/140] best_cull90 parity4 seed 5: cost 44,800 solved True (0.2s, 200s elapsed)
+[57/140] best_cull90 parity4 seed 6: cost 35,840 solved True (0.1s, 200s elapsed)
+[58/140] best_cull90 parity4 seed 7: cost 28,800 solved True (0.1s, 200s elapsed)
+[59/140] best_cull90 parity4 seed 8: cost 70,400 solved True (0.4s, 200s elapsed)
+[60/140] best_cull90 parity4 seed 9: cost 113,280 solved True (0.6s, 200s elapsed)
+[61/140] round0_cull80 moons seed 0: cost 137,600 solved True (0.6s, 200s elapsed)
+[62/140] round0_cull80 moons seed 1: cost 168,960 solved True (0.8s, 200s elapsed)
+[63/140] round0_cull80 moons seed 2: cost 80,640 solved True (0.4s, 200s elapsed)
+[64/140] round0_cull80 moons seed 3: cost 84,480 solved True (0.4s, 200s elapsed)
+[65/140] round0_cull80 moons seed 4: cost 52,480 solved True (0.3s, 200s elapsed)
+[66/140] round0_cull80 moons seed 5: cost 16,640 solved True (0.1s, 200s elapsed)
+[67/140] round0_cull80 moons seed 6: cost 81,280 solved True (0.4s, 200s elapsed)
+[68/140] round0_cull80 moons seed 7: cost 37,120 solved True (0.2s, 200s elapsed)
+[69/140] round0_cull80 moons seed 8: cost 38,400 solved True (0.2s, 200s elapsed)
+[70/140] round0_cull80 moons seed 9: cost 149,120 solved True (0.7s, 200s elapsed)
+[71/140] best_cull90 moons seed 0: cost 81,920 solved True (0.4s, 200s elapsed)
+[72/140] best_cull90 moons seed 1: cost 97,280 solved True (0.5s, 200s elapsed)
+[73/140] best_cull90 moons seed 2: cost 45,440 solved True (0.2s, 200s elapsed)
+[74/140] best_cull90 moons seed 3: cost 37,120 solved True (0.2s, 200s elapsed)
+[75/140] best_cull90 moons seed 4: cost 7,040 solved True (0.0s, 200s elapsed)
+[76/140] best_cull90 moons seed 5: cost 10,240 solved True (0.0s, 200s elapsed)
+[77/140] best_cull90 moons seed 6: cost 186,880 solved True (0.9s, 200s elapsed)
+[78/140] best_cull90 moons seed 7: cost 44,800 solved True (0.2s, 200s elapsed)
+[79/140] best_cull90 moons seed 8: cost 68,480 solved True (0.3s, 200s elapsed)
+[80/140] best_cull90 moons seed 9: cost 79,360 solved True (0.4s, 200s elapsed)
+[81/140] round0_cull80 circles seed 0: cost 32,640 solved True (0.1s, 200s elapsed)
+[82/140] round0_cull80 circles seed 1: cost 56,320 solved True (0.2s, 200s elapsed)
+[83/140] round0_cull80 circles seed 2: cost 73,600 solved True (0.3s, 200s elapsed)
+[84/140] round0_cull80 circles seed 3: cost 83,200 solved True (0.4s, 200s elapsed)
+[85/140] round0_cull80 circles seed 4: cost 108,800 solved True (0.6s, 200s elapsed)
+[86/140] round0_cull80 circles seed 5: cost 30,080 solved True (0.1s, 200s elapsed)
+[87/140] round0_cull80 circles seed 6: cost 56,960 solved True (0.2s, 200s elapsed)
+[88/140] round0_cull80 circles seed 7: cost 17,280 solved True (0.1s, 200s elapsed)
+[89/140] round0_cull80 circles seed 8: cost 117,120 solved True (0.6s, 200s elapsed)
+[90/140] round0_cull80 circles seed 9: cost 15,360 solved True (0.1s, 200s elapsed)
+[91/140] best_cull90 circles seed 0: cost 32,640 solved True (0.1s, 200s elapsed)
+[92/140] best_cull90 circles seed 1: cost 21,120 solved True (0.1s, 200s elapsed)
+[93/140] best_cull90 circles seed 2: cost 28,160 solved True (0.1s, 200s elapsed)
+[94/140] best_cull90 circles seed 3: cost 90,240 solved True (0.4s, 200s elapsed)
+[95/140] best_cull90 circles seed 4: cost 69,120 solved True (0.3s, 200s elapsed)
+[96/140] best_cull90 circles seed 5: cost 23,680 solved True (0.1s, 200s elapsed)
+[97/140] best_cull90 circles seed 6: cost 136,960 solved True (0.7s, 200s elapsed)
+[98/140] best_cull90 circles seed 7: cost 16,640 solved True (0.1s, 200s elapsed)
+[99/140] best_cull90 circles seed 8: cost 24,960 solved True (0.1s, 200s elapsed)
+[100/140] best_cull90 circles seed 9: cost 25,600 solved True (0.1s, 200s elapsed)
+[101/140] round0_cull80 xorgauss seed 0: cost 21,120 solved True (0.1s, 200s elapsed)
+[102/140] round0_cull80 xorgauss seed 1: cost 7,680 solved True (0.0s, 200s elapsed)
+[103/140] round0_cull80 xorgauss seed 2: cost 12,800 solved True (0.1s, 200s elapsed)
+[104/140] round0_cull80 xorgauss seed 3: cost 21,760 solved True (0.1s, 200s elapsed)
+[105/140] round0_cull80 xorgauss seed 4: cost 30,080 solved True (0.1s, 200s elapsed)
+[106/140] round0_cull80 xorgauss seed 5: cost 26,240 solved True (0.1s, 200s elapsed)
+[107/140] round0_cull80 xorgauss seed 6: cost 16,640 solved True (0.1s, 200s elapsed)
+[108/140] round0_cull80 xorgauss seed 7: cost 31,360 solved True (0.1s, 200s elapsed)
+[109/140] round0_cull80 xorgauss seed 8: cost 28,160 solved True (0.1s, 200s elapsed)
+[110/140] round0_cull80 xorgauss seed 9: cost 44,800 solved True (0.2s, 200s elapsed)
+[111/140] best_cull90 xorgauss seed 0: cost 51,200 solved True (0.2s, 200s elapsed)
+[112/140] best_cull90 xorgauss seed 1: cost 35,840 solved True (0.2s, 200s elapsed)
+[113/140] best_cull90 xorgauss seed 2: cost 24,960 solved True (0.1s, 200s elapsed)
+[114/140] best_cull90 xorgauss seed 3: cost 17,920 solved True (0.1s, 200s elapsed)
+[115/140] best_cull90 xorgauss seed 4: cost 11,520 solved True (0.1s, 200s elapsed)
+[116/140] best_cull90 xorgauss seed 5: cost 84,480 solved True (0.4s, 200s elapsed)
+[117/140] best_cull90 xorgauss seed 6: cost 37,760 solved True (0.2s, 200s elapsed)
+[118/140] best_cull90 xorgauss seed 7: cost 14,080 solved True (0.1s, 200s elapsed)
+[119/140] best_cull90 xorgauss seed 8: cost 87,040 solved True (0.4s, 200s elapsed)
+[120/140] best_cull90 xorgauss seed 9: cost 24,960 solved True (0.1s, 200s elapsed)
+[121/140] round0_cull80 blobs3 seed 0: cost 3,200 solved True (0.0s, 200s elapsed)
+[122/140] round0_cull80 blobs3 seed 1: cost 6,400 solved True (0.0s, 200s elapsed)
+[123/140] round0_cull80 blobs3 seed 2: cost 3,200 solved True (0.0s, 200s elapsed)
+[124/140] round0_cull80 blobs3 seed 3: cost 7,680 solved True (0.0s, 200s elapsed)
+[125/140] round0_cull80 blobs3 seed 4: cost 3,200 solved True (0.0s, 200s elapsed)
+[126/140] round0_cull80 blobs3 seed 5: cost 21,760 solved True (0.1s, 200s elapsed)
+[127/140] round0_cull80 blobs3 seed 6: cost 10,880 solved True (0.1s, 200s elapsed)
+[128/140] round0_cull80 blobs3 seed 7: cost 5,760 solved True (0.0s, 200s elapsed)
+[129/140] round0_cull80 blobs3 seed 8: cost 8,960 solved True (0.0s, 200s elapsed)
+[130/140] round0_cull80 blobs3 seed 9: cost 4,480 solved True (0.0s, 200s elapsed)
+[131/140] best_cull90 blobs3 seed 0: cost 1,920 solved True (0.0s, 200s elapsed)
+[132/140] best_cull90 blobs3 seed 1: cost 5,760 solved True (0.0s, 200s elapsed)
+[133/140] best_cull90 blobs3 seed 2: cost 4,480 solved True (0.0s, 200s elapsed)
+[134/140] best_cull90 blobs3 seed 3: cost 3,840 solved True (0.0s, 200s elapsed)
+[135/140] best_cull90 blobs3 seed 4: cost 2,560 solved True (0.0s, 200s elapsed)
+[136/140] best_cull90 blobs3 seed 5: cost 19,840 solved True (0.1s, 200s elapsed)
+[137/140] best_cull90 blobs3 seed 6: cost 7,040 solved True (0.0s, 200s elapsed)
+[138/140] best_cull90 blobs3 seed 7: cost 5,120 solved True (0.0s, 200s elapsed)
+[139/140] best_cull90 blobs3 seed 8: cost 4,480 solved True (0.0s, 200s elapsed)
+[140/140] best_cull90 blobs3 seed 9: cost 3,200 solved True (0.0s, 200s elapsed)
+{
+ "round0_cull80": {
+  "solved_1e7": 60,
+  "solved_3e6": 58,
+  "total": 70,
+  "gm_vs_default": 0.8710291098154331,
+  "gm_vs_tuned": 16.19956815176157,
+  "unsolved_per_problem": {
+   "xorgauss": 0,
+   "moons": 0,
+   "circles": 0,
+   "spirals": 0,
+   "blobs3": 0,
+   "checker3": 10,
+   "parity4": 0
+  },
+  "median_cost_per_problem": {
+   "xorgauss": 24000.0,
+   "moons": 80960.0,
+   "circles": 56640.0,
+   "spirals": 2557760.0,
+   "blobs3": 6080.0,
+   "checker3": 10000000.0,
+   "parity4": 78720.0
+  },
+  "parity_identical": "58/58"
+ },
+ "best_cull90": {
+  "solved_1e7": 60,
+  "solved_3e6": 59,
+  "total": 70,
+  "gm_vs_default": 0.6025448230384282,
+  "gm_vs_tuned": 11.206245365749526,
+  "unsolved_per_problem": {
+   "xorgauss": 0,
+   "moons": 0,
+   "circles": 0,
+   "spirals": 0,
+   "blobs3": 0,
+   "checker3": 10,
+   "parity4": 0
+  },
+  "median_cost_per_problem": {
+   "xorgauss": 30400.0,
+   "moons": 56960.0,
+   "circles": 26880.0,
+   "spirals": 1101120.0,
+   "blobs3": 4480.0,
+   "checker3": 10000000.0,
+   "parity4": 44480.0
+  },
+  "parity_identical": "59/59"
+ }
+}

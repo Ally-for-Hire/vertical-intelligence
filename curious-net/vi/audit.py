@@ -5,7 +5,7 @@ import io, re, sys, tokenize, pathlib
 import constants
 
 TRIVIAL = {"0", "1", "2", "0.5", "1.0", "0.0", "2.0", "3", "4", "6", "8", "1e9", "30", "100"}   # 2.0: log base; 1e9/30/100: numerical sentinels and percent scale   # structural counts (tuple sizes, 6 actions, 3 action bits); see constants.STRUCTURAL
-EXEMPT_FILES = {"w0.py", "constants.py", "audit.py"}   # w0.py is the WORLD (like src/env.py)
+EXEMPT_FILES = {"w0.py", "constants.py", "audit.py", "figures.py"}   # w0.py is the WORLD (like src/env.py)
 here = pathlib.Path(__file__).parent
 bad = []
 for f in sorted(here.glob("*.py")):

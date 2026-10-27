@@ -1,0 +1,47 @@
+budget 128000 samples, tau 0.9.  L = 0.95 x labelled-MLP accuracy.  Lower is better for samples/cpu; accuracy higher.
+problem        L | model      final acc  samples->L  reach  cpu s->L  params | verdict
+parity4     0.95 | pg         0.775+-0.142      128000   2/10      3.97    1282 | 
+parity4     0.95 | q          1.000+-0.000        1200  10/10      0.03   17410 | 
+parity4     0.95 | agentC     1.000+-0.000        1280  10/10      0.02     142 | acc OK samples LOSS cpu OK
+parity4     0.95 | agentD     1.000+-0.000         880  10/10      0.02     147 | acc OK samples OK cpu OK
+parity6     0.72 | pg         0.661+-0.090      128000   1/10      4.03    1346 | 
+parity6     0.72 | q          1.000+-0.000        1280  10/10      0.03   17666 | 
+parity6     0.72 | agentC     1.000+-0.000        2560  10/10      0.03     492 | acc OK samples LOSS cpu OK
+parity6     0.72 | agentD     1.000+-0.000        2160  10/10      0.02     462 | acc OK samples LOSS cpu OK
+majority5   0.95 | pg         0.994+-0.020         480  10/10      0.02    1314 | 
+majority5   0.95 | q          1.000+-0.000         480  10/10      0.02   17538 | 
+majority5   0.95 | agentC     0.989+-0.036        3120  10/10      0.06     322 | acc LOSS samples LOSS cpu LOSS
+majority5   0.95 | agentD     0.998+-0.004         480  10/10      0.00     162 | acc OK samples OK cpu OK
+mux6        0.95 | pg         0.870+-0.116      128000   4/10      4.41   17666 | 
+mux6        0.95 | q          1.000+-0.000        1520  10/10      0.05   17666 | 
+mux6        0.95 | agentC     1.000+-0.000        2560  10/10      0.03     576 | acc OK samples LOSS cpu OK
+mux6        0.95 | agentD     0.990+-0.021         800  10/10      0.02     277 | acc LOSS samples OK cpu OK
+adder2      0.95 | pg         0.856+-0.059      128000   0/10      4.05    1447 | 
+adder2      0.95 | q          1.000+-0.000        2240  10/10      0.07   18055 | 
+adder2      0.95 | agentC     1.000+-0.000        2960  10/10      0.04     474 | acc OK samples LOSS cpu OK
+adder2      0.95 | agentD     0.945+-0.174         800  10/10      0.02     568 | acc LOSS samples OK cpu OK
+quadrants   0.86 | pg         0.770+-0.101      128000   3/10      4.17    1666 | 
+quadrants   0.86 | q          0.906+-0.013        1920  10/10      0.05    1666 | 
+quadrants   0.86 | agentC     0.905+-0.015        3040  10/10      0.03    2447 | acc OK samples LOSS cpu OK
+quadrants   0.86 | agentD     0.906+-0.012         480  10/10      0.00    5882 | acc OK samples OK cpu OK
+moons       0.94 | pg         0.993+-0.003        2320  10/10      0.07    1666 | 
+moons       0.94 | q          0.993+-0.002         800  10/10      0.03    1666 | 
+moons       0.94 | agentC     0.964+-0.020        4160  10/10      0.09     713 | acc LOSS samples LOSS cpu LOSS
+moons       0.94 | agentD     0.994+-0.001         480  10/10      0.01     206 | acc OK samples OK cpu OK
+circles     0.95 | pg         0.999+-0.001        2240  10/10      0.08    1666 | 
+circles     0.95 | q          0.999+-0.001        1120  10/10      0.03    1666 | 
+circles     0.95 | agentC     0.925+-0.045        6400   9/10      0.20     946 | acc LOSS samples LOSS cpu LOSS
+circles     0.95 | agentD     0.998+-0.001         480  10/10      0.02     355 | acc OK samples OK cpu OK
+spirals     0.86 | pg         0.840+-0.063      128000   4/10      4.01    1666 | 
+spirals     0.86 | q          0.912+-0.008        5600  10/10      0.17   18946 | 
+spirals     0.86 | agentC     0.824+-0.020       17600   9/10      0.83    3423 | acc LOSS samples LOSS cpu LOSS
+spirals     0.86 | agentD     0.915+-0.009         800  10/10      0.02    5778 | acc OK samples OK cpu OK
+blobs3      0.90 | pg         0.944+-0.004         640  10/10      0.03    1699 | 
+blobs3      0.90 | q          0.945+-0.002         640  10/10      0.02    1699 | 
+blobs3      0.90 | agentC     0.943+-0.007        2560  10/10      0.04    1295 | acc OK samples LOSS cpu LOSS
+blobs3      0.90 | agentD     0.946+-0.004         480  10/10      0.00    4629 | acc OK samples OK cpu OK
+PURELY BETTER on every problem: False   (11.7 min)
+
+real	11m44.568s
+user	0m0.015s
+sys	0m0.015s

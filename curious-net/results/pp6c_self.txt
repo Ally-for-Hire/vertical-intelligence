@@ -1,0 +1,6 @@
+fixed6         | test 0.1840 | x wide 0.96 | x oracle 18.0 | parts 6 | training purity 0.67 | test routing to the right specialist 0.48
+spawn1.5_u0.3  | test 0.1515 | x wide 0.93 | x oracle 17.8 | parts 4 | training purity 0.61 | test routing to the right specialist 0.43
+spawn2_u0.1    | test 0.1423 | x wide 0.88 | x oracle 15.1 | parts 4 | training purity 0.67 | test routing to the right specialist 0.49
+spawn3_u0.3    | test 0.1587 | x wide 0.90 | x oracle 16.3 | parts 3 | training purity 0.55 | test routing to the right specialist 0.34
+spawn1.5_u0.1  | test 0.1539 | x wide 0.88 | x oracle 16.0 | parts 4 | training purity 0.68 | test routing to the right specialist 0.50
+done 41 s

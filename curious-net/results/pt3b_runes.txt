@@ -1,0 +1,7 @@
+fraction of tasks built from shared blocks | median cost last 10: flat / library | advantage flat/library (median of per-seed ratios)
+  f=0.00 | 1906 / 1822 | 1.00 (tasks generated: 29.3)
+  f=0.25 | 1756 / 1325 | 1.12 (tasks generated: 30.0)
+  f=0.50 | 1976 / 684 | 2.68 (tasks generated: 30.0)
+  f=0.75 | 1876 / 316 | 4.17 (tasks generated: 30.0)
+  f=1.00 | 2020 / 251 | 7.48 (tasks generated: 30.0)
+done 26 s

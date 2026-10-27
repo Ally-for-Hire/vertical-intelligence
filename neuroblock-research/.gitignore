@@ -1,0 +1,8 @@
+__pycache__/
+*.pyc
+
+# NeuroBlock selfscore runs: large resume-state files and W&B local caches (2026-10-26)
+selfscore/runs/*.pt
+selfscore/runs/*.tmp
+wandb/
+__pycache__/

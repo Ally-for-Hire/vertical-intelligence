@@ -1,0 +1,4120 @@
+{
+ "mode": "run",
+ "seconds": 303.1,
+ "result": {
+  "hyper": {
+   "B0": [
+    0.001,
+    0.5
+   ],
+   "SUM": [
+    0.001,
+    0.5
+   ],
+   "HOMEO": [
+    0.001,
+    0.99
+   ],
+   "HOMEO0": [
+    0.001,
+    0.0
+   ],
+   "RANDOM": [
+    0.001,
+    0.0
+   ]
+  },
+  "per_world": {
+   "tuned": {
+    "B0": [
+     {
+      "deaths_per_10k": 63.333333333333336,
+      "post_swap_deaths": 9,
+      "food": 191.4747181364272,
+      "valence_acc": 0.9548022598870056,
+      "netharm_accept": 1.0,
+      "need_slope": 0.0
+     },
+     {
+      "deaths_per_10k": 18.0,
+      "post_swap_deaths": 5,
+      "food": 202.29145786903874,
+      "valence_acc": 0.9567567567567568,
+      "netharm_accept": 0.8636363636363636,
+      "need_slope": 0.047169811320754707
+     },
+     {
+      "deaths_per_10k": 0.0,
+      "post_swap_deaths": 0,
+      "food": 197.28449444878075,
+      "valence_acc": 0.875,
+      "netharm_accept": 0.92,
+      "need_slope": -0.021505376344086002
+     },
+     {
+      "deaths_per_10k": 28.666666666666668,
+      "post_swap_deaths": 3,
+      "food": 192.90531150865772,
+      "valence_acc": 0.9090909090909091,
+      "netharm_accept": 1.0,
+      "need_slope": 0.008130081300813052
+     },
+     {
+      "deaths_per_10k": 2.0,
+      "post_swap_deaths": 0,
+      "food": 189.9592770985938,
+      "valence_acc": 0.9469387755102041,
+      "netharm_accept": 1.0,
+      "need_slope": 0.012658227848101222
+     },
+     {
+      "deaths_per_10k": 4.666666666666667,
+      "post_swap_deaths": 0,
+      "food": 197.199729941968,
+      "valence_acc": 0.945054945054945,
+      "netharm_accept": 0.5428571428571428,
+      "need_slope": -0.05970149253731338
+     },
+     {
+      "deaths_per_10k": 32.666666666666664,
+      "post_swap_deaths": 11,
+      "food": 198.14750167944675,
+      "valence_acc": 0.9476744186046512,
+      "netharm_accept": 0.890625,
+      "need_slope": 0.007999999999999896
+     },
+     {
+      "deaths_per_10k": 33.333333333333336,
+      "post_swap_deaths": 0,
+      "food": 199.24172590015039,
+      "valence_acc": 0.9647577092511013,
+      "netharm_accept": 0.9347826086956522,
+      "need_slope": -0.010638297872340496
+     },
+     {
+      "deaths_per_10k": 58.666666666666664,
+      "post_swap_deaths": 10,
+      "food": 203.79512638417557,
+      "valence_acc": 0.93048128342246,
+      "netharm_accept": 0.9387755102040817,
+      "need_slope": 0.12037037037037035
+     },
+     {
+      "deaths_per_10k": 61.333333333333336,
+      "post_swap_deaths": 7,
+      "food": 206.28894183696252,
+      "valence_acc": 0.7375886524822695,
+      "netharm_accept": 1.0,
+      "need_slope": 0.0
+     },
+     {
+      "deaths_per_10k": 1.3333333333333333,
+      "post_swap_deaths": 0,
+      "food": 198.87839555616955,
+      "valence_acc": 0.9386973180076629,
+      "netharm_accept": 0.7241379310344828,
+      "need_slope": 0.014285714285714346
+     },
+     {
+      "deaths_per_10k": 38.0,
+      "post_swap_deaths": 8,
+      "food": 197.13022029774473,
+      "valence_acc": 0.9047619047619048,
+      "netharm_accept": 0.8125,
+      "need_slope": -0.1428571428571428
+     },
+     {
+      "deaths_per_10k": 96.0,
+      "post_swap_deaths": 18,
+      "food": 189.6124516665722,
+      "valence_acc": 0.9509803921568627,
+      "netharm_accept": 0.927710843373494,
+      "need_slope": -0.0064102564102564985
+     },
+     {
+      "deaths_per_10k": 10.666666666666666,
+      "post_swap_deaths": 3,
+      "food": 199.06750510330045,
+      "valence_acc": 0.9017341040462428,
+      "netharm_accept": 0.9607843137254902,
+      "need_slope": 0.028037383177570097
+     },
+     {
+      "deaths_per_10k": 3.3333333333333335,
+      "post_swap_deaths": 1,
+      "food": 195.77866653311582,
+      "valence_acc": 0.9691119691119691,
+      "netharm_accept": 0.6388888888888888,
+      "need_slope": 0.11111111111111105
+     },
+     {
+      "deaths_per_10k": 44.666666666666664,
+      "post_swap_deaths": 11,
+      "food": 205.6896423799647,
+      "valence_acc": 0.9166666666666666,
+      "netharm_accept": 0.8266666666666667,
+      "need_slope": 0.10236220472440949
+     },
+     {
+      "deaths_per_10k": 70.0,
+      "post_swap_deaths": 11,
+      "food": 193.92320074665537,
+      "valence_acc": 0.9863013698630136,
+      "netharm_accept": 0.9154929577464789,
+      "need_slope": 0.007246376811594124
+     },
+     {
+      "deaths_per_10k": 28.0,
+      "post_swap_deaths": 4,
+      "food": 205.40500817751322,
+      "valence_acc": 0.8375634517766497,
+      "netharm_accept": 0.9090909090909091,
+      "need_slope": 0.08602150537634412
+     },
+     {
+      "deaths_per_10k": 0.6666666666666666,
+      "post_swap_deaths": 0,
+      "food": 203.43843561382107,
+      "valence_acc": 0.939622641509434,
+      "netharm_accept": 0.4666666666666667,
+      "need_slope": 0.07246376811594202
+     },
+     {
+      "deaths_per_10k": 40.0,
+      "post_swap_deaths": 12,
+      "food": 189.28459371410813,
+      "valence_acc": 0.9153225806451613,
+      "netharm_accept": 0.9705882352941176,
+      "need_slope": 0.0
+     },
+     {
+      "deaths_per_10k": 51.333333333333336,
+      "post_swap_deaths": 11,
+      "food": 201.2127429264555,
+      "valence_acc": 0.8756756756756757,
+      "netharm_accept": 0.696969696969697,
+      "need_slope": 0.12727272727272732
+     },
+     {
+      "deaths_per_10k": 34.666666666666664,
+      "post_swap_deaths": 0,
+      "food": 198.33292187225612,
+      "valence_acc": 0.9263157894736842,
+      "netharm_accept": 0.6785714285714286,
+      "need_slope": 0.10204081632653061
+     },
+     {
+      "deaths_per_10k": 36.666666666666664,
+      "post_swap_deaths": 9,
+      "food": 191.90330731354769,
+      "valence_acc": 0.8681818181818182,
+      "netharm_accept": 0.9574468085106383,
+      "need_slope": -0.034482758620689724
+     },
+     {
+      "deaths_per_10k": 38.666666666666664,
+      "post_swap_deaths": 14,
+      "food": 197.82132040402806,
+      "valence_acc": 0.8473282442748091,
+      "netharm_accept": 0.8970588235294118,
+      "need_slope": 0.06060606060606066
+     },
+     {
+      "deaths_per_10k": 42.0,
+      "post_swap_deaths": 6,
+      "food": 199.81584718556962,
+      "valence_acc": 0.9261744966442953,
+      "netharm_accept": 0.9365079365079365,
+      "need_slope": -0.0234375
+     },
+     {
+      "deaths_per_10k": 50.0,
+      "post_swap_deaths": 12,
+      "food": 204.22044419841887,
+      "valence_acc": 0.9166666666666666,
+      "netharm_accept": 0.9464285714285714,
+      "need_slope": 0.008474576271186418
+     },
+     {
+      "deaths_per_10k": 40.0,
+      "post_swap_deaths": 2,
+      "food": 205.096106861242,
+      "valence_acc": 0.8865979381443299,
+      "netharm_accept": 0.8301886792452831,
+      "need_slope": 0.09090909090909094
+     },
+     {
+      "deaths_per_10k": 18.666666666666668,
+      "post_swap_deaths": 2,
+      "food": 195.110181472845,
+      "valence_acc": 0.9157894736842105,
+      "netharm_accept": 0.46938775510204084,
+      "need_slope": 0.09345794392523366
+     },
+     {
+      "deaths_per_10k": 34.0,
+      "post_swap_deaths": 5,
+      "food": 199.6072311383019,
+      "valence_acc": 0.9611111111111111,
+      "netharm_accept": 0.9836065573770492,
+      "need_slope": 0.0
+     },
+     {
+      "deaths_per_10k": 17.333333333333332,
+      "post_swap_deaths": 0,
+      "food": 198.01962684191386,
+      "valence_acc": 0.9405405405405406,
+      "netharm_accept": 0.95,
+      "need_slope": 0.020408163265306145
+     },
+     {
+      "deaths_per_10k": 5.333333333333333,
+      "post_swap_deaths": 1,
+      "food": 194.97572907487785,
+      "valence_acc": 0.8486486486486486,
+      "netharm_accept": 1.0,
+      "need_slope": 0.0
+     },
+     {
+      "deaths_per_10k": 20.0,
+      "post_swap_deaths": 5,
+      "food": 198.0357466167723,
+      "valence_acc": 0.8012820512820513,
+      "netharm_accept": 0.9361702127659575,
+      "need_slope": 0.01834862385321101
+     },
+     {
+      "deaths_per_10k": 1.3333333333333333,
+      "post_swap_deaths": 0,
+      "food": 199.705264309548,
+      "valence_acc": 0.8780487804878049,
+      "netharm_accept": 1.0,
+      "need_slope": 0.0
+     },
+     {
+      "deaths_per_10k": 8.0,
+      "post_swap_deaths": 0,
+      "food": 194.09555920101846,
+      "valence_acc": 0.9132231404958677,
+      "netharm_accept": 0.8378378378378378,
+      "need_slope": 0.041095890410958846
+     },
+     {
+      "deaths_per_10k": 1.3333333333333333,
+      "post_swap_deaths": 0,
+      "food": 198.2723893641421,
+      "valence_acc": 0.954225352112676,
+      "netharm_accept": 0.6842105263157895,
+      "need_slope": 0.1333333333333333
+     },
+     {
+      "deaths_per_10k": 18.666666666666668,
+      "post_swap_deaths": 4,
+      "food": 191.76108263923442,
+      "valence_acc": 0.8457446808510638,
+      "netharm_accept": 1.0,
+      "need_slope": 0.0
+     },
+     {
+      "deaths_per_10k": 112.66666666666667,
+      "post_swap_deaths": 23,
+      "food": 197.1557647016864,
+      "valence_acc": 0.9921259842519685,
+      "netharm_accept": 0.9508196721311475,
+      "need_slope": -0.015037593984962405
+     },
+     {
+      "deaths_per_10k": 44.0,
+      "post_swap_deaths": 7,
+      "food": 199.128177354916,
+      "valence_acc": 0.9271844660194175,
+      "netharm_accept": 0.7413793103448276,
+      "need_slope": 0.04040404040404044
+     },
+     {
+      "deaths_per_10k": 87.33333333333333,
+      "post_swap_deaths": 25,
+      "food": 204.10323428592972,
+      "valence_acc": 0.9523809523809523,
+      "netharm_accept": 0.8852459016393442,
+      "need_slope": -0.07751937984496116
+     },
+     {
+      "deaths_per_10k": 71.33333333333333,
+      "post_swap_deaths": 10,
+      "food": 199.76081558093935,
+      "valence_acc": 0.9084507042253521,
+      "netharm_accept": 0.8656716417910447,
+      "need_slope": -0.015625
+     },
+     {
+      "deaths_per_10k": 2.0,
+      "post_swap_deaths": 0,
+      "food": 195.06608869782553,
+      "valence_acc": 0.9781659388646288,
+      "netharm_accept": 0.9111111111111111,
+      "need_slope": 0.14814814814814814
+     },
+     {
+      "deaths_per_10k": 5.333333333333333,
+      "post_swap_deaths": 1,
+      "food": 200.97984593235617,
+      "valence_acc": 0.9213483146067416,
+      "netharm_accept": 0.9038461538461539,
+      "need_slope": 0.03539823008849552
+     },
+     {
+      "deaths_per_10k": 44.666666666666664,
+      "post_swap_deaths": 12,
+      "food": 198.65920141196648,
+      "valence_acc": 0.8905109489051095,
+      "netharm_accept": 0.9142857142857143,
+      "need_slope": 0.021582733812949617
+     },
+     {
+      "deaths_per_10k": 0.6666666666666666,
+      "post_swap_deaths": 1,
+      "food": 201.4268425454142,
+      "valence_acc": 0.8409090909090909,
+      "netharm_accept": 0.6129032258064516,
+      "need_slope": -0.125
+     },
+     {
+      "deaths_per_10k": 33.333333333333336,
+      "post_swap_deaths": 6,
+      "food": 201.18411423329624,
+      "valence_acc": 0.9520958083832335,
+      "netharm_accept": 0.8615384615384616,
+      "need_slope": -0.11382113821138218
+     },
+     {
+      "deaths_per_10k": 42.0,
+      "post_swap_deaths": 1,
+      "food": 198.9879884445819,
+      "valence_acc": 0.9408602150537635,
+      "netharm_accept": 0.8461538461538461,
+      "need_slope": 0.029126213592232997
+     },
+     {
+      "deaths_per_10k": 69.33333333333333,
+      "post_swap_deaths": 22,
+      "food": 196.59942822620638,
+      "valence_acc": 0.9095744680851063,
+      "netharm_accept": 0.9811320754716981,
+      "need_slope": 0.009803921568627416
+     },
+     {
+      "deaths_per_10k": 47.333333333333336,
+      "post_swap_deaths": 1,
+      "food": 193.1522442870533,
+      "valence_acc": 0.9302325581395349,
+      "netharm_accept": 0.9111111111111111,
+      "need_slope": 0.011235955056179803
+     }
+    ],
+    "SUM": [
+     {
+      "deaths_per_10k": 2.6666666666666665,
+      "post_swap_deaths": 1,
+      "food": 107.52136708512275,
+      "valence_acc": 0.9887005649717514,
+      "netharm_accept": 0.1016949152542373,
+      "need_slope": 0.2
+     },
+     {
+      "deaths_per_10k": 1.3333333333333333,
+      "post_swap_deaths": 0,
+      "food": 160.71632124484137,
+      "valence_acc": 1.0,
+      "netharm_accept": 0.11363636363636363,
+      "need_slope": 0.10377358490566035
+     },
+     {
+      "deaths_per_10k": 0.0,
+      "post_swap_deaths": 0,
+      "food": 182.69991385205407,
+      "valence_acc": 0.9907407407407407,
+      "netharm_accept": 0.06,
+      "need_slope": -0.17204301075268819
+     },
+     {
+      "deaths_per_10k": 1.3333333333333333,
+      "post_swap_deaths": 0,
+      "food": 154.13876763040454,
+      "valence_acc": 0.9939393939393939,
+      "netharm_accept": 0.19230769230769232,
+      "need_slope": 0.21951219512195125
+     },
+     {
+      "deaths_per_10k": 0.6666666666666666,
+      "post_swap_deaths": 0,
+      "food": 156.30124554556363,
+      "valence_acc": 0.9918367346938776,
+      "netharm_accept": 0.2682926829268293,
+      "need_slope": 0.15189873417721522
+     },
+     {
+      "deaths_per_10k": 2.0,
+      "post_swap_deaths": 0,
+      "food": 172.3093420248218,
+      "valence_acc": 1.0,
+      "netharm_accept": 0.05714285714285714,
+      "need_slope": 0.014925373134328346
+     },
+     {
+      "deaths_per_10k": 0.0,
+      "post_swap_deaths": 0,
+      "food": 135.383078931477,
+      "valence_acc": 0.9941860465116279,
+      "netharm_accept": 0.078125,
+      "need_slope": 0.20800000000000002
+     },
+     {
+      "deaths_per_10k": 3.3333333333333335,
+      "post_swap_deaths": 0,
+      "food": 143.06638863230046,
+      "valence_acc": 0.986784140969163,
+      "netharm_accept": 0.06521739130434782,
+      "need_slope": 0.19148936170212771
+     },
+     {
+      "deaths_per_10k": 0.6666666666666666,
+      "post_swap_deaths": 0,
+      "food": 124.12312001759169,
+      "valence_acc": 0.983957219251337,
+      "netharm_accept": 0.30612244897959184,
+      "need_slope": 0.02777777777777779
+     },
+     {
+      "deaths_per_10k": 2.0,
+      "post_swap_deaths": 0,
+      "food": 119.22068155881665,
+      "valence_acc": 0.9787234042553191,
+      "netharm_accept": 0.09722222222222222,
+      "need_slope": 0.02307692307692305
+     },
+     {
+      "deaths_per_10k": 2.0,
+      "post_swap_deaths": 0,
+      "food": 180.8589261681958,
+      "valence_acc": 0.9770114942528736,
+      "netharm_accept": 0.0,
+      "need_slope": 0.014285714285714235
+     },
+     {
+      "deaths_per_10k": 0.6666666666666666,
+      "post_swap_deaths": 0,
+      "food": 124.08356963213005,
+      "valence_acc": 0.9857142857142858,
+      "netharm_accept": 0.3958333333333333,
+      "need_slope": -0.16666666666666669
+     },
+     {
+      "deaths_per_10k": 6.666666666666667,
+      "post_swap_deaths": 2,
+      "food": 101.46189771623405,
+      "valence_acc": 0.9705882352941176,
+      "netharm_accept": 0.024096385542168676,
+      "need_slope": -0.2243589743589744
+     },
+     {
+      "deaths_per_10k": 0.0,
+      "post_swap_deaths": 0,
+      "food": 147.9646253458146,
+      "valence_acc": 0.976878612716763,
+      "netharm_accept": 0.09803921568627451,
+      "need_slope": 0.308411214953271
+     },
+     {
+      "deaths_per_10k": 0.0,
+      "post_swap_deaths": 0,
+      "food": 154.4409231300047,
+      "valence_acc": 0.9845559845559846,
+      "netharm_accept": 0.19444444444444445,
+      "need_slope": 0.18518518518518523
+     },
+     {
+      "deaths_per_10k": 0.0,
+      "post_swap_deaths": 0,
+      "food": 130.85542949090294,
+      "valence_acc": 0.9930555555555556,
+      "netharm_accept": 0.013333333333333334,
+      "need_slope": 0.055118110236220486
+     },
+     {
+      "deaths_per_10k": 3.3333333333333335,
+      "post_swap_deaths": 1,
+      "food": 109.41467936721311,
+      "valence_acc": 0.9931506849315068,
+      "netharm_accept": 0.08450704225352113,
+      "need_slope": 0.0579710144927536
+     },
+     {
+      "deaths_per_10k": 1.3333333333333333,
+      "post_swap_deaths": 0,
+      "food": 137.1119072585584,
+      "valence_acc": 0.9695431472081218,
+      "netharm_accept": 0.22727272727272727,
+      "need_slope": -0.021505376344086058
+     },
+     {
+      "deaths_per_10k": 0.6666666666666666,
+      "post_swap_deaths": 0,
+      "food": 182.67654094089104,
+      "valence_acc": 0.9660377358490566,
+      "netharm_accept": 0.06666666666666667,
+      "need_slope": 0.07246376811594207
+     },
+     {
+      "deaths_per_10k": 2.6666666666666665,
+      "post_swap_deaths": 1,
+      "food": 127.7348593951164,
+      "valence_acc": 0.9717741935483871,
+      "netharm_accept": 0.3235294117647059,
+      "need_slope": 0.0
+     },
+     {
+      "deaths_per_10k": 0.6666666666666666,
+      "post_swap_deaths": 0,
+      "food": 129.37565498297712,
+      "valence_acc": 0.9945945945945946,
+      "netharm_accept": 0.0,
+      "need_slope": -0.08181818181818182
+     },
+     {
+      "deaths_per_10k": 2.6666666666666665,
+      "post_swap_deaths": 0,
+      "food": 157.66428081228315,
+      "valence_acc": 0.9964912280701754,
+      "netharm_accept": 0.14285714285714285,
+      "need_slope": 0.22448979591836732
+     },
+     {
+      "deaths_per_10k": 4.666666666666667,
+      "post_swap_deaths": 1,
+      "food": 131.51192840437574,
+      "valence_acc": 0.9727272727272728,
+      "netharm_accept": 0.1702127659574468,
+      "need_slope": -0.03448275862068967
+     },
+     {
+      "deaths_per_10k": 1.3333333333333333,
+      "post_swap_deaths": 0,
+      "food": 151.02642370898087,
+      "valence_acc": 1.0,
+      "netharm_accept": 0.07352941176470588,
+      "need_slope": 0.2121212121212121
+     },
+     {
+      "deaths_per_10k": 3.3333333333333335,
+      "post_swap_deaths": 0,
+      "food": 127.06805231215435,
+      "valence_acc": 1.0,
+      "netharm_accept": 0.09523809523809523,
+      "need_slope": -0.0546875
+     },
+     {
+      "deaths_per_10k": 0.0,
+      "post_swap_deaths": 0,
+      "food": 131.77867986193849,
+      "valence_acc": 0.9930555555555556,
+      "netharm_accept": 0.07142857142857142,
+      "need_slope": 0.13559322033898308
+     },
+     {
+      "deaths_per_10k": 1.3333333333333333,
+      "post_swap_deaths": 0,
+      "food": 132.25763746383512,
+      "valence_acc": 0.979381443298969,
+      "netharm_accept": 0.20754716981132076,
+      "need_slope": 0.018181818181818188
+     },
+     {
+      "deaths_per_10k": 4.666666666666667,
+      "post_swap_deaths": 0,
+      "food": 137.1171381882463,
+      "valence_acc": 0.9894736842105263,
+      "netharm_accept": 0.061224489795918366,
+      "need_slope": 0.0654205607476635
+     },
+     {
+      "deaths_per_10k": 0.6666666666666666,
+      "post_swap_deaths": 0,
+      "food": 123.7437153612149,
+      "valence_acc": 0.9944444444444445,
+      "netharm_accept": 0.01639344262295082,
+      "need_slope": -0.04424778761061948
+     },
+     {
+      "deaths_per_10k": 1.3333333333333333,
+      "post_swap_deaths": 0,
+      "food": 140.57405913756628,
+      "valence_acc": 0.972972972972973,
+      "netharm_accept": 0.0,
+      "need_slope": 0.10204081632653056
+     },
+     {
+      "deaths_per_10k": 0.6666666666666666,
+      "post_swap_deaths": 0,
+      "food": 164.85315208194,
+      "valence_acc": 1.0,
+      "netharm_accept": 0.0,
+      "need_slope": 0.19047619047619047
+     },
+     {
+      "deaths_per_10k": 0.0,
+      "post_swap_deaths": 0,
+      "food": 144.1876643051588,
+      "valence_acc": 0.9423076923076923,
+      "netharm_accept": 0.06382978723404255,
+      "need_slope": -0.045871559633027525
+     },
+     {
+      "deaths_per_10k": 0.6666666666666666,
+      "post_swap_deaths": 0,
+      "food": 188.70338954187338,
+      "valence_acc": 0.9796747967479674,
+      "netharm_accept": 0.5,
+      "need_slope": -0.03409090909090906
+     },
+     {
+      "deaths_per_10k": 2.0,
+      "post_swap_deaths": 0,
+      "food": 157.7438008106117,
+      "valence_acc": 0.9586776859504132,
+      "netharm_accept": 0.35135135135135137,
+      "need_slope": -0.06849315068493156
+     },
+     {
+      "deaths_per_10k": 0.6666666666666666,
+      "post_swap_deaths": 0,
+      "food": 187.85310808386618,
+      "valence_acc": 1.0,
+      "netharm_accept": 0.07894736842105263,
+      "need_slope": 0.11666666666666659
+     },
+     {
+      "deaths_per_10k": 0.6666666666666666,
+      "post_swap_deaths": 0,
+      "food": 128.55003605577144,
+      "valence_acc": 0.9148936170212766,
+      "netharm_accept": 0.17391304347826086,
+      "need_slope": 0.31
+     },
+     {
+      "deaths_per_10k": 3.3333333333333335,
+      "post_swap_deaths": 0,
+      "food": 97.35858519481752,
+      "valence_acc": 1.0,
+      "netharm_accept": 0.0,
+      "need_slope": 0.06015037593984962
+     },
+     {
+      "deaths_per_10k": 1.3333333333333333,
+      "post_swap_deaths": 0,
+      "food": 129.3709524769385,
+      "valence_acc": 1.0,
+      "netharm_accept": 0.08620689655172414,
+      "need_slope": 0.02020202020202022
+     },
+     {
+      "deaths_per_10k": 2.0,
+      "post_swap_deaths": 1,
+      "food": 114.01394994757906,
+      "valence_acc": 1.0,
+      "netharm_accept": 0.08196721311475409,
+      "need_slope": 0.21705426356589141
+     },
+     {
+      "deaths_per_10k": 2.6666666666666665,
+      "post_swap_deaths": 0,
+      "food": 109.32517977080563,
+      "valence_acc": 0.9859154929577465,
+      "netharm_accept": 0.1791044776119403,
+      "need_slope": 0.171875
+     },
+     {
+      "deaths_per_10k": 1.3333333333333333,
+      "post_swap_deaths": 0,
+      "food": 155.35071569897877,
+      "valence_acc": 0.9956331877729258,
+      "netharm_accept": 0.022222222222222223,
+      "need_slope": 0.1111111111111111
+     },
+     {
+      "deaths_per_10k": 0.0,
+      "post_swap_deaths": 0,
+      "food": 161.96320571287876,
+      "valence_acc": 0.9382022471910112,
+      "netharm_accept": 0.40384615384615385,
+      "need_slope": 0.026548672566371723
+     },
+     {
+      "deaths_per_10k": 0.6666666666666666,
+      "post_swap_deaths": 0,
+      "food": 131.0280990113731,
+      "valence_acc": 0.9927007299270073,
+      "netharm_accept": 0.24285714285714285,
+      "need_slope": 0.05035971223021585
+     },
+     {
+      "deaths_per_10k": 0.0,
+      "post_swap_deaths": 0,
+      "food": 179.0278176966428,
+      "valence_acc": 0.9727272727272728,
+      "netharm_accept": 0.0,
+      "need_slope": -0.09999999999999998
+     },
+     {
+      "deaths_per_10k": 3.3333333333333335,
+      "post_swap_deaths": 0,
+      "food": 138.5305352253864,
+      "valence_acc": 0.9760479041916168,
+      "netharm_accept": 0.15384615384615385,
+      "need_slope": -0.03252032520325199
+     },
+     {
+      "deaths_per_10k": 2.6666666666666665,
+      "post_swap_deaths": 0,
+      "food": 130.1681064473881,
+      "valence_acc": 0.9946236559139785,
+      "netharm_accept": 0.1346153846153846,
+      "need_slope": 0.12621359223300976
+     },
+     {
+      "deaths_per_10k": 5.333333333333333,
+      "post_swap_deaths": 0,
+      "food": 113.81141124345835,
+      "valence_acc": 0.9787234042553191,
+      "netharm_accept": 0.1509433962264151,
+      "need_slope": 0.0
+     },
+     {
+      "deaths_per_10k": 6.0,
+      "post_swap_deaths": 0,
+      "food": 143.73673066551268,
+      "valence_acc": 0.986046511627907,
+      "netharm_accept": 0.044444444444444446,
+      "need_slope": 0.0561797752808989
+     }
+    ],
+    "HOMEO": [
+     {
+      "deaths_per_10k": 6.0,
+      "post_swap_deaths": 1,
+      "food": 57.97528471541461,
+      "valence_acc": 0.8757062146892656,
+      "netharm_accept": 0.23728813559322035,
+      "need_slope": 0.6333333333333333
+     },
+     {
+      "deaths_per_10k": 8.666666666666666,
+      "post_swap_deaths": 0,
+      "food": 59.66604505489636,
+      "valence_acc": 0.7513513513513513,
+      "netharm_accept": 0.6590909090909091,
+      "need_slope": 0.3207547169811321
+     },
+     {
+      "deaths_per_10k": 2.0,
+      "post_swap_deaths": 0,
+      "food": 61.87570158621875,
+      "valence_acc": 0.5,
+      "netharm_accept": 0.0,
+      "need_slope": 0.8602150537634409
+     },
+     {
+      "deaths_per_10k": 4.0,
+      "post_swap_deaths": 0,
+      "food": 61.94009527524336,
+      "valence_acc": 0.7151515151515152,
+      "netharm_accept": 0.0,
+      "need_slope": 0.45528455284552843
+     },
+     {
+      "deaths_per_10k": 3.3333333333333335,
+      "post_swap_deaths": 0,
+      "food": 60.22864087395515,
+      "valence_acc": 0.5142857142857142,
+      "netharm_accept": 0.21951219512195122,
+      "need_slope": 0.949367088607595
+     },
+     {
+      "deaths_per_10k": 5.333333333333333,
+      "post_swap_deaths": 1,
+      "food": 60.289545392068796,
+      "valence_acc": 0.5787545787545788,
+      "netharm_accept": 0.08571428571428572,
+      "need_slope": 0.9850746268656716
+     },
+     {
+      "deaths_per_10k": 2.0,
+      "post_swap_deaths": 0,
+      "food": 60.33340147892212,
+      "valence_acc": 0.6511627906976745,
+      "netharm_accept": 0.28125,
+      "need_slope": 0.9279999999999999
+     },
+     {
+      "deaths_per_10k": 4.666666666666667,
+      "post_swap_deaths": 0,
+      "food": 60.48342046574236,
+      "valence_acc": 0.5066079295154186,
+      "netharm_accept": 0.0,
+      "need_slope": 0.6702127659574468
+     },
+     {
+      "deaths_per_10k": 3.3333333333333335,
+      "post_swap_deaths": 0,
+      "food": 61.71642566947662,
+      "valence_acc": 0.6256684491978609,
+      "netharm_accept": 0.1836734693877551,
+      "need_slope": 1.0
+     },
+     {
+      "deaths_per_10k": 2.6666666666666665,
+      "post_swap_deaths": 0,
+      "food": 62.361950100503485,
+      "valence_acc": 0.6312056737588653,
+      "netharm_accept": 0.08333333333333333,
+      "need_slope": 0.9461538461538461
+     },
+     {
+      "deaths_per_10k": 2.6666666666666665,
+      "post_swap_deaths": 0,
+      "food": 62.721789225019315,
+      "valence_acc": 0.5517241379310345,
+      "netharm_accept": 0.5172413793103449,
+      "need_slope": 0.5
+     },
+     {
+      "deaths_per_10k": 5.333333333333333,
+      "post_swap_deaths": 0,
+      "food": 59.75022072734149,
+      "valence_acc": 0.5142857142857142,
+      "netharm_accept": 0.020833333333333332,
+      "need_slope": 0.9047619047619048
+     },
+     {
+      "deaths_per_10k": 12.666666666666666,
+      "post_swap_deaths": 2,
+      "food": 54.29677164934667,
+      "valence_acc": 0.4117647058823529,
+      "netharm_accept": 0.21686746987951808,
+      "need_slope": 0.8205128205128205
+     },
+     {
+      "deaths_per_10k": 1.3333333333333333,
+      "post_swap_deaths": 0,
+      "food": 61.0408210569872,
+      "valence_acc": 0.8786127167630058,
+      "netharm_accept": 0.3137254901960784,
+      "need_slope": 0.7757009345794392
+     },
+     {
+      "deaths_per_10k": 4.0,
+      "post_swap_deaths": 1,
+      "food": 62.18053363573901,
+      "valence_acc": 0.640926640926641,
+      "netharm_accept": 0.19444444444444445,
+      "need_slope": 0.5185185185185186
+     },
+     {
+      "deaths_per_10k": 0.6666666666666666,
+      "post_swap_deaths": 0,
+      "food": 63.19838324323221,
+      "valence_acc": 0.7430555555555556,
+      "netharm_accept": 0.14666666666666667,
+      "need_slope": 0.889763779527559
+     },
+     {
+      "deaths_per_10k": 8.0,
+      "post_swap_deaths": 0,
+      "food": 57.21141444986986,
+      "valence_acc": 0.5136986301369864,
+      "netharm_accept": 0.16901408450704225,
+      "need_slope": 0.891304347826087
+     },
+     {
+      "deaths_per_10k": 2.0,
+      "post_swap_deaths": 0,
+      "food": 61.75660563718305,
+      "valence_acc": 0.5989847715736041,
+      "netharm_accept": 0.06818181818181818,
+      "need_slope": 0.4838709677419355
+     },
+     {
+      "deaths_per_10k": 2.0,
+      "post_swap_deaths": 0,
+      "food": 62.12418393805294,
+      "valence_acc": 0.6867924528301886,
+      "netharm_accept": 0.6666666666666666,
+      "need_slope": 0.6086956521739131
+     },
+     {
+      "deaths_per_10k": 6.666666666666667,
+      "post_swap_deaths": 1,
+      "food": 59.26095700917597,
+      "valence_acc": 0.5161290322580645,
+      "netharm_accept": 0.5588235294117647,
+      "need_slope": 0.8840579710144928
+     },
+     {
+      "deaths_per_10k": 4.666666666666667,
+      "post_swap_deaths": 1,
+      "food": 61.66793846782067,
+      "valence_acc": 0.4756756756756757,
+      "netharm_accept": 0.06060606060606061,
+      "need_slope": 0.8545454545454545
+     },
+     {
+      "deaths_per_10k": 5.333333333333333,
+      "post_swap_deaths": 0,
+      "food": 62.26271812145079,
+      "valence_acc": 0.5087719298245614,
+      "netharm_accept": 0.0,
+      "need_slope": 0.7755102040816326
+     },
+     {
+      "deaths_per_10k": 6.666666666666667,
+      "post_swap_deaths": 0,
+      "food": 58.296954257609286,
+      "valence_acc": 0.8045454545454546,
+      "netharm_accept": 0.6382978723404256,
+      "need_slope": 0.5862068965517242
+     },
+     {
+      "deaths_per_10k": 4.0,
+      "post_swap_deaths": 0,
+      "food": 61.08417320279706,
+      "valence_acc": 0.35877862595419846,
+      "netharm_accept": 0.4411764705882353,
+      "need_slope": 0.9393939393939394
+     },
+     {
+      "deaths_per_10k": 1.3333333333333333,
+      "post_swap_deaths": 0,
+      "food": 62.80717864041021,
+      "valence_acc": 0.5033557046979866,
+      "netharm_accept": 0.0,
+      "need_slope": 0.671875
+     },
+     {
+      "deaths_per_10k": 4.0,
+      "post_swap_deaths": 1,
+      "food": 63.10752450092694,
+      "valence_acc": 0.6875,
+      "netharm_accept": 0.03571428571428571,
+      "need_slope": 0.2627118644067797
+     },
+     {
+      "deaths_per_10k": 4.666666666666667,
+      "post_swap_deaths": 0,
+      "food": 61.44224733849826,
+      "valence_acc": 0.7010309278350515,
+      "netharm_accept": 0.05660377358490566,
+      "need_slope": 0.6818181818181819
+     },
+     {
+      "deaths_per_10k": 4.666666666666667,
+      "post_swap_deaths": 0,
+      "food": 59.353598390427685,
+      "valence_acc": 0.6578947368421053,
+      "netharm_accept": 0.5714285714285714,
+      "need_slope": 0.6635514018691588
+     },
+     {
+      "deaths_per_10k": 1.3333333333333333,
+      "post_swap_deaths": 0,
+      "food": 65.07754284663902,
+      "valence_acc": 0.5944444444444444,
+      "netharm_accept": 0.5081967213114754,
+      "need_slope": 0.6106194690265487
+     },
+     {
+      "deaths_per_10k": 2.0,
+      "post_swap_deaths": 0,
+      "food": 62.671231699041016,
+      "valence_acc": 0.7081081081081081,
+      "netharm_accept": 0.6,
+      "need_slope": 0.4897959183673469
+     },
+     {
+      "deaths_per_10k": 6.666666666666667,
+      "post_swap_deaths": 1,
+      "food": 58.191295385381714,
+      "valence_acc": 0.9081081081081082,
+      "netharm_accept": 0.12,
+      "need_slope": 0.6666666666666667
+     },
+     {
+      "deaths_per_10k": 0.6666666666666666,
+      "post_swap_deaths": 0,
+      "food": 63.66823506049233,
+      "valence_acc": 0.6025641025641025,
+      "netharm_accept": 0.3404255319148936,
+      "need_slope": 0.9357798165137615
+     },
+     {
+      "deaths_per_10k": 4.0,
+      "post_swap_deaths": 0,
+      "food": 61.81419076609607,
+      "valence_acc": 0.5609756097560976,
+      "netharm_accept": 0.06521739130434782,
+      "need_slope": 0.5681818181818182
+     },
+     {
+      "deaths_per_10k": 4.0,
+      "post_swap_deaths": 0,
+      "food": 62.55859967937396,
+      "valence_acc": 0.5454545454545454,
+      "netharm_accept": 0.5135135135135135,
+      "need_slope": 0.5342465753424658
+     },
+     {
+      "deaths_per_10k": 3.3333333333333335,
+      "post_swap_deaths": 0,
+      "food": 61.31502396728065,
+      "valence_acc": 0.647887323943662,
+      "netharm_accept": 0.2631578947368421,
+      "need_slope": 0.7000000000000001
+     },
+     {
+      "deaths_per_10k": 3.3333333333333335,
+      "post_swap_deaths": 0,
+      "food": 60.203633334576246,
+      "valence_acc": 0.6329787234042553,
+      "netharm_accept": 0.4782608695652174,
+      "need_slope": 0.69
+     },
+     {
+      "deaths_per_10k": 6.666666666666667,
+      "post_swap_deaths": 0,
+      "food": 59.72706484579389,
+      "valence_acc": 0.6062992125984252,
+      "netharm_accept": 0.04918032786885246,
+      "need_slope": 0.9323308270676691
+     },
+     {
+      "deaths_per_10k": 6.666666666666667,
+      "post_swap_deaths": 0,
+      "food": 59.96875397968145,
+      "valence_acc": 0.7524271844660194,
+      "netharm_accept": 0.0,
+      "need_slope": 0.6868686868686869
+     },
+     {
+      "deaths_per_10k": 1.3333333333333333,
+      "post_swap_deaths": 0,
+      "food": 60.738638937131036,
+      "valence_acc": 0.8707482993197279,
+      "netharm_accept": 0.9836065573770492,
+      "need_slope": 0.015503875968992276
+     },
+     {
+      "deaths_per_10k": 4.666666666666667,
+      "post_swap_deaths": 0,
+      "food": 59.49114562070327,
+      "valence_acc": 0.5070422535211268,
+      "netharm_accept": 0.0,
+      "need_slope": 1.0
+     },
+     {
+      "deaths_per_10k": 2.6666666666666665,
+      "post_swap_deaths": 0,
+      "food": 60.574177718356246,
+      "valence_acc": 0.39737991266375544,
+      "netharm_accept": 0.4222222222222222,
+      "need_slope": 0.7283950617283951
+     },
+     {
+      "deaths_per_10k": 0.6666666666666666,
+      "post_swap_deaths": 0,
+      "food": 63.476748285983426,
+      "valence_acc": 0.797752808988764,
+      "netharm_accept": 0.6153846153846154,
+      "need_slope": 0.6283185840707964
+     },
+     {
+      "deaths_per_10k": 5.333333333333333,
+      "post_swap_deaths": 0,
+      "food": 58.80338811064359,
+      "valence_acc": 0.46715328467153283,
+      "netharm_accept": 0.08571428571428572,
+      "need_slope": 0.7553956834532374
+     },
+     {
+      "deaths_per_10k": 4.666666666666667,
+      "post_swap_deaths": 0,
+      "food": 61.197635929323475,
+      "valence_acc": 0.5318181818181819,
+      "netharm_accept": 0.4838709677419355,
+      "need_slope": 0.85
+     },
+     {
+      "deaths_per_10k": 8.666666666666666,
+      "post_swap_deaths": 2,
+      "food": 59.91994321463877,
+      "valence_acc": 0.6227544910179641,
+      "netharm_accept": 0.0,
+      "need_slope": 0.4878048780487805
+     },
+     {
+      "deaths_per_10k": 2.6666666666666665,
+      "post_swap_deaths": 1,
+      "food": 62.96872683615669,
+      "valence_acc": 0.5053763440860215,
+      "netharm_accept": 0.019230769230769232,
+      "need_slope": 0.9611650485436893
+     },
+     {
+      "deaths_per_10k": 5.333333333333333,
+      "post_swap_deaths": 3,
+      "food": 60.01532270774335,
+      "valence_acc": 0.648936170212766,
+      "netharm_accept": 0.33962264150943394,
+      "need_slope": 0.8823529411764706
+     },
+     {
+      "deaths_per_10k": 9.333333333333334,
+      "post_swap_deaths": 0,
+      "food": 57.08438296574062,
+      "valence_acc": 0.7023255813953488,
+      "netharm_accept": 0.37777777777777777,
+      "need_slope": 0.5842696629213482
+     }
+    ],
+    "HOMEO0": [
+     {
+      "deaths_per_10k": 1.3333333333333333,
+      "post_swap_deaths": 1,
+      "food": 59.80910812972902,
+      "valence_acc": 0.5423728813559322,
+      "netharm_accept": 0.1016949152542373,
+      "need_slope": 0.925
+     },
+     {
+      "deaths_per_10k": 6.666666666666667,
+      "post_swap_deaths": 1,
+      "food": 58.80403891637582,
+      "valence_acc": 0.5945945945945946,
+      "netharm_accept": 0.8409090909090909,
+      "need_slope": 0.28301886792452835
+     },
+     {
+      "deaths_per_10k": 6.0,
+      "post_swap_deaths": 5,
+      "food": 56.69274858254501,
+      "valence_acc": 0.5231481481481481,
+      "netharm_accept": 0.34,
+      "need_slope": 0.5913978494623656
+     },
+     {
+      "deaths_per_10k": 4.0,
+      "post_swap_deaths": 0,
+      "food": 60.84751133171019,
+      "valence_acc": 0.5818181818181818,
+      "netharm_accept": 0.6666666666666666,
+      "need_slope": 0.8211382113821138
+     },
+     {
+      "deaths_per_10k": 6.666666666666667,
+      "post_swap_deaths": 0,
+      "food": 56.511551479777296,
+      "valence_acc": 0.6816326530612244,
+      "netharm_accept": 0.04878048780487805,
+      "need_slope": 0.6075949367088608
+     },
+     {
+      "deaths_per_10k": 6.0,
+      "post_swap_deaths": 2,
+      "food": 57.57934695720854,
+      "valence_acc": 0.5274725274725275,
+      "netharm_accept": 0.2571428571428571,
+      "need_slope": 0.9104477611940298
+     },
+     {
+      "deaths_per_10k": 2.0,
+      "post_swap_deaths": 0,
+      "food": 59.80029246602423,
+      "valence_acc": 0.7151162790697675,
+      "netharm_accept": 0.6875,
+      "need_slope": 0.6639999999999999
+     },
+     {
+      "deaths_per_10k": 7.333333333333333,
+      "post_swap_deaths": 0,
+      "food": 57.43870802919034,
+      "valence_acc": 0.44933920704845814,
+      "netharm_accept": 0.45652173913043476,
+      "need_slope": 0.9042553191489362
+     },
+     {
+      "deaths_per_10k": 4.666666666666667,
+      "post_swap_deaths": 0,
+      "food": 57.92874197874539,
+      "valence_acc": 0.7433155080213903,
+      "netharm_accept": 0.04081632653061224,
+      "need_slope": 0.4907407407407407
+     },
+     {
+      "deaths_per_10k": 5.333333333333333,
+      "post_swap_deaths": 1,
+      "food": 58.3717800202751,
+      "valence_acc": 0.9078014184397163,
+      "netharm_accept": 0.25,
+      "need_slope": 0.6461538461538461
+     },
+     {
+      "deaths_per_10k": 4.0,
+      "post_swap_deaths": 1,
+      "food": 59.636032975865504,
+      "valence_acc": 0.6130268199233716,
+      "netharm_accept": 0.1724137931034483,
+      "need_slope": 0.6142857142857142
+     },
+     {
+      "deaths_per_10k": 3.3333333333333335,
+      "post_swap_deaths": 2,
+      "food": 58.804274241665624,
+      "valence_acc": 0.7095238095238096,
+      "netharm_accept": 0.0,
+      "need_slope": 0.8333333333333334
+     },
+     {
+      "deaths_per_10k": 12.0,
+      "post_swap_deaths": 3,
+      "food": 52.63124466632549,
+      "valence_acc": 0.5294117647058824,
+      "netharm_accept": 0.14457831325301204,
+      "need_slope": 0.5897435897435898
+     },
+     {
+      "deaths_per_10k": 4.0,
+      "post_swap_deaths": 0,
+      "food": 57.50378675972942,
+      "valence_acc": 0.7398843930635838,
+      "netharm_accept": 0.0392156862745098,
+      "need_slope": 0.6074766355140186
+     },
+     {
+      "deaths_per_10k": 3.3333333333333335,
+      "post_swap_deaths": 2,
+      "food": 60.442752225636866,
+      "valence_acc": 0.5868725868725869,
+      "netharm_accept": 0.08333333333333333,
+      "need_slope": 0.728395061728395
+     },
+     {
+      "deaths_per_10k": 0.6666666666666666,
+      "post_swap_deaths": 0,
+      "food": 62.62932700441306,
+      "valence_acc": 0.4791666666666667,
+      "netharm_accept": 0.04,
+      "need_slope": 0.8661417322834646
+     },
+     {
+      "deaths_per_10k": 5.333333333333333,
+      "post_swap_deaths": 1,
+      "food": 57.267764489571576,
+      "valence_acc": 0.6575342465753424,
+      "netharm_accept": 0.29577464788732394,
+      "need_slope": 0.7246376811594203
+     },
+     {
+      "deaths_per_10k": 1.3333333333333333,
+      "post_swap_deaths": 1,
+      "food": 61.954461265431114,
+      "valence_acc": 0.5786802030456852,
+      "netharm_accept": 0.0,
+      "need_slope": 0.6881720430107527
+     },
+     {
+      "deaths_per_10k": 2.6666666666666665,
+      "post_swap_deaths": 0,
+      "food": 61.97150938926127,
+      "valence_acc": 0.4,
+      "netharm_accept": 0.5333333333333333,
+      "need_slope": 0.7391304347826086
+     },
+     {
+      "deaths_per_10k": 4.666666666666667,
+      "post_swap_deaths": 2,
+      "food": 58.149161662738074,
+      "valence_acc": 0.49193548387096775,
+      "netharm_accept": 0.058823529411764705,
+      "need_slope": 0.8115942028985508
+     },
+     {
+      "deaths_per_10k": 4.0,
+      "post_swap_deaths": 1,
+      "food": 58.864096531076605,
+      "valence_acc": 0.4702702702702703,
+      "netharm_accept": 0.21212121212121213,
+      "need_slope": 0.8090909090909091
+     },
+     {
+      "deaths_per_10k": 7.333333333333333,
+      "post_swap_deaths": 0,
+      "food": 56.31303360150824,
+      "valence_acc": 0.512280701754386,
+      "netharm_accept": 0.0,
+      "need_slope": 0.5102040816326531
+     },
+     {
+      "deaths_per_10k": 6.666666666666667,
+      "post_swap_deaths": 4,
+      "food": 57.61996545991419,
+      "valence_acc": 0.7227272727272728,
+      "netharm_accept": 0.7659574468085106,
+      "need_slope": 0.632183908045977
+     },
+     {
+      "deaths_per_10k": 4.0,
+      "post_swap_deaths": 0,
+      "food": 58.30816423957806,
+      "valence_acc": 0.4961832061068702,
+      "netharm_accept": 0.22058823529411764,
+      "need_slope": 0.8484848484848485
+     },
+     {
+      "deaths_per_10k": 5.333333333333333,
+      "post_swap_deaths": 1,
+      "food": 59.0275099366657,
+      "valence_acc": 0.5234899328859061,
+      "netharm_accept": 0.015873015873015872,
+      "need_slope": 0.7109375
+     },
+     {
+      "deaths_per_10k": 4.666666666666667,
+      "post_swap_deaths": 1,
+      "food": 59.47211277922091,
+      "valence_acc": 0.625,
+      "netharm_accept": 0.03571428571428571,
+      "need_slope": 0.9491525423728814
+     },
+     {
+      "deaths_per_10k": 2.0,
+      "post_swap_deaths": 0,
+      "food": 59.94926832587084,
+      "valence_acc": 0.5773195876288659,
+      "netharm_accept": 0.32075471698113206,
+      "need_slope": 0.5909090909090909
+     },
+     {
+      "deaths_per_10k": 4.666666666666667,
+      "post_swap_deaths": 0,
+      "food": 58.050514863781245,
+      "valence_acc": 0.7842105263157895,
+      "netharm_accept": 0.04081632653061224,
+      "need_slope": 0.9439252336448598
+     },
+     {
+      "deaths_per_10k": 3.3333333333333335,
+      "post_swap_deaths": 1,
+      "food": 59.619539748142735,
+      "valence_acc": 0.5444444444444444,
+      "netharm_accept": 0.2459016393442623,
+      "need_slope": 0.7256637168141593
+     },
+     {
+      "deaths_per_10k": 4.666666666666667,
+      "post_swap_deaths": 0,
+      "food": 60.02398260319622,
+      "valence_acc": 0.5783783783783784,
+      "netharm_accept": 0.325,
+      "need_slope": 0.7755102040816326
+     },
+     {
+      "deaths_per_10k": 5.333333333333333,
+      "post_swap_deaths": 1,
+      "food": 57.477540071855806,
+      "valence_acc": 0.6378378378378379,
+      "netharm_accept": 0.12,
+      "need_slope": 0.7333333333333334
+     },
+     {
+      "deaths_per_10k": 2.6666666666666665,
+      "post_swap_deaths": 1,
+      "food": 59.36764630465565,
+      "valence_acc": 0.5128205128205128,
+      "netharm_accept": 0.0851063829787234,
+      "need_slope": 0.7522935779816513
+     },
+     {
+      "deaths_per_10k": 6.0,
+      "post_swap_deaths": 0,
+      "food": 57.65280051609139,
+      "valence_acc": 0.5487804878048781,
+      "netharm_accept": 0.34782608695652173,
+      "need_slope": 0.8409090909090909
+     },
+     {
+      "deaths_per_10k": 7.333333333333333,
+      "post_swap_deaths": 1,
+      "food": 55.86345989680479,
+      "valence_acc": 0.5413223140495868,
+      "netharm_accept": 0.10810810810810811,
+      "need_slope": 0.904109589041096
+     },
+     {
+      "deaths_per_10k": 6.666666666666667,
+      "post_swap_deaths": 0,
+      "food": 56.194732596206954,
+      "valence_acc": 0.5,
+      "netharm_accept": 0.15789473684210525,
+      "need_slope": 0.7333333333333333
+     },
+     {
+      "deaths_per_10k": 4.0,
+      "post_swap_deaths": 1,
+      "food": 58.122180178434505,
+      "valence_acc": 0.7180851063829787,
+      "netharm_accept": 0.43478260869565216,
+      "need_slope": 0.5900000000000001
+     },
+     {
+      "deaths_per_10k": 16.0,
+      "post_swap_deaths": 1,
+      "food": 49.889298059961355,
+      "valence_acc": 0.6614173228346457,
+      "netharm_accept": 0.03278688524590164,
+      "need_slope": 0.46616541353383456
+     },
+     {
+      "deaths_per_10k": 3.3333333333333335,
+      "post_swap_deaths": 0,
+      "food": 60.211528483809396,
+      "valence_acc": 0.5825242718446602,
+      "netharm_accept": 0.2413793103448276,
+      "need_slope": 1.0
+     },
+     {
+      "deaths_per_10k": 5.333333333333333,
+      "post_swap_deaths": 1,
+      "food": 56.84267011369983,
+      "valence_acc": 0.7346938775510204,
+      "netharm_accept": 0.04918032786885246,
+      "need_slope": 0.4651162790697675
+     },
+     {
+      "deaths_per_10k": 5.333333333333333,
+      "post_swap_deaths": 2,
+      "food": 57.76476446646887,
+      "valence_acc": 0.5915492957746479,
+      "netharm_accept": 0.31343283582089554,
+      "need_slope": 0.859375
+     },
+     {
+      "deaths_per_10k": 6.0,
+      "post_swap_deaths": 3,
+      "food": 56.310838597715644,
+      "valence_acc": 0.44541484716157204,
+      "netharm_accept": 0.24444444444444444,
+      "need_slope": 0.6790123456790124
+     },
+     {
+      "deaths_per_10k": 0.6666666666666666,
+      "post_swap_deaths": 0,
+      "food": 60.475553525179926,
+      "valence_acc": 0.5786516853932584,
+      "netharm_accept": 0.038461538461538464,
+      "need_slope": 0.7876106194690266
+     },
+     {
+      "deaths_per_10k": 3.3333333333333335,
+      "post_swap_deaths": 0,
+      "food": 58.77481518274396,
+      "valence_acc": 0.9197080291970803,
+      "netharm_accept": 0.02857142857142857,
+      "need_slope": 0.6115107913669064
+     },
+     {
+      "deaths_per_10k": 4.666666666666667,
+      "post_swap_deaths": 0,
+      "food": 60.5261440483861,
+      "valence_acc": 0.7227272727272728,
+      "netharm_accept": 0.5483870967741935,
+      "need_slope": 0.6875
+     },
+     {
+      "deaths_per_10k": 8.0,
+      "post_swap_deaths": 0,
+      "food": 57.08516845697886,
+      "valence_acc": 0.8143712574850299,
+      "netharm_accept": 0.07692307692307693,
+      "need_slope": 0.7804878048780488
+     },
+     {
+      "deaths_per_10k": 2.6666666666666665,
+      "post_swap_deaths": 1,
+      "food": 59.82772196015576,
+      "valence_acc": 0.6612903225806451,
+      "netharm_accept": 0.11538461538461539,
+      "need_slope": 0.6116504854368933
+     },
+     {
+      "deaths_per_10k": 5.333333333333333,
+      "post_swap_deaths": 2,
+      "food": 57.94418267445435,
+      "valence_acc": 0.6808510638297872,
+      "netharm_accept": 0.22641509433962265,
+      "need_slope": 0.7058823529411764
+     },
+     {
+      "deaths_per_10k": 12.0,
+      "post_swap_deaths": 1,
+      "food": 52.420434847530025,
+      "valence_acc": 0.5720930232558139,
+      "netharm_accept": 0.06666666666666667,
+      "need_slope": 0.6966292134831461
+     }
+    ],
+    "RANDOM": [
+     {
+      "deaths_per_10k": 88.66666666666667,
+      "post_swap_deaths": 16,
+      "food": -2.175682078455803,
+      "valence_acc": 0.8361581920903954,
+      "netharm_accept": 0.3050847457627119,
+      "need_slope": 0.125
+     },
+     {
+      "deaths_per_10k": 73.33333333333333,
+      "post_swap_deaths": 19,
+      "food": 10.553114660634858,
+      "valence_acc": 0.2756756756756757,
+      "netharm_accept": 0.6590909090909091,
+      "need_slope": -0.009433962264150941
+     },
+     {
+      "deaths_per_10k": 75.33333333333333,
+      "post_swap_deaths": 19,
+      "food": 4.993229873830668,
+      "valence_acc": 0.8564814814814815,
+      "netharm_accept": 0.26,
+      "need_slope": -0.2043010752688172
+     },
+     {
+      "deaths_per_10k": 92.0,
+      "post_swap_deaths": 18,
+      "food": -1.1480392086103783,
+      "valence_acc": 0.5454545454545454,
+      "netharm_accept": 0.21794871794871795,
+      "need_slope": 0.13821138211382114
+     },
+     {
+      "deaths_per_10k": 90.0,
+      "post_swap_deaths": 16,
+      "food": -1.9385681427435322,
+      "valence_acc": 0.7591836734693878,
+      "netharm_accept": 0.24390243902439024,
+      "need_slope": 0.050632911392405056
+     },
+     {
+      "deaths_per_10k": 91.33333333333333,
+      "post_swap_deaths": 15,
+      "food": -5.944574964415045,
+      "valence_acc": 0.38461538461538464,
+      "netharm_accept": 0.5142857142857142,
+      "need_slope": -0.2985074626865672
+     },
+     {
+      "deaths_per_10k": 83.33333333333333,
+      "post_swap_deaths": 16,
+      "food": 4.701973563053286,
+      "valence_acc": 0.5581395348837209,
+      "netharm_accept": 0.359375,
+      "need_slope": 0.136
+     },
+     {
+      "deaths_per_10k": 86.66666666666667,
+      "post_swap_deaths": 22,
+      "food": -1.5472747218729337,
+      "valence_acc": 0.6960352422907489,
+      "netharm_accept": 0.1956521739130435,
+      "need_slope": 0.08510638297872339
+     },
+     {
+      "deaths_per_10k": 86.0,
+      "post_swap_deaths": 16,
+      "food": 3.5791376767878136,
+      "valence_acc": 0.47593582887700536,
+      "netharm_accept": 0.3469387755102041,
+      "need_slope": 0.06481481481481485
+     },
+     {
+      "deaths_per_10k": 92.66666666666667,
+      "post_swap_deaths": 18,
+      "food": -3.3295697729301263,
+      "valence_acc": 0.3333333333333333,
+      "netharm_accept": 0.6388888888888888,
+      "need_slope": -0.015384615384615441
+     },
+     {
+      "deaths_per_10k": 87.33333333333333,
+      "post_swap_deaths": 12,
+      "food": -0.9747621962774796,
+      "valence_acc": 0.36398467432950193,
+      "netharm_accept": 0.5517241379310345,
+      "need_slope": 0.12857142857142856
+     },
+     {
+      "deaths_per_10k": 92.0,
+      "post_swap_deaths": 16,
+      "food": -2.1798730009202116,
+      "valence_acc": 0.6238095238095238,
+      "netharm_accept": 0.5,
+      "need_slope": -0.011904761904761973
+     },
+     {
+      "deaths_per_10k": 84.66666666666667,
+      "post_swap_deaths": 19,
+      "food": 14.773999394346633,
+      "valence_acc": 0.5,
+      "netharm_accept": 0.5662650602409639,
+      "need_slope": -0.12179487179487175
+     },
+     {
+      "deaths_per_10k": 90.0,
+      "post_swap_deaths": 15,
+      "food": -0.49334289381014584,
+      "valence_acc": 0.6358381502890174,
+      "netharm_accept": 0.45098039215686275,
+      "need_slope": 0.08411214953271029
+     },
+     {
+      "deaths_per_10k": 90.0,
+      "post_swap_deaths": 13,
+      "food": -4.636830677586127,
+      "valence_acc": 0.44787644787644787,
+      "netharm_accept": 0.4444444444444444,
+      "need_slope": 0.06172839506172839
+     },
+     {
+      "deaths_per_10k": 77.33333333333333,
+      "post_swap_deaths": 13,
+      "food": 9.846968881534112,
+      "valence_acc": 0.375,
+      "netharm_accept": 0.7333333333333333,
+      "need_slope": 0.1417322834645669
+     },
+     {
+      "deaths_per_10k": 96.66666666666667,
+      "post_swap_deaths": 22,
+      "food": -4.404118246736329,
+      "valence_acc": 0.589041095890411,
+      "netharm_accept": 0.2535211267605634,
+      "need_slope": 0.028985507246376774
+     },
+     {
+      "deaths_per_10k": 88.66666666666667,
+      "post_swap_deaths": 17,
+      "food": 1.2315358344801275,
+      "valence_acc": 0.38578680203045684,
+      "netharm_accept": 0.7045454545454546,
+      "need_slope": 0.032258064516129004
+     },
+     {
+      "deaths_per_10k": 84.66666666666667,
+      "post_swap_deaths": 21,
+      "food": -1.3387767534361117,
+      "valence_acc": 0.24528301886792453,
+      "netharm_accept": 0.9333333333333333,
+      "need_slope": -0.10144927536231885
+     },
+     {
+      "deaths_per_10k": 98.0,
+      "post_swap_deaths": 18,
+      "food": -6.775244717775144,
+      "valence_acc": 0.5201612903225806,
+      "netharm_accept": 0.5882352941176471,
+      "need_slope": -0.04347826086956519
+     },
+     {
+      "deaths_per_10k": 96.0,
+      "post_swap_deaths": 16,
+      "food": -2.067838960655965,
+      "valence_acc": 0.745945945945946,
+      "netharm_accept": 0.8939393939393939,
+      "need_slope": -0.12727272727272732
+     },
+     {
+      "deaths_per_10k": 90.0,
+      "post_swap_deaths": 19,
+      "food": -3.6710278495832225,
+      "valence_acc": 0.512280701754386,
+      "netharm_accept": 0.6428571428571429,
+      "need_slope": -0.061224489795918324
+     },
+     {
+      "deaths_per_10k": 90.0,
+      "post_swap_deaths": 14,
+      "food": -1.7154005965606434,
+      "valence_acc": 0.4636363636363636,
+      "netharm_accept": 0.3404255319148936,
+      "need_slope": 0.0
+     },
+     {
+      "deaths_per_10k": 80.0,
+      "post_swap_deaths": 17,
+      "food": 7.564471976170031,
+      "valence_acc": 0.8396946564885496,
+      "netharm_accept": 0.07352941176470588,
+      "need_slope": 0.15151515151515152
+     },
+     {
+      "deaths_per_10k": 81.33333333333333,
+      "post_swap_deaths": 15,
+      "food": 8.335014515544392,
+      "valence_acc": 0.48322147651006714,
+      "netharm_accept": 0.4444444444444444,
+      "need_slope": -0.015625
+     },
+     {
+      "deaths_per_10k": 97.33333333333333,
+      "post_swap_deaths": 22,
+      "food": -5.509952767626419,
+      "valence_acc": 0.6944444444444444,
+      "netharm_accept": 0.5357142857142857,
+      "need_slope": -0.09322033898305082
+     },
+     {
+      "deaths_per_10k": 79.33333333333333,
+      "post_swap_deaths": 18,
+      "food": 10.051481966340909,
+      "valence_acc": 0.26288659793814434,
+      "netharm_accept": 0.6792452830188679,
+      "need_slope": -0.11818181818181822
+     },
+     {
+      "deaths_per_10k": 92.0,
+      "post_swap_deaths": 18,
+      "food": -2.5593579559158264,
+      "valence_acc": 0.3631578947368421,
+      "netharm_accept": 0.2653061224489796,
+      "need_slope": 0.08411214953271028
+     },
+     {
+      "deaths_per_10k": 90.66666666666667,
+      "post_swap_deaths": 22,
+      "food": 0.34729442701733393,
+      "valence_acc": 0.6111111111111112,
+      "netharm_accept": 0.6721311475409836,
+      "need_slope": -0.18584070796460184
+     },
+     {
+      "deaths_per_10k": 89.33333333333333,
+      "post_swap_deaths": 19,
+      "food": -1.1628211459749287,
+      "valence_acc": 0.3567567567567568,
+      "netharm_accept": 0.7,
+      "need_slope": -0.061224489795918324
+     },
+     {
+      "deaths_per_10k": 82.0,
+      "post_swap_deaths": 18,
+      "food": 4.369814050795666,
+      "valence_acc": 0.5351351351351351,
+      "netharm_accept": 0.72,
+      "need_slope": -0.07619047619047614
+     },
+     {
+      "deaths_per_10k": 85.33333333333333,
+      "post_swap_deaths": 23,
+      "food": -1.8067535408592925,
+      "valence_acc": 0.5705128205128205,
+      "netharm_accept": 0.7872340425531915,
+      "need_slope": -0.04587155963302747
+     },
+     {
+      "deaths_per_10k": 78.0,
+      "post_swap_deaths": 12,
+      "food": 2.219463817075342,
+      "valence_acc": 0.3130081300813008,
+      "netharm_accept": 0.782608695652174,
+      "need_slope": 0.011363636363636354
+     },
+     {
+      "deaths_per_10k": 85.33333333333333,
+      "post_swap_deaths": 18,
+      "food": -3.2181855891014695,
+      "valence_acc": 0.371900826446281,
+      "netharm_accept": 0.10810810810810811,
+      "need_slope": 0.0410958904109589
+     },
+     {
+      "deaths_per_10k": 87.33333333333333,
+      "post_swap_deaths": 16,
+      "food": -3.3784744745331317,
+      "valence_acc": 0.4859154929577465,
+      "netharm_accept": 0.3684210526315789,
+      "need_slope": -0.016666666666666663
+     },
+     {
+      "deaths_per_10k": 88.0,
+      "post_swap_deaths": 18,
+      "food": -1.8457898304993925,
+      "valence_acc": 0.3351063829787234,
+      "netharm_accept": 0.5652173913043478,
+      "need_slope": 0.030000000000000027
+     },
+     {
+      "deaths_per_10k": 103.33333333333333,
+      "post_swap_deaths": 19,
+      "food": -2.968461026306984,
+      "valence_acc": 0.5196850393700787,
+      "netharm_accept": 0.9344262295081968,
+      "need_slope": -0.10526315789473684
+     },
+     {
+      "deaths_per_10k": 104.66666666666667,
+      "post_swap_deaths": 19,
+      "food": -15.28587777476785,
+      "valence_acc": 0.7330097087378641,
+      "netharm_accept": 0.15517241379310345,
+      "need_slope": -0.07070707070707072
+     },
+     {
+      "deaths_per_10k": 84.0,
+      "post_swap_deaths": 17,
+      "food": 11.614033118872797,
+      "valence_acc": 0.20408163265306123,
+      "netharm_accept": 0.6885245901639344,
+      "need_slope": -0.062015503875968936
+     },
+     {
+      "deaths_per_10k": 75.33333333333333,
+      "post_swap_deaths": 19,
+      "food": 13.70160363118155,
+      "valence_acc": 0.21830985915492956,
+      "netharm_accept": 0.6268656716417911,
+      "need_slope": -0.0703125
+     },
+     {
+      "deaths_per_10k": 82.0,
+      "post_swap_deaths": 15,
+      "food": 0.9683941790374645,
+      "valence_acc": 0.5589519650655022,
+      "netharm_accept": 0.4222222222222222,
+      "need_slope": 0.037037037037037035
+     },
+     {
+      "deaths_per_10k": 79.33333333333333,
+      "post_swap_deaths": 11,
+      "food": 5.6193403116036755,
+      "valence_acc": 0.5393258426966292,
+      "netharm_accept": 0.28846153846153844,
+      "need_slope": 0.08849557522123891
+     },
+     {
+      "deaths_per_10k": 92.66666666666667,
+      "post_swap_deaths": 15,
+      "food": -1.8034856834821578,
+      "valence_acc": 0.6715328467153284,
+      "netharm_accept": 0.4,
+      "need_slope": -0.028776978417266175
+     },
+     {
+      "deaths_per_10k": 83.33333333333333,
+      "post_swap_deaths": 17,
+      "food": 4.764777189002762,
+      "valence_acc": 0.6863636363636364,
+      "netharm_accept": 0.5483870967741935,
+      "need_slope": -0.1499999999999999
+     },
+     {
+      "deaths_per_10k": 90.0,
+      "post_swap_deaths": 18,
+      "food": -0.002946125879801708,
+      "valence_acc": 0.6407185628742516,
+      "netharm_accept": 0.4,
+      "need_slope": -0.1707317073170732
+     },
+     {
+      "deaths_per_10k": 94.0,
+      "post_swap_deaths": 24,
+      "food": -3.0716734301992776,
+      "valence_acc": 0.45698924731182794,
+      "netharm_accept": 0.8653846153846154,
+      "need_slope": -0.01941747572815533
+     },
+     {
+      "deaths_per_10k": 83.33333333333333,
+      "post_swap_deaths": 25,
+      "food": 2.565809449541611,
+      "valence_acc": 0.3404255319148936,
+      "netharm_accept": 0.20754716981132076,
+      "need_slope": 0.06862745098039216
+     },
+     {
+      "deaths_per_10k": 75.33333333333333,
+      "post_swap_deaths": 15,
+      "food": 8.253170051975093,
+      "valence_acc": 0.34418604651162793,
+      "netharm_accept": 0.6888888888888889,
+      "need_slope": 0.0
+     }
+    ]
+   },
+   "default": {
+    "B0": [
+     {
+      "deaths_per_10k": 14.0,
+      "post_swap_deaths": 1,
+      "food": 158.24950582994484,
+      "valence_acc": 0.9265536723163842,
+      "netharm_accept": 0.11864406779661017,
+      "need_slope": 0.42500000000000004
+     },
+     {
+      "deaths_per_10k": 3.3333333333333335,
+      "post_swap_deaths": 2,
+      "food": 181.7334953710882,
+      "valence_acc": 0.9135135135135135,
+      "netharm_accept": 0.6363636363636364,
+      "need_slope": -0.018867924528301883
+     },
+     {
+      "deaths_per_10k": 1.3333333333333333,
+      "post_swap_deaths": 0,
+      "food": 182.59960929450781,
+      "valence_acc": 0.8611111111111112,
+      "netharm_accept": 0.1,
+      "need_slope": -0.13978494623655907
+     },
+     {
+      "deaths_per_10k": 12.666666666666666,
+      "post_swap_deaths": 0,
+      "food": 173.74557770501937,
+      "valence_acc": 0.9454545454545454,
+      "netharm_accept": 0.3974358974358974,
+      "need_slope": 0.3333333333333333
+     },
+     {
+      "deaths_per_10k": 1.3333333333333333,
+      "post_swap_deaths": 0,
+      "food": 177.78626606388138,
+      "valence_acc": 0.8244897959183674,
+      "netharm_accept": 0.12195121951219512,
+      "need_slope": -0.03797468354430383
+     },
+     {
+      "deaths_per_10k": 2.6666666666666665,
+      "post_swap_deaths": 0,
+      "food": 184.38268505792598,
+      "valence_acc": 0.73992673992674,
+      "netharm_accept": 0.0,
+      "need_slope": 0.02985074626865672
+     },
+     {
+      "deaths_per_10k": 5.333333333333333,
+      "post_swap_deaths": 2,
+      "food": 180.10468943731135,
+      "valence_acc": 0.9593023255813954,
+      "netharm_accept": 0.796875,
+      "need_slope": 0.128
+     },
+     {
+      "deaths_per_10k": 12.0,
+      "post_swap_deaths": 0,
+      "food": 174.2714178415778,
+      "valence_acc": 0.7092511013215859,
+      "netharm_accept": 0.06521739130434782,
+      "need_slope": 0.30851063829787234
+     },
+     {
+      "deaths_per_10k": 7.333333333333333,
+      "post_swap_deaths": 3,
+      "food": 178.8218704186954,
+      "valence_acc": 0.9679144385026738,
+      "netharm_accept": 0.8367346938775511,
+      "need_slope": 0.02777777777777779
+     },
+     {
+      "deaths_per_10k": 13.333333333333334,
+      "post_swap_deaths": 0,
+      "food": 173.376605193268,
+      "valence_acc": 0.8723404255319149,
+      "netharm_accept": 0.125,
+      "need_slope": 0.4846153846153846
+     },
+     {
+      "deaths_per_10k": 2.0,
+      "post_swap_deaths": 0,
+      "food": 186.71378668789768,
+      "valence_acc": 0.8888888888888888,
+      "netharm_accept": 0.1724137931034483,
+      "need_slope": 0.11428571428571421
+     },
+     {
+      "deaths_per_10k": 14.0,
+      "post_swap_deaths": 1,
+      "food": 164.388534663266,
+      "valence_acc": 0.9,
+      "netharm_accept": 0.4166666666666667,
+      "need_slope": 0.0714285714285714
+     },
+     {
+      "deaths_per_10k": 27.333333333333332,
+      "post_swap_deaths": 2,
+      "food": 142.18575912950126,
+      "valence_acc": 0.8333333333333334,
+      "netharm_accept": 0.3614457831325301,
+      "need_slope": 0.21153846153846156
+     },
+     {
+      "deaths_per_10k": 1.3333333333333333,
+      "post_swap_deaths": 0,
+      "food": 174.81041923731317,
+      "valence_acc": 0.930635838150289,
+      "netharm_accept": 0.29411764705882354,
+      "need_slope": 0.30841121495327106
+     },
+     {
+      "deaths_per_10k": 1.3333333333333333,
+      "post_swap_deaths": 0,
+      "food": 180.95966225210856,
+      "valence_acc": 0.9420849420849421,
+      "netharm_accept": 0.6111111111111112,
+      "need_slope": 0.20987654320987648
+     },
+     {
+      "deaths_per_10k": 9.333333333333334,
+      "post_swap_deaths": 4,
+      "food": 178.24817664436662,
+      "valence_acc": 0.8263888888888888,
+      "netharm_accept": 0.17333333333333334,
+      "need_slope": 0.6614173228346456
+     },
+     {
+      "deaths_per_10k": 13.333333333333334,
+      "post_swap_deaths": 1,
+      "food": 164.28940069645571,
+      "valence_acc": 0.9246575342465754,
+      "netharm_accept": 0.1267605633802817,
+      "need_slope": 0.050724637681159424
+     },
+     {
+      "deaths_per_10k": 4.666666666666667,
+      "post_swap_deaths": 0,
+      "food": 188.09460294407256,
+      "valence_acc": 0.9238578680203046,
+      "netharm_accept": 0.45454545454545453,
+      "need_slope": -0.16129032258064513
+     },
+     {
+      "deaths_per_10k": 0.6666666666666666,
+      "post_swap_deaths": 0,
+      "food": 186.10725509396238,
+      "valence_acc": 0.9849056603773585,
+      "netharm_accept": 0.7,
+      "need_slope": -0.14492753623188404
+     },
+     {
+      "deaths_per_10k": 13.333333333333334,
+      "post_swap_deaths": 6,
+      "food": 153.16461813720022,
+      "valence_acc": 0.8669354838709677,
+      "netharm_accept": 0.08823529411764706,
+      "need_slope": 0.49275362318840576
+     },
+     {
+      "deaths_per_10k": 9.333333333333334,
+      "post_swap_deaths": 3,
+      "food": 164.813960704577,
+      "valence_acc": 0.8432432432432433,
+      "netharm_accept": 0.015151515151515152,
+      "need_slope": 0.2272727272727273
+     },
+     {
+      "deaths_per_10k": 16.0,
+      "post_swap_deaths": 0,
+      "food": 180.85565760175848,
+      "valence_acc": 0.743859649122807,
+      "netharm_accept": 0.0,
+      "need_slope": 0.30612244897959184
+     },
+     {
+      "deaths_per_10k": 12.0,
+      "post_swap_deaths": 1,
+      "food": 169.568935177673,
+      "valence_acc": 0.759090909090909,
+      "netharm_accept": 1.0,
+      "need_slope": 0.0
+     },
+     {
+      "deaths_per_10k": 7.333333333333333,
+      "post_swap_deaths": 3,
+      "food": 179.91532687381792,
+      "valence_acc": 0.816793893129771,
+      "netharm_accept": 0.8529411764705882,
+      "need_slope": 0.06818181818181823
+     },
+     {
+      "deaths_per_10k": 4.666666666666667,
+      "post_swap_deaths": 0,
+      "food": 181.77947465199003,
+      "valence_acc": 0.8657718120805369,
+      "netharm_accept": 0.9841269841269841,
+      "need_slope": 0.0078125
+     },
+     {
+      "deaths_per_10k": 8.666666666666666,
+      "post_swap_deaths": 3,
+      "food": 167.881472324958,
+      "valence_acc": 0.9930555555555556,
+      "netharm_accept": 0.4107142857142857,
+      "need_slope": 0.06779661016949157
+     },
+     {
+      "deaths_per_10k": 16.666666666666668,
+      "post_swap_deaths": 0,
+      "food": 176.36811029507166,
+      "valence_acc": 0.8556701030927835,
+      "netharm_accept": 0.1320754716981132,
+      "need_slope": 0.10909090909090913
+     },
+     {
+      "deaths_per_10k": 6.666666666666667,
+      "post_swap_deaths": 0,
+      "food": 177.0345683610536,
+      "valence_acc": 0.8631578947368421,
+      "netharm_accept": 0.08163265306122448,
+      "need_slope": 0.04672897196261683
+     },
+     {
+      "deaths_per_10k": 5.333333333333333,
+      "post_swap_deaths": 0,
+      "food": 177.1602946456415,
+      "valence_acc": 0.8888888888888888,
+      "netharm_accept": 0.16393442622950818,
+      "need_slope": 0.04424778761061954
+     },
+     {
+      "deaths_per_10k": 4.0,
+      "post_swap_deaths": 0,
+      "food": 178.5255688682496,
+      "valence_acc": 0.9135135135135135,
+      "netharm_accept": 0.475,
+      "need_slope": 0.11224489795918358
+     },
+     {
+      "deaths_per_10k": 4.0,
+      "post_swap_deaths": 0,
+      "food": 178.71526510089572,
+      "valence_acc": 0.7945945945945946,
+      "netharm_accept": 0.06,
+      "need_slope": 0.3142857142857143
+     },
+     {
+      "deaths_per_10k": 2.0,
+      "post_swap_deaths": 1,
+      "food": 178.18440074047078,
+      "valence_acc": 0.9294871794871795,
+      "netharm_accept": 0.14893617021276595,
+      "need_slope": -0.0825688073394496
+     },
+     {
+      "deaths_per_10k": 2.0,
+      "post_swap_deaths": 0,
+      "food": 192.7542974212914,
+      "valence_acc": 0.9024390243902439,
+      "netharm_accept": 1.0,
+      "need_slope": 0.0
+     },
+     {
+      "deaths_per_10k": 3.3333333333333335,
+      "post_swap_deaths": 0,
+      "food": 185.23601803779454,
+      "valence_acc": 0.9628099173553719,
+      "netharm_accept": 0.6756756756756757,
+      "need_slope": 0.20547945205479456
+     },
+     {
+      "deaths_per_10k": 1.3333333333333333,
+      "post_swap_deaths": 0,
+      "food": 190.06222663666048,
+      "valence_acc": 0.8802816901408451,
+      "netharm_accept": 0.15789473684210525,
+      "need_slope": -0.24999999999999994
+     },
+     {
+      "deaths_per_10k": 2.6666666666666665,
+      "post_swap_deaths": 0,
+      "food": 174.63443936089465,
+      "valence_acc": 0.9148936170212766,
+      "netharm_accept": 0.717391304347826,
+      "need_slope": 0.06999999999999995
+     },
+     {
+      "deaths_per_10k": 26.0,
+      "post_swap_deaths": 3,
+      "food": 156.70111750226798,
+      "valence_acc": 0.968503937007874,
+      "netharm_accept": 0.6721311475409836,
+      "need_slope": 0.007518796992481258
+     },
+     {
+      "deaths_per_10k": 11.333333333333334,
+      "post_swap_deaths": 2,
+      "food": 172.91032175801064,
+      "valence_acc": 0.8737864077669902,
+      "netharm_accept": 0.3448275862068966,
+      "need_slope": 0.24242424242424243
+     },
+     {
+      "deaths_per_10k": 16.0,
+      "post_swap_deaths": 8,
+      "food": 165.9351534587746,
+      "valence_acc": 0.9319727891156463,
+      "netharm_accept": 0.32786885245901637,
+      "need_slope": 0.13178294573643412
+     },
+     {
+      "deaths_per_10k": 16.0,
+      "post_swap_deaths": 1,
+      "food": 167.36333328394312,
+      "valence_acc": 0.9859154929577465,
+      "netharm_accept": 0.7313432835820896,
+      "need_slope": 0.078125
+     },
+     {
+      "deaths_per_10k": 2.6666666666666665,
+      "post_swap_deaths": 0,
+      "food": 184.05395027496152,
+      "valence_acc": 0.8908296943231441,
+      "netharm_accept": 0.3333333333333333,
+      "need_slope": -0.16049382716049387
+     },
+     {
+      "deaths_per_10k": 0.6666666666666666,
+      "post_swap_deaths": 0,
+      "food": 193.28262736955412,
+      "valence_acc": 0.9438202247191011,
+      "netharm_accept": 0.7115384615384616,
+      "need_slope": 0.1504424778761062
+     },
+     {
+      "deaths_per_10k": 8.666666666666666,
+      "post_swap_deaths": 2,
+      "food": 163.82188157350967,
+      "valence_acc": 0.8686131386861314,
+      "netharm_accept": 0.21428571428571427,
+      "need_slope": 0.28776978417266186
+     },
+     {
+      "deaths_per_10k": 0.0,
+      "post_swap_deaths": 0,
+      "food": 188.2289856299258,
+      "valence_acc": 0.8636363636363636,
+      "netharm_accept": 0.16129032258064516,
+      "need_slope": -0.16249999999999998
+     },
+     {
+      "deaths_per_10k": 8.666666666666666,
+      "post_swap_deaths": 0,
+      "food": 182.53866458367207,
+      "valence_acc": 0.8982035928143712,
+      "netharm_accept": 0.6923076923076923,
+      "need_slope": 0.08130081300813008
+     },
+     {
+      "deaths_per_10k": 12.0,
+      "post_swap_deaths": 0,
+      "food": 171.30543132069482,
+      "valence_acc": 0.9139784946236559,
+      "netharm_accept": 0.34615384615384615,
+      "need_slope": 0.01941747572815533
+     },
+     {
+      "deaths_per_10k": 20.0,
+      "post_swap_deaths": 4,
+      "food": 156.53239217421861,
+      "valence_acc": 0.9202127659574468,
+      "netharm_accept": 0.8679245283018868,
+      "need_slope": 0.02941176470588236
+     },
+     {
+      "deaths_per_10k": 18.0,
+      "post_swap_deaths": 0,
+      "food": 169.8960162375021,
+      "valence_acc": 0.7441860465116279,
+      "netharm_accept": 0.044444444444444446,
+      "need_slope": 0.1685393258426966
+     }
+    ],
+    "SUM": [
+     {
+      "deaths_per_10k": 2.6666666666666665,
+      "post_swap_deaths": 1,
+      "food": 109.88045653030096,
+      "valence_acc": 0.96045197740113,
+      "netharm_accept": 0.0,
+      "need_slope": 0.25
+     },
+     {
+      "deaths_per_10k": 1.3333333333333333,
+      "post_swap_deaths": 0,
+      "food": 153.85832506775128,
+      "valence_acc": 0.9675675675675676,
+      "netharm_accept": 0.022727272727272728,
+      "need_slope": -0.028301886792452824
+     },
+     {
+      "deaths_per_10k": 0.6666666666666666,
+      "post_swap_deaths": 0,
+      "food": 174.0172016627835,
+      "valence_acc": 0.9953703703703703,
+      "netharm_accept": 0.12,
+      "need_slope": -0.19354838709677413
+     },
+     {
+      "deaths_per_10k": 2.0,
+      "post_swap_deaths": 0,
+      "food": 152.34032006849768,
+      "valence_acc": 0.9939393939393939,
+      "netharm_accept": 0.11538461538461539,
+      "need_slope": 0.24390243902439024
+     },
+     {
+      "deaths_per_10k": 1.3333333333333333,
+      "post_swap_deaths": 0,
+      "food": 146.12493917838302,
+      "valence_acc": 0.9714285714285714,
+      "netharm_accept": 0.024390243902439025,
+      "need_slope": 0.012658227848101278
+     },
+     {
+      "deaths_per_10k": 4.0,
+      "post_swap_deaths": 0,
+      "food": 164.54103338370524,
+      "valence_acc": 0.9816849816849816,
+      "netharm_accept": 0.0,
+      "need_slope": -0.05970149253731344
+     },
+     {
+      "deaths_per_10k": 0.0,
+      "post_swap_deaths": 0,
+      "food": 135.97004188075766,
+      "valence_acc": 0.8953488372093024,
+      "netharm_accept": 0.0,
+      "need_slope": 0.21600000000000003
+     },
+     {
+      "deaths_per_10k": 4.0,
+      "post_swap_deaths": 0,
+      "food": 143.9018619889065,
+      "valence_acc": 0.8634361233480177,
+      "netharm_accept": 0.0,
+      "need_slope": 0.0425531914893617
+     },
+     {
+      "deaths_per_10k": 1.3333333333333333,
+      "post_swap_deaths": 0,
+      "food": 121.53186935202363,
+      "valence_acc": 0.9893048128342246,
+      "netharm_accept": 0.22448979591836735,
+      "need_slope": -0.02777777777777779
+     },
+     {
+      "deaths_per_10k": 3.3333333333333335,
+      "post_swap_deaths": 0,
+      "food": 120.64702468451023,
+      "valence_acc": 0.9645390070921985,
+      "netharm_accept": 0.013888888888888888,
+      "need_slope": -0.046153846153846156
+     },
+     {
+      "deaths_per_10k": 1.3333333333333333,
+      "post_swap_deaths": 0,
+      "food": 175.95010719733511,
+      "valence_acc": 0.9770114942528736,
+      "netharm_accept": 0.0,
+      "need_slope": -0.042857142857142816
+     },
+     {
+      "deaths_per_10k": 2.0,
+      "post_swap_deaths": 0,
+      "food": 121.389259246406,
+      "valence_acc": 0.9761904761904762,
+      "netharm_accept": 0.0,
+      "need_slope": -0.16666666666666666
+     },
+     {
+      "deaths_per_10k": 8.0,
+      "post_swap_deaths": 2,
+      "food": 97.09646428767951,
+      "valence_acc": 0.9411764705882353,
+      "netharm_accept": 0.08433734939759036,
+      "need_slope": -0.14102564102564102
+     },
+     {
+      "deaths_per_10k": 0.6666666666666666,
+      "post_swap_deaths": 0,
+      "food": 137.93697038483793,
+      "valence_acc": 0.9710982658959537,
+      "netharm_accept": 0.09803921568627451,
+      "need_slope": 0.19626168224299062
+     },
+     {
+      "deaths_per_10k": 0.6666666666666666,
+      "post_swap_deaths": 0,
+      "food": 150.8319533701886,
+      "valence_acc": 0.9498069498069498,
+      "netharm_accept": 0.5,
+      "need_slope": -0.03703703703703709
+     },
+     {
+      "deaths_per_10k": 1.3333333333333333,
+      "post_swap_deaths": 0,
+      "food": 121.20128206984225,
+      "valence_acc": 0.9097222222222222,
+      "netharm_accept": 0.0,
+      "need_slope": 0.07086614173228348
+     },
+     {
+      "deaths_per_10k": 4.0,
+      "post_swap_deaths": 1,
+      "food": 107.90979442408839,
+      "valence_acc": 0.9657534246575342,
+      "netharm_accept": 0.028169014084507043,
+      "need_slope": -0.19565217391304346
+     },
+     {
+      "deaths_per_10k": 0.0,
+      "post_swap_deaths": 0,
+      "food": 139.95887202769606,
+      "valence_acc": 0.9796954314720813,
+      "netharm_accept": 0.18181818181818182,
+      "need_slope": -0.19354838709677424
+     },
+     {
+      "deaths_per_10k": 0.6666666666666666,
+      "post_swap_deaths": 0,
+      "food": 172.77989564729558,
+      "valence_acc": 0.9962264150943396,
+      "netharm_accept": 0.1,
+      "need_slope": -0.1449275362318841
+     },
+     {
+      "deaths_per_10k": 2.0,
+      "post_swap_deaths": 0,
+      "food": 129.91296891808267,
+      "valence_acc": 0.9798387096774194,
+      "netharm_accept": 0.029411764705882353,
+      "need_slope": 0.0
+     },
+     {
+      "deaths_per_10k": 0.0,
+      "post_swap_deaths": 0,
+      "food": 122.76218938965035,
+      "valence_acc": 0.9135135135135135,
+      "netharm_accept": 0.0,
+      "need_slope": -0.08181818181818179
+     },
+     {
+      "deaths_per_10k": 2.6666666666666665,
+      "post_swap_deaths": 0,
+      "food": 161.3974891685453,
+      "valence_acc": 0.9508771929824561,
+      "netharm_accept": 0.07142857142857142,
+      "need_slope": 0.163265306122449
+     },
+     {
+      "deaths_per_10k": 6.0,
+      "post_swap_deaths": 1,
+      "food": 132.05020717039758,
+      "valence_acc": 0.9090909090909091,
+      "netharm_accept": 0.5319148936170213,
+      "need_slope": -0.14942528735632177
+     },
+     {
+      "deaths_per_10k": 2.0,
+      "post_swap_deaths": 0,
+      "food": 145.71941594729475,
+      "valence_acc": 0.9923664122137404,
+      "netharm_accept": 0.10294117647058823,
+      "need_slope": 0.1515151515151515
+     },
+     {
+      "deaths_per_10k": 1.3333333333333333,
+      "post_swap_deaths": 0,
+      "food": 123.41988831468842,
+      "valence_acc": 0.9798657718120806,
+      "netharm_accept": 0.1111111111111111,
+      "need_slope": -0.046875
+     },
+     {
+      "deaths_per_10k": 0.0,
+      "post_swap_deaths": 0,
+      "food": 127.20995199910841,
+      "valence_acc": 0.9930555555555556,
+      "netharm_accept": 0.017857142857142856,
+      "need_slope": 0.0
+     },
+     {
+      "deaths_per_10k": 0.0,
+      "post_swap_deaths": 0,
+      "food": 133.38195468037225,
+      "valence_acc": 0.9845360824742269,
+      "netharm_accept": 0.11320754716981132,
+      "need_slope": -0.13636363636363635
+     },
+     {
+      "deaths_per_10k": 5.333333333333333,
+      "post_swap_deaths": 0,
+      "food": 128.98788815312483,
+      "valence_acc": 0.9368421052631579,
+      "netharm_accept": 0.0,
+      "need_slope": 0.01869158878504673
+     },
+     {
+      "deaths_per_10k": 0.6666666666666666,
+      "post_swap_deaths": 0,
+      "food": 120.15921761144178,
+      "valence_acc": 0.9111111111111111,
+      "netharm_accept": 0.0,
+      "need_slope": -0.026548672566371667
+     },
+     {
+      "deaths_per_10k": 1.3333333333333333,
+      "post_swap_deaths": 0,
+      "food": 144.48518355536714,
+      "valence_acc": 0.9621621621621622,
+      "netharm_accept": 0.0,
+      "need_slope": -0.061224489795918324
+     },
+     {
+      "deaths_per_10k": 0.6666666666666666,
+      "post_swap_deaths": 0,
+      "food": 153.29339114978552,
+      "valence_acc": 0.9459459459459459,
+      "netharm_accept": 0.08,
+      "need_slope": 0.12380952380952381
+     },
+     {
+      "deaths_per_10k": 0.0,
+      "post_swap_deaths": 0,
+      "food": 130.67659028721332,
+      "valence_acc": 0.8653846153846154,
+      "netharm_accept": 0.0,
+      "need_slope": -0.07339449541284404
+     },
+     {
+      "deaths_per_10k": 2.0,
+      "post_swap_deaths": 0,
+      "food": 186.75680567052777,
+      "valence_acc": 0.943089430894309,
+      "netharm_accept": 0.8043478260869565,
+      "need_slope": 0.011363636363636354
+     },
+     {
+      "deaths_per_10k": 2.6666666666666665,
+      "post_swap_deaths": 0,
+      "food": 158.97154921597544,
+      "valence_acc": 0.9710743801652892,
+      "netharm_accept": 0.3783783783783784,
+      "need_slope": 0.1643835616438356
+     },
+     {
+      "deaths_per_10k": 1.3333333333333333,
+      "post_swap_deaths": 0,
+      "food": 174.8952441770877,
+      "valence_acc": 0.9436619718309859,
+      "netharm_accept": 0.0,
+      "need_slope": -0.2833333333333333
+     },
+     {
+      "deaths_per_10k": 0.6666666666666666,
+      "post_swap_deaths": 0,
+      "food": 129.28873161099006,
+      "valence_acc": 0.9680851063829787,
+      "netharm_accept": 0.043478260869565216,
+      "need_slope": 0.10999999999999999
+     },
+     {
+      "deaths_per_10k": 3.3333333333333335,
+      "post_swap_deaths": 1,
+      "food": 102.98811533205411,
+      "valence_acc": 0.8267716535433071,
+      "netharm_accept": 0.0,
+      "need_slope": -0.045112781954887216
+     },
+     {
+      "deaths_per_10k": 2.6666666666666665,
+      "post_swap_deaths": 0,
+      "food": 127.67242866802223,
+      "valence_acc": 0.970873786407767,
+      "netharm_accept": 0.017241379310344827,
+      "need_slope": 0.10101010101010105
+     },
+     {
+      "deaths_per_10k": 0.6666666666666666,
+      "post_swap_deaths": 0,
+      "food": 124.89231955607582,
+      "valence_acc": 0.9455782312925171,
+      "netharm_accept": 0.0,
+      "need_slope": 0.2325581395348837
+     },
+     {
+      "deaths_per_10k": 4.0,
+      "post_swap_deaths": 1,
+      "food": 110.12072622430135,
+      "valence_acc": 0.9859154929577465,
+      "netharm_accept": 0.208955223880597,
+      "need_slope": 0.0390625
+     },
+     {
+      "deaths_per_10k": 2.0,
+      "post_swap_deaths": 0,
+      "food": 152.75729677893648,
+      "valence_acc": 0.8864628820960698,
+      "netharm_accept": 0.0,
+      "need_slope": -0.07407407407407407
+     },
+     {
+      "deaths_per_10k": 0.0,
+      "post_swap_deaths": 0,
+      "food": 164.5157825296421,
+      "valence_acc": 0.9269662921348315,
+      "netharm_accept": 0.46153846153846156,
+      "need_slope": 0.07079646017699115
+     },
+     {
+      "deaths_per_10k": 2.0,
+      "post_swap_deaths": 0,
+      "food": 120.80952464556171,
+      "valence_acc": 0.9416058394160584,
+      "netharm_accept": 0.0,
+      "need_slope": 0.19424460431654678
+     },
+     {
+      "deaths_per_10k": 0.0,
+      "post_swap_deaths": 0,
+      "food": 172.8895002642769,
+      "valence_acc": 0.9136363636363637,
+      "netharm_accept": 0.0,
+      "need_slope": -0.11250000000000004
+     },
+     {
+      "deaths_per_10k": 4.666666666666667,
+      "post_swap_deaths": 0,
+      "food": 130.5267821136875,
+      "valence_acc": 0.8802395209580839,
+      "netharm_accept": 0.015384615384615385,
+      "need_slope": -0.008130081300812997
+     },
+     {
+      "deaths_per_10k": 2.6666666666666665,
+      "post_swap_deaths": 0,
+      "food": 123.16126056807721,
+      "valence_acc": 0.967741935483871,
+      "netharm_accept": 0.4230769230769231,
+      "need_slope": -0.17475728155339798
+     },
+     {
+      "deaths_per_10k": 2.0,
+      "post_swap_deaths": 0,
+      "food": 115.34270578195598,
+      "valence_acc": 0.9840425531914894,
+      "netharm_accept": 0.22641509433962265,
+      "need_slope": -0.03921568627450989
+     },
+     {
+      "deaths_per_10k": 5.333333333333333,
+      "post_swap_deaths": 0,
+      "food": 139.16944100321007,
+      "valence_acc": 0.8418604651162791,
+      "netharm_accept": 0.0,
+      "need_slope": -0.06741573033707865
+     }
+    ],
+    "HOMEO": [
+     {
+      "deaths_per_10k": 6.0,
+      "post_swap_deaths": 1,
+      "food": 57.97528471541461,
+      "valence_acc": 0.8757062146892656,
+      "netharm_accept": 0.23728813559322035,
+      "need_slope": 0.6333333333333333
+     },
+     {
+      "deaths_per_10k": 8.666666666666666,
+      "post_swap_deaths": 0,
+      "food": 59.66604505489636,
+      "valence_acc": 0.7513513513513513,
+      "netharm_accept": 0.6590909090909091,
+      "need_slope": 0.3207547169811321
+     },
+     {
+      "deaths_per_10k": 2.0,
+      "post_swap_deaths": 0,
+      "food": 61.87570158621875,
+      "valence_acc": 0.5,
+      "netharm_accept": 0.0,
+      "need_slope": 0.8602150537634409
+     },
+     {
+      "deaths_per_10k": 4.0,
+      "post_swap_deaths": 0,
+      "food": 61.94009527524336,
+      "valence_acc": 0.7151515151515152,
+      "netharm_accept": 0.0,
+      "need_slope": 0.45528455284552843
+     },
+     {
+      "deaths_per_10k": 3.3333333333333335,
+      "post_swap_deaths": 0,
+      "food": 60.22864087395515,
+      "valence_acc": 0.5142857142857142,
+      "netharm_accept": 0.21951219512195122,
+      "need_slope": 0.949367088607595
+     },
+     {
+      "deaths_per_10k": 5.333333333333333,
+      "post_swap_deaths": 1,
+      "food": 60.289545392068796,
+      "valence_acc": 0.5787545787545788,
+      "netharm_accept": 0.08571428571428572,
+      "need_slope": 0.9850746268656716
+     },
+     {
+      "deaths_per_10k": 2.0,
+      "post_swap_deaths": 0,
+      "food": 60.33340147892212,
+      "valence_acc": 0.6511627906976745,
+      "netharm_accept": 0.28125,
+      "need_slope": 0.9279999999999999
+     },
+     {
+      "deaths_per_10k": 4.666666666666667,
+      "post_swap_deaths": 0,
+      "food": 60.48342046574236,
+      "valence_acc": 0.5066079295154186,
+      "netharm_accept": 0.0,
+      "need_slope": 0.6702127659574468
+     },
+     {
+      "deaths_per_10k": 3.3333333333333335,
+      "post_swap_deaths": 0,
+      "food": 61.71642566947662,
+      "valence_acc": 0.6256684491978609,
+      "netharm_accept": 0.1836734693877551,
+      "need_slope": 1.0
+     },
+     {
+      "deaths_per_10k": 2.6666666666666665,
+      "post_swap_deaths": 0,
+      "food": 62.361950100503485,
+      "valence_acc": 0.6312056737588653,
+      "netharm_accept": 0.08333333333333333,
+      "need_slope": 0.9461538461538461
+     },
+     {
+      "deaths_per_10k": 2.6666666666666665,
+      "post_swap_deaths": 0,
+      "food": 62.721789225019315,
+      "valence_acc": 0.5517241379310345,
+      "netharm_accept": 0.5172413793103449,
+      "need_slope": 0.5
+     },
+     {
+      "deaths_per_10k": 5.333333333333333,
+      "post_swap_deaths": 0,
+      "food": 59.75022072734149,
+      "valence_acc": 0.5142857142857142,
+      "netharm_accept": 0.020833333333333332,
+      "need_slope": 0.9047619047619048
+     },
+     {
+      "deaths_per_10k": 12.666666666666666,
+      "post_swap_deaths": 2,
+      "food": 54.29677164934667,
+      "valence_acc": 0.4117647058823529,
+      "netharm_accept": 0.21686746987951808,
+      "need_slope": 0.8205128205128205
+     },
+     {
+      "deaths_per_10k": 1.3333333333333333,
+      "post_swap_deaths": 0,
+      "food": 61.0408210569872,
+      "valence_acc": 0.8786127167630058,
+      "netharm_accept": 0.3137254901960784,
+      "need_slope": 0.7757009345794392
+     },
+     {
+      "deaths_per_10k": 4.0,
+      "post_swap_deaths": 1,
+      "food": 62.18053363573901,
+      "valence_acc": 0.640926640926641,
+      "netharm_accept": 0.19444444444444445,
+      "need_slope": 0.5185185185185186
+     },
+     {
+      "deaths_per_10k": 0.6666666666666666,
+      "post_swap_deaths": 0,
+      "food": 63.19838324323221,
+      "valence_acc": 0.7430555555555556,
+      "netharm_accept": 0.14666666666666667,
+      "need_slope": 0.889763779527559
+     },
+     {
+      "deaths_per_10k": 8.0,
+      "post_swap_deaths": 0,
+      "food": 57.21141444986986,
+      "valence_acc": 0.5136986301369864,
+      "netharm_accept": 0.16901408450704225,
+      "need_slope": 0.891304347826087
+     },
+     {
+      "deaths_per_10k": 2.0,
+      "post_swap_deaths": 0,
+      "food": 61.75660563718305,
+      "valence_acc": 0.5989847715736041,
+      "netharm_accept": 0.06818181818181818,
+      "need_slope": 0.4838709677419355
+     },
+     {
+      "deaths_per_10k": 2.0,
+      "post_swap_deaths": 0,
+      "food": 62.12418393805294,
+      "valence_acc": 0.6867924528301886,
+      "netharm_accept": 0.6666666666666666,
+      "need_slope": 0.6086956521739131
+     },
+     {
+      "deaths_per_10k": 6.666666666666667,
+      "post_swap_deaths": 1,
+      "food": 59.26095700917597,
+      "valence_acc": 0.5161290322580645,
+      "netharm_accept": 0.5588235294117647,
+      "need_slope": 0.8840579710144928
+     },
+     {
+      "deaths_per_10k": 4.666666666666667,
+      "post_swap_deaths": 1,
+      "food": 61.66793846782067,
+      "valence_acc": 0.4756756756756757,
+      "netharm_accept": 0.06060606060606061,
+      "need_slope": 0.8545454545454545
+     },
+     {
+      "deaths_per_10k": 5.333333333333333,
+      "post_swap_deaths": 0,
+      "food": 62.26271812145079,
+      "valence_acc": 0.5087719298245614,
+      "netharm_accept": 0.0,
+      "need_slope": 0.7755102040816326
+     },
+     {
+      "deaths_per_10k": 6.666666666666667,
+      "post_swap_deaths": 0,
+      "food": 58.296954257609286,
+      "valence_acc": 0.8045454545454546,
+      "netharm_accept": 0.6382978723404256,
+      "need_slope": 0.5862068965517242
+     },
+     {
+      "deaths_per_10k": 4.0,
+      "post_swap_deaths": 0,
+      "food": 61.08417320279706,
+      "valence_acc": 0.35877862595419846,
+      "netharm_accept": 0.4411764705882353,
+      "need_slope": 0.9393939393939394
+     },
+     {
+      "deaths_per_10k": 1.3333333333333333,
+      "post_swap_deaths": 0,
+      "food": 62.80717864041021,
+      "valence_acc": 0.5033557046979866,
+      "netharm_accept": 0.0,
+      "need_slope": 0.671875
+     },
+     {
+      "deaths_per_10k": 4.0,
+      "post_swap_deaths": 1,
+      "food": 63.10752450092694,
+      "valence_acc": 0.6875,
+      "netharm_accept": 0.03571428571428571,
+      "need_slope": 0.2627118644067797
+     },
+     {
+      "deaths_per_10k": 4.666666666666667,
+      "post_swap_deaths": 0,
+      "food": 61.44224733849826,
+      "valence_acc": 0.7010309278350515,
+      "netharm_accept": 0.05660377358490566,
+      "need_slope": 0.6818181818181819
+     },
+     {
+      "deaths_per_10k": 4.666666666666667,
+      "post_swap_deaths": 0,
+      "food": 59.353598390427685,
+      "valence_acc": 0.6578947368421053,
+      "netharm_accept": 0.5714285714285714,
+      "need_slope": 0.6635514018691588
+     },
+     {
+      "deaths_per_10k": 1.3333333333333333,
+      "post_swap_deaths": 0,
+      "food": 65.07754284663902,
+      "valence_acc": 0.5944444444444444,
+      "netharm_accept": 0.5081967213114754,
+      "need_slope": 0.6106194690265487
+     },
+     {
+      "deaths_per_10k": 2.0,
+      "post_swap_deaths": 0,
+      "food": 62.671231699041016,
+      "valence_acc": 0.7081081081081081,
+      "netharm_accept": 0.6,
+      "need_slope": 0.4897959183673469
+     },
+     {
+      "deaths_per_10k": 6.666666666666667,
+      "post_swap_deaths": 1,
+      "food": 58.191295385381714,
+      "valence_acc": 0.9081081081081082,
+      "netharm_accept": 0.12,
+      "need_slope": 0.6666666666666667
+     },
+     {
+      "deaths_per_10k": 0.6666666666666666,
+      "post_swap_deaths": 0,
+      "food": 63.66823506049233,
+      "valence_acc": 0.6025641025641025,
+      "netharm_accept": 0.3404255319148936,
+      "need_slope": 0.9357798165137615
+     },
+     {
+      "deaths_per_10k": 4.0,
+      "post_swap_deaths": 0,
+      "food": 61.81419076609607,
+      "valence_acc": 0.5609756097560976,
+      "netharm_accept": 0.06521739130434782,
+      "need_slope": 0.5681818181818182
+     },
+     {
+      "deaths_per_10k": 4.0,
+      "post_swap_deaths": 0,
+      "food": 62.55859967937396,
+      "valence_acc": 0.5454545454545454,
+      "netharm_accept": 0.5135135135135135,
+      "need_slope": 0.5342465753424658
+     },
+     {
+      "deaths_per_10k": 3.3333333333333335,
+      "post_swap_deaths": 0,
+      "food": 61.31502396728065,
+      "valence_acc": 0.647887323943662,
+      "netharm_accept": 0.2631578947368421,
+      "need_slope": 0.7000000000000001
+     },
+     {
+      "deaths_per_10k": 3.3333333333333335,
+      "post_swap_deaths": 0,
+      "food": 60.203633334576246,
+      "valence_acc": 0.6329787234042553,
+      "netharm_accept": 0.4782608695652174,
+      "need_slope": 0.69
+     },
+     {
+      "deaths_per_10k": 6.666666666666667,
+      "post_swap_deaths": 0,
+      "food": 59.72706484579389,
+      "valence_acc": 0.6062992125984252,
+      "netharm_accept": 0.04918032786885246,
+      "need_slope": 0.9323308270676691
+     },
+     {
+      "deaths_per_10k": 6.666666666666667,
+      "post_swap_deaths": 0,
+      "food": 59.96875397968145,
+      "valence_acc": 0.7524271844660194,
+      "netharm_accept": 0.0,
+      "need_slope": 0.6868686868686869
+     },
+     {
+      "deaths_per_10k": 1.3333333333333333,
+      "post_swap_deaths": 0,
+      "food": 60.738638937131036,
+      "valence_acc": 0.8707482993197279,
+      "netharm_accept": 0.9836065573770492,
+      "need_slope": 0.015503875968992276
+     },
+     {
+      "deaths_per_10k": 4.666666666666667,
+      "post_swap_deaths": 0,
+      "food": 59.49114562070327,
+      "valence_acc": 0.5070422535211268,
+      "netharm_accept": 0.0,
+      "need_slope": 1.0
+     },
+     {
+      "deaths_per_10k": 2.6666666666666665,
+      "post_swap_deaths": 0,
+      "food": 60.574177718356246,
+      "valence_acc": 0.39737991266375544,
+      "netharm_accept": 0.4222222222222222,
+      "need_slope": 0.7283950617283951
+     },
+     {
+      "deaths_per_10k": 0.6666666666666666,
+      "post_swap_deaths": 0,
+      "food": 63.476748285983426,
+      "valence_acc": 0.797752808988764,
+      "netharm_accept": 0.6153846153846154,
+      "need_slope": 0.6283185840707964
+     },
+     {
+      "deaths_per_10k": 5.333333333333333,
+      "post_swap_deaths": 0,
+      "food": 58.80338811064359,
+      "valence_acc": 0.46715328467153283,
+      "netharm_accept": 0.08571428571428572,
+      "need_slope": 0.7553956834532374
+     },
+     {
+      "deaths_per_10k": 4.666666666666667,
+      "post_swap_deaths": 0,
+      "food": 61.197635929323475,
+      "valence_acc": 0.5318181818181819,
+      "netharm_accept": 0.4838709677419355,
+      "need_slope": 0.85
+     },
+     {
+      "deaths_per_10k": 8.666666666666666,
+      "post_swap_deaths": 2,
+      "food": 59.91994321463877,
+      "valence_acc": 0.6227544910179641,
+      "netharm_accept": 0.0,
+      "need_slope": 0.4878048780487805
+     },
+     {
+      "deaths_per_10k": 2.6666666666666665,
+      "post_swap_deaths": 1,
+      "food": 62.96872683615669,
+      "valence_acc": 0.5053763440860215,
+      "netharm_accept": 0.019230769230769232,
+      "need_slope": 0.9611650485436893
+     },
+     {
+      "deaths_per_10k": 5.333333333333333,
+      "post_swap_deaths": 3,
+      "food": 60.01532270774335,
+      "valence_acc": 0.648936170212766,
+      "netharm_accept": 0.33962264150943394,
+      "need_slope": 0.8823529411764706
+     },
+     {
+      "deaths_per_10k": 9.333333333333334,
+      "post_swap_deaths": 0,
+      "food": 57.08438296574062,
+      "valence_acc": 0.7023255813953488,
+      "netharm_accept": 0.37777777777777777,
+      "need_slope": 0.5842696629213482
+     }
+    ],
+    "HOMEO0": [
+     {
+      "deaths_per_10k": 1.3333333333333333,
+      "post_swap_deaths": 1,
+      "food": 59.80910812972902,
+      "valence_acc": 0.5423728813559322,
+      "netharm_accept": 0.1016949152542373,
+      "need_slope": 0.925
+     },
+     {
+      "deaths_per_10k": 6.666666666666667,
+      "post_swap_deaths": 1,
+      "food": 58.80403891637582,
+      "valence_acc": 0.5945945945945946,
+      "netharm_accept": 0.8409090909090909,
+      "need_slope": 0.28301886792452835
+     },
+     {
+      "deaths_per_10k": 6.0,
+      "post_swap_deaths": 5,
+      "food": 56.69274858254501,
+      "valence_acc": 0.5231481481481481,
+      "netharm_accept": 0.34,
+      "need_slope": 0.5913978494623656
+     },
+     {
+      "deaths_per_10k": 4.0,
+      "post_swap_deaths": 0,
+      "food": 60.84751133171019,
+      "valence_acc": 0.5818181818181818,
+      "netharm_accept": 0.6666666666666666,
+      "need_slope": 0.8211382113821138
+     },
+     {
+      "deaths_per_10k": 6.666666666666667,
+      "post_swap_deaths": 0,
+      "food": 56.511551479777296,
+      "valence_acc": 0.6816326530612244,
+      "netharm_accept": 0.04878048780487805,
+      "need_slope": 0.6075949367088608
+     },
+     {
+      "deaths_per_10k": 6.0,
+      "post_swap_deaths": 2,
+      "food": 57.57934695720854,
+      "valence_acc": 0.5274725274725275,
+      "netharm_accept": 0.2571428571428571,
+      "need_slope": 0.9104477611940298
+     },
+     {
+      "deaths_per_10k": 2.0,
+      "post_swap_deaths": 0,
+      "food": 59.80029246602423,
+      "valence_acc": 0.7151162790697675,
+      "netharm_accept": 0.6875,
+      "need_slope": 0.6639999999999999
+     },
+     {
+      "deaths_per_10k": 7.333333333333333,
+      "post_swap_deaths": 0,
+      "food": 57.43870802919034,
+      "valence_acc": 0.44933920704845814,
+      "netharm_accept": 0.45652173913043476,
+      "need_slope": 0.9042553191489362
+     },
+     {
+      "deaths_per_10k": 4.666666666666667,
+      "post_swap_deaths": 0,
+      "food": 57.92874197874539,
+      "valence_acc": 0.7433155080213903,
+      "netharm_accept": 0.04081632653061224,
+      "need_slope": 0.4907407407407407
+     },
+     {
+      "deaths_per_10k": 5.333333333333333,
+      "post_swap_deaths": 1,
+      "food": 58.3717800202751,
+      "valence_acc": 0.9078014184397163,
+      "netharm_accept": 0.25,
+      "need_slope": 0.6461538461538461
+     },
+     {
+      "deaths_per_10k": 4.0,
+      "post_swap_deaths": 1,
+      "food": 59.636032975865504,
+      "valence_acc": 0.6130268199233716,
+      "netharm_accept": 0.1724137931034483,
+      "need_slope": 0.6142857142857142
+     },
+     {
+      "deaths_per_10k": 3.3333333333333335,
+      "post_swap_deaths": 2,
+      "food": 58.804274241665624,
+      "valence_acc": 0.7095238095238096,
+      "netharm_accept": 0.0,
+      "need_slope": 0.8333333333333334
+     },
+     {
+      "deaths_per_10k": 12.0,
+      "post_swap_deaths": 3,
+      "food": 52.63124466632549,
+      "valence_acc": 0.5294117647058824,
+      "netharm_accept": 0.14457831325301204,
+      "need_slope": 0.5897435897435898
+     },
+     {
+      "deaths_per_10k": 4.0,
+      "post_swap_deaths": 0,
+      "food": 57.50378675972942,
+      "valence_acc": 0.7398843930635838,
+      "netharm_accept": 0.0392156862745098,
+      "need_slope": 0.6074766355140186
+     },
+     {
+      "deaths_per_10k": 3.3333333333333335,
+      "post_swap_deaths": 2,
+      "food": 60.442752225636866,
+      "valence_acc": 0.5868725868725869,
+      "netharm_accept": 0.08333333333333333,
+      "need_slope": 0.728395061728395
+     },
+     {
+      "deaths_per_10k": 0.6666666666666666,
+      "post_swap_deaths": 0,
+      "food": 62.62932700441306,
+      "valence_acc": 0.4791666666666667,
+      "netharm_accept": 0.04,
+      "need_slope": 0.8661417322834646
+     },
+     {
+      "deaths_per_10k": 5.333333333333333,
+      "post_swap_deaths": 1,
+      "food": 57.267764489571576,
+      "valence_acc": 0.6575342465753424,
+      "netharm_accept": 0.29577464788732394,
+      "need_slope": 0.7246376811594203
+     },
+     {
+      "deaths_per_10k": 1.3333333333333333,
+      "post_swap_deaths": 1,
+      "food": 61.954461265431114,
+      "valence_acc": 0.5786802030456852,
+      "netharm_accept": 0.0,
+      "need_slope": 0.6881720430107527
+     },
+     {
+      "deaths_per_10k": 2.6666666666666665,
+      "post_swap_deaths": 0,
+      "food": 61.97150938926127,
+      "valence_acc": 0.4,
+      "netharm_accept": 0.5333333333333333,
+      "need_slope": 0.7391304347826086
+     },
+     {
+      "deaths_per_10k": 4.666666666666667,
+      "post_swap_deaths": 2,
+      "food": 58.149161662738074,
+      "valence_acc": 0.49193548387096775,
+      "netharm_accept": 0.058823529411764705,
+      "need_slope": 0.8115942028985508
+     },
+     {
+      "deaths_per_10k": 4.0,
+      "post_swap_deaths": 1,
+      "food": 58.864096531076605,
+      "valence_acc": 0.4702702702702703,
+      "netharm_accept": 0.21212121212121213,
+      "need_slope": 0.8090909090909091
+     },
+     {
+      "deaths_per_10k": 7.333333333333333,
+      "post_swap_deaths": 0,
+      "food": 56.31303360150824,
+      "valence_acc": 0.512280701754386,
+      "netharm_accept": 0.0,
+      "need_slope": 0.5102040816326531
+     },
+     {
+      "deaths_per_10k": 6.666666666666667,
+      "post_swap_deaths": 4,
+      "food": 57.61996545991419,
+      "valence_acc": 0.7227272727272728,
+      "netharm_accept": 0.7659574468085106,
+      "need_slope": 0.632183908045977
+     },
+     {
+      "deaths_per_10k": 4.0,
+      "post_swap_deaths": 0,
+      "food": 58.30816423957806,
+      "valence_acc": 0.4961832061068702,
+      "netharm_accept": 0.22058823529411764,
+      "need_slope": 0.8484848484848485
+     },
+     {
+      "deaths_per_10k": 5.333333333333333,
+      "post_swap_deaths": 1,
+      "food": 59.0275099366657,
+      "valence_acc": 0.5234899328859061,
+      "netharm_accept": 0.015873015873015872,
+      "need_slope": 0.7109375
+     },
+     {
+      "deaths_per_10k": 4.666666666666667,
+      "post_swap_deaths": 1,
+      "food": 59.47211277922091,
+      "valence_acc": 0.625,
+      "netharm_accept": 0.03571428571428571,
+      "need_slope": 0.9491525423728814
+     },
+     {
+      "deaths_per_10k": 2.0,
+      "post_swap_deaths": 0,
+      "food": 59.94926832587084,
+      "valence_acc": 0.5773195876288659,
+      "netharm_accept": 0.32075471698113206,
+      "need_slope": 0.5909090909090909
+     },
+     {
+      "deaths_per_10k": 4.666666666666667,
+      "post_swap_deaths": 0,
+      "food": 58.050514863781245,
+      "valence_acc": 0.7842105263157895,
+      "netharm_accept": 0.04081632653061224,
+      "need_slope": 0.9439252336448598
+     },
+     {
+      "deaths_per_10k": 3.3333333333333335,
+      "post_swap_deaths": 1,
+      "food": 59.619539748142735,
+      "valence_acc": 0.5444444444444444,
+      "netharm_accept": 0.2459016393442623,
+      "need_slope": 0.7256637168141593
+     },
+     {
+      "deaths_per_10k": 4.666666666666667,
+      "post_swap_deaths": 0,
+      "food": 60.02398260319622,
+      "valence_acc": 0.5783783783783784,
+      "netharm_accept": 0.325,
+      "need_slope": 0.7755102040816326
+     },
+     {
+      "deaths_per_10k": 5.333333333333333,
+      "post_swap_deaths": 1,
+      "food": 57.477540071855806,
+      "valence_acc": 0.6378378378378379,
+      "netharm_accept": 0.12,
+      "need_slope": 0.7333333333333334
+     },
+     {
+      "deaths_per_10k": 2.6666666666666665,
+      "post_swap_deaths": 1,
+      "food": 59.36764630465565,
+      "valence_acc": 0.5128205128205128,
+      "netharm_accept": 0.0851063829787234,
+      "need_slope": 0.7522935779816513
+     },
+     {
+      "deaths_per_10k": 6.0,
+      "post_swap_deaths": 0,
+      "food": 57.65280051609139,
+      "valence_acc": 0.5487804878048781,
+      "netharm_accept": 0.34782608695652173,
+      "need_slope": 0.8409090909090909
+     },
+     {
+      "deaths_per_10k": 7.333333333333333,
+      "post_swap_deaths": 1,
+      "food": 55.86345989680479,
+      "valence_acc": 0.5413223140495868,
+      "netharm_accept": 0.10810810810810811,
+      "need_slope": 0.904109589041096
+     },
+     {
+      "deaths_per_10k": 6.666666666666667,
+      "post_swap_deaths": 0,
+      "food": 56.194732596206954,
+      "valence_acc": 0.5,
+      "netharm_accept": 0.15789473684210525,
+      "need_slope": 0.7333333333333333
+     },
+     {
+      "deaths_per_10k": 4.0,
+      "post_swap_deaths": 1,
+      "food": 58.122180178434505,
+      "valence_acc": 0.7180851063829787,
+      "netharm_accept": 0.43478260869565216,
+      "need_slope": 0.5900000000000001
+     },
+     {
+      "deaths_per_10k": 16.0,
+      "post_swap_deaths": 1,
+      "food": 49.889298059961355,
+      "valence_acc": 0.6614173228346457,
+      "netharm_accept": 0.03278688524590164,
+      "need_slope": 0.46616541353383456
+     },
+     {
+      "deaths_per_10k": 3.3333333333333335,
+      "post_swap_deaths": 0,
+      "food": 60.211528483809396,
+      "valence_acc": 0.5825242718446602,
+      "netharm_accept": 0.2413793103448276,
+      "need_slope": 1.0
+     },
+     {
+      "deaths_per_10k": 5.333333333333333,
+      "post_swap_deaths": 1,
+      "food": 56.84267011369983,
+      "valence_acc": 0.7346938775510204,
+      "netharm_accept": 0.04918032786885246,
+      "need_slope": 0.4651162790697675
+     },
+     {
+      "deaths_per_10k": 5.333333333333333,
+      "post_swap_deaths": 2,
+      "food": 57.76476446646887,
+      "valence_acc": 0.5915492957746479,
+      "netharm_accept": 0.31343283582089554,
+      "need_slope": 0.859375
+     },
+     {
+      "deaths_per_10k": 6.0,
+      "post_swap_deaths": 3,
+      "food": 56.310838597715644,
+      "valence_acc": 0.44541484716157204,
+      "netharm_accept": 0.24444444444444444,
+      "need_slope": 0.6790123456790124
+     },
+     {
+      "deaths_per_10k": 0.6666666666666666,
+      "post_swap_deaths": 0,
+      "food": 60.475553525179926,
+      "valence_acc": 0.5786516853932584,
+      "netharm_accept": 0.038461538461538464,
+      "need_slope": 0.7876106194690266
+     },
+     {
+      "deaths_per_10k": 3.3333333333333335,
+      "post_swap_deaths": 0,
+      "food": 58.77481518274396,
+      "valence_acc": 0.9197080291970803,
+      "netharm_accept": 0.02857142857142857,
+      "need_slope": 0.6115107913669064
+     },
+     {
+      "deaths_per_10k": 4.666666666666667,
+      "post_swap_deaths": 0,
+      "food": 60.5261440483861,
+      "valence_acc": 0.7227272727272728,
+      "netharm_accept": 0.5483870967741935,
+      "need_slope": 0.6875
+     },
+     {
+      "deaths_per_10k": 8.0,
+      "post_swap_deaths": 0,
+      "food": 57.08516845697886,
+      "valence_acc": 0.8143712574850299,
+      "netharm_accept": 0.07692307692307693,
+      "need_slope": 0.7804878048780488
+     },
+     {
+      "deaths_per_10k": 2.6666666666666665,
+      "post_swap_deaths": 1,
+      "food": 59.82772196015576,
+      "valence_acc": 0.6612903225806451,
+      "netharm_accept": 0.11538461538461539,
+      "need_slope": 0.6116504854368933
+     },
+     {
+      "deaths_per_10k": 5.333333333333333,
+      "post_swap_deaths": 2,
+      "food": 57.94418267445435,
+      "valence_acc": 0.6808510638297872,
+      "netharm_accept": 0.22641509433962265,
+      "need_slope": 0.7058823529411764
+     },
+     {
+      "deaths_per_10k": 12.0,
+      "post_swap_deaths": 1,
+      "food": 52.420434847530025,
+      "valence_acc": 0.5720930232558139,
+      "netharm_accept": 0.06666666666666667,
+      "need_slope": 0.6966292134831461
+     }
+    ],
+    "RANDOM": [
+     {
+      "deaths_per_10k": 88.66666666666667,
+      "post_swap_deaths": 16,
+      "food": -2.175682078455803,
+      "valence_acc": 0.8361581920903954,
+      "netharm_accept": 0.3050847457627119,
+      "need_slope": 0.125
+     },
+     {
+      "deaths_per_10k": 73.33333333333333,
+      "post_swap_deaths": 19,
+      "food": 10.553114660634858,
+      "valence_acc": 0.2756756756756757,
+      "netharm_accept": 0.6590909090909091,
+      "need_slope": -0.009433962264150941
+     },
+     {
+      "deaths_per_10k": 75.33333333333333,
+      "post_swap_deaths": 19,
+      "food": 4.993229873830668,
+      "valence_acc": 0.8564814814814815,
+      "netharm_accept": 0.26,
+      "need_slope": -0.2043010752688172
+     },
+     {
+      "deaths_per_10k": 92.0,
+      "post_swap_deaths": 18,
+      "food": -1.1480392086103783,
+      "valence_acc": 0.5454545454545454,
+      "netharm_accept": 0.21794871794871795,
+      "need_slope": 0.13821138211382114
+     },
+     {
+      "deaths_per_10k": 90.0,
+      "post_swap_deaths": 16,
+      "food": -1.9385681427435322,
+      "valence_acc": 0.7591836734693878,
+      "netharm_accept": 0.24390243902439024,
+      "need_slope": 0.050632911392405056
+     },
+     {
+      "deaths_per_10k": 91.33333333333333,
+      "post_swap_deaths": 15,
+      "food": -5.944574964415045,
+      "valence_acc": 0.38461538461538464,
+      "netharm_accept": 0.5142857142857142,
+      "need_slope": -0.2985074626865672
+     },
+     {
+      "deaths_per_10k": 83.33333333333333,
+      "post_swap_deaths": 16,
+      "food": 4.701973563053286,
+      "valence_acc": 0.5581395348837209,
+      "netharm_accept": 0.359375,
+      "need_slope": 0.136
+     },
+     {
+      "deaths_per_10k": 86.66666666666667,
+      "post_swap_deaths": 22,
+      "food": -1.5472747218729337,
+      "valence_acc": 0.6960352422907489,
+      "netharm_accept": 0.1956521739130435,
+      "need_slope": 0.08510638297872339
+     },
+     {
+      "deaths_per_10k": 86.0,
+      "post_swap_deaths": 16,
+      "food": 3.5791376767878136,
+      "valence_acc": 0.47593582887700536,
+      "netharm_accept": 0.3469387755102041,
+      "need_slope": 0.06481481481481485
+     },
+     {
+      "deaths_per_10k": 92.66666666666667,
+      "post_swap_deaths": 18,
+      "food": -3.3295697729301263,
+      "valence_acc": 0.3333333333333333,
+      "netharm_accept": 0.6388888888888888,
+      "need_slope": -0.015384615384615441
+     },
+     {
+      "deaths_per_10k": 87.33333333333333,
+      "post_swap_deaths": 12,
+      "food": -0.9747621962774796,
+      "valence_acc": 0.36398467432950193,
+      "netharm_accept": 0.5517241379310345,
+      "need_slope": 0.12857142857142856
+     },
+     {
+      "deaths_per_10k": 92.0,
+      "post_swap_deaths": 16,
+      "food": -2.1798730009202116,
+      "valence_acc": 0.6238095238095238,
+      "netharm_accept": 0.5,
+      "need_slope": -0.011904761904761973
+     },
+     {
+      "deaths_per_10k": 84.66666666666667,
+      "post_swap_deaths": 19,
+      "food": 14.773999394346633,
+      "valence_acc": 0.5,
+      "netharm_accept": 0.5662650602409639,
+      "need_slope": -0.12179487179487175
+     },
+     {
+      "deaths_per_10k": 90.0,
+      "post_swap_deaths": 15,
+      "food": -0.49334289381014584,
+      "valence_acc": 0.6358381502890174,
+      "netharm_accept": 0.45098039215686275,
+      "need_slope": 0.08411214953271029
+     },
+     {
+      "deaths_per_10k": 90.0,
+      "post_swap_deaths": 13,
+      "food": -4.636830677586127,
+      "valence_acc": 0.44787644787644787,
+      "netharm_accept": 0.4444444444444444,
+      "need_slope": 0.06172839506172839
+     },
+     {
+      "deaths_per_10k": 77.33333333333333,
+      "post_swap_deaths": 13,
+      "food": 9.846968881534112,
+      "valence_acc": 0.375,
+      "netharm_accept": 0.7333333333333333,
+      "need_slope": 0.1417322834645669
+     },
+     {
+      "deaths_per_10k": 96.66666666666667,
+      "post_swap_deaths": 22,
+      "food": -4.404118246736329,
+      "valence_acc": 0.589041095890411,
+      "netharm_accept": 0.2535211267605634,
+      "need_slope": 0.028985507246376774
+     },
+     {
+      "deaths_per_10k": 88.66666666666667,
+      "post_swap_deaths": 17,
+      "food": 1.2315358344801275,
+      "valence_acc": 0.38578680203045684,
+      "netharm_accept": 0.7045454545454546,
+      "need_slope": 0.032258064516129004
+     },
+     {
+      "deaths_per_10k": 84.66666666666667,
+      "post_swap_deaths": 21,
+      "food": -1.3387767534361117,
+      "valence_acc": 0.24528301886792453,
+      "netharm_accept": 0.9333333333333333,
+      "need_slope": -0.10144927536231885
+     },
+     {
+      "deaths_per_10k": 98.0,
+      "post_swap_deaths": 18,
+      "food": -6.775244717775144,
+      "valence_acc": 0.5201612903225806,
+      "netharm_accept": 0.5882352941176471,
+      "need_slope": -0.04347826086956519
+     },
+     {
+      "deaths_per_10k": 96.0,
+      "post_swap_deaths": 16,
+      "food": -2.067838960655965,
+      "valence_acc": 0.745945945945946,
+      "netharm_accept": 0.8939393939393939,
+      "need_slope": -0.12727272727272732
+     },
+     {
+      "deaths_per_10k": 90.0,
+      "post_swap_deaths": 19,
+      "food": -3.6710278495832225,
+      "valence_acc": 0.512280701754386,
+      "netharm_accept": 0.6428571428571429,
+      "need_slope": -0.061224489795918324
+     },
+     {
+      "deaths_per_10k": 90.0,
+      "post_swap_deaths": 14,
+      "food": -1.7154005965606434,
+      "valence_acc": 0.4636363636363636,
+      "netharm_accept": 0.3404255319148936,
+      "need_slope": 0.0
+     },
+     {
+      "deaths_per_10k": 80.0,
+      "post_swap_deaths": 17,
+      "food": 7.564471976170031,
+      "valence_acc": 0.8396946564885496,
+      "netharm_accept": 0.07352941176470588,
+      "need_slope": 0.15151515151515152
+     },
+     {
+      "deaths_per_10k": 81.33333333333333,
+      "post_swap_deaths": 15,
+      "food": 8.335014515544392,
+      "valence_acc": 0.48322147651006714,
+      "netharm_accept": 0.4444444444444444,
+      "need_slope": -0.015625
+     },
+     {
+      "deaths_per_10k": 97.33333333333333,
+      "post_swap_deaths": 22,
+      "food": -5.509952767626419,
+      "valence_acc": 0.6944444444444444,
+      "netharm_accept": 0.5357142857142857,
+      "need_slope": -0.09322033898305082
+     },
+     {
+      "deaths_per_10k": 79.33333333333333,
+      "post_swap_deaths": 18,
+      "food": 10.051481966340909,
+      "valence_acc": 0.26288659793814434,
+      "netharm_accept": 0.6792452830188679,
+      "need_slope": -0.11818181818181822
+     },
+     {
+      "deaths_per_10k": 92.0,
+      "post_swap_deaths": 18,
+      "food": -2.5593579559158264,
+      "valence_acc": 0.3631578947368421,
+      "netharm_accept": 0.2653061224489796,
+      "need_slope": 0.08411214953271028
+     },
+     {
+      "deaths_per_10k": 90.66666666666667,
+      "post_swap_deaths": 22,
+      "food": 0.34729442701733393,
+      "valence_acc": 0.6111111111111112,
+      "netharm_accept": 0.6721311475409836,
+      "need_slope": -0.18584070796460184
+     },
+     {
+      "deaths_per_10k": 89.33333333333333,
+      "post_swap_deaths": 19,
+      "food": -1.1628211459749287,
+      "valence_acc": 0.3567567567567568,
+      "netharm_accept": 0.7,
+      "need_slope": -0.061224489795918324
+     },
+     {
+      "deaths_per_10k": 82.0,
+      "post_swap_deaths": 18,
+      "food": 4.369814050795666,
+      "valence_acc": 0.5351351351351351,
+      "netharm_accept": 0.72,
+      "need_slope": -0.07619047619047614
+     },
+     {
+      "deaths_per_10k": 85.33333333333333,
+      "post_swap_deaths": 23,
+      "food": -1.8067535408592925,
+      "valence_acc": 0.5705128205128205,
+      "netharm_accept": 0.7872340425531915,
+      "need_slope": -0.04587155963302747
+     },
+     {
+      "deaths_per_10k": 78.0,
+      "post_swap_deaths": 12,
+      "food": 2.219463817075342,
+      "valence_acc": 0.3130081300813008,
+      "netharm_accept": 0.782608695652174,
+      "need_slope": 0.011363636363636354
+     },
+     {
+      "deaths_per_10k": 85.33333333333333,
+      "post_swap_deaths": 18,
+      "food": -3.2181855891014695,
+      "valence_acc": 0.371900826446281,
+      "netharm_accept": 0.10810810810810811,
+      "need_slope": 0.0410958904109589
+     },
+     {
+      "deaths_per_10k": 87.33333333333333,
+      "post_swap_deaths": 16,
+      "food": -3.3784744745331317,
+      "valence_acc": 0.4859154929577465,
+      "netharm_accept": 0.3684210526315789,
+      "need_slope": -0.016666666666666663
+     },
+     {
+      "deaths_per_10k": 88.0,
+      "post_swap_deaths": 18,
+      "food": -1.8457898304993925,
+      "valence_acc": 0.3351063829787234,
+      "netharm_accept": 0.5652173913043478,
+      "need_slope": 0.030000000000000027
+     },
+     {
+      "deaths_per_10k": 103.33333333333333,
+      "post_swap_deaths": 19,
+      "food": -2.968461026306984,
+      "valence_acc": 0.5196850393700787,
+      "netharm_accept": 0.9344262295081968,
+      "need_slope": -0.10526315789473684
+     },
+     {
+      "deaths_per_10k": 104.66666666666667,
+      "post_swap_deaths": 19,
+      "food": -15.28587777476785,
+      "valence_acc": 0.7330097087378641,
+      "netharm_accept": 0.15517241379310345,
+      "need_slope": -0.07070707070707072
+     },
+     {
+      "deaths_per_10k": 84.0,
+      "post_swap_deaths": 17,
+      "food": 11.614033118872797,
+      "valence_acc": 0.20408163265306123,
+      "netharm_accept": 0.6885245901639344,
+      "need_slope": -0.062015503875968936
+     },
+     {
+      "deaths_per_10k": 75.33333333333333,
+      "post_swap_deaths": 19,
+      "food": 13.70160363118155,
+      "valence_acc": 0.21830985915492956,
+      "netharm_accept": 0.6268656716417911,
+      "need_slope": -0.0703125
+     },
+     {
+      "deaths_per_10k": 82.0,
+      "post_swap_deaths": 15,
+      "food": 0.9683941790374645,
+      "valence_acc": 0.5589519650655022,
+      "netharm_accept": 0.4222222222222222,
+      "need_slope": 0.037037037037037035
+     },
+     {
+      "deaths_per_10k": 79.33333333333333,
+      "post_swap_deaths": 11,
+      "food": 5.6193403116036755,
+      "valence_acc": 0.5393258426966292,
+      "netharm_accept": 0.28846153846153844,
+      "need_slope": 0.08849557522123891
+     },
+     {
+      "deaths_per_10k": 92.66666666666667,
+      "post_swap_deaths": 15,
+      "food": -1.8034856834821578,
+      "valence_acc": 0.6715328467153284,
+      "netharm_accept": 0.4,
+      "need_slope": -0.028776978417266175
+     },
+     {
+      "deaths_per_10k": 83.33333333333333,
+      "post_swap_deaths": 17,
+      "food": 4.764777189002762,
+      "valence_acc": 0.6863636363636364,
+      "netharm_accept": 0.5483870967741935,
+      "need_slope": -0.1499999999999999
+     },
+     {
+      "deaths_per_10k": 90.0,
+      "post_swap_deaths": 18,
+      "food": -0.002946125879801708,
+      "valence_acc": 0.6407185628742516,
+      "netharm_accept": 0.4,
+      "need_slope": -0.1707317073170732
+     },
+     {
+      "deaths_per_10k": 94.0,
+      "post_swap_deaths": 24,
+      "food": -3.0716734301992776,
+      "valence_acc": 0.45698924731182794,
+      "netharm_accept": 0.8653846153846154,
+      "need_slope": -0.01941747572815533
+     },
+     {
+      "deaths_per_10k": 83.33333333333333,
+      "post_swap_deaths": 25,
+      "food": 2.565809449541611,
+      "valence_acc": 0.3404255319148936,
+      "netharm_accept": 0.20754716981132076,
+      "need_slope": 0.06862745098039216
+     },
+     {
+      "deaths_per_10k": 75.33333333333333,
+      "post_swap_deaths": 15,
+      "food": 8.253170051975093,
+      "valence_acc": 0.34418604651162793,
+      "netharm_accept": 0.6888888888888889,
+      "need_slope": 0.0
+     }
+    ]
+   }
+  },
+  "summary": {
+   "tuned": {
+    "deaths_per_10k": {
+     "B0": 33.66666666666667,
+     "SUM": 1.3333333333333333,
+     "HOMEO": 4.0,
+     "HOMEO0": 4.666666666666667,
+     "RANDOM": 87.66666666666666,
+     "HOMEO-HOMEO0": [
+      -0.33333333333333304,
+      -1.6666666666666667,
+      0.0
+     ],
+     "HOMEO-SUM": [
+      2.666666666666667,
+      1.6666666666666667,
+      3.333333333333333
+     ],
+     "HOMEO-B0": [
+      -29.666666666666664,
+      -35.333333333333336,
+      -17.333333333333332
+     ]
+    },
+    "post_swap_deaths": {
+     "B0": 4.5,
+     "SUM": 0.0,
+     "HOMEO": 0.0,
+     "HOMEO0": 1.0,
+     "RANDOM": 18.0,
+     "HOMEO-HOMEO0": [
+      0.0,
+      -1.0,
+      0.0
+     ],
+     "HOMEO-SUM": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "HOMEO-B0": [
+      -4.0,
+      -7.5,
+      -1.0
+     ]
+    },
+    "valence_acc": {
+     "B0": 0.9237614056255185,
+     "SUM": 0.9877423529704572,
+     "HOMEO": 0.6145268518081947,
+     "HOMEO0": 0.582171226831421,
+     "RANDOM": 0.506140350877193,
+     "HOMEO-HOMEO0": [
+      0.008800263678312464,
+      -0.048034934497816595,
+      0.05726872246696041
+     ],
+     "HOMEO-SUM": [
+      -0.35579109161356437,
+      -0.42326638878363015,
+      -0.331578947368421
+     ],
+     "HOMEO-B0": [
+      -0.30771446862996155,
+      -0.37138429752066116,
+      -0.23857868020304562
+     ]
+    },
+    "netharm_accept": {
+     "B0": 0.9111111111111111,
+     "SUM": 0.09072249589490969,
+     "HOMEO": 0.20565595716198126,
+     "HOMEO0": 0.15123652504755863,
+     "RANDOM": 0.5249999999999999,
+     "HOMEO-HOMEO0": [
+      0.050310559006211196,
+      -0.015873015873015872,
+      0.1132075471698113
+     ],
+     "HOMEO-SUM": [
+      0.12666666666666665,
+      -0.013888888888888895,
+      0.203125
+     ],
+     "HOMEO-B0": [
+      -0.6628151260504203,
+      -0.7627118644067796,
+      -0.5217391304347826
+     ]
+    },
+    "need_slope": {
+     "B0": 0.01051993831240361,
+     "SUM": 0.055648942758559694,
+     "HOMEO": 0.6950000000000001,
+     "HOMEO0": 0.7251506989867897,
+     "RANDOM": -0.013644688644688707,
+     "HOMEO-HOMEO0": [
+      0.04159519725557459,
+      -0.11235955056179792,
+      0.09090909090909094
+     ],
+     "HOMEO-SUM": [
+      0.6377784559047911,
+      0.5671768707482994,
+      0.7272727272727273
+     ],
+     "HOMEO-B0": [
+      0.6771602257924447,
+      0.6016260162601627,
+      0.7874015748031495
+     ]
+    }
+   },
+   "default": {
+    "deaths_per_10k": {
+     "B0": 7.333333333333333,
+     "SUM": 1.6666666666666665,
+     "HOMEO": 4.0,
+     "HOMEO0": 4.666666666666667,
+     "RANDOM": 87.66666666666666,
+     "HOMEO-HOMEO0": [
+      -0.33333333333333304,
+      -1.6666666666666667,
+      0.0
+     ],
+     "HOMEO-SUM": [
+      2.0,
+      1.3333333333333335,
+      3.0
+     ],
+     "HOMEO-B0": [
+      -3.3333333333333335,
+      -5.333333333333333,
+      -1.3333333333333335
+     ]
+    },
+    "post_swap_deaths": {
+     "B0": 0.0,
+     "SUM": 0.0,
+     "HOMEO": 0.0,
+     "HOMEO0": 1.0,
+     "RANDOM": 18.0,
+     "HOMEO-HOMEO0": [
+      0.0,
+      -1.0,
+      0.0
+     ],
+     "HOMEO-SUM": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "HOMEO-B0": [
+      0.0,
+      -1.0,
+      0.0
+     ]
+    },
+    "valence_acc": {
+     "B0": 0.8945166435687577,
+     "SUM": 0.9633505846271804,
+     "HOMEO": 0.6145268518081947,
+     "HOMEO0": 0.582171226831421,
+     "RANDOM": 0.506140350877193,
+     "HOMEO-HOMEO0": [
+      0.008800263678312464,
+      -0.048034934497816595,
+      0.05726872246696041
+     ],
+     "HOMEO-SUM": [
+      -0.33421985815602834,
+      -0.38214306019184063,
+      -0.28350515463917536
+     ],
+     "HOMEO-B0": [
+      -0.2996357543527355,
+      -0.3331938802963781,
+      -0.23508771929824557
+     ]
+    },
+    "netharm_accept": {
+     "B0": 0.3390804597701149,
+     "SUM": 0.023558758314855877,
+     "HOMEO": 0.20565595716198126,
+     "HOMEO0": 0.15123652504755863,
+     "RANDOM": 0.5249999999999999,
+     "HOMEO-HOMEO0": [
+      0.050310559006211196,
+      -0.015873015873015872,
+      0.1132075471698113
+     ],
+     "HOMEO-SUM": [
+      0.12286883382586951,
+      0.04918032786885246,
+      0.21568627450980393
+     ],
+     "HOMEO-B0": [
+      -0.07034454470877768,
+      -0.23913043478260865,
+      0.030969675001882736
+     ]
+    },
+    "need_slope": {
+     "B0": 0.0747767857142857,
+     "SUM": -0.028039832285115307,
+     "HOMEO": 0.6950000000000001,
+     "HOMEO0": 0.7251506989867897,
+     "RANDOM": -0.013644688644688707,
+     "HOMEO-HOMEO0": [
+      0.04159519725557459,
+      -0.11235955056179792,
+      0.09090909090909094
+     ],
+     "HOMEO-SUM": [
+      0.715375,
+      0.6122448979591837,
+      0.8359683794466404
+     ],
+     "HOMEO-B0": [
+      0.5794670846394985,
+      0.46728971962616817,
+      0.7084220056845116
+     ]
+    }
+   }
+  }
+ }
+}

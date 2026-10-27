@@ -1,0 +1,92 @@
+reference: pd 0.943 coin-flip 0.126
+poll seed0 lap  9 test 0.163 off 0.60 lat 3.09 neurons 11 yes/no/abs 0.06/0.00/0.94 ties 0.96
+poll seed0 lap 19 test 0.164 off 0.60 lat 2.99 neurons 13 yes/no/abs 0.13/0.00/0.87 ties 0.67
+poll seed0 lap 29 test 0.142 off 0.65 lat 3.44 neurons 13 yes/no/abs 0.13/0.00/0.87 ties 0.67
+poll seed0 lap 39 test 0.143 off 0.62 lat 2.77 neurons 13 yes/no/abs 0.07/0.00/0.93 ties 0.68
+poll seed0 lap 49 test 0.168 off 0.61 lat 3.16 neurons 13 yes/no/abs 0.07/0.00/0.93 ties 0.69
+poll seed0 lap 59 test 0.186 off 0.58 lat 3.05 neurons 13 yes/no/abs 0.08/0.00/0.92 ties 0.67
+poll seed0 lap 69 test 0.139 off 0.64 lat 3.28 neurons 13 yes/no/abs 0.09/0.00/0.91 ties 0.67
+poll seed0 lap 79 test 0.151 off 0.62 lat 3.21 neurons 13 yes/no/abs 0.11/0.00/0.89 ties 0.68
+poll seed0 lap 89 test 0.166 off 0.61 lat 3.09 neurons 13 yes/no/abs 0.06/0.00/0.94 ties 0.67
+poll seed0 lap 99 test 0.140 off 0.64 lat 3.11 neurons 13 yes/no/abs 0.06/0.00/0.94 ties 0.67
+poll seed0 lap109 test 0.153 off 0.62 lat 3.34 neurons 13 yes/no/abs 0.10/0.00/0.90 ties 0.67
+poll seed0 lap119 test 0.168 off 0.60 lat 3.10 neurons 13 yes/no/abs 0.08/0.00/0.92 ties 0.67
+poll seed0 lap129 test 0.151 off 0.62 lat 2.98 neurons 13 yes/no/abs 0.12/0.00/0.88 ties 0.67
+poll seed0 lap139 test 0.159 off 0.61 lat 2.95 neurons 13 yes/no/abs 0.07/0.00/0.93 ties 0.67
+poll seed0 lap149 test 0.142 off 0.63 lat 3.19 neurons 13 yes/no/abs 0.08/0.00/0.92 ties 0.67
+poll seed0 lap159 test 0.148 off 0.64 lat 3.30 neurons 21 yes/no/abs 0.09/0.00/0.91 ties 0.67
+poll seed0 lap169 test 0.168 off 0.60 lat 3.13 neurons 22 yes/no/abs 0.06/0.00/0.94 ties 0.68
+poll seed0 lap179 test 0.158 off 0.62 lat 3.21 neurons 29 yes/no/abs 0.07/0.00/0.92 ties 0.68
+poll seed0 lap189 test 0.144 off 0.59 lat 3.01 neurons 32 yes/no/abs 0.07/0.00/0.93 ties 0.67
+poll seed0 lap199 test 0.142 off 0.62 lat 3.16 neurons 36 yes/no/abs 0.09/0.01/0.91 ties 0.68
+poll seed0 lap209 test 0.156 off 0.58 lat 3.00 neurons 50 yes/no/abs 0.08/0.02/0.89 ties 0.69
+poll seed0 lap219 test 0.156 off 0.56 lat 2.79 neurons 58 yes/no/abs 0.11/0.05/0.84 ties 0.68
+poll seed0 lap229 test 0.153 off 0.62 lat 3.02 neurons 68 yes/no/abs 0.09/0.04/0.87 ties 0.69
+poll seed0 lap239 test 0.149 off 0.61 lat 3.03 neurons 68 yes/no/abs 0.04/0.00/0.96 ties 0.67
+poll seed0 lap249 test 0.182 off 0.59 lat 2.88 neurons 68 yes/no/abs 0.03/0.00/0.97 ties 0.67
+poll seed0 lap259 test 0.167 off 0.59 lat 2.94 neurons 72 yes/no/abs 0.05/0.00/0.95 ties 0.67
+poll seed0 lap269 test 0.131 off 0.65 lat 3.48 neurons 78 yes/no/abs 0.07/0.00/0.93 ties 0.67
+poll seed0 lap279 test 0.140 off 0.62 lat 2.41 neurons 80 yes/no/abs 0.04/0.00/0.96 ties 0.67
+poll seed0 lap289 test 0.152 off 0.63 lat 3.37 neurons 86 yes/no/abs 0.05/0.00/0.95 ties 0.67
+poll seed0 lap299 test 0.159 off 0.62 lat 3.12 neurons 90 yes/no/abs 0.08/0.00/0.92 ties 0.67
+poll seed1 lap  9 test 0.128 off 0.51 lat 2.00 neurons 1 yes/no/abs 0.00/0.00/1.00 ties 1.00
+poll seed1 lap 19 test 0.165 off 0.61 lat 2.86 neurons 11 yes/no/abs 0.13/0.00/0.87 ties 0.77
+poll seed1 lap 29 test 0.160 off 0.62 lat 3.02 neurons 11 yes/no/abs 0.13/0.00/0.87 ties 0.67
+poll seed1 lap 39 test 0.152 off 0.61 lat 2.83 neurons 11 yes/no/abs 0.12/0.00/0.88 ties 0.67
+poll seed1 lap 49 test 0.152 off 0.62 lat 3.24 neurons 11 yes/no/abs 0.06/0.00/0.94 ties 0.67
+poll seed1 lap 59 test 0.134 off 0.64 lat 2.98 neurons 17 yes/no/abs 0.08/0.00/0.92 ties 0.69
+poll seed1 lap 69 test 0.174 off 0.59 lat 3.00 neurons 17 yes/no/abs 0.09/0.00/0.91 ties 0.67
+poll seed1 lap 79 test 0.160 off 0.61 lat 3.25 neurons 17 yes/no/abs 0.06/0.00/0.94 ties 0.67
+poll seed1 lap 89 test 0.169 off 0.60 lat 3.09 neurons 21 yes/no/abs 0.09/0.00/0.91 ties 0.67
+poll seed1 lap 99 test 0.151 off 0.62 lat 3.11 neurons 21 yes/no/abs 0.11/0.00/0.89 ties 0.67
+poll seed1 lap109 test 0.147 off 0.63 lat 3.07 neurons 21 yes/no/abs 0.12/0.00/0.88 ties 0.67
+poll seed1 lap119 test 0.198 off 0.56 lat 2.90 neurons 21 yes/no/abs 0.09/0.00/0.91 ties 0.67
+poll seed1 lap129 test 0.167 off 0.59 lat 2.86 neurons 21 yes/no/abs 0.05/0.00/0.95 ties 0.68
+poll seed1 lap139 test 0.154 off 0.62 lat 3.35 neurons 23 yes/no/abs 0.06/0.00/0.94 ties 0.70
+poll seed1 lap149 test 0.173 off 0.61 lat 3.17 neurons 23 yes/no/abs 0.07/0.00/0.93 ties 0.68
+poll seed1 lap159 test 0.143 off 0.46 lat 1.76 neurons 23 yes/no/abs 0.05/0.00/0.95 ties 0.68
+poll seed1 lap169 test 0.163 off 0.61 lat 2.98 neurons 23 yes/no/abs 0.07/0.00/0.93 ties 0.68
+poll seed1 lap179 test 0.154 off 0.63 lat 3.11 neurons 25 yes/no/abs 0.07/0.00/0.93 ties 0.67
+poll seed1 lap189 test 0.157 off 0.62 lat 3.17 neurons 25 yes/no/abs 0.05/0.00/0.95 ties 0.67
+poll seed1 lap199 test 0.186 off 0.58 lat 2.49 neurons 25 yes/no/abs 0.08/0.00/0.92 ties 0.67
+poll seed1 lap209 test 0.158 off 0.62 lat 3.03 neurons 25 yes/no/abs 0.08/0.00/0.92 ties 0.67
+poll seed1 lap219 test 0.144 off 0.63 lat 3.17 neurons 25 yes/no/abs 0.13/0.00/0.87 ties 0.67
+poll seed1 lap229 test 0.128 off 0.67 lat 3.41 neurons 25 yes/no/abs 0.18/0.00/0.82 ties 0.67
+poll seed1 lap239 test 0.185 off 0.58 lat 2.90 neurons 25 yes/no/abs 0.17/0.00/0.83 ties 0.67
+poll seed1 lap249 test 0.162 off 0.61 lat 3.31 neurons 25 yes/no/abs 0.20/0.00/0.80 ties 0.67
+poll seed1 lap259 test 0.160 off 0.62 lat 2.94 neurons 27 yes/no/abs 0.18/0.00/0.82 ties 0.67
+poll seed1 lap269 test 0.170 off 0.61 lat 3.21 neurons 27 yes/no/abs 0.09/0.00/0.91 ties 0.68
+poll seed1 lap279 test 0.128 off 0.49 lat 1.96 neurons 29 yes/no/abs 0.07/0.00/0.93 ties 0.68
+poll seed1 lap289 test 0.162 off 0.59 lat 3.17 neurons 29 yes/no/abs 0.04/0.00/0.96 ties 0.67
+poll seed1 lap299 test 0.175 off 0.60 lat 3.02 neurons 29 yes/no/abs 0.03/0.00/0.97 ties 0.67
+poll seed2 lap  9 test 0.121 off 0.53 lat 2.04 neurons 1 yes/no/abs 0.00/0.00/1.00 ties 1.00
+poll seed2 lap 19 test 0.158 off 0.63 lat 3.32 neurons 11 yes/no/abs 0.04/0.00/0.96 ties 0.97
+poll seed2 lap 29 test 0.156 off 0.61 lat 3.10 neurons 11 yes/no/abs 0.13/0.00/0.87 ties 0.68
+poll seed2 lap 39 test 0.168 off 0.60 lat 3.06 neurons 11 yes/no/abs 0.14/0.00/0.86 ties 0.67
+poll seed2 lap 49 test 0.163 off 0.62 lat 3.10 neurons 11 yes/no/abs 0.09/0.00/0.91 ties 0.67
+poll seed2 lap 59 test 0.158 off 0.62 lat 3.14 neurons 15 yes/no/abs 0.09/0.00/0.91 ties 0.67
+poll seed2 lap 69 test 0.155 off 0.62 lat 3.25 neurons 15 yes/no/abs 0.07/0.00/0.93 ties 0.67
+poll seed2 lap 79 test 0.165 off 0.59 lat 3.03 neurons 15 yes/no/abs 0.08/0.00/0.92 ties 0.68
+poll seed2 lap 89 test 0.155 off 0.62 lat 3.07 neurons 15 yes/no/abs 0.14/0.00/0.86 ties 0.67
+poll seed2 lap 99 test 0.152 off 0.62 lat 3.18 neurons 15 yes/no/abs 0.15/0.00/0.85 ties 0.67
+poll seed2 lap109 test 0.146 off 0.62 lat 3.17 neurons 19 yes/no/abs 0.15/0.00/0.85 ties 0.68
+poll seed2 lap119 test 0.156 off 0.62 lat 3.25 neurons 19 yes/no/abs 0.05/0.00/0.95 ties 0.67
+poll seed2 lap129 test 0.178 off 0.60 lat 3.12 neurons 19 yes/no/abs 0.05/0.00/0.95 ties 0.67
+poll seed2 lap139 test 0.148 off 0.63 lat 3.10 neurons 19 yes/no/abs 0.06/0.00/0.94 ties 0.67
+poll seed2 lap149 test 0.177 off 0.59 lat 2.95 neurons 19 yes/no/abs 0.07/0.00/0.93 ties 0.68
+poll seed2 lap159 test 0.156 off 0.61 lat 3.20 neurons 21 yes/no/abs 0.08/0.00/0.92 ties 0.67
+poll seed2 lap169 test 0.144 off 0.64 lat 3.12 neurons 21 yes/no/abs 0.11/0.00/0.89 ties 0.67
+poll seed2 lap179 test 0.149 off 0.64 lat 3.17 neurons 21 yes/no/abs 0.06/0.00/0.94 ties 0.67
+poll seed2 lap189 test 0.155 off 0.64 lat 3.28 neurons 21 yes/no/abs 0.08/0.00/0.92 ties 0.67
+poll seed2 lap199 test 0.143 off 0.63 lat 3.33 neurons 21 yes/no/abs 0.24/0.00/0.76 ties 0.67
+poll seed2 lap209 test 0.169 off 0.60 lat 3.01 neurons 21 yes/no/abs 0.25/0.00/0.75 ties 0.67
+poll seed2 lap219 test 0.162 off 0.61 lat 3.06 neurons 33 yes/no/abs 0.06/0.00/0.94 ties 0.67
+poll seed2 lap229 test 0.166 off 0.61 lat 3.01 neurons 33 yes/no/abs 0.03/0.00/0.97 ties 0.68
+poll seed2 lap239 test 0.169 off 0.59 lat 2.92 neurons 33 yes/no/abs 0.05/0.00/0.95 ties 0.68
+poll seed2 lap249 test 0.169 off 0.61 lat 3.16 neurons 33 yes/no/abs 0.02/0.00/0.98 ties 0.68
+poll seed2 lap259 test 0.142 off 0.64 lat 3.18 neurons 33 yes/no/abs 0.03/0.00/0.97 ties 0.68
+poll seed2 lap269 test 0.158 off 0.61 lat 2.40 neurons 37 yes/no/abs 0.03/0.00/0.97 ties 0.69
+poll seed2 lap279 test 0.147 off 0.61 lat 3.00 neurons 56 yes/no/abs 0.04/0.00/0.96 ties 0.68
+poll seed2 lap289 test 0.157 off 0.59 lat 3.18 neurons 56 yes/no/abs 0.04/0.00/0.96 ties 0.67
+poll seed2 lap299 test 0.186 off 0.58 lat 2.88 neurons 56 yes/no/abs 0.02/0.00/0.98 ties 0.67
+done in 58s

@@ -1,0 +1,19 @@
+gradient descent: median cost 115,680 sample-forward-equivalents (5/5 solved)
+{"B": 32, "P": 20, "cull": 0.5, "life": true}: solved 2/5 | median cost 1,500,160 (13.0x gradient) | 7.8s
+{"B": 64, "P": 20, "cull": 0.5, "life": true}: solved 2/5 | median cost 1,500,160 (13.0x gradient) | 3.4s
+{"B": 128, "P": 20, "cull": 0.5, "life": true}: solved 2/5 | median cost 1,500,160 (13.0x gradient) | 1.8s
+{"B": 32, "P": 50, "cull": 0.5, "life": true}: solved 2/5 | median cost 1,500,800 (13.0x gradient) | 3.0s
+{"B": 64, "P": 50, "cull": 0.5, "life": true}: solved 1/5 | median cost 1,500,800 (13.0x gradient) | 1.6s
+{"B": 128, "P": 50, "cull": 0.5, "life": true}: solved 2/5 | median cost 1,504,000 (13.0x gradient) | 0.8s
+{"B": 32, "P": 100, "cull": 0.5, "life": true}: solved 3/5 | median cost 1,292,800 (11.2x gradient) | 1.5s
+{"B": 64, "P": 100, "cull": 0.5, "life": true}: solved 2/5 | median cost 1,504,000 (13.0x gradient) | 0.8s
+{"B": 128, "P": 100, "cull": 0.5, "life": true}: solved 2/5 | median cost 1,510,400 (13.1x gradient) | 0.4s
+{"B": 32, "P": 20, "cull": 0.5, "life": false}: solved 0/5 | median cost 1,500,160 (13.0x gradient) | 10.0s
+{"B": 64, "P": 20, "cull": 0.5, "life": false}: solved 1/5 | median cost 1,500,160 (13.0x gradient) | 4.2s
+{"B": 128, "P": 20, "cull": 0.5, "life": false}: solved 2/5 | median cost 1,500,160 (13.0x gradient) | 1.6s
+{"B": 32, "P": 50, "cull": 0.5, "life": false}: solved 1/5 | median cost 1,500,800 (13.0x gradient) | 3.3s
+{"B": 64, "P": 50, "cull": 0.5, "life": false}: solved 0/5 | median cost 1,500,800 (13.0x gradient) | 2.0s
+{"B": 128, "P": 50, "cull": 0.5, "life": false}: solved 2/5 | median cost 1,504,000 (13.0x gradient) | 0.7s
+{"B": 32, "P": 100, "cull": 0.5, "life": false}: solved 2/5 | median cost 1,500,800 (13.0x gradient) | 1.3s
+{"B": 64, "P": 100, "cull": 0.5, "life": false}: solved 2/5 | median cost 1,504,000 (13.0x gradient) | 0.7s
+{"B": 128, "P": 100, "cull": 0.5, "life": false}: solved 2/5 | median cost 1,510,400 (13.1x gradient) | 0.4s

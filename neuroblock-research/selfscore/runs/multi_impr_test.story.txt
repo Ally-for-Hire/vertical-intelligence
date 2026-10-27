@@ -1,0 +1,15 @@
+=== RUN impr_test | 24 problems | POPULATION 400 brains | cull rule: improvement | cull = fixed 50%; at least 200 brains survive every generation ===
+Self-modification: FREE (every random change is kept, no gate). Cull-size distribution: median 50.0%, mean 50.0%, 90th percentile 50%, mass culls (>50%) in 0.0% of generations, (>80%) in 0.0%.
+Refill of empty slots: random collections of the current brains, each slot a random mode: fresh 100%.
+Input bus 16 lines + 5 task-code lines = 21 inputs, 7 outputs. Brain size cap: 96 hidden nodes. GPU memory free at start: 6.8 GB. W&B: off
+generation 0 population ready (1s); average accuracy of the random starting brains: 0.451
+gen     0 | last cull  50.0% -> kept   200/400 | score avg 0.451 best 0.516 | best brain solves  1/24 at 90%+ | brains: 0 hidden nodes avg, T=2.0 | 400 lineages, 100% distinct functions | experts: E1=20 E2cv=+13.0pp E3cv=15 | 0.4s/gen, 1s total
+    * NEW: problem "moons" is now solved at 90%+ by the best brain (first time in this run)
+    * new best score of the run: 0.516
+gen    20 | last cull  50.0% -> kept   200/400 | score avg 0.450 best 0.530 | best brain solves  0/24 at 90%+ | brains: 2 hidden nodes avg, T=2.0 | 400 lineages, 100% distinct functions | experts: E1=23 E2cv=+14.7pp E3cv=18 | 0.2s/gen, 3s total
+gen    40 | last cull  50.0% -> kept   200/400 | score avg 0.451 best 0.521 | best brain solves  0/24 at 90%+ | brains: 3 hidden nodes avg, T=2.1 | 400 lineages, 100% distinct functions | experts: E1=22 E2cv=+20.6pp E3cv=22 | 0.2s/gen, 5s total
+gen    60 | last cull  50.0% -> kept   200/400 | score avg 0.454 best 0.538 | best brain solves  1/24 at 90%+ | brains: 6 hidden nodes avg, T=2.1 | 400 lineages, 100% distinct functions | experts: E1=24 E2cv=+19.0pp E3cv=19 | 0.3s/gen, 8s total
+    * NEW: problem "blobs3" is now solved at 90%+ by the best brain (first time in this run)
+    * new best score of the run: 0.538
+gen    79 | last cull  50.0% -> kept   200/400 | score avg 0.452 best 0.517 | best brain solves  0/24 at 90%+ | brains: 7 hidden nodes avg, T=2.2 | 400 lineages, 100% distinct functions | experts: E1=24 E2cv=+20.4pp E3cv=22 | 0.3s/gen, 12s total
+=== RUN impr_test finished: 80 generations, 12s ===

@@ -1,0 +1,18 @@
+=== RUN wave_test | 24 problems | POPULATION 300 brains | cull rule: mean | cull = smooth cosine wave 0.15 -> 0.5 -> 0.15 every 50 generations; at least 150 brains survive every generation ===
+Self-modification: FREE (every random change is kept, no gate). Cull-size distribution: median 32.5%, mean 32.5%, 90th percentile 49%, mass culls (>50%) in 0.0% of generations, (>80%) in 0.0%.
+Refill of empty slots: random collections of the current brains, each slot a random mode: blend 100%.
+Input bus 16 lines + 5 task-code lines = 21 inputs, 7 outputs. Brain size cap: 96 hidden nodes. GPU memory free at start: 6.8 GB. W&B: off
+generation 0 population ready (1s); average accuracy of the random starting brains: 0.452
+gen     0 | last cull  15.0% -> kept   255/300 | score avg 0.452 best 0.523 | best brain solves  0/24 at 90%+ | brains: 0 hidden nodes avg, T=2.0 | 225 lineages, 100% distinct functions | experts: E1=23 E2cv=+14.5pp E3cv=16 | 0.5s/gen, 2s total
+    * new best score of the run: 0.523
+gen    10 | last cull  27.1% -> kept   219/300 | score avg 0.475 best 0.521 | best brain solves  0/24 at 90%+ | brains: 6 hidden nodes avg, T=1.9 | 35 lineages, 100% distinct functions | experts: E1=23 E2cv=+15.4pp E3cv=19 | 0.1s/gen, 3s total
+gen    20 | last cull  46.7% -> kept   160/300 | score avg 0.508 best 0.544 | best brain solves  1/24 at 90%+ | brains: 16 hidden nodes avg, T=1.0 | 6 lineages, 100% distinct functions | experts: E1=14 E2cv=+10.2pp E3cv=17 | 0.1s/gen, 4s total
+    * NEW: problem "majority5" is now solved at 90%+ by the best brain (first time in this run)
+    * new best score of the run: 0.544
+gen    30 | last cull  46.7% -> kept   160/300 | score avg 0.529 best 0.552 | best brain solves  1/24 at 90%+ | brains: 27 hidden nodes avg, T=1.0 | 5 lineages, 100% distinct functions | experts: E1=11 E2cv=+3.4pp E3cv=7 | 0.1s/gen, 5s total
+gen    40 | last cull  27.1% -> kept   219/300 | score avg 0.559 best 0.576 | best brain solves  1/24 at 90%+ | brains: 34 hidden nodes avg, T=1.0 | 3 lineages, 100% distinct functions | experts: E1=10 E2cv=+1.8pp E3cv=5 | 0.1s/gen, 5s total
+    * new best score of the run: 0.576
+gen    50 | last cull  15.0% -> kept   255/300 | score avg 0.562 best 0.578 | best brain solves  0/24 at 90%+ | brains: 41 hidden nodes avg, T=1.0 | 3 lineages, 100% distinct functions | experts: E1=12 E2cv=+1.6pp E3cv=6 | 0.1s/gen, 6s total
+    refill modes, score vs the generation average (percentage points, all generations so far): blend +0.03
+gen    59 | last cull  25.0% -> kept   225/300 | score avg 0.574 best 0.592 | best brain solves  0/24 at 90%+ | brains: 50 hidden nodes avg, T=1.0 | 3 lineages, 99% distinct functions | experts: E1=8 E2cv=+1.0pp E3cv=5 | 0.1s/gen, 6s total
+=== RUN wave_test finished: 60 generations, 6s ===

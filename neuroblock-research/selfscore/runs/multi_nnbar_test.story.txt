@@ -1,0 +1,18 @@
+=== RUN nnbar_test | 24 problems | POPULATION 300 brains | cull rule: nnbar | cull = every brain that does worse than or ties an UNTRAINED small NN (average over the problems, fresh each generation) dies; if all die, restart from pure random; at least 150 brains survive every generation ===
+Self-modification: FREE (every random change is kept, no gate). Cull-size distribution: median 32.5%, mean 32.5%, 90th percentile 49%, mass culls (>50%) in 0.0% of generations, (>80%) in 0.0%.
+Refill of empty slots: random collections of the current brains, each slot a random mode: blend 100%.
+Input bus 16 lines + 5 task-code lines = 21 inputs, 7 outputs. Brain size cap: 96 hidden nodes. GPU memory free at start: 6.8 GB. W&B: off
+generation 0 population ready (4s); average accuracy of the random starting brains: 0.449
+gen     0 | died   60 (20.0%) | bar (untrained NN) 0.432, restarts 0 | SURVIVAL: oldest has survived 1 cullings, mean 0.8 | kept   240/300 | score avg 0.452 best 0.510 | best brain solves  1/24 at 90%+ | brains: 17 hidden nodes avg, T=3.6 | 209 lineages, 87% distinct functions | experts: E1=21 E2cv=+12.4pp E3cv=16 | 0.5s/gen, 6s total
+    * NEW: problem "moons_noisy15" is now solved at 90%+ by the best brain (first time in this run)
+    * new best score of the run: 0.510
+gen    10 | died   64 (21.3%) | bar (untrained NN) 0.465, restarts 0 | SURVIVAL: oldest has survived 11 cullings, mean 3.8 | kept   236/300 | score avg 0.486 best 0.542 | best brain solves  0/24 at 90%+ | brains: 33 hidden nodes avg, T=3.5 | 24 lineages, 100% distinct functions | experts: E1=23 E2cv=+14.2pp E3cv=20 | 0.3s/gen, 8s total
+    * new best score of the run: 0.542
+gen    20 | died   20 ( 6.7%) | bar (untrained NN) 0.458, restarts 0 | SURVIVAL: oldest has survived 21 cullings, mean 7.1 | kept   280/300 | score avg 0.490 best 0.543 | best brain solves  2/24 at 90%+ | brains: 38 hidden nodes avg, T=3.7 | 12 lineages, 100% distinct functions | experts: E1=23 E2cv=+12.8pp E3cv=15 | 0.4s/gen, 10s total
+    * NEW: problem "moons" is now solved at 90%+ by the best brain (first time in this run)
+gen    30 | died    0 ( 0.0%) | bar (untrained NN) 0.410, restarts 0 | SURVIVAL: oldest has survived 31 cullings, mean 8.2 | kept   300/300 | score avg 0.495 best 0.555 | best brain solves  2/24 at 90%+ | brains: 46 hidden nodes avg, T=3.6 | 9 lineages, 100% distinct functions | experts: E1=23 E2cv=+16.7pp E3cv=19 | 0.4s/gen, 12s total
+gen    40 | died   17 ( 5.7%) | bar (untrained NN) 0.456, restarts 0 | SURVIVAL: oldest has survived 41 cullings, mean 13.2 | kept   283/300 | score avg 0.489 best 0.544 | best brain solves  0/24 at 90%+ | brains: 52 hidden nodes avg, T=3.3 | 8 lineages, 100% distinct functions | experts: E1=20 E2cv=+11.6pp E3cv=17 | 0.4s/gen, 14s total
+gen    50 | died   28 ( 9.3%) | bar (untrained NN) 0.480, restarts 0 | SURVIVAL: oldest has survived 51 cullings, mean 19.4 | kept   272/300 | score avg 0.508 best 0.551 | best brain solves  2/24 at 90%+ | brains: 55 hidden nodes avg, T=3.1 | 9 lineages, 100% distinct functions | experts: E1=21 E2cv=+12.0pp E3cv=16 | 0.4s/gen, 16s total
+    refill modes, score vs the generation average (percentage points, all generations so far): blend -0.20
+gen    59 | died    2 ( 0.7%) | bar (untrained NN) 0.453, restarts 0 | SURVIVAL: oldest has survived 57 cullings, mean 15.6 | kept   298/300 | score avg 0.500 best 0.544 | best brain solves  2/24 at 90%+ | brains: 63 hidden nodes avg, T=2.8 | 10 lineages, 100% distinct functions | experts: E1=22 E2cv=+11.7pp E3cv=16 | 0.3s/gen, 17s total
+=== RUN nnbar_test finished: 60 generations, 17s ===

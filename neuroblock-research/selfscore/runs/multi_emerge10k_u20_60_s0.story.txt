@@ -1,0 +1,16 @@
+=== RUN emerge10k_u20_60_s0 | 24 problems | POPULATION 10000 brains | cull rule: mean | cull draw = 0.2 + (0.6 - 0.2) * u^1.0; at least 4000 brains survive every generation ===
+Self-modification: FREE (every random change is kept, no gate). Cull-size distribution: median 39.9%, mean 40.0%, 90th percentile 56%, mass culls (>50%) in 24.9% of generations, (>80%) in 0.0%.
+Refill of empty slots: random collections of the current brains, each slot a random mode: copy 25%, vary 25%, cross 20%, blend 10%, scramble 10%, fresh 10%.
+Input bus 16 lines + 5 task-code lines = 21 inputs, 7 outputs. Brain size cap: 96 hidden nodes. GPU memory free at start: 6.6 GB. W&B: run https://wandb.ai/<wandb-team>/neuroblock-emergence/runs/1kw136k3
+generation 0 population ready (6s); average accuracy of the random starting brains: 0.450
+gen     0 | last cull  39.9% -> kept  6015/10000 | score avg 0.451 best 0.547 | best brain solves  0/24 at 90%+ | brains: 0 hidden nodes avg, T=2.0 | 5169 lineages, 97% distinct functions | experts: E1=22 E2cv=+17.2pp E3cv=18 | 1.1s/gen, 8s total
+    * new best score of the run: 0.547
+gen    10 | last cull  34.0% -> kept  6604/10000 | score avg 0.479 best 0.574 | best brain solves  0/24 at 90%+ | brains: 4 hidden nodes avg, T=2.0 | 436 lineages, 98% distinct functions | experts: E1=23 E2cv=+17.7pp E3cv=17 | 1.2s/gen, 16s total
+    * new best score of the run: 0.574
+gen    20 | last cull  47.3% -> kept  5274/10000 | score avg 0.514 best 0.592 | best brain solves  0/24 at 90%+ | brains: 9 hidden nodes avg, T=1.9 | 170 lineages, 96% distinct functions | experts: E1=23 E2cv=+13.7pp E3cv=19 | 1.7s/gen, 25s total
+gen    30 | last cull  32.2% -> kept  6780/10000 | score avg 0.522 best 0.577 | best brain solves  0/24 at 90%+ | brains: 13 hidden nodes avg, T=1.7 | 79 lineages, 97% distinct functions | experts: E1=24 E2cv=+15.6pp E3cv=16 | 2.1s/gen, 36s total
+gen    40 | last cull  41.1% -> kept  5895/10000 | score avg 0.536 best 0.598 | best brain solves  0/24 at 90%+ | brains: 18 hidden nodes avg, T=1.7 | 30 lineages, 95% distinct functions | experts: E1=22 E2cv=+8.7pp E3cv=16 | 2.5s/gen, 50s total
+    * new best score of the run: 0.598
+gen    50 | last cull  52.8% -> kept  4721/10000 | score avg 0.557 best 0.612 | best brain solves  0/24 at 90%+ | brains: 25 hidden nodes avg, T=1.2 | 22 lineages, 92% distinct functions | experts: E1=24 E2cv=+13.7pp E3cv=17 | 2.9s/gen, 168s total
+    refill modes, score vs the generation average (percentage points, all generations so far): copy +0.70 | vary +0.38 | cross -0.35 | blend +0.59 | scramble -6.15 | fresh -6.15
+gen    60 | last cull  49.0% -> kept  5095/10000 | score avg 0.560 best 0.598 | best brain solves  0/24 at 90%+ | brains: 31 hidden nodes avg, T=1.1 | 14 lineages, 90% distinct functions | experts: E1=22 E2cv=+9.5pp E3cv=16 | 3.2s/gen, 269s total

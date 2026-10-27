@@ -1,0 +1,22 @@
+Traceback (most recent call last):
+  File "~\neuroblock-research\selfscore\run.py", line 100, in <module>
+    h = run(a.problem, a.rule, a.sched, a.seed, a.gens, P=a.P)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "~\AppData\Local\Programs\Python\Python311\Lib\site-packages\torch\utils\_contextlib.py", line 124, in decorate_context
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "~\neuroblock-research\selfscore\run.py", line 42, in run
+    X, y, Xt, yt, K = load(problem); d = X.shape[1]
+                      ^^^^^^^^^^^^^
+  File "~\neuroblock-research\selfscore\run.py", line 36, in load
+    return f(X), torch.tensor(y, device=dev), f(Xt), torch.tensor(yt, device=dev), K
+           ^^^^
+  File "~\neuroblock-research\selfscore\run.py", line 35, in <lambda>
+    f = lambda A: torch.tensor(enc.bits(A) * 2.0 - 1.0, dtype=torch.float32, device=dev)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+torch.AcceleratorError: CUDA error: out of memory
+Search for `cudaErrorMemoryAllocation' in https://docs.nvidia.com/cuda/cuda-runtime-api/group__CUDART__TYPES.html for more information.
+CUDA kernel errors might be asynchronously reported at some other API call, so the stacktrace below might be incorrect.
+For debugging consider passing CUDA_LAUNCH_BLOCKING=1
+Compile with `TORCH_USE_CUDA_DSA` to enable device-side assertions.
+

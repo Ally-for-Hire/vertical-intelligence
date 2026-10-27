@@ -1,0 +1,105 @@
+=== RUN lbar_t | 24 problems | POPULATION 300 brains | cull rule: nnbar | cull = every brain that does worse than or ties the BEST EVER average of one small LEARNING net per problem (one gradient step per generation; the bar never drops) dies; if all die, restart from pure random; ===
+Self-modification: FREE (every random change is kept, no gate). Cull-size distribution: median 32.5%, mean 32.5%, 90th percentile 49%, mass culls (>50%) in 0.0% of generations, (>80%) in 0.0%.
+Refill of empty slots: random collections of the current brains, each slot a random mode: blend 100%.
+Input bus 16 lines + 5 task-code lines = 21 inputs, 7 outputs. Brain size cap: 96 hidden nodes. GPU memory free at start: 6.8 GB. W&B: off
+generation 0 population ready (3s); average accuracy of the random starting brains: 0.449
+gen     0 | died  290 (96.7%) | bar 0.488 (net now 0.488), restarts 0 | SURVIVAL: oldest has survived 1 cullings, mean 0.0 | kept    10/300 | score avg 0.449 best 0.512 | best brain solves  0/24 at 90%+ | brains: 23 hidden nodes avg, T=3.1 | 10 lineages, 63% distinct functions | experts: E1=22 E2cv=+10.7pp E3cv=18 | 1.0s/gen, 4s total
+    * new best score of the run: 0.512
+    !!! generation 2: EVERY brain did worse than or tied the untrained-NN bar (0.527); restart #1 from pure random
+    !!! generation 3: EVERY brain did worse than or tied the untrained-NN bar (0.538); restart #2 from pure random
+    !!! generation 4: EVERY brain did worse than or tied the untrained-NN bar (0.538); restart #3 from pure random
+    !!! generation 5: EVERY brain did worse than or tied the untrained-NN bar (0.538); restart #4 from pure random
+    !!! generation 6: EVERY brain did worse than or tied the untrained-NN bar (0.538); restart #5 from pure random
+    !!! generation 7: EVERY brain did worse than or tied the untrained-NN bar (0.538); restart #6 from pure random
+    !!! generation 8: EVERY brain did worse than or tied the untrained-NN bar (0.581); restart #7 from pure random
+    !!! generation 9: EVERY brain did worse than or tied the untrained-NN bar (0.581); restart #8 from pure random
+    !!! generation 10: EVERY brain did worse than or tied the untrained-NN bar (0.581); restart #9 from pure random
+gen    10 | died    0 (100.0%) | bar 0.581 (net now 0.546), restarts 9 | SURVIVAL: oldest has survived 0 cullings, mean 0.0 | kept   300/300 | score avg 0.449 best 0.503 | best brain solves  2/24 at 90%+ | brains: 14 hidden nodes avg, T=3.5 | 300 lineages, 88% distinct functions | experts: E1=20 E2cv=+11.7pp E3cv=16 | 0.4s/gen, 6s total
+    * NEW: problem "moons" is now solved at 90%+ by the best brain (first time in this run)
+    * NEW: problem "moons_noisy15" is now solved at 90%+ by the best brain (first time in this run)
+    !!! generation 11: EVERY brain did worse than or tied the untrained-NN bar (0.581); restart #10 from pure random
+    !!! generation 12: EVERY brain did worse than or tied the untrained-NN bar (0.581); restart #11 from pure random
+    !!! generation 13: EVERY brain did worse than or tied the untrained-NN bar (0.581); restart #12 from pure random
+    !!! generation 14: EVERY brain did worse than or tied the untrained-NN bar (0.598); restart #13 from pure random
+    !!! generation 15: EVERY brain did worse than or tied the untrained-NN bar (0.598); restart #14 from pure random
+    !!! generation 16: EVERY brain did worse than or tied the untrained-NN bar (0.615); restart #15 from pure random
+    !!! generation 17: EVERY brain did worse than or tied the untrained-NN bar (0.615); restart #16 from pure random
+    !!! generation 18: EVERY brain did worse than or tied the untrained-NN bar (0.615); restart #17 from pure random
+    !!! generation 19: EVERY brain did worse than or tied the untrained-NN bar (0.616); restart #18 from pure random
+    !!! generation 20: EVERY brain did worse than or tied the untrained-NN bar (0.616); restart #19 from pure random
+gen    20 | died    0 (100.0%) | bar 0.616 (net now 0.611), restarts 19 | SURVIVAL: oldest has survived 0 cullings, mean 0.0 | kept   300/300 | score avg 0.449 best 0.509 | best brain solves  2/24 at 90%+ | brains: 14 hidden nodes avg, T=3.7 | 300 lineages, 89% distinct functions | experts: E1=20 E2cv=+10.0pp E3cv=15 | 0.3s/gen, 8s total
+    !!! generation 21: EVERY brain did worse than or tied the untrained-NN bar (0.625); restart #20 from pure random
+    !!! generation 22: EVERY brain did worse than or tied the untrained-NN bar (0.625); restart #21 from pure random
+    !!! generation 23: EVERY brain did worse than or tied the untrained-NN bar (0.625); restart #22 from pure random
+    !!! generation 24: EVERY brain did worse than or tied the untrained-NN bar (0.625); restart #23 from pure random
+    !!! generation 25: EVERY brain did worse than or tied the untrained-NN bar (0.628); restart #24 from pure random
+    !!! generation 26: EVERY brain did worse than or tied the untrained-NN bar (0.628); restart #25 from pure random
+    !!! generation 27: EVERY brain did worse than or tied the untrained-NN bar (0.628); restart #26 from pure random
+    !!! generation 28: EVERY brain did worse than or tied the untrained-NN bar (0.628); restart #27 from pure random
+    !!! generation 29: EVERY brain did worse than or tied the untrained-NN bar (0.628); restart #28 from pure random
+    !!! generation 30: EVERY brain did worse than or tied the untrained-NN bar (0.656); restart #29 from pure random
+gen    30 | died    0 (100.0%) | bar 0.656 (net now 0.656), restarts 29 | SURVIVAL: oldest has survived 0 cullings, mean 0.0 | kept   300/300 | score avg 0.450 best 0.497 | best brain solves  0/24 at 90%+ | brains: 16 hidden nodes avg, T=3.4 | 300 lineages, 89% distinct functions | experts: E1=21 E2cv=+12.2pp E3cv=16 | 0.3s/gen, 10s total
+    !!! generation 31: EVERY brain did worse than or tied the untrained-NN bar (0.656); restart #30 from pure random
+    !!! generation 32: EVERY brain did worse than or tied the untrained-NN bar (0.656); restart #31 from pure random
+    !!! generation 33: EVERY brain did worse than or tied the untrained-NN bar (0.656); restart #32 from pure random
+    !!! generation 34: EVERY brain did worse than or tied the untrained-NN bar (0.656); restart #33 from pure random
+    !!! generation 35: EVERY brain did worse than or tied the untrained-NN bar (0.656); restart #34 from pure random
+    !!! generation 36: EVERY brain did worse than or tied the untrained-NN bar (0.659); restart #35 from pure random
+    !!! generation 37: EVERY brain did worse than or tied the untrained-NN bar (0.659); restart #36 from pure random
+    !!! generation 38: EVERY brain did worse than or tied the untrained-NN bar (0.659); restart #37 from pure random
+    !!! generation 39: EVERY brain did worse than or tied the untrained-NN bar (0.659); restart #38 from pure random
+gen    39 | died    0 (100.0%) | bar 0.659 (net now 0.634), restarts 38 | SURVIVAL: oldest has survived 0 cullings, mean 0.0 | kept   300/300 | score avg 0.450 best 0.510 | best brain solves  0/24 at 90%+ | brains: 16 hidden nodes avg, T=3.6 | 300 lineages, 88% distinct functions | experts: E1=19 E2cv=+13.0pp E3cv=15 | 0.3s/gen, 12s total
+=== RUN lbar_t finished: 40 generations, 12s ===
+=== RUN lbar_t | 24 problems | POPULATION 300 brains | cull rule: nnbar | cull = every brain that does worse than or ties the BEST EVER average of one small LEARNING net per problem (one gradient step per generation; the bar never drops) dies; if all die, restart from pure random; ===
+Self-modification: FREE (every random change is kept, no gate). Cull-size distribution: median 32.5%, mean 32.5%, 90th percentile 49%, mass culls (>50%) in 0.0% of generations, (>80%) in 0.0%.
+Refill of empty slots: random collections of the current brains, each slot a random mode: blend 100%.
+Input bus 16 lines + 5 task-code lines = 21 inputs, 7 outputs. Brain size cap: 96 hidden nodes. GPU memory free at start: 6.8 GB. W&B: off
+*** RESUMED from the state file at generation 40 (recorded 2026-10-26 21:21:34); 40 generation records restored. ***
+    !!! generation 40: EVERY brain did worse than or tied the untrained-NN bar (0.659); restart #39 from pure random
+gen    40 | died    0 (100.0%) | bar 0.659 (net now 0.638), restarts 39 | SURVIVAL: oldest has survived 0 cullings, mean 0.0 | kept   300/300 | score avg 0.451 best 0.505 | best brain solves  0/24 at 90%+ | brains: 16 hidden nodes avg, T=3.4 | 300 lineages, 87% distinct functions | experts: E1=21 E2cv=+10.9pp E3cv=15 | 1.2s/gen, 16s total
+    !!! generation 41: EVERY brain did worse than or tied the untrained-NN bar (0.659); restart #40 from pure random
+    !!! generation 42: EVERY brain did worse than or tied the untrained-NN bar (0.659); restart #41 from pure random
+    !!! generation 43: EVERY brain did worse than or tied the untrained-NN bar (0.659); restart #42 from pure random
+    !!! generation 44: EVERY brain did worse than or tied the untrained-NN bar (0.659); restart #43 from pure random
+    !!! generation 45: EVERY brain did worse than or tied the untrained-NN bar (0.659); restart #44 from pure random
+    !!! generation 46: EVERY brain did worse than or tied the untrained-NN bar (0.659); restart #45 from pure random
+    !!! generation 47: EVERY brain did worse than or tied the untrained-NN bar (0.677); restart #46 from pure random
+    !!! generation 48: EVERY brain did worse than or tied the untrained-NN bar (0.677); restart #47 from pure random
+    !!! generation 49: EVERY brain did worse than or tied the untrained-NN bar (0.677); restart #48 from pure random
+    !!! generation 50: EVERY brain did worse than or tied the untrained-NN bar (0.677); restart #49 from pure random
+gen    50 | died    0 (100.0%) | bar 0.677 (net now 0.646), restarts 49 | SURVIVAL: oldest has survived 0 cullings, mean 0.0 | kept   300/300 | score avg 0.451 best 0.539 | best brain solves  0/24 at 90%+ | brains: 15 hidden nodes avg, T=3.6 | 300 lineages, 87% distinct functions | experts: E1=20 E2cv=+13.3pp E3cv=17 | 0.3s/gen, 18s total
+    refill modes, score vs the generation average (percentage points, all generations so far): blend -0.01
+    * new best score of the run: 0.539
+    !!! generation 51: EVERY brain did worse than or tied the untrained-NN bar (0.677); restart #50 from pure random
+    !!! generation 52: EVERY brain did worse than or tied the untrained-NN bar (0.677); restart #51 from pure random
+    !!! generation 53: EVERY brain did worse than or tied the untrained-NN bar (0.677); restart #52 from pure random
+    !!! generation 54: EVERY brain did worse than or tied the untrained-NN bar (0.677); restart #53 from pure random
+    !!! generation 55: EVERY brain did worse than or tied the untrained-NN bar (0.677); restart #54 from pure random
+    !!! generation 56: EVERY brain did worse than or tied the untrained-NN bar (0.688); restart #55 from pure random
+    !!! generation 57: EVERY brain did worse than or tied the untrained-NN bar (0.688); restart #56 from pure random
+    !!! generation 58: EVERY brain did worse than or tied the untrained-NN bar (0.688); restart #57 from pure random
+    !!! generation 59: EVERY brain did worse than or tied the untrained-NN bar (0.719); restart #58 from pure random
+    !!! generation 60: EVERY brain did worse than or tied the untrained-NN bar (0.719); restart #59 from pure random
+gen    60 | died    0 (100.0%) | bar 0.719 (net now 0.701), restarts 59 | SURVIVAL: oldest has survived 0 cullings, mean 0.0 | kept   300/300 | score avg 0.450 best 0.512 | best brain solves  2/24 at 90%+ | brains: 16 hidden nodes avg, T=3.5 | 300 lineages, 90% distinct functions | experts: E1=22 E2cv=+14.2pp E3cv=19 | 0.3s/gen, 21s total
+    !!! generation 61: EVERY brain did worse than or tied the untrained-NN bar (0.719); restart #60 from pure random
+    !!! generation 62: EVERY brain did worse than or tied the untrained-NN bar (0.719); restart #61 from pure random
+    !!! generation 63: EVERY brain did worse than or tied the untrained-NN bar (0.719); restart #62 from pure random
+    !!! generation 64: EVERY brain did worse than or tied the untrained-NN bar (0.719); restart #63 from pure random
+    !!! generation 65: EVERY brain did worse than or tied the untrained-NN bar (0.719); restart #64 from pure random
+    !!! generation 66: EVERY brain did worse than or tied the untrained-NN bar (0.719); restart #65 from pure random
+    !!! generation 67: EVERY brain did worse than or tied the untrained-NN bar (0.719); restart #66 from pure random
+    !!! generation 68: EVERY brain did worse than or tied the untrained-NN bar (0.719); restart #67 from pure random
+    !!! generation 69: EVERY brain did worse than or tied the untrained-NN bar (0.719); restart #68 from pure random
+    !!! generation 70: EVERY brain did worse than or tied the untrained-NN bar (0.719); restart #69 from pure random
+gen    70 | died    0 (100.0%) | bar 0.719 (net now 0.668), restarts 69 | SURVIVAL: oldest has survived 0 cullings, mean 0.0 | kept   300/300 | score avg 0.449 best 0.499 | best brain solves  2/24 at 90%+ | brains: 15 hidden nodes avg, T=3.4 | 300 lineages, 85% distinct functions | experts: E1=20 E2cv=+7.3pp E3cv=13 | 0.3s/gen, 22s total
+    !!! generation 71: EVERY brain did worse than or tied the untrained-NN bar (0.719); restart #70 from pure random
+    !!! generation 72: EVERY brain did worse than or tied the untrained-NN bar (0.719); restart #71 from pure random
+    !!! generation 73: EVERY brain did worse than or tied the untrained-NN bar (0.719); restart #72 from pure random
+    !!! generation 74: EVERY brain did worse than or tied the untrained-NN bar (0.719); restart #73 from pure random
+    !!! generation 75: EVERY brain did worse than or tied the untrained-NN bar (0.719); restart #74 from pure random
+    !!! generation 76: EVERY brain did worse than or tied the untrained-NN bar (0.719); restart #75 from pure random
+    !!! generation 77: EVERY brain did worse than or tied the untrained-NN bar (0.719); restart #76 from pure random
+    !!! generation 78: EVERY brain did worse than or tied the untrained-NN bar (0.719); restart #77 from pure random
+    !!! generation 79: EVERY brain did worse than or tied the untrained-NN bar (0.719); restart #78 from pure random
+gen    79 | died    0 (100.0%) | bar 0.719 (net now 0.667), restarts 78 | SURVIVAL: oldest has survived 0 cullings, mean 0.0 | kept   300/300 | score avg 0.451 best 0.507 | best brain solves  2/24 at 90%+ | brains: 15 hidden nodes avg, T=3.5 | 300 lineages, 87% distinct functions | experts: E1=22 E2cv=+14.7pp E3cv=18 | 0.3s/gen, 24s total
+=== RUN lbar_t finished: 80 generations, 25s ===

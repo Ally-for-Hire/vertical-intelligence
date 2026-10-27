@@ -1,0 +1,33 @@
+budget 128000 samples, tau 0.9.  L = 0.95 x labelled-MLP accuracy.  Lower is better for samples/cpu; accuracy higher.
+problem        L | model      final acc  samples->L  reach  cpu s->L  params | verdict
+parity4     0.95 | pg         0.775+-0.142      128000   2/10      3.80    1282 | 
+parity4     0.95 | q          1.000+-0.000        1200  10/10      0.04   17410 | 
+parity4     0.95 | agentE     1.000+-0.000         800  10/10      0.02     441 | acc OK samples OK cpu OK
+parity6     0.72 | pg         0.661+-0.090      128000   1/10      3.91    1346 | 
+parity6     0.72 | q          1.000+-0.000        1280  10/10      0.05   17666 | 
+parity6     0.72 | agentE     1.000+-0.000         800  10/10      0.02     773 | acc OK samples OK cpu OK
+majority5   0.95 | pg         0.994+-0.020         480  10/10      0.02    1314 | 
+majority5   0.95 | q          1.000+-0.000         480  10/10      0.02   17538 | 
+majority5   0.95 | agentE     1.000+-0.000         480  10/10      0.02     486 | acc OK samples OK cpu OK
+mux6        0.95 | pg         0.870+-0.116      128000   4/10      4.50   17666 | 
+mux6        0.95 | q          1.000+-0.000        1520  10/10      0.04   17666 | 
+mux6        0.95 | agentE     1.000+-0.000         640  10/10      0.02     886 | acc OK samples OK cpu OK
+adder2      0.95 | pg         0.856+-0.059      128000   0/10      4.19    1447 | 
+adder2      0.95 | q          1.000+-0.000        2240  10/10      0.06   18055 | 
+adder2      0.95 | agentE     1.000+-0.000         800  10/10      0.03    1780 | acc OK samples OK cpu OK
+quadrants   0.86 | pg         0.770+-0.101      128000   3/10      4.09    1666 | 
+quadrants   0.86 | q          0.906+-0.013        1920  10/10      0.05    1666 | 
+quadrants   0.86 | agentE     0.904+-0.013         480  10/10      0.02    5972 | acc OK samples OK cpu OK
+moons       0.94 | pg         0.993+-0.003        2320  10/10      0.06    1666 | 
+moons       0.94 | q          0.993+-0.002         800  10/10      0.02    1666 | 
+moons       0.94 | agentE     0.994+-0.001         480  10/10      0.02     507 | acc OK samples OK cpu OK
+circles     0.95 | pg         0.999+-0.001        2240  10/10      0.08    1666 | 
+circles     0.95 | q          0.999+-0.001        1120  10/10      0.03    1666 | 
+circles     0.95 | agentE     0.999+-0.001         480  10/10      0.00     531 | acc OK samples OK cpu OK
+spirals     0.86 | pg         0.840+-0.063      128000   4/10      3.98    1666 | 
+spirals     0.86 | q          0.912+-0.008        5600  10/10      0.20   18946 | 
+spirals     0.86 | agentE     0.914+-0.009         960  10/10      0.02    5826 | acc OK samples OK cpu OK
+blobs3      0.90 | pg         0.944+-0.004         640  10/10      0.02    1699 | 
+blobs3      0.90 | q          0.945+-0.002         640  10/10      0.02    1699 | 
+blobs3      0.90 | agentE     0.946+-0.004         480  10/10      0.02    8683 | acc OK samples OK cpu OK
+PURELY BETTER on every problem: True   (11.9 min)

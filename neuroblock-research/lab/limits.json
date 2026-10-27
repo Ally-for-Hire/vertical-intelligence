@@ -1,0 +1,5 @@
+{
+ "max_workers": 1,
+ "priority_cap": "low",
+ "note": "The user wants the computer free for games and other work. Nothing in the Lab may use more than max_workers threads or a higher priority than priority_cap. Change only when the user says so."
+}

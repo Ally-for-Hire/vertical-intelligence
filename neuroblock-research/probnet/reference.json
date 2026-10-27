@@ -1,0 +1,342 @@
+{
+ "AND": {
+  "chance": 0.747,
+  "mlp": 1.0,
+  "ceiling": 1.0
+ },
+ "OR": {
+  "chance": 0.764,
+  "mlp": 1.0,
+  "ceiling": 1.0
+ },
+ "XOR": {
+  "chance": 0.505,
+  "mlp": 1.0,
+  "ceiling": 1.0
+ },
+ "NAND": {
+  "chance": 0.784,
+  "mlp": 1.0,
+  "ceiling": 1.0
+ },
+ "NOR": {
+  "chance": 0.759,
+  "mlp": 1.0,
+  "ceiling": 1.0
+ },
+ "XNOR": {
+  "chance": 0.505,
+  "mlp": 1.0,
+  "ceiling": 1.0
+ },
+ "A AND NOT B": {
+  "chance": 0.733,
+  "mlp": 1.0,
+  "ceiling": 1.0
+ },
+ "IMPLIES": {
+  "chance": 0.718,
+  "mlp": 1.0,
+  "ceiling": 1.0
+ },
+ "NOT A": {
+  "chance": 0.51,
+  "mlp": 1.0,
+  "ceiling": 1.0
+ },
+ "MAJ3": {
+  "chance": 0.513,
+  "mlp": 1.0,
+  "ceiling": 1.0
+ },
+ "PARITY3": {
+  "chance": 0.503,
+  "mlp": 1.0,
+  "ceiling": 1.0
+ },
+ "MUX (a picks b or c)": {
+  "chance": 0.53,
+  "mlp": 1.0,
+  "ceiling": 1.0
+ },
+ "AND3": {
+  "chance": 0.88,
+  "mlp": 1.0,
+  "ceiling": 1.0
+ },
+ "OR3": {
+  "chance": 0.872,
+  "mlp": 1.0,
+  "ceiling": 1.0
+ },
+ "EXACTLY ONE": {
+  "chance": 0.648,
+  "mlp": 1.0,
+  "ceiling": 1.0
+ },
+ "A XOR (B AND C)": {
+  "chance": 0.518,
+  "mlp": 1.0,
+  "ceiling": 1.0
+ },
+ "(A AND B) OR C": {
+  "chance": 0.627,
+  "mlp": 1.0,
+  "ceiling": 1.0
+ },
+ "PARITY4": {
+  "chance": 0.513,
+  "mlp": 1.0,
+  "ceiling": 1.0
+ },
+ "PARITY5": {
+  "chance": 0.513,
+  "mlp": 1.0,
+  "ceiling": 1.0
+ },
+ "MAJ5": {
+  "chance": 0.512,
+  "mlp": 1.0,
+  "ceiling": 1.0
+ },
+ "3 OF 6": {
+  "chance": 0.639,
+  "mlp": 1.0,
+  "ceiling": 1.0
+ },
+ "MUX 2-select": {
+  "chance": 0.512,
+  "mlp": 1.0,
+  "ceiling": 1.0
+ },
+ "ALL EQUAL 4": {
+  "chance": 0.873,
+  "mlp": 1.0,
+  "ceiling": 1.0
+ },
+ "PALINDROME 4": {
+  "chance": 0.754,
+  "mlp": 1.0,
+  "ceiling": 1.0
+ },
+ "EVEN ONES of 6": {
+  "chance": 0.509,
+  "mlp": 1.0,
+  "ceiling": 1.0
+ },
+ "XOR + 10% noise": {
+  "chance": 0.515,
+  "mlp": 0.906,
+  "ceiling": 0.9
+ },
+ "MAJ5 + 10% noise": {
+  "chance": 0.506,
+  "mlp": 0.9,
+  "ceiling": 0.9
+ },
+ "AND of 2, 6 junk bits": {
+  "chance": 0.766,
+  "mlp": 1.0,
+  "ceiling": 1.0
+ },
+ "XOR of 2, 6 junk bits": {
+  "chance": 0.501,
+  "mlp": 1.0,
+  "ceiling": 1.0
+ },
+ "MAJ3, 5 junk bits": {
+  "chance": 0.518,
+  "mlp": 1.0,
+  "ceiling": 1.0
+ },
+ "ONE bit, 10 junk bits": {
+  "chance": 0.51,
+  "mlp": 1.0,
+  "ceiling": 1.0
+ },
+ "COMPARE 2-bit (<,=,>)": {
+  "chance": 0.77,
+  "mlp": 1.0,
+  "ceiling": 1.0
+ },
+ "MAX of two 2-bit": {
+  "chance": 0.415,
+  "mlp": 1.0,
+  "ceiling": 1.0
+ },
+ "SUM >= 3 of two 2-bit": {
+  "chance": 0.615,
+  "mlp": 1.0,
+  "ceiling": 1.0
+ },
+ "COUNT ONES of 4": {
+  "chance": 0.364,
+  "mlp": 1.0,
+  "ceiling": 1.0
+ },
+ "ADD two 2-bit (7 sums)": {
+  "chance": 0.253,
+  "mlp": 1.0,
+  "ceiling": 1.0
+ },
+ "HALF PLANE": {
+  "chance": 0.503,
+  "mlp": 0.916,
+  "ceiling": 1.0
+ },
+ "DIAGONAL": {
+  "chance": 0.506,
+  "mlp": 0.917,
+  "ceiling": 1.0
+ },
+ "XOR QUADRANTS": {
+  "chance": 0.523,
+  "mlp": 0.818,
+  "ceiling": 1.0
+ },
+ "CHECKERBOARD 4x4": {
+  "chance": 0.516,
+  "mlp": 0.697,
+  "ceiling": 1.0
+ },
+ "CIRCLE": {
+  "chance": 0.689,
+  "mlp": 0.938,
+  "ceiling": 1.0
+ },
+ "RING of 3 bands": {
+  "chance": 0.529,
+  "mlp": 0.757,
+  "ceiling": 1.0
+ },
+ "STRIPES": {
+  "chance": 0.623,
+  "mlp": 1.0,
+  "ceiling": 1.0
+ },
+ "DIAGONAL BAND": {
+  "chance": 0.646,
+  "mlp": 0.822,
+  "ceiling": 1.0
+ },
+ "FOUR CORNERS": {
+  "chance": 0.259,
+  "mlp": 0.821,
+  "ceiling": 1.0
+ },
+ "HALF PLANE + 10% noise": {
+  "chance": 0.531,
+  "mlp": 0.818,
+  "ceiling": 0.9
+ },
+ "3D OCTANT PARITY": {
+  "chance": 0.51,
+  "mlp": 0.77,
+  "ceiling": 1.0
+ },
+ "BLOBS 2 classes": {
+  "chance": 0.516,
+  "mlp": 0.97,
+  "ceiling": 1.0
+ },
+ "BLOBS 3 classes": {
+  "chance": 0.347,
+  "mlp": 0.794,
+  "ceiling": 1.0
+ },
+ "BLOBS 4 classes in 4D": {
+  "chance": 0.264,
+  "mlp": 0.935,
+  "ceiling": 1.0
+ },
+ "TWO MOONS": {
+  "chance": 0.521,
+  "mlp": 0.986,
+  "ceiling": 1.0
+ },
+ "SPIRAL arms": {
+  "chance": 0.509,
+  "mlp": 0.898,
+  "ceiling": 1.0
+ },
+ "THRESHOLD 6 inputs": {
+  "chance": 0.679,
+  "mlp": 1.0,
+  "ceiling": 1.0
+ },
+ "THRESHOLD 8 inputs": {
+  "chance": 0.904,
+  "mlp": 1.0,
+  "ceiling": 1.0
+ },
+ "THRESHOLD 3 of 8 matter": {
+  "chance": 0.763,
+  "mlp": 1.0,
+  "ceiling": 1.0
+ },
+ "3x3 LINE: row/col/none": {
+  "chance": 0.358,
+  "mlp": 0.991,
+  "ceiling": 1.0
+ },
+ "5x5 SHAPES plus/box/X (5% noise)": {
+  "chance": 0.361,
+  "mlp": 1.0,
+  "ceiling": 0.95
+ },
+ "LEFT vs RIGHT heavier (4x4)": {
+  "chance": 0.513,
+  "mlp": 1.0,
+  "ceiling": 1.0
+ },
+ "MIRROR SYMMETRIC 3x3?": {
+  "chance": 0.562,
+  "mlp": 1.0,
+  "ceiling": 1.0
+ },
+ "CORNERS ON count (3 classes)": {
+  "chance": 0.397,
+  "mlp": 1.0,
+  "ceiling": 1.0
+ },
+ "NEXT: pattern 110": {
+  "chance": 0.683,
+  "mlp": 1.0,
+  "ceiling": 1.0
+ },
+ "NEXT: pattern 1000": {
+  "chance": 0.723,
+  "mlp": 1.0,
+  "ceiling": 1.0
+ },
+ "NEXT: pattern 10110": {
+  "chance": 0.599,
+  "mlp": 1.0,
+  "ceiling": 1.0
+ },
+ "NEXT: alternate 01": {
+  "chance": 0.5,
+  "mlp": 1.0,
+  "ceiling": 1.0
+ },
+ "NEXT = XOR of last two": {
+  "chance": 0.529,
+  "mlp": 1.0,
+  "ceiling": 1.0
+ },
+ "NEXT = bit from 3 ago": {
+  "chance": 0.514,
+  "mlp": 1.0,
+  "ceiling": 1.0
+ },
+ "NEXT = majority of last 3": {
+  "chance": 0.529,
+  "mlp": 1.0,
+  "ceiling": 1.0
+ },
+ "NEXT = parity of window of 4": {
+  "chance": 0.511,
+  "mlp": 1.0,
+  "ceiling": 1.0
+ }
+}

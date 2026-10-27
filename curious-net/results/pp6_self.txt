@@ -1,0 +1,6 @@
+arm    | final test error (median) | ratio to wide (median) | ratio to oracle (median) | prequential | parts (median, range) | update compute vs wide
+small  | 0.2099 | 1.15 | 22.78 | 0.1849 | 1 (1-1) | 0.17
+wide   | 0.1824 | 1.00 | 17.90 | 0.1561 | 1 (1-1) | 1.00
+oracle | 0.0088 | 0.06 | 1.00 | 0.0417 | 6 (6-6) | 0.17
+self   | 0.2110 | 1.15 | 19.90 | 0.1870 | 10 (4-14) | 0.17
+done 6 s

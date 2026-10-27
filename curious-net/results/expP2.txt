@@ -1,0 +1,5 @@
+validation first-1000 error (wide group-lasso grid): {"('gl', 0.3)": 0.61, "('gl', 1.0)": 0.617, "('gl', 3.0)": 0.825, "('gl', 10.0)": 0.993, "('gl', 30.0)": 1.008, "('gl', 100.0)": 1.006, "('none', 0.0)": 0.626}
+chosen group-lasso 0.3
+training data done 46 s
+seq priors fitted 228 s
+done 241 s

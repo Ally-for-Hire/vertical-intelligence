@@ -1,0 +1,39 @@
+{
+ "mode": "pilot",
+ "seconds": 2.3,
+ "result": {
+  "B0": {
+   "deaths_per_10k": 60.0,
+   "post_swap_deaths": 12,
+   "food": 203.4015633746175,
+   "valence_acc": 0.8904109589041096,
+   "netharm_accept": 0.9436619718309859,
+   "need_slope": 0.013513513513513487
+  },
+  "SUM": {
+   "deaths_per_10k": 4.0,
+   "post_swap_deaths": 0,
+   "food": 127.11822889816477,
+   "valence_acc": 0.9863013698630136,
+   "netharm_accept": 0.28169014084507044,
+   "need_slope": 0.19594594594594594
+  },
+  "HOMEO": {
+   "deaths_per_10k": 14.0,
+   "post_swap_deaths": 4,
+   "food": 53.66423517116215,
+   "valence_acc": 0.773972602739726,
+   "netharm_accept": 0.23943661971830985,
+   "need_slope": 0.7702702702702703,
+   "manip_corr_homeo_vs_sum": 0.4478440061142312
+  },
+  "RANDOM": {
+   "deaths_per_10k": 94.0,
+   "post_swap_deaths": 15,
+   "food": -4.077071534456859,
+   "valence_acc": 0.6575342465753424,
+   "netharm_accept": 0.4084507042253521,
+   "need_slope": -0.03378378378378377
+  }
+ }
+}

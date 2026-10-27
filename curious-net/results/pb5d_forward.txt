@@ -1,0 +1,10 @@
+controller | early | late | late x oracle (medians)
+model_free | 0.388 | 0.366 | 1.45
+focused_1  | 0.353 | 0.291 | 1.39
+full_1     | 0.493 | 0.432 | 1.83
+full_3     | 0.493 | 0.341 | 1.88
+fullL1_1   | 0.413 | 0.372 | 1.76
+fullL1_3   | 0.449 | 0.396 | 1.90
+oracle     | 0.175 | 0.175 | 1.00
+focused_1/full_3 late 0.82 | focused_1/model_free early 0.77 | fullL1_3/full_3 late 0.92 | fullL1_1/focused_1 late 1.07
+done 87 s

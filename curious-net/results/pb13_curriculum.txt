@@ -1,0 +1,5 @@
+curriculum total cost median 18402 | hidden blocks recovered after 20 tasks median 5 | unsolved tasks 0.0
+random     total cost median 47277 | hidden blocks recovered after 20 tasks median 5 | unsolved tasks 0.1
+anti       total cost median 101622 | hidden blocks recovered after 20 tasks median 4 | unsolved tasks 0.3
+curriculum / random total: median 0.42 | anti / random: median 2.22 | blocks-after-20 difference curriculum - random: median 0
+done 6 s

@@ -1,0 +1,13 @@
+=== RUN bigtest | 24 problems | POPULATION 1000 brains | cull draw each generation ~ uniform(0, 0.9); no wipes possible: at least 100 brains survive every generation ===
+Input bus 16 lines + 5 task-code lines = 21 inputs, 7 outputs. Brain size cap: 96 hidden nodes. GPU memory free at start: 6.8 GB
+=== RUN bigtest | 24 problems | POPULATION 1000 brains | cull draw each generation ~ uniform(0, 0.9); no wipes possible: at least 100 brains survive every generation ===
+Input bus 16 lines + 5 task-code lines = 21 inputs, 7 outputs. Brain size cap: 96 hidden nodes. GPU memory free at start: 6.8 GB
+generation 0 population ready (1s); average accuracy of the random starting brains: 0.452
+gen     0 | last cull  44.7% -> kept   553/1000 | score avg 0.452 best 0.534 | best brain solves  0/24 at 90%+ | brains: 0 hidden nodes avg, T=2.0 | 528 lineages | 0.7s/gen, 2s total, GPU 0.9 GB peak
+    * new best score of the run: 0.534
+gen     2 | last cull   8.0% -> kept   920/1000 | score avg 0.482 best 0.544 | best brain solves  0/24 at 90%+ | brains: 1 hidden nodes avg, T=2.0 | 153 lineages | 0.3s/gen, 2s total, GPU 0.9 GB peak
+gen     4 | last cull  27.7% -> kept   723/1000 | score avg 0.472 best 0.544 | best brain solves  0/24 at 90%+ | brains: 2 hidden nodes avg, T=2.0 | 67 lineages | 0.4s/gen, 3s total, GPU 0.9 GB peak
+gen     5 | last cull  57.1% -> kept   429/1000 | score avg 0.496 best 0.559 | best brain solves  1/24 at 90%+ | brains: 3 hidden nodes avg, T=2.0 | 19 lineages | 0.4s/gen, 3s total, GPU 0.9 GB peak
+    * NEW: problem "majority5" is now solved at 90%+ by the best brain (first time in this run)
+    * new best score of the run: 0.559
+=== RUN bigtest finished: 6 generations, 4s ===

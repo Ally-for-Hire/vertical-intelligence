@@ -1,0 +1,54 @@
+[
+ {
+  "src": "projects/neuroblock/graphs/tornado_acc.png",
+  "caption": "Variable importance for accuracy after drift (%), all four task conditions (colour = task group)."
+ },
+ {
+  "src": "projects/neuroblock/graphs/tornado_t.png",
+  "caption": "Variable importance for thought time (\u00b5s), all four task conditions (colour = task group)."
+ },
+ {
+  "src": "projects/neuroblock/graphs/tornado_n.png",
+  "caption": "Variable importance for neuron count, all four task conditions (colour = task group)."
+ },
+ {
+  "src": "projects/neuroblock/graphs/tornado_F.png",
+  "caption": "Variable importance for fitness (accuracy per effort), all four task conditions (colour = task group)."
+ },
+ {
+  "src": "projects/neuroblock/graphs/curves_medium_acc.png",
+  "caption": "Medium task \u00b7 shift drift: Accuracy after drift (%) versus every variable, one at a time."
+ },
+ {
+  "src": "projects/neuroblock/graphs/curves_medium_t.png",
+  "caption": "Medium task \u00b7 shift drift: Thought time (\u00b5s) versus every variable, one at a time."
+ },
+ {
+  "src": "projects/neuroblock/graphs/curves_medium_n.png",
+  "caption": "Medium task \u00b7 shift drift: Neuron count versus every variable, one at a time."
+ },
+ {
+  "src": "projects/neuroblock/graphs/curves_hard_acc.png",
+  "caption": "Hard task \u00b7 shift drift: Accuracy after drift (%) versus every variable, one at a time."
+ },
+ {
+  "src": "projects/neuroblock/graphs/curves_hard_t.png",
+  "caption": "Hard task \u00b7 shift drift: Thought time (\u00b5s) versus every variable, one at a time."
+ },
+ {
+  "src": "projects/neuroblock/graphs/curves_hard_n.png",
+  "caption": "Hard task \u00b7 shift drift: Neuron count versus every variable, one at a time."
+ },
+ {
+  "src": "projects/neuroblock/graphs/consistency_heatmap.png",
+  "caption": "Effect size of every variable in each of the four task conditions (bold white = beyond noise)."
+ },
+ {
+  "src": "projects/neuroblock/graphs/tradeoff_speed_accuracy.png",
+  "caption": "Every tested setting as a point: speed versus accuracy, bubble size = neurons, orange line = best accuracy at each speed."
+ },
+ {
+  "src": "projects/neuroblock/graphs/solo_features.png",
+  "caption": "What each feature does when it is the only thing switched on (versus a bare brain)."
+ }
+]

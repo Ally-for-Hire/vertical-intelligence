@@ -1,0 +1,10 @@
+48 pre-registered controllable worlds (seeds 9000..9109)
+controller     | early (0-1000) | late (2000-3000) | late / oracle (median)
+random         | 0.657 | 0.667 | 2.97
+model_free     | 0.490 | 0.424 | 2.00
+model_based_1  | 0.342 | 0.229 | 1.53
+model_based_3  | 0.460 | 0.394 | 2.16
+oracle         | 0.151 | 0.141 | 1.00
+model_based_3 / model_free late: median 1.00
+model_based_3 / model_free early: median 1.04
+done 67 s

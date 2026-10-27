@@ -1,0 +1,6 @@
+none   median cost first 10: 237 | last 20: 74
+right  median cost first 10: 131 | last 20: 64
+wrong  median cost first 10: 311 | last 20: 84
+right-prior advantage (none / right): first 10 median 1.59, last 20 median 1.04 | first-10 cost cut 37%
+wrong / none first 10: median 1.49
+done 2 s

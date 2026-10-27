@@ -1,0 +1,10 @@
+structured universe:
+   flat     median cost first 10 tasks 374 | last 20 tasks 423 | unsolved 0.0/60 | vocabulary 6 | hidden blocks recovered 0/6
+   library  median cost first 10 tasks 251 | last 20 tasks 94 | unsolved 0.0/60 | vocabulary 26 | hidden blocks recovered 5/6
+   library / flat cost, last 20 tasks: median 0.244
+control universe:
+   flat     median cost first 10 tasks 292 | last 20 tasks 322 | unsolved 0.0/60 | vocabulary 6 | hidden blocks recovered 0/6
+   library  median cost first 10 tasks 309 | last 20 tasks 206 | unsolved 0.0/60 | vocabulary 27 | hidden blocks recovered 4/6
+   library / flat cost, last 20 tasks: median 0.650
+new-domain tasks (3 blocks): flat median cost 1265, library 288, ratio median 0.151
+done 7 s

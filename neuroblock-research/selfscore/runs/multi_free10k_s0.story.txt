@@ -1,0 +1,12 @@
+=== RUN free10k_s0 | 24 problems | POPULATION 10000 brains | cull draw each generation ~ uniform(0, 0.9); no wipes possible: at least 1000 brains survive every generation ===
+Self-modification: FREE (every random change is kept, no gate). Cull-size distribution: median 1.4%, mean 12.8%, 90th percentile 47%, mass culls (>50%) in 9.2% of generations, (>80%) in 2.0%.
+Input bus 16 lines + 5 task-code lines = 21 inputs, 7 outputs. Brain size cap: 96 hidden nodes. GPU memory free at start: 6.6 GB
+generation 0 population ready (1s); average accuracy of the random starting brains: 0.450
+gen     0 | last cull   1.3% -> kept  9866/10000 | score avg 0.450 best 0.542 | best brain solves  1/24 at 90%+ | brains: 0 hidden nodes avg, T=2.0 | 9739 lineages | 3.2s/gen, 4s total, GPU 1.0 GB peak
+    * NEW: problem "circles" is now solved at 90%+ by the best brain (first time in this run)
+    * new best score of the run: 0.542
+gen    10 | last cull   0.2% -> kept  9984/10000 | score avg 0.479 best 0.569 | best brain solves  0/24 at 90%+ | brains: 4 hidden nodes avg, T=2.2 | 1730 lineages | 4.4s/gen, 43s total, GPU 1.0 GB peak
+    * new best score of the run: 0.569
+gen    20 | last cull   9.0% -> kept  9097/10000 | score avg 0.485 best 0.561 | best brain solves  0/24 at 90%+ | brains: 7 hidden nodes avg, T=2.1 | 277 lineages | 7.2s/gen, 96s total, GPU 1.4 GB peak
+gen    30 | last cull   0.1% -> kept  9993/10000 | score avg 0.503 best 0.570 | best brain solves  1/24 at 90%+ | brains: 14 hidden nodes avg, T=1.6 | 18 lineages | 7.4s/gen, 169s total, GPU 1.4 GB peak
+    * NEW: problem "moons_noisy15" is now solved at 90%+ by the best brain (first time in this run)

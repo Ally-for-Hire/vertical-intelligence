@@ -1,0 +1,86 @@
+# Log: emergent neural-net behaviour from random weights + culling (every attempt, failures included)
+
+## Attempt 0 (2026-10-26): baseline comparison, target 0.90 test accuracy, 1 seed (smoke test)
+2-8-2 tanh nets (42 parameters), P=1000, cull 50%, self-adaptive noise. Evolution reached 0.900 test after 8 generations (8,000 network evaluations); BUT pure random search reached 0.900 after 5,000 random networks (and the very first 1,000 random networks already contained one at 0.764); gradient descent reached 0.907 after 19,200 training samples.
+**Failure of the test design, not of the method:** with N(0,1) random weights, a 2-8-2 tanh net is often already an XOR-like detector, so 0.90 does not separate culling from luck. Amendment (made before any further run): the target is raised to **0.95** (within 0.5 points of the best possible 0.955); the comparison with random search decides whether culling adds anything.
+
+## Attempt 1 (2026-10-26): target 0.95, 5 seeds, all three methods (python emergent/evolve.py --tag t095 --target 0.95) -> RESULTS_t095.md
+* Linear classifier on the raw coordinates (reference, Adam on logistic loss): **0.515 test** -> the problem cannot be solved without hidden units.
+* **Evolution (pure random N(0,1) weights and biases, self-adaptive random noise on copies, 50% cull, P=1000): solved 5/5 seeds**, test 0.950-0.956, after 26-65 generations = 26,000-65,000 network evaluations (median 42,000), 0.1-0.6 s each.
+* **Random search (same random networks, no culling): 0/5 seeds** within 2,000,000 networks each; best found 0.927-0.940.
+* Gradient descent (same 2-8-2 net, Adam): 5/5, 12,800-43,200 training samples (median 39,200).
+**SUCCESS on the pre-registered criterion:** neural-net behaviour (0.95 on a problem where linear models get 0.515) emerges from random weights + internal randomness + external culling in every seed, with at least 30x fewer evaluations than random search, which never reached it.
+
+## Attempt 2 (2026-10-26): efficiency of the culling mechanism (population size x cull fraction, 5 seeds each, up to 4,000 generations)
+| P | cull 50% | cull 80% | cull 90% |
+|---|---|---|---|
+| 50 | 2/5, median 3,250 | 1/5, 1,650 | 4/5, 1,400 |
+| 100 | **5/5, median 7,100** (4,000-8,100) | 4/5, 2,600 | 3/5, 1,500 |
+| 200 | 5/5, 11,600 | 3/5, 5,000 | 4/5, 2,900 |
+| 1000 | 5/5, 42,000 | 5/5, 12,000 | **5/5, median 10,000** (7,000-14,000) |
+(network evaluations to reach 0.95 test accuracy; "x/5" = seeds that reached it)
+* Most efficient setting that works in every seed: **P=100, cull 50%: median 7,100 network evaluations** (about 71 generations), i.e. at least **280x fewer evaluations than random search** (which failed with 2,000,000). P=1000 with a 90% cull: 10,000, also 5/5.
+* Small populations with hard culls are fastest when they succeed but fail in some seeds (diversity runs out: the same failure mode as in the previous series, in miniature).
+* **Honest comparison with gradient descent:** evolution at its best uses 7,100 networks x 2,000 training points = 14.2 million sample-forward passes; gradient descent uses ~39,000 samples (forward + backward). Culling is far more efficient than random search but still ~100-400x less sample-efficient than gradient descent on this problem.
+
+## Attempt 3 (2026-10-26): user's variation rule "undo + barred change types" (method 'undo')
+User: "if a net performs worse i want the previous change to its weights and biases to be undone and a new one to be done, and that specific type of evolution (ie neuron x decrease) barred until all others have been attempted on that specific net". Implemented: a change type = one weight or bias moved up or down (84 types for a 2-8-2 net) by |N(0, sigma)| (sigma random per net, inherited); one change per net per generation; worse training accuracy -> undone and the type barred for that net; when all 84 are barred the list clears; equal/better -> kept. External cull as before; culled slots get exact copies of random survivors (fresh list). Snapshot of the previous evolve.py: evolve_v1_snapshot.py.
+
+| setting (5 seeds, target 0.95 test) | noise on every weight (attempt 1) | undo + barred types |
+|---|---|---|
+| P=100, cull 50% | 5/5, median 7,100 evaluations | 2/5, median 10,250 (others ended at ~0.94) |
+| P=1000, cull 90% | 5/5, median 10,000 | 2/5, median 13,500 (others ~0.94) |
+
+**Worse than plain noise:** changing one number at a time and refusing every worsening step is a greedy coordinate search; it climbs quickly but gets stuck where no single weight change helps (failing seeds stall at ~0.94 test), whereas noise on all weights at once can cross such points.
+
+## Attempt 4 (2026-10-26): user's "separate stack" rule (method 'stack'; previous code evolve_v2_snapshot.py)
+User: "for everything that failed after an evolution, add it to a SEPARATE stack and then continuously modify it until everything has been tried and no improved performance happens, at which point it is culled." Implemented on top of attempt 3: a net whose change made it worse (undone, type barred) leaves the main population for the stack; each generation every stacked net tries one untried change type; a change that does not improve on its accuracy at entry is undone and barred; an improvement sends the net back to the main population; a net that has tried all 84 types without improving is culled. The main population keeps its external cull and is refilled to P with copies of its survivors. Stack nets are evaluated every generation and counted.
+* P=100, cull 50%, 5 seeds: **4/5 solved**, median 13,911 evaluations (2,972-68,907); seed 2 got stuck at 0.726 test for 4,000 generations (671,352 evaluations).
+* P=1000, cull 90%: seeds 0 and 1 solved (22,404 and 41,086 evaluations, 9 and 13 generations); seeds 2-4 did not finish in 25+ minutes: the stack grows without limit (about 20% of the main population fails every generation and each failed net lives up to 84 generations on the stack, i.e. thousands to ~17,000 extra nets evaluated every generation), so each generation becomes very slow.
+**Result:** the stack rescues some nets and occasionally finds the target very fast (2,972 evaluations, the fastest single run so far), but on average it costs more evaluations than plain noise (median 13,911 vs 7,100), is less reliable (4/5 vs 5/5), and its cost explodes with population size. Best mechanism so far remains attempt 1/2: noise on every weight + 50% cull, P=100 (5/5, median 7,100).
+
+
+# Series 2 (2026-10-26): reach gradient-descent SPEED with blind variation + external culling (emergent/search.py, results emergent/runs/search_results.json)
+User's MAIN RULE: "nothing can be directly guided by task performance internally ... we want a purely random system forced to continuously improve". So task performance is used ONLY by the external cull (who lives/dies) and to pick which net to report; every change inside a net is blind random noise. Attempts 3-4 ('undo', 'stack') break this rule (the net itself keeps/undoes changes by performance) and are excluded from this series.
+Speed is counted in sample-forward-equivalents (one training sample through one net forward = 1; a backward pass = 2 more). Bar: gradient descent (Adam, batches of 32, 2-8-2 net): median **115,680** (5/5 seeds; 37,920-129,120). Success = 5/5 seeds reach 0.95 test accuracy at median cost <= the bar. Budget per run 1.5-3 million.
+
+## Round 1: smaller scoring batches (P 10, B 16-64, culls 50/80%)
+Scoring each net on a small shared batch B instead of all 2,000 points (cost per generation = P x B): 0-1/5 seeds within 3,000,000. The 0/1-accuracy score on a few samples is too noisy to tell good nets apart. Stopped early.
+## Round 2: lifetime-average score (external: the cull uses each net's average over every batch it was scored on), P 20-100, B 32-128
+Best 3/5; most configurations 1-2/5 within 1,500,000 (~13x the bar). Lifetime averaging alone is not enough.
+## Round 3: smooth external score + network width + blind recombination (48 configurations)
+* **Key finding:** grading by the mean log-probability of the right answer ('ll') instead of fraction correct: best **5/5 seeds at median 201,600 (1.7x gradient)** with P=50, B=64, H=8, no recombination; 5/5 at 230,400 (2.0x) with blind averaging of two random survivors; 3/5 at 125,440 (1.1x) with P=20.
+* Every 0/1-accuracy configuration stayed at 0-2/5 (13x). Width 4 was worse than 8 in every pairing. Averaging all survivors ('centroid') did not help.
+
+## Round 4: width, batch, cull (48 configurations, smooth score)
+Wider nets help evolution but help gradient descent just as much, so the fair bar is gradient descent at the SAME width: H=8 115,680; H=16 47,040; H=32 22,560 (5 seeds). Best evolution (5/5 seeds): H=8 134,400 (1.16x), H=16 99,840 (2.1x), H=32 46,080 (2.0x; P=20, B=64, cull 80%).
+## Round 5: fewer nets, harder culls, heavy-tailed (Cauchy) noise (32 configurations)
+Best at the same width (5 seeds): H=8, P=20, B=32, cull 80%, Gaussian noise: 5/5 at median 55,040 = 0.48x gradient (apparently FASTER than gradient). H=32 stayed ~2x slower than gradient at H=32. Cauchy noise: no consistent gain.
+## Confirmation on 20 NEW seeds (100-119) -- the 5-seed winners were partly luck
+* Gradient descent H=8, Adam: default learning rate 0.001: median **81,120**; lr 0.003: 27,600; lr 0.01: 10,800; **lr 0.03: 5,520** (all 20/20).
+* Evolution, best three settings from round 5: P=20 B=32 cull 80%: 20/20, median **142,400 (1.76x default Adam)**; P=20 B=64 cull 80% Cauchy: 20/20, 157,440; P=10 B=64 cull 90%: 17/20, 123,840.
+**Honest status:** with 5 seeds the search picked lucky winners (winner's curse); on fresh seeds the best blind-variation + culling method is ~1.8x slower than gradient descent at its default settings, and ~26x slower than gradient descent with a tuned learning rate. Gradient descent got only a 4-value learning-rate check, while evolution was tuned over ~150 settings, so the tuned-Adam number is the fair bar. From here on, settings are judged on 20 seeds.
+
+## Round 6: 36 settings judged on 20 seeds each (seeds 200-219), smaller random start (emergent/round6.py)
+Gradient on the same seeds: default Adam 99,120; tuned Adam (lr 0.03) 6,240. Best: P=40, B=16, cull 80%, random start scale 0.5: 20/20, median 64,000; P=20, B=32, cull 80%, start 0.5: 20/20, 70,080. A smaller random starting scale (0.5) helped in every pairing.
+**Confirmation on 20 further NEW seeds (300-319):** default Adam 75,120; tuned Adam 5,520. P=40 B=16 cull 80% start 0.5: **20/20, median 67,840 = 0.90x default Adam** (IQR 46,240-123,360); P=20 B=32: 20/20, 74,240 = 0.99x.
+**MILESTONE:** blind random variation + external culling (smooth score, lifetime average) now matches gradient descent at PyTorch's default settings on fresh seeds. It is still ~12x slower than gradient descent with a tuned learning rate (5,520).
+
+## Series 2 closed (2026-10-26): user set the goal as "matching default gradient descent" -> reached
+`emergent/confirm.py` reproduces the confirmation exactly (default Adam 75,120; tuned Adam 5,520; evolution 20/20, 67,840 = 0.90x default Adam, 12.3x tuned Adam).
+
+
+# Series 3 (2026-10-26): a GENERAL optimizer evolved from randomness (emergent/general.py, results emergent/runs/general.json)
+User: "let's improve. get the fastest possible with these ideas. we want a system that best optimizes any other given system evolved from randomness." Same rule: performance only in the external cull.
+`evolve(system, cfg, seed, budget)` takes any system that offers n parameters, an external grade of a batch of parameter vectors, and a monitoring check. Benchmark: 7 problems (xorgauss, moons, circles, spirals, blobs3, checker3, parity4), each with a d-16-K tanh net (82-114 parameters). Target per problem = median best test accuracy of tuned Adam in 20,000 steps minus 0.02. Suite score = geometric mean over problems of median cost / reference cost, 10 seeds per problem, budget 3,000,000 per run (unsolved count at the budget).
+References (10 seeds): default Adam / tuned Adam: xorgauss 35,520 / 2,400; moons 264,480 / 4,800; circles 81,120 / 4,320; spirals 1,920,000 (default never reaches the target in 20,000 steps) / 72,960; blobs3 11,520 / 960; checker3 1,920,000 (never) / 275,040; parity4 109,440 / 4,800. The best learning rate was 0.1 (the largest tried) on 5 of 7 problems.
+Round 0 (series-2 winner, P=40, B=16, cull 80%, start 0.5): solved 58/70; geometric mean **0.73x default Adam, 13.6x tuned Adam**; per problem vs default: xorgauss 0.68, moons 0.31, circles 0.70, spirals 1.33, blobs3 0.53, checker3 1.56, parity4 0.72.
+
+Round 1 (11 variants of the round-0 method, each on the whole suite; geometric mean vs tuned Adam): baseline 13.6x; **cull 90%: 9.4x** (0.51x default, 59/70 solved); scoring batch 8: 10.0x; P=80 with batch 8: 12.5x; paired +/- noise ("mirror"): 12.6x; batch growing 0.5% per generation: 13.2x; faster noise-size adaptation (tau 0.22): 13.6x; start scale 0.25: 14.1x; P=20 batch 32: 16.1x; per-individual mutation-sparsity gene: 17.2x; smaller starting noise (0.001-0.1): 26.0x. checker3 was never solved within the budget by any variant (default Adam never reaches its target either).
+
+Round 2 (11 combinations of the round-1 winners; vs tuned Adam): cull 90% + batch 8: 9.7x; + mirror: 9.5x; cull 90% + mirror: 10.8x; cull 95%: 11.9-12.1x; P=80 batch 8 (cull 90/95%, with/without mirror): 11.0-12.5x; P=160 batch 4: 18.0x (cull 90%), 33.9x (cull 95%). **No combination beats cull 90% alone (9.4x tuned Adam, 0.51x default Adam).** Hand tuning of the knobs has levelled off at ~9.4-10x tuned Adam; the remaining cost is dominated by the two hardest problems (spirals, checker3), which mostly hit the 3,000,000 budget.
+
+## Series 3 reframed (user, 2026-10-27): nature's optimizer before gradients
+User: "right now i'm trying to figure out how nature could produce life without explicit gradient decent, which didn't exist at the very dawn of time with tiny little cells, which is a different angle. you are the stepping stones for improving any algorithm the way nature does it". Adam stays as a yardstick, not the target; the proposed meta-evolution of settings is parked (I8: it is knob tuning at a larger scale, and nature has no outer loop).
+Gaps between this system and early life (assistant): (1) a designer-written grade ranks the nets, nature had none; (2) only the noise size is heritable, nature evolved its own variation machinery; (3) hard problems are faced head-on, nature used stepping stones.
+Queued (arms, manipulation checks, thresholds and seeds written BEFORE running, in Knowledge-Wiki domains/vertical-intelligence/wiki/experiment-plan.md section 6; curious-net paper/QUEUE.md EMG-0..3): X6.5 benchmark repair (budget 1e7, bit-identical parity for runs already solved); X6.6 variation machinery that evolves itself (inherited direction, recombination, unit duplication); X6.7 selection with no grader (energy world); X6.8 stepping stones for spirals and checker3. Nothing run yet.

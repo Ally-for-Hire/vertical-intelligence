@@ -1,0 +1,15 @@
+references (held-out score): {'coin': np.float64(0.1221009259330382), 'forward_straight': np.float64(0.16195783169359335), 'pd': np.float64(0.9429143271495375)}  target 0.5  success = 3 evals in a row >= target
+tick    1500 test 0.143 off 0.62 train 0.131 neurons 3 retired 3 sweeps 12.97 cost0 0.0132 streak 0 [0.1 min]
+tick    3000 test 0.154 off 0.58 train 0.164 neurons 5 retired 6 sweeps 12.46 cost0 0.0198 streak 0 [0.2 min]
+tick    4500 test 0.147 off 0.62 train 0.147 neurons 5 retired 11 sweeps 13.89 cost0 0.0187 streak 0 [0.4 min]
+tick    6000 test 0.583 off 0.18 train 0.259 neurons 5 retired 16 sweeps 4.76 cost0 0.0157 streak 1 [0.6 min]
+tick    7500 test 0.438 off 0.33 train 0.409 neurons 6 retired 20 sweeps 9.16 cost0 0.0284 streak 0 [0.8 min]
+tick    9000 test 0.623 off 0.06 train 0.446 neurons 6 retired 25 sweeps 5.91 cost0 0.0232 streak 1 [1.0 min]
+tick   10500 test 0.502 off 0.13 train 0.462 neurons 6 retired 30 sweeps 7.83 cost0 0.0221 streak 2 [1.2 min]
+tick   12000 test 0.381 off 0.34 train 0.509 neurons 6 retired 35 sweeps 10.59 cost0 0.0233 streak 0 [1.4 min]
+tick   13500 test 0.711 off 0.12 train 0.440 neurons 6 retired 40 sweeps 3.61 cost0 0.0108 streak 1 [1.7 min]
+tick   15000 test 0.424 off 0.31 train 0.513 neurons 6 retired 45 sweeps 7.03 cost0 0.0087 streak 0 [1.9 min]
+tick   16500 test 0.533 off 0.20 train 0.510 neurons 6 retired 50 sweeps 7.65 cost0 0.0228 streak 1 [2.1 min]
+tick   18000 test 0.559 off 0.03 train 0.466 neurons 5 retired 55 sweeps 7.57 cost0 0.0116 streak 2 [2.3 min]
+tick   19500 test 0.662 off 0.05 train 0.562 neurons 5 retired 60 sweeps 4.93 cost0 0.0133 streak 3 [2.5 min]
+SUCCESS at tick 19500: held-out score >= 0.5 on 3 evaluations in a row

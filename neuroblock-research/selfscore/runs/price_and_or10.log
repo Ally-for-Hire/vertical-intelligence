@@ -1,0 +1,7 @@
+done P=64 Be=32
+done P=64 Be=128
+done P=64 Be=1024
+done P=256 Be=32
+done P=256 Be=128
+done P=256 Be=1024
+saved ~\neuroblock-research\selfscore\runs\price_and_or10.json 168 runs

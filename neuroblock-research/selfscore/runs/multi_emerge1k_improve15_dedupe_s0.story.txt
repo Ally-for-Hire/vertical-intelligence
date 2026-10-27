@@ -1,0 +1,14 @@
+=== RUN emerge1k_improve15_dedupe_s0 | 24 problems | POPULATION 1000 brains | cull rule: improvement | cull = fixed 15%; at least 850 brains survive every generation ===
+Self-modification: FREE (every random change is kept, no gate). Cull-size distribution: median 15.0%, mean 15.0%, 90th percentile 15%, mass culls (>50%) in 0.0% of generations, (>80%) in 0.0%.
+Refill of empty slots: random collections of the current brains, each slot a random mode: fresh 100%.
+Input bus 16 lines + 5 task-code lines = 21 inputs, 7 outputs. Brain size cap: 96 hidden nodes. GPU memory free at start: 6.8 GB. W&B: run https://wandb.ai/<wandb-team>/neuroblock-emergence/runs/jazmpal2
+Dedupe: brains closer than 0.1914 (fraction of 768 probe answers that differ) to a better-ranked brain are culled and replaced with random brains. Threshold = smallest distance between two brains of a fresh random population of 1000 (derived, not tuned).
+generation 0 population ready (8s); average accuracy of the random starting brains: 0.451
+gen     0 | last cull  15.0% (+0 near-copies) -> kept   850/1000 | score avg 0.451 best 0.531 | best brain solves  0/24 at 90%+ | brains: 0 hidden nodes avg, T=2.0 | 1000 lineages, 100% distinct functions | experts: E1=24 E2cv=+17.2pp E3cv=18 | 8.8s/gen, 22s total
+    * new best score of the run: 0.531
+gen    25 | last cull  15.0% (+1 near-copies) -> kept   849/1000 | score avg 0.452 best 0.539 | best brain solves  0/24 at 90%+ | brains: 6 hidden nodes avg, T=2.1 | 1000 lineages, 100% distinct functions | experts: E1=24 E2cv=+19.7pp E3cv=21 | 0.3s/gen, 32s total
+gen    50 | last cull  15.0% (+0 near-copies) -> kept   850/1000 | score avg 0.453 best 0.512 | best brain solves  1/24 at 90%+ | brains: 12 hidden nodes avg, T=2.2 | 1000 lineages, 100% distinct functions | experts: E1=23 E2cv=+20.3pp E3cv=20 | 0.4s/gen, 39s total
+    * NEW: problem "moons" is now solved at 90%+ by the best brain (first time in this run)
+gen    75 | last cull  15.0% (+0 near-copies) -> kept   850/1000 | score avg 0.453 best 0.547 | best brain solves  0/24 at 90%+ | brains: 18 hidden nodes avg, T=2.3 | 1000 lineages, 100% distinct functions | experts: E1=23 E2cv=+14.8pp E3cv=18 | 0.6s/gen, 48s total
+gen   100 | last cull  15.0% (+0 near-copies) -> kept   850/1000 | score avg 0.453 best 0.552 | best brain solves  0/24 at 90%+ | brains: 23 hidden nodes avg, T=2.5 | 1000 lineages, 100% distinct functions | experts: E1=23 E2cv=+19.1pp E3cv=20 | 0.7s/gen, 58s total
+    * new best score of the run: 0.552

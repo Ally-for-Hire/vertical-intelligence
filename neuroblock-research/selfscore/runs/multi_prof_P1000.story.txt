@@ -1,0 +1,9 @@
+=== RUN prof_P1000 | 24 problems | POPULATION 1000 brains | cull rule: mean | cull draw = 0.2 + (0.6 - 0.2) * u^1.0; at least 400 brains survive every generation ===
+Self-modification: FREE (every random change is kept, no gate). Cull-size distribution: median 39.9%, mean 40.0%, 90th percentile 56%, mass culls (>50%) in 24.9% of generations, (>80%) in 0.0%.
+Refill of empty slots: random collections of the current brains, each slot a random mode: copy 25%, vary 25%, cross 20%, blend 10%, scramble 10%, fresh 10%.
+Input bus 16 lines + 5 task-code lines = 21 inputs, 7 outputs. Brain size cap: 96 hidden nodes. GPU memory free at start: 6.8 GB. W&B: off
+generation 0 population ready (1s); average accuracy of the random starting brains: 0.449
+gen     0 | last cull  50.3% -> kept   497/1000 | score avg 0.449 best 0.534 | best brain solves  0/24 at 90%+ | brains: 0 hidden nodes avg, T=2.0 | 424 lineages, 86% distinct functions | experts: E1=21 E2cv=+13.5pp E3cv=17 | 0.5s/gen, 1s total
+    * new best score of the run: 0.534
+gen    10 | last cull  45.5% -> kept   545/1000 | score avg 0.485 best 0.556 | best brain solves  0/24 at 90%+ | brains: 3 hidden nodes avg, T=2.0 | 52 lineages, 85% distinct functions | experts: E1=24 E2cv=+15.2pp E3cv=16 | 0.3s/gen, 3s total
+    * new best score of the run: 0.556

@@ -1,0 +1,27 @@
+budget 128000 samples, tau 0.9.  L = 0.95 x labelled-MLP accuracy.  Lower is better for samples/cpu; accuracy higher.
+problem        L | model      final acc  samples->L  reach  cpu s->L  params | verdict
+parity4     0.95 | nn         0.775+-0.142      128000   2/10      3.72    1282 | 
+parity4     0.95 | agentC     1.000+-0.000        2000  10/10      0.02     253 | acc OK samples OK cpu OK
+parity6     0.71 | nn         0.661+-0.090      128000   1/10      3.70    1346 | 
+parity6     0.71 | agentC     1.000+-0.000        2800  10/10      0.03     746 | acc OK samples OK cpu OK
+majority5   0.95 | nn         1.000+-0.000        1600  10/10      0.05    1314 | 
+majority5   0.95 | agentC     0.993+-0.022        4000  10/10      0.09     684 | acc OK samples LOSS cpu LOSS
+mux6        0.95 | nn         0.867+-0.103      128000   4/10      3.77    1346 | 
+mux6        0.95 | agentC     1.000+-0.000        3200  10/10      0.05     856 | acc OK samples OK cpu OK
+adder2      0.95 | nn         0.856+-0.059      128000   0/10      3.73    1447 | 
+adder2      0.95 | agentC     1.000+-0.000        4000  10/10      0.07     603 | acc OK samples OK cpu OK
+quadrants   0.86 | nn         0.769+-0.100      128000   3/10      3.77    1666 | 
+quadrants   0.86 | agentC     0.905+-0.012        4000  10/10      0.05    3916 | acc OK samples OK cpu OK
+moons       0.94 | nn         0.992+-0.003        2800  10/10      0.09    1666 | 
+moons       0.94 | agentC     0.965+-0.020        4800  10/10      0.13    2352 | acc LOSS samples LOSS cpu LOSS
+circles     0.95 | nn         0.999+-0.001        3200  10/10      0.10    1666 | 
+circles     0.95 | agentC     0.910+-0.057        7600   8/10      0.21    2966 | acc LOSS samples LOSS cpu LOSS
+spirals     0.87 | nn         0.840+-0.063      128000   4/10      3.77    1666 | 
+spirals     0.87 | agentC     0.816+-0.030       25600  10/10      1.42    5913 | acc LOSS samples OK cpu OK
+blobs3      0.90 | nn         0.944+-0.004        1600  10/10      0.05    1699 | 
+blobs3      0.90 | agentC     0.943+-0.007        3200  10/10      0.06    2472 | acc OK samples LOSS cpu LOSS
+PURELY BETTER on every problem: False   (2.5 min)
+
+real	2m27.621s
+user	0m0.000s
+sys	0m0.016s

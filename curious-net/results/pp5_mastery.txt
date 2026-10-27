@@ -1,0 +1,18 @@
+mean error by encounter k (1 = first time) | 24 world sets x 10 problems
+k      fresh    single   library    freeze    oracle   | updates: library  freeze
+ 1     2.324    30.281     2.789     3.548     2.269   |    1800    1776
+ 2     2.375    35.735     5.142     5.571     1.806   |    1800    1526
+ 3     2.091    32.369     2.940     3.792     1.505   |    1800    1531
+ 4     1.630    38.056     2.015     2.477     1.366   |    1800    1499
+ 5     1.968    23.653     2.077     3.599     1.353   |    1800    1492
+ 6     2.235    52.164     3.666     6.982     1.751   |    1800    1435
+ 7     1.854    18.495     2.470     4.687     1.343   |    1800    1465
+ 8     1.995    25.924     2.410     4.850     1.493   |    1800    1402
+ 9     1.595    32.641    13.967    16.711     1.150   |    1800    1370
+10     1.741    30.251     3.476     4.864     1.215   |    1800    1419
+library on repeat encounters: reused OWN chunk 0.247, reused ANOTHER problem's chunk 0.047, made a new chunk 0.706; chunks per world set 73.4 (true problems: 10)
+freeze on repeat encounters: reused OWN chunk 0.216, reused ANOTHER problem's chunk 0.038, made a new chunk 0.746; chunks per world set 77.0 (true problems: 10)
+library vs single over repeats: +82.5% +- 4.3 (24 world sets)
+library error ratio vs first encounter: k=2 1.84, k=10 1.25
+10th encounter: freeze/library error 1.40, updates 0.79
+done 152 s

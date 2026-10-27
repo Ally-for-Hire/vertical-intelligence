@@ -1,0 +1,13 @@
+=== RUN det_a | 24 problems | POPULATION 200 brains | cull rule: mean | cull = smooth cosine wave 0.15 -> 0.4 -> 0.15 every 1000 generations; at least 120 brains survive every generation ===
+Self-modification: FREE (every random change is kept, no gate). Cull-size distribution: median 27.5%, mean 27.5%, 90th percentile 39%, mass culls (>50%) in 0.0% of generations, (>80%) in 0.0%.
+Refill of empty slots: random collections of the current brains, each slot a random mode: blend 100%.
+Input bus 16 lines + 5 task-code lines = 21 inputs, 7 outputs. Brain size cap: 96 hidden nodes. GPU memory free at start: 6.8 GB. W&B: off
+generation 0 population ready (3s); average accuracy of the random starting brains: 0.453
+gen     0 | died   30 (15.0%) | SURVIVAL: oldest has survived 1 cullings, mean 0.8 | kept   170/200 | score avg 0.452 best 0.509 | best brain solves  0/24 at 90%+ | brains: 0 hidden nodes avg, T=2.0 | 146 lineages, 100% distinct functions | experts: E1=21 E2cv=+19.5pp E3cv=21 | 0.5s/gen, 4s total
+    * new best score of the run: 0.509
+gen    25 | died   30 (15.2%) | SURVIVAL: oldest has survived 26 cullings, mean 5.5 | kept   170/200 | score avg 0.487 best 0.529 | best brain solves  0/24 at 90%+ | brains: 17 hidden nodes avg, T=2.2 | 18 lineages, 100% distinct functions | experts: E1=24 E2cv=+14.2pp E3cv=18 | 0.2s/gen, 6s total
+gen    50 | died   31 (15.6%) | SURVIVAL: oldest has survived 35 cullings, mean 5.6 | kept   169/200 | score avg 0.507 best 0.548 | best brain solves  0/24 at 90%+ | brains: 38 hidden nodes avg, T=1.1 | 3 lineages, 100% distinct functions | experts: E1=21 E2cv=+8.2pp E3cv=18 | 0.2s/gen, 9s total
+    * new best score of the run: 0.548
+gen    59 | died   32 (15.8%) | SURVIVAL: oldest has survived 37 cullings, mean 5.3 | kept   168/200 | score avg 0.535 best 0.578 | best brain solves  0/24 at 90%+ | brains: 46 hidden nodes avg, T=1.0 | 3 lineages, 100% distinct functions | experts: E1=14 E2cv=+5.2pp E3cv=9 | 0.1s/gen, 10s total
+    * new best score of the run: 0.578
+=== RUN det_a finished: 60 generations, 10s ===

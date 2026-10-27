@@ -1,0 +1,8 @@
+arm      | final test error (median) | ratio to wide | ratio to oracle | parts (median, range)
+small    | 0.2099 | 1.15 | 22.78 | 1 (1-1)
+wide     | 0.1824 | 1.00 | 17.90 | 1 (1-1)
+oracle   | 0.0088 | 0.06 | 1.00 | 6 (6-6)
+self     | 0.2110 | 1.15 | 19.90 | 10 (4-14)
+self_v01 | 0.1538 | 0.87 | 17.42 | 4 (2-5)
+self_v01 forward passes per tick (responsibility evaluation): 2.7
+done 9 s

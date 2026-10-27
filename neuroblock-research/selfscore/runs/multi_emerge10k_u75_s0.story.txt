@@ -1,0 +1,14 @@
+=== RUN emerge10k_u75_s0 | 24 problems | POPULATION 10000 brains | cull rule: mean | cull draw = 0.75 * u^1.0; at least 2500 brains survive every generation ===
+Self-modification: FREE (every random change is kept, no gate). Cull-size distribution: median 37.4%, mean 37.4%, 90th percentile 67%, mass culls (>50%) in 33.3% of generations, (>80%) in 0.0%.
+Refill of empty slots: random collections of the current brains, each slot a random mode: copy 25%, vary 25%, cross 20%, blend 10%, scramble 10%, fresh 10%.
+Input bus 16 lines + 5 task-code lines = 21 inputs, 7 outputs. Brain size cap: 96 hidden nodes. GPU memory free at start: 6.6 GB. W&B: run https://wandb.ai/<wandb-team>/neuroblock-emergence/runs/pybk297t
+generation 0 population ready (6s); average accuracy of the random starting brains: 0.450
+gen     0 | last cull  37.2% -> kept  6278/10000 | score avg 0.451 best 0.547 | best brain solves  0/24 at 90%+ | brains: 0 hidden nodes avg, T=2.0 | 5405 lineages, 97% distinct functions | experts: E1=22 E2cv=+17.2pp E3cv=18 | 1.2s/gen, 8s total
+    * new best score of the run: 0.547
+gen    10 | last cull  26.2% -> kept  7383/10000 | score avg 0.486 best 0.551 | best brain solves  1/24 at 90%+ | brains: 4 hidden nodes avg, T=2.0 | 488 lineages, 97% distinct functions | experts: E1=24 E2cv=+18.4pp E3cv=20 | 1.1s/gen, 16s total
+    * NEW: problem "moons" is now solved at 90%+ by the best brain (first time in this run)
+gen    20 | last cull  51.1% -> kept  4888/10000 | score avg 0.500 best 0.573 | best brain solves  0/24 at 90%+ | brains: 8 hidden nodes avg, T=2.0 | 207 lineages, 97% distinct functions | experts: E1=23 E2cv=+13.9pp E3cv=17 | 1.7s/gen, 25s total
+    * new best score of the run: 0.573
+gen    30 | last cull  22.9% -> kept  7712/10000 | score avg 0.528 best 0.604 | best brain solves  2/24 at 90%+ | brains: 13 hidden nodes avg, T=2.0 | 73 lineages, 97% distinct functions | experts: E1=24 E2cv=+10.9pp E3cv=13 | 2.3s/gen, 37s total
+    * NEW: problem "majority5" is now solved at 90%+ by the best brain (first time in this run)
+    * new best score of the run: 0.604

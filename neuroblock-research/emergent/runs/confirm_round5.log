@@ -1,0 +1,7 @@
+gradient H=8 Adam lr=0.001: solved 20/20, median 81,120, IQR 56,640-127,680
+gradient H=8 Adam lr=0.003: solved 20/20, median 27,600, IQR 19,080-42,240
+gradient H=8 Adam lr=0.01: solved 20/20, median 10,800, IQR 7,800-14,280
+gradient H=8 Adam lr=0.03: solved 20/20, median 5,520, IQR 4,680-6,840
+evolution {'P': 20, 'B': 32, 'cull': 0.8, 'life': True, 'fit': 'll', 'H': 8, 'recomb': 'none', 'noise': 'gauss'}: solved 20/20, median 142,400, IQR 84,160-279,040
+evolution {'P': 20, 'B': 64, 'cull': 0.8, 'life': True, 'fit': 'll', 'H': 8, 'recomb': 'none', 'noise': 'cauchy'}: solved 20/20, median 157,440, IQR 103,040-208,960
+evolution {'P': 10, 'B': 64, 'cull': 0.9, 'life': True, 'fit': 'll', 'H': 8, 'recomb': 'none', 'noise': 'gauss'}: solved 17/20, median 123,840, IQR 55,840-197,440

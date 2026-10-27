@@ -1,0 +1,10 @@
+=== RUN big10k_s0 | 24 problems | POPULATION 10000 brains | cull draw each generation ~ uniform(0, 0.9); no wipes possible: at least 1000 brains survive every generation ===
+Input bus 16 lines + 5 task-code lines = 21 inputs, 7 outputs. Brain size cap: 96 hidden nodes. GPU memory free at start: 6.6 GB
+generation 0 population ready (1s); average accuracy of the random starting brains: 0.450
+gen     0 | last cull  44.7% -> kept  5534/10000 | score avg 0.450 best 0.553 | best brain solves  1/24 at 90%+ | brains: 0 hidden nodes avg, T=2.0 | 5282 lineages | 3.5s/gen, 5s total, GPU 1.0 GB peak
+    * NEW: problem "circles" is now solved at 90%+ by the best brain (first time in this run)
+    * new best score of the run: 0.553
+gen    10 | last cull  31.4% -> kept  6860/10000 | score avg 0.502 best 0.561 | best brain solves  0/24 at 90%+ | brains: 5 hidden nodes avg, T=1.9 | 12 lineages | 4.4s/gen, 45s total, GPU 1.0 GB peak
+gen    20 | last cull  61.3% -> kept  3866/10000 | score avg 0.532 best 0.583 | best brain solves  1/24 at 90%+ | brains: 11 hidden nodes avg, T=1.7 | 4 lineages | 6.3s/gen, 92s total, GPU 1.4 GB peak
+    * new best score of the run: 0.583
+gen    30 | last cull  27.5% -> kept  7254/10000 | score avg 0.517 best 0.553 | best brain solves  1/24 at 90%+ | brains: 28 hidden nodes avg, T=1.3 | 2 lineages | 9.3s/gen, 162s total, GPU 2.2 GB peak

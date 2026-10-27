@@ -1,0 +1,18 @@
+=== RUN pct_test | 24 problems | POPULATION 500 brains | cull rule: percentile | cull = smooth cosine wave 0.15 -> 0.5 -> 0.15 every 1000 generations; at least 250 brains survive every generation ===
+Self-modification: FREE (every random change is kept, no gate). Cull-size distribution: median 32.5%, mean 32.5%, 90th percentile 49%, mass culls (>50%) in 0.0% of generations, (>80%) in 0.0%.
+Refill of empty slots: random collections of the current brains, each slot a random mode: fresh 100%.
+Input bus 16 lines + 5 task-code lines = 21 inputs, 7 outputs. Brain size cap: 96 hidden nodes. GPU memory free at start: 6.8 GB. W&B: off
+generation 0 population ready (4s); average accuracy of the random starting brains: 0.451
+gen     0 | died   83 (16.6%) cutoff 0.427 window 1 | SURVIVAL: oldest has survived 1 cullings, mean 0.8 | kept   417/500 | score avg 0.451 best 0.508 | best brain solves  0/24 at 90%+ | brains: 15 hidden nodes avg, T=3.5 | 500 lineages, 88% distinct functions | experts: E1=23 E2cv=+12.6pp E3cv=16 | 2.0s/gen, 7s total
+    * new best score of the run: 0.508
+gen    10 | died   78 (15.6%) cutoff 0.441 window 1 | SURVIVAL: oldest has survived 11 cullings, mean 5.9 | kept   422/500 | score avg 0.459 best 0.522 | best brain solves  0/24 at 90%+ | brains: 16 hidden nodes avg, T=3.4 | 500 lineages, 85% distinct functions | experts: E1=23 E2cv=+12.0pp E3cv=14 | 0.5s/gen, 9s total
+gen    20 | died  120 (24.0%) cutoff 0.438 window 11 | SURVIVAL: oldest has survived 21 cullings, mean 6.5 | kept   380/500 | score avg 0.463 best 0.522 | best brain solves  0/24 at 90%+ | brains: 18 hidden nodes avg, T=3.6 | 500 lineages, 93% distinct functions | experts: E1=22 E2cv=+16.0pp E3cv=18 | 0.6s/gen, 12s total
+gen    30 | died   43 ( 8.6%) cutoff 0.438 window 17 | SURVIVAL: oldest has survived 31 cullings, mean 10.0 | kept   457/500 | score avg 0.463 best 0.531 | best brain solves  0/24 at 90%+ | brains: 19 hidden nodes avg, T=3.4 | 500 lineages, 85% distinct functions | experts: E1=21 E2cv=+18.8pp E3cv=19 | 0.6s/gen, 15s total
+    * new best score of the run: 0.531
+gen    40 | died   79 (15.8%) cutoff 0.441 window 24 | SURVIVAL: oldest has survived 41 cullings, mean 12.2 | kept   421/500 | score avg 0.458 best 0.516 | best brain solves  0/24 at 90%+ | brains: 20 hidden nodes avg, T=3.6 | 500 lineages, 82% distinct functions | experts: E1=22 E2cv=+15.5pp E3cv=19 | 0.7s/gen, 18s total
+gen    50 | died   37 ( 7.4%) cutoff 0.439 window 51 | SURVIVAL: oldest has survived 51 cullings, mean 13.4 | kept   463/500 | score avg 0.465 best 0.516 | best brain solves  0/24 at 90%+ | brains: 20 hidden nodes avg, T=3.5 | 500 lineages, 89% distinct functions | experts: E1=20 E2cv=+18.1pp E3cv=21 | 0.6s/gen, 21s total
+    refill modes, score vs the generation average (percentage points, all generations so far): fresh -1.18
+gen    59 | died   40 ( 8.0%) cutoff 0.440 window 48 | SURVIVAL: oldest has survived 60 cullings, mean 12.6 | kept   460/500 | score avg 0.460 best 0.516 | best brain solves  2/24 at 90%+ | brains: 20 hidden nodes avg, T=3.5 | 500 lineages, 92% distinct functions | experts: E1=22 E2cv=+17.6pp E3cv=19 | 0.6s/gen, 23s total
+    * NEW: problem "moons" is now solved at 90%+ by the best brain (first time in this run)
+    * NEW: problem "moons_noisy15" is now solved at 90%+ by the best brain (first time in this run)
+=== RUN pct_test finished: 60 generations, 23s ===

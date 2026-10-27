@@ -1,0 +1,4 @@
+delay  0: accuracy oracle 0.985 | trace 0.984 (keeps 100% of oracle's above-chance) | no_trace 0.985 (keeps 100%)
+delay  3: accuracy oracle 0.985 | trace 0.965 (keeps 97% of oracle's above-chance) | no_trace 0.258 (keeps 1%)
+delay 10: accuracy oracle 0.985 | trace 0.599 (keeps 48% of oracle's above-chance) | no_trace 0.254 (keeps 1%)
+done 11 s

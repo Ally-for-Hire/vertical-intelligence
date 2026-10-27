@@ -1,0 +1,40 @@
+budget 128000 samples, tau 0.9.  L = 0.95 x labelled-MLP accuracy.  Lower is better for samples/cpu; accuracy higher.
+problem        L | model      final acc  samples->L  reach  cpu s->L  params | verdict
+parity3of6  0.95 | pg         0.950+-0.105        3920   8/10      0.12    1346 | 
+parity3of6  0.95 | q          1.000+-0.000         960  10/10      0.02   17666 | 
+parity3of6  0.95 | agentE     1.000+-0.000         800  10/10      0.02     858 | acc OK samples OK cpu OK
+cmp3        0.95 | pg         1.000+-0.000        1200  10/10      0.04    1346 | 
+cmp3        0.95 | q          1.000+-0.000         560  10/10      0.02   17666 | 
+cmp3        0.95 | agentE     1.000+-0.000         480  10/10      0.02     651 | acc OK samples OK cpu OK
+addmod4     0.95 | pg         0.669+-0.078      128000   0/10      4.05    1348 | 
+addmod4     0.95 | q          1.000+-0.000        1920  10/10      0.05   17668 | 
+addmod4     0.95 | agentE     1.000+-0.000         640  10/10      0.02     965 | acc OK samples OK cpu OK
+and_or10    0.95 | pg         1.000+-0.000         640  10/10      0.03   18178 | 
+and_or10    0.95 | q          1.000+-0.000         480  10/10      0.02   18178 | 
+and_or10    0.95 | agentE     0.999+-0.001         480  10/10      0.02     538 | acc OK samples OK cpu OK
+majority7   0.95 | pg         0.944+-0.093         480  10/10      0.02    1378 | 
+majority7   0.95 | q          1.000+-0.000         480  10/10      0.02    1378 | 
+majority7   0.95 | agentE     1.000+-0.000         480  10/10      0.01     744 | acc OK samples OK cpu OK
+checker3    0.92 | pg         0.856+-0.042      128000   0/10      4.10    1666 | 
+checker3    0.92 | q          0.964+-0.018        2000  10/10      0.06   18946 | 
+checker3    0.92 | agentE     0.966+-0.015        1280  10/10      0.06    2630 | acc OK samples OK cpu OK
+sine        0.91 | pg         0.960+-0.011        1120  10/10      0.05    1666 | 
+sine        0.91 | q          0.963+-0.004         640  10/10      0.02    1666 | 
+sine        0.91 | agentE     0.964+-0.003         480  10/10      0.02    1496 | acc OK samples OK cpu OK
+blobs4      0.84 | pg         0.884+-0.009         480  10/10      0.02   19204 | 
+blobs4      0.84 | q          0.886+-0.005         640  10/10      0.02   19204 | 
+blobs4      0.84 | agentE     0.886+-0.004         480  10/10      0.02   11767 | acc OK samples OK cpu OK
+rings3      0.87 | pg         0.905+-0.036       10080   8/10      0.37    1699 | 
+rings3      0.87 | q          0.922+-0.015        2240  10/10      0.05    1699 | 
+rings3      0.87 | agentE     0.921+-0.013         480  10/10      0.02    8646 | acc OK samples OK cpu OK
+xorgauss    0.86 | pg         0.721+-0.058      128000   1/10      4.24    1666 | 
+xorgauss    0.86 | q          0.902+-0.013        1760  10/10      0.06   18946 | 
+xorgauss    0.86 | agentE     0.902+-0.011         480  10/10      0.02    5876 | acc OK samples OK cpu OK
+moons_noisy15  0.94 | pg         0.989+-0.004        2640  10/10      0.09    1666 | 
+moons_noisy15  0.94 | q          0.993+-0.002         880  10/10      0.03   18946 | 
+moons_noisy15  0.94 | agentE     0.993+-0.002         480  10/10      0.00    2800 | acc OK samples OK cpu OK
+PURELY BETTER on every problem: True   (14.2 min)
+
+real	14m12.412s
+user	0m0.015s
+sys	0m0.031s

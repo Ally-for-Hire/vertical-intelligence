@@ -1,0 +1,8 @@
+xorgauss  n=  82 target 0.940 | default Adam      35,520 | tuned Adam (lr 0.1)     2,400
+moons     n=  82 target 0.975 | default Adam     264,480 | tuned Adam (lr 0.1)     4,800
+circles   n=  82 target 0.980 | default Adam      81,120 | tuned Adam (lr 0.1)     4,320
+spirals   n=  82 target 0.980 | default Adam   1,920,000 | tuned Adam (lr 0.1)    72,960
+blobs3    n=  99 target 0.935 | default Adam      11,520 | tuned Adam (lr 0.03)       960
+checker3  n=  82 target 0.960 | default Adam   1,920,000 | tuned Adam (lr 0.03)   275,040
+parity4   n= 114 target 0.980 | default Adam     109,440 | tuned Adam (lr 0.1)     4,800
+{"B": 16, "P": 40, "cull": 0.8, "init": 0.5}: solved 58/70 | geometric-mean cost 0.73x default Adam, 13.6x tuned Adam | per problem vs default {'xorgauss': 0.68, 'moons': 0.31, 'circles': 0.7, 'spirals': 1.33, 'blobs3': 0.53, 'checker3': 1.56, 'parity4': 0.72} | 64s

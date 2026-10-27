@@ -1,0 +1,4 @@
+=== RUN r1_s0 | 24 problems in the pool | population 128 | cull draw each generation ~ uniform(0, 0.9); no wipes possible: at least 13 survive every generation ===
+The tests are ALL 24 problems, every generation. Brain input = 245 slots, outputs = 7.
+gen     0 | epoch 0 (24 tests) | last cull  44.7% -> kept  71/128 | score avg 0.453 best 0.522 | best brain solves  0/24 problems at 90%+ | brains: 0 hidden nodes avg, T=2.0, randomness=1.01 | 85s
+    * new best score of the run: 0.522

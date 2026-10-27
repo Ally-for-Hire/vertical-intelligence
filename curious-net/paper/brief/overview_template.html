@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Curious-net: a one-day research sprint on machines that learn what affects what</title>
+<style>
+  :root { --ink:#1d2330; --soft:#5a6375; --line:#e3e6ec; --bg:#fbfbfc; --blue:#1f6fb4; --green:#2c8a3c; --red:#b0412f; --amber:#a86b00; }
+  * { box-sizing: border-box; }
+  body { margin:0; background:var(--bg); color:var(--ink); font: 17px/1.6 Georgia, "Iowan Old Style", "Times New Roman", serif; }
+  main { max-width: 860px; margin: 0 auto; padding: 48px 24px 80px; }
+  h1 { font-size: 2.1em; line-height:1.2; margin: 0 0 .2em; }
+  h2 { font: 600 1.35em/1.3 -apple-system, "Segoe UI", Helvetica, Arial, sans-serif; margin: 2.2em 0 .6em; padding-top:.4em; border-top: 1px solid var(--line); }
+  h3 { font: 600 1.05em/1.3 -apple-system, "Segoe UI", Helvetica, Arial, sans-serif; margin: 1.6em 0 .4em; }
+  .sub { color: var(--soft); font-size: 1.05em; margin-bottom: 1.6em; }
+  .lede { font-size: 1.12em; }
+  .box { background:#fff; border:1px solid var(--line); border-radius:8px; padding: 14px 18px; margin: 1.2em 0; }
+  .box.note { border-left: 4px solid var(--blue); }
+  .box.warn { border-left: 4px solid var(--amber); }
+  table { width:100%; border-collapse: collapse; margin: 1em 0; font: 15px/1.45 -apple-system, "Segoe UI", Helvetica, Arial, sans-serif; background:#fff; }
+  th, td { text-align:left; vertical-align: top; padding: 8px 10px; border-bottom: 1px solid var(--line); }
+  th { background:#f2f4f7; font-weight:600; }
+  .tag { display:inline-block; font: 600 12px/1 -apple-system, "Segoe UI", sans-serif; padding: 4px 7px; border-radius: 4px; color:#fff; white-space:nowrap; }
+  .ok { background: var(--green); } .no { background: var(--red); } .mid { background: var(--amber); } .exp { background:#6b7385; }
+  figure { margin: 1.4em 0; background:#fff; border:1px solid var(--line); border-radius:8px; padding: 12px; }
+  figure img { width:100%; height:auto; display:block; }
+  figcaption { font: 14px/1.45 -apple-system, "Segoe UI", Helvetica, Arial, sans-serif; color: var(--soft); margin-top: 8px; }
+  ul { padding-left: 1.2em; } li { margin: .3em 0; }
+  .small { font-size: .9em; color: var(--soft); }
+  .refs li { font-size: .92em; }
+  .num { font-variant-numeric: tabular-nums; }
+  details.dive { background:#f6f4ee; border:1px solid #e6e0cf; border-radius:8px; padding: 10px 16px; margin: 1em 0 1.4em; }
+  details.dive summary { cursor:pointer; font: 600 15px/1.4 -apple-system, "Segoe UI", Helvetica, Arial, sans-serif; color:#6b5300; }
+  details.dive[open] summary { margin-bottom:.5em; }
+  details.dive p, details.dive li { font-size: .95em; }
+  .eq { font-family: "Cambria Math", Cambria, Georgia, serif; font-size:1.05em; background:#fff; border:1px solid #ece6d4; border-radius:6px; padding: 8px 12px; margin: .6em 0; text-align:center; }
+  @media print { details.dive { break-inside: avoid; } }
+</style>
+</head>
+<body>
+<main>
+
+<h1>Curious-net</h1>
+<div class="sub">A one-day research sprint on machines that learn <em>what affects what</em> and know when they might be wrong.<br>October 22, 2026 · run with AI research assistants, ideas and direction by the project owner</div>
+
+<p class="lede"><b>The dream:</b> a large language model that can <b>discover quantum physics on its own</b>. It is given only the science people knew before quantum theory, plus the measurements that puzzled them around 1900 (the colours of light from hot objects, the sharp colours of hydrogen, light knocking electrons out of metal). It is never told quantum theory exists. It passes if it proposes that energy must come in discrete chunks. More broadly: a language model that can actually learn and create semi-new things.</p>
+
+<p>We did not try to build that mind. Instead we broke the dream into small, testable claims and ran experiments on small simulated worlds, plus some real brain-wiring data from the fruit fly. For each claim we asked one thing: <b>does this actually hold up, and what would a skeptic say?</b> Below is what we found, including the surprises and the places where we were wrong.</p>
+
+<div class="box note"><b>How to read this.</b> The main text is meant to be read straight through without any math. The gold <b>"Deep dive"</b> boxes open up the actual mathematics behind each result for anyone curious. They are optional.<br><br> Everything here is early-stage and was done in one day on one computer. Nothing has been independently replicated yet. The worlds are small simulations, not the real world (except for the fly wiring data). The value is in the <em>shape</em> of the findings and in how they connect to real published research.</div>
+
+<h2>1. The big ideas being tested</h2>
+<table>
+<tr><th style="width:32%">Idea</th><th>What it means in practice</th></tr>
+<tr><td><b>Learn what affects what</b></td><td>In any new problem, figure out quickly which inputs actually matter, e.g. which knobs move which dials, and ignore the clutter.</td></tr>
+<tr><td><b>Get faster with experience</b></td><td>After many problems, the system should be quicker at spotting what matters in a brand-new one, while behaving exactly like an ordinary neural network when it has no experience.</td></tr>
+<tr><td><b>Improve itself over generations</b></td><td>Each generation learns from what the previous one figured out, without "inbreeding" into nonsense.</td></tr>
+<tr><td><b>Curiosity and skepticism</b></td><td>Choose experiments that resolve uncertainty, check claims against evidence, and say "I don't know" when it should.</td></tr>
+<tr><td><b>Emotion as structured randomness</b></td><td>A part of the mind that throws out guesses, to find connections the cautious "intellectual" part would miss.</td></tr>
+<tr><td><b>Quantum-style states</b></td><td>Represent beliefs as quantum-like states instead of plain on/off values or probabilities.</td></tr>
+<tr><td><b>Discover laws from data</b></td><td>Like dropping a ball and working out gravity, and rejecting a claim like "a ball takes 5 seconds to fall 15 m on Earth."</td></tr>
+<tr><td><b>A teacher that knows the truth</b></td><td>A perfect "oracle" teacher, plus a student that runs its <em>own</em> experiments, ends up confident about what it was taught and skeptical about the rest.</td></tr>
+<tr><td><b>Grounded in biology</b></td><td>Use the fully mapped fruit-fly brain as a reality check and a stepping stone. The owner believes the future of AI may be brain scans precise enough to code.</td></tr>
+</table>
+
+<h2>2. How the research direction evolved during the day</h2>
+<ol>
+<li><b>Morning: a curious on/off neuron network</b> learning to drive a toy car around a track, with "sleep" cycles to consolidate memories. Sleep was later set aside as a separate future study, so its effect could be isolated.</li>
+<li><b>A continuous lifelong learner</b> that should recognise an old problem with one change, e.g. "same car, more drag," immediately.</li>
+<li><b>A "self-learning neural network"</b>: an ordinary network plus a small add-on that learns, across problems, which kinds of inputs tend to matter. This became the main line.</li>
+<li><b>The long-range vision was written down</b>: a self-improving, curious, skeptical language model, an offline AI parent teaching it from zero, ties to the fly brain, and a future three-part brain design (sensors, emotion, a central "Self").</li>
+<li><b>Mid-day: a fast research loop.</b> Each round tested one claim, updated a "claims ledger," and checked the published literature.</li>
+<li><b>An independent review</b> by a second, stronger AI read all the code and results and found real errors (see "Shake-ups").</li>
+<li><b>Afternoon redirect:</b> the teacher is an <b>oracle of objective truth</b>. The student <b>must run its own experiments</b>, with perfect instruments by default, and should learn from real data, poke holes in bad theories and derive laws.</li>
+</ol>
+
+<h2>3. Results: what held up</h2>
+
+<h3>Knowing what matters is worth a lot, but only when there's clutter</h3>
+<p>With a handful of inputs, telling a network which ones matter makes no difference. With 200 useless inputs mixed in, it roughly <b>halves</b> the network's early mistakes (error 0.84 → 0.40).</p>
+<figure>{{IMG:fig_headroom.png}}<figcaption>Left: an ordinary network (grey) versus one told the true inputs (blue), as useless "distractor" inputs are added. Right: the same for a transformer, the architecture behind modern language models. The green line is what the network recovers by learning from earlier problems.</figcaption></figure>
+<details class="dive"><summary>Deep dive: why clutter hurts a learner</summary>
+<p>A network has to learn one or more weights per input, and every weight it learns from noisy data carries a bit of error. A useful rule of thumb from statistics:</p>
+<div class="eq">extra error ≈ (number of weights being learned) ÷ (number of examples seen)</div>
+<p>So 200 useless inputs mean hundreds of weights that can only add error, and the learner needs far more examples before it settles. If you <em>knew</em> that only, say, 3 of the 200 inputs matter, you'd only pay for 3. Even searching for which few matter costs only about <i>s</i>·log(<i>p</i>) examples' worth (s = true inputs, p = all inputs) instead of <i>p</i>. That logarithm is the whole value of "knowing what affects what": it turns a cost that grows with the clutter into one that barely notices it.</p>
+</details>
+
+<h3>Learning from past problems helps, but less than hoped, and it stops improving</h3>
+<p>After about 10 earlier problems, the learned add-on recovers a real share of that benefit. Then it <b>plateaus</b>: more experience doesn't help with this design. That matches theory. A learner that has learned a family of problems has learned all there is to learn about that family.</p>
+<figure>{{IMG:fig_experience.png}}<figcaption>Gain over an ordinary network versus the number of earlier problems seen. The dashed line is "told the true inputs." The curve rises and then flattens.</figcaption></figure>
+<details class="dive"><summary>Deep dive: what "learning from experience" really learns, and why it plateaus</summary>
+<p>In probability terms, experience across problems builds a <b>prior</b>, the learner's expectations before it sees the new problem. Bayes' rule combines that with the new evidence:</p>
+<div class="eq">belief after evidence ∝ (what I expected before) × (how well the evidence fits)</div>
+<p>Each past problem sharpens the "what I expected" part, for example "inputs that wiggle in step with the output usually matter; slow drifting ones usually don't." But once the prior matches how this <em>family</em> of problems is actually generated, there is nothing more to learn from more of the same. The plateau is a mathematical ceiling, not a bug. To keep improving, the learner needs genuinely new kinds of problems.</p>
+<p>A second finding explains <em>how</em> the add-on helps. It multiplies each input by a number p between 0 and 1. In the optimiser these networks use, that makes the input's weight learn about p times slower. So the add-on is really a <b>learned learning-speed per input</b>: suspicious inputs aren't thrown away, just learned slowly. That is why mistakes in its judgement are cheap.</p>
+</details>
+
+<h3>Self-improvement across 150 generations did not collapse</h3>
+<p>A big worry in AI research is "model collapse": systems trained on their own output slowly degrade (Shumailov et al., <i>Nature</i> 2024). Here, 150 generations improved and then held steady. The reason is understood: every generation learned from <b>fresh real data</b> and carried forward only a tiny summary.</p>
+<figure>{{IMG:fig_generations.png}}<figcaption>Eight independent chains of generations: improvement, then a stable plateau, with no collapse.</figcaption></figure>
+<details class="dive"><summary>Deep dive: why training on your own output can't create knowledge</summary>
+<p>Information theory has a result called the <b>data-processing inequality</b>. No amount of processing of a signal can increase the information it contains about the world:</p>
+<div class="eq">information(world ; my output) ≤ information(world ; what I observed)</div>
+<p>A model trained only on its own outputs is processing a copy of a copy, so errors and blind spots compound. That is model collapse. Our generations avoided it because each one looked at <b>new real data</b> (new information enters every time), and only a tiny "what tends to matter" summary was handed down. A self-improving mind therefore needs a continuing source of fresh evidence: experiments, observations or a trustworthy teacher.</p>
+</details>
+
+<h3>Law discovery with perfect instruments is easy, if the law is a simple one</h3>
+<p>A simulated student chose its own drop heights and timed each fall exactly. With just <b>five drops</b> it identified the right law every time. It noticed every time the world followed a law it didn't know, with no false alarms, and caught claims that were wrong by as little as 1%. It rejected the "15 m in 5 s on Earth" claim, and noted that it would be true on a world with gravity 1.2 m/s² (about the Moon's 1.62). With 3% measurement noise, small errors slip through again.</p>
+<details class="dive"><summary>Deep dive: how the student picks a law and catches a bad claim</summary>
+<p><b>Candidate laws.</b> The student knows three: free fall, <i>t</i> = √(2<i>h</i>/<i>g</i>); constant speed, <i>t</i> = <i>h</i>/<i>v</i>; and fall with air drag. It fits each to its drops and scores them with the <b>Bayesian Information Criterion</b>:</p>
+<div class="eq">score = (how badly the law misses the data) + (number of adjustable knobs) × log(number of drops)</div>
+<p>The second term is Occam's razor in numbers: a law with more knobs must earn them by fitting much better.</p>
+<p><b>Checking "15 m in 5 s".</b> Free fall gives <i>g</i> = 2<i>h</i>/<i>t</i>² = 2·15/25 = 1.2 m/s². On Earth (9.8 m/s²) the fall takes about 1.75 s, so the claim is off by a factor of almost 3 and is rejected every time. The student can also say what <em>would</em> make it true: a world with gravity about an eighth of Earth's.</p>
+<p><b>Why perfect instruments change everything.</b> With noise of size σ, the smallest deviation from a law you can detect after <i>n</i> measurements shrinks only like σ/√<i>n</i>. Halving it costs four times the experiments. With σ = 0, any real deviation shows up immediately, so the hard part moves from statistics to <em>imagination</em>: having the right law among your candidates.</p>
+</details>
+
+<h3>The real fly brain</h3>
+<p>We analysed the public FlyWire whole-brain map: <b>138,639 neurons and 54.5 million synapses</b>. Real wiring is very sparse. Half of a typical neuron's input comes from just <b>3 partners</b>, and 90% from about 9. Our simulated worlds turned out to match the dominant connections but not the long tail.</p>
+<figure>{{IMG:fig_connectome_degrees.png}}<figcaption>How many partners each fly neuron listens to, from the FlyWire connectome.</figcaption></figure>
+<details class="dive"><summary>Deep dive: what "sparse" and "heavy-tailed" mean here</summary>
+<p>Counting a connection when two neurons share at least 5 synapses (the field's convention), a typical fly neuron listens to about 9 others (median), out of 138,639 possible. That is about 0.007% of the brain. "Heavy-tailed" means a few neurons are enormous hubs: the top 1% of neurons receive 21% of all incoming synapses, and one receives from over 5,000 partners. Weighting by synapse count, half of a neuron's input comes from about 3 partners. So "a few strong causes plus a long tail of weak ones" is a realistic picture of what affects what in a real brain.</p>
+</details>
+
+<h2>4. Results: what did <em>not</em> hold up (and why that's useful)</h2>
+<table>
+<tr><th style="width:30%">Belief</th><th style="width:14%">Verdict</th><th>What happened</th></tr>
+<tr><td>Curiosity beats random exploration</td><td><span class="tag no">not in simple worlds</span></td><td>When effects are immediate and independent, random experiments are already nearly ideal. With perfect instruments, clever and random drop heights did equally well.</td></tr>
+<tr><td>Quantum-style states help</td><td><span class="tag mid">only in a niche</span></td><td>They win only when the data really has quantum-like structure, like question-order effects in surveys, and then only slightly. On ordinary data they cost accuracy.</td></tr>
+<tr><td>Emotion as structured randomness finds deeper links</td><td><span class="tag no">not supported</span></td><td>A population of randomised variants never beat the single best learner. Randomness only helped as insurance when the learner was <em>confidently wrong</em>.</td></tr>
+<tr><td>Neural networks can't do this</td><td><span class="tag no">refuted</span></td><td>The published literature shows ordinary networks trained across many tasks already learn this way, and our own add-on is itself a small neural network.</td></tr>
+<tr><td>The add-on learns cause and effect</td><td><span class="tag no">no</span></td><td>It learns "what is useful to predict with," not "what causes what." Taught the true causes, it did slightly <em>worse</em>. On fly-wiring worlds it couldn't recover the wiring at all, which is a known hard problem in neuroscience.</td></tr>
+</table>
+
+<details class="dive"><summary>Deep dive: why "useful for predicting" is not "causes"</summary>
+<p>Suppose A causes B, and C is just a noisy copy of A. Then C predicts B almost as well as A does, but changing C does nothing to B. From watching alone, the two can be statistically indistinguishable. With hidden variables in the system (like 250 unobserved neurons in the fly-wiring worlds), the problem gets worse: true direct connections can look weak, and indirect ones strong. Neuroscience has proven versions of this for recurrent networks. The way out is <b>intervention</b>: nudge A yourself and see whether B moves. In causal-inference notation, the question changes from P(B | saw A) to P(B | <i>did</i> A). That is why the project now insists the student runs its own experiments.</p>
+</details>
+<details class="dive"><summary>Deep dive: why the quantum idea helps only in a niche</summary>
+<p>A quantum bit is described by amplitudes whose squares are probabilities. If the amplitudes are ordinary real numbers and you only ever ask one question, that is just a probability written differently, so there is nothing to gain. The difference appears when questions are asked in sequence and the <b>order matters</b>. Quantum rules then force a specific balance, the "quantum question equality":</p>
+<div class="eq">P(yes,no) + P(no,yes) asked A-then-B &nbsp;=&nbsp; the same sum asked B-then-A</div>
+<p>Real survey data appear to obey this (Wang et al., <i>PNAS</i> 2014). On data with this structure, a quantum-style model needs fewer adjustable knobs and wins slightly. On ordinary data it is the wrong shape and loses.</p>
+</details>
+
+<h2>5. Shake-ups: where we caught ourselves being wrong</h2>
+<div class="box warn">
+<ul>
+<li><b>"Most of the gain is experience" turned out to be mostly not experience.</b> A simple statistic, softly weighted with just two tuned dials, gets about <b>70%</b> of the learned add-on's benefit. Experience across problems adds the remaining ~30%. That part is real, but modest.</li>
+<li><b>A "curiosity wins" result was an artefact.</b> At small budgets the "curious" strategy was secretly choosing randomly. In the fair re-test it helps a little, but only when measurements are noisy.</li>
+<li><b>A yardstick was wrong.</b> Results were quoted as "% of the best possible," but the "best possible" reference was beaten in two settings, so it wasn't the best possible.</li>
+<li><b>The simulated worlds changed mid-day.</b> A code change silently made "world #9000" a different world in later experiments. This explained why two runs of the same test disagreed.</li>
+<li><b>A theory note was mathematically wrong</b> about a trust statistic staying stable. It doesn't: it drifts, growing like the square root of time.</li>
+<li><b>The "no arbitrary numbers" rule was broken.</b> The project's audit, meant to ensure every unjustified number is flagged, found 76 unregistered numbers in the newer code.</li>
+</ul>
+</div>
+<figure>{{IMG:fig_fair_screen.png}}<figcaption>The shake-up in one picture. Grey bars use no experience at all; green bars learned from 100 earlier problems; blue is "told the true inputs." The two-dial soft screen (third bar) gets most of the way.</figcaption></figure>
+
+<h2>6. The newest result: a student taught only the truth</h2>
+<p>We taught the student the exact truth on 100 practice worlds, then asked it "how likely is this input a cause?" on new worlds.</p>
+<ul>
+<li><b>On familiar worlds its confidence is honest.</b> When it says 2%, about 2% really are causes.</li>
+<li><b>On worlds built differently, it is confidently wrong.</b> On fly-wiring worlds it said about 1% while the truth was about 24%.</li>
+<li><b>It can't feel that it is wrong.</b> Asking several copies of it whether they disagree, the standard self-doubt test, backfired: they agreed <em>more</em> exactly where they were wrong.</li>
+<li><b>"This looks unlike what I was taught" mostly works.</b> Comparing the new world's raw data with the practice data flagged most of the dangerous cases.</li>
+</ul>
+<figure>{{IMG:fig_calibration.png}}<figcaption>Left: predicted versus actual rate of real causes on each kind of world. They match on familiar worlds and are wildly off on the right. Right: which warning signals detect unfamiliar worlds (0.5 = no better than a coin flip). The orange "distance from what I was taught" signal works best.</figcaption></figure>
+<details class="dive"><summary>Deep dive: honest confidence, and why self-doubt failed</summary>
+<p><b>Honest confidence</b> ("calibration") has a simple test. Gather every case where the system said "70% sure" and check that it was right about 70% of the time, and the same for every other confidence level. Our taught student passed this on familiar worlds: the average gap was under 1 percentage point.</p>
+<p><b>Why the copies agreed when wrong.</b> All five copies were trained on the same lessons, so they share the same blind spot. On an unfamiliar world each one confidently gives the same wrong answer. Agreement measures how well the lessons pinned the answer down, not whether the lessons apply. Comparing the <em>raw data</em> of the new world with the practice data asks a different question, "have I seen anything like this?", and that worked much better.</p>
+<p><b>A statistical safety net that misled.</b> A method called conformal prediction promises "the truth is in my answer set 90% of the time." It kept that promise by answering "not a cause" almost always. Real causes were only about 2% of cases, so that answer is right 98% of the time while missing nearly every real cause. Averages can hide exactly the cases you care about.</p>
+</details>
+<div class="box note"><b>Why this matters for the vision:</b> being taught the truth gives honest confidence <em>only inside the territory that was taught</em>. Healthy skepticism needs two more things: a sense of "am I in familiar territory?" that comes from the data, not from the model's own feelings of certainty, and the ability to <b>run an experiment to check</b>. Both are now central to the project.</div>
+
+<h2>7. What we expected vs. what happened</h2>
+<table>
+<tr><th>Expectation going in</th><th style="width:16%"></th><th>Outcome</th></tr>
+<tr><td>Knowing the inputs helps more as clutter grows</td><td><span class="tag ok">as expected</span></td><td>Yes, strongly.</td></tr>
+<tr><td>The learned add-on keeps improving with more experience</td><td><span class="tag no">no</span></td><td>It plateaus after about 10 problems, as theory predicts.</td></tr>
+<tr><td>Training on its own labels would collapse the system</td><td><span class="tag ok">surprise (good)</span></td><td>It didn't, because each generation used fresh real data. Later we found this matches published work.</td></tr>
+<tr><td>A fly-like world would be much harder</td><td><span class="tag ok">surprise (good)</span></td><td>The benefit survived realistic fly-like wiring statistics.</td></tr>
+<tr><td>A larger learned model would be over-confident</td><td><span class="tag mid">wrong prediction</span></td><td>It was just as well calibrated as the simple one.</td></tr>
+<tr><td>"Several copies disagreeing" would flag unfamiliar worlds</td><td><span class="tag no">wrong prediction</span></td><td>The opposite: they agreed more on exactly the worlds where they were wrong.</td></tr>
+<tr><td>Clever experiment design beats random</td><td><span class="tag mid">depends</span></td><td>No difference with perfect instruments. A small edge with noisy ones.</td></tr>
+</table>
+
+<h2>8. Where this connects to real research</h2>
+<p>Every result was tied to published work. The sources below were checked against the actual papers or abstracts during the project. Several more suggested by the reviewer are still awaiting verification and are not listed.</p>
+<table>
+<tr><th style="width:34%">Our finding</th><th>Related real research</th></tr>
+<tr><td>Learning across problems = learning a "prior," which then plateaus</td><td>Ortega et al. 2019 (DeepMind), "Meta-learning of sequential strategies"; Mikulik et al., NeurIPS 2020: networks trained on many tasks behave like ideal Bayesian learners within that family.</td></tr>
+<tr><td>No collapse across generations</td><td>Shumailov et al., <i>Nature</i> 2024, "AI models collapse when trained on recursively generated data": our setup avoids the mechanism they identify. STaR (Zelikman et al. 2022): self-improvement works when a verifier filters outputs.</td></tr>
+<tr><td>Honest confidence and its limits</td><td>Guo et al. 2017, "On calibration of modern neural networks"; Houlsby et al. 2011 (BALD), choosing the most informative experiment.</td></tr>
+<tr><td>Law discovery from data</td><td>SINDy (Brunton, Proctor &amp; Kutz, <i>PNAS</i> 2016), discovering equations from data; AI Feynman (Udrescu &amp; Tegmark 2020); DreamCoder (Ellis et al. 2021).</td></tr>
+<tr><td>Fly-brain statistics and brain simulation</td><td>FlyWire whole-brain connectome (Dorkenwald et al., <i>Nature</i> 2024); Shiu et al., <i>Nature</i> 634 (2024), a whole fly-brain simulation that predicts feeding behaviour; Lappalainen et al., <i>Nature</i> 2024, connectome-constrained models of fly vision; the hemibrain (Scheffer et al., eLife 2020); Sandberg &amp; Bostrom 2008, the "Whole Brain Emulation" roadmap; "State of Brain Emulation Report 2025" (Zanichelli et al., arXiv 2510.15745).</td></tr>
+<tr><td>Teaching a learner from zero</td><td>Machine teaching (Zhu 2015); cross-situational word learning (Saffran et al. 1996, statistical learning in infants); emergent language between agents (Lazaridou et al. 2017); BabyLM and TinyStories (small language models trained on child-scale data).</td></tr>
+<tr><td>Generations passing knowledge on</td><td>Iterated learning (Kirby, Cornish &amp; Smith, <i>PNAS</i> 2008): languages become more structured as they pass through generations of learners.</td></tr>
+<tr><td>Quantum-style beliefs</td><td>Quantum cognition (Busemeyer &amp; Bruza 2012); Wang, Solloway, Shiffrin &amp; Busemeyer, <i>PNAS</i> 2014: question-order effects in surveys follow a quantum-like rule.</td></tr>
+<tr><td>Tracking a changing world</td><td>"Fixed share" (Herbster &amp; Warmuth 1998); minimum description length (Rissanen 1978): prediction as compression.</td></tr>
+</table>
+
+<h2>9. Limits of the math worth knowing</h2>
+<ul>
+<li><b>Watching isn't enough to find causes.</b> Without experiments, something that merely tracks a cause looks the same as the cause.</li>
+<li><b>Experience has a ceiling.</b> A learner can't beat the information in what it looks at. Within one family of problems, learning-to-learn stops improving once the family is learned. "Faster forever" needs ever-new kinds of problems.</li>
+<li><b>No universal "I'm out of my depth" detector exists.</b> Confidence is only trustworthy relative to what the system was trained on. The realistic goal is honest inside its territory, abstaining at a detectable boundary, and able to run experiments to check.</li>
+<li><b>A system trained only on its own output gains no new information about the world.</b> Fresh real data is essential.</li>
+<li><b>Perfect teacher versus skepticism.</b> A perfect teacher makes the student certain, and certainty leaves no room for doubt. How the oracle should teach its own limits is an open research question in this project.</li>
+</ul>
+
+<h2>10. What's next</h2>
+<ul>
+<li>Students that run experiments in <b>many-variable worlds</b> (nudging one input and watching what changes), where choosing the right experiment should matter.</li>
+<li><b>Inventing the missing law</b> once the student knows none of its laws fit.</li>
+<li>Three ways for the oracle to teach its limits: facts only; facts plus a stated scope; or showing data near and beyond where the law breaks down.</li>
+<li><b>Real data:</b> derive Kepler's third law from actual planetary orbits, and reject bad theories with it.</li>
+</ul>
+
+<p class="small" style="margin-top:3em">Prepared from the project's claims ledger, log and figures (curious-net, October 22, 2026). Numbers are from small simulated worlds unless marked as fly-connectome data. All claims, corrections and sources are recorded in the project's ledger, with the experiments behind them.</p>
+
+</main>
+</body>
+</html>

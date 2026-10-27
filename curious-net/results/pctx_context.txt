@@ -1,0 +1,12 @@
+mode     | test error (median) | x wide (median) | x oracle (median)
+wide     | 0.1824 | 1.00 | 17.9
+oracle   | 0.0088 | 0.06 | 1.0
+cue0.0   | 0.1840 | 0.96 | 18.0
+cue0.1   | 0.1707 | 0.96 | 17.0
+cue0.25  | 0.1707 | 0.91 | 16.8
+cue0.5   | 0.1366 | 0.69 | 11.7
+cue1.0   | 0.0978 | 0.55 | 9.8
+soft     | 0.2810 | 1.53 | 31.0
+cue1.0 router accuracy (test points sent to their true region part): median 0.936; cue1.0 parts with TRUE routing at test: median x oracle 1.0
+cue1.0 hedged MIX prediction: median x oracle 11.2; mix / top-part error ratio median 1.19
+done 23 s

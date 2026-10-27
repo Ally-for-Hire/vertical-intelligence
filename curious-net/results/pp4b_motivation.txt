@@ -1,0 +1,17 @@
+budget 600, 2 noisy TVs of 6:
+   random    noise 0.333 hard 0.335 | error ratio to random: median 1.000
+   motivated noise 0.079 hard 0.332 | error ratio to random: median 0.889
+   motivated2 noise 0.056 hard 0.211 | error ratio to random: median 0.915
+budget 600, 4 noisy TVs of 8:
+   random    noise 0.502 hard 0.251 | error ratio to random: median 1.000
+   motivated noise 0.241 hard 0.258 | error ratio to random: median 0.804
+   motivated2 noise 0.110 hard 0.179 | error ratio to random: median 0.830
+budget 2400, 2 noisy TVs of 6:
+   random    noise 0.334 hard 0.332 | error ratio to random: median 1.000
+   motivated noise 0.074 hard 0.587 | error ratio to random: median 0.923
+   motivated2 noise 0.049 hard 0.236 | error ratio to random: median 1.149
+budget 2400, 4 noisy TVs of 8:
+   random    noise 0.500 hard 0.249 | error ratio to random: median 1.000
+   motivated noise 0.198 hard 0.533 | error ratio to random: median 0.824
+   motivated2 noise 0.091 hard 0.197 | error ratio to random: median 1.087
+done 383 s

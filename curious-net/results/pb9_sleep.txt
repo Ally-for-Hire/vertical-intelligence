@@ -1,0 +1,15 @@
+MEDIAN error by encounter k
+ 1  awake 1.021  rehearse 1.013  merge 1.013  oracle 0.963
+ 2  awake 0.983  rehearse 0.979  merge 0.979  oracle 0.668
+ 3  awake 1.031  rehearse 0.957  merge 0.957  oracle 0.656
+ 4  awake 0.877  rehearse 0.873  merge 0.873  oracle 0.569
+ 5  awake 0.948  rehearse 0.902  merge 0.867  oracle 0.609
+ 6  awake 0.923  rehearse 0.915  merge 0.915  oracle 0.553
+ 7  awake 0.972  rehearse 0.989  merge 0.941  oracle 0.552
+ 8  awake 0.993  rehearse 0.970  merge 0.969  oracle 0.555
+ 9  awake 0.892  rehearse 0.876  merge 0.845  oracle 0.530
+10  awake 0.925  rehearse 0.922  merge 0.917  oracle 0.518
+awake   : own 0.504 other 0.130 new 0.366 | final chunks 42.2 | 10th/1st 0.91 | repeat median 0.948 | updates 180000 | merges 0.0 (same-problem 0.00)
+rehearse: own 0.507 other 0.107 new 0.386 | final chunks 44.0 | 10th/1st 0.91 | repeat median 0.934 | updates 345050 | merges 0.0 (same-problem 0.00)
+merge   : own 0.504 other 0.106 new 0.391 | final chunks 30.0 | 10th/1st 0.91 | repeat median 0.927 | updates 323725 | merges 14.5 (same-problem 0.69)
+done 353 s

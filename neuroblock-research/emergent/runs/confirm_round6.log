@@ -1,0 +1,3 @@
+gradient default Adam: median 75,120 | tuned Adam (lr 0.03): median 5,520
+P=40 B=16 cull=0.8 init=0.5: solved 20/20 | median 67,840 = 0.90x default Adam, 12.3x tuned Adam | IQR 46,240-123,360
+P=20 B=32 cull=0.8 init=0.5: solved 20/20 | median 74,240 = 0.99x default Adam, 13.4x tuned Adam | IQR 37,920-224,320

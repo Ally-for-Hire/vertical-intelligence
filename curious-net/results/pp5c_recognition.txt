@@ -1,0 +1,8 @@
+window w | top-1 identification of the right problem (10 candidates; chance 0.10) | right expert beats a fresh net
+    10 | 0.739 | 0.403   (n=1200)
+    25 | 0.808 | 0.529   (n=1200)
+    50 | 0.848 | 0.602   (n=1200)
+   100 | 0.881 | 0.651   (n=1200)
+   200 | 0.899 | 0.665   (n=1200)
+   300 | 0.917 | 0.680   (n=1200)
+done 40 s

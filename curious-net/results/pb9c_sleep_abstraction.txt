@@ -1,0 +1,5 @@
+awake    total awake cost median 13966 | hidden blocks recovered median 5 | vocabulary 27 | offline cost 0
+sleep    total awake cost median 14348 | hidden blocks recovered median 6 | vocabulary 28 | offline cost 0
+refactor total awake cost median 15406 | hidden blocks recovered median 5 | vocabulary 31 | offline cost 18826
+sleep / awake cost median 1.00 | refactor / awake 1.05 | refactor - awake blocks median 0
+done 2 s

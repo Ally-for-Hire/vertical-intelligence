@@ -1,0 +1,5 @@
+new   vs slow (negative = better): ewc_known +2.6% +- 0.7 | ewc_surprise +3.4% +- 0.9
+ret   vs slow (negative = better): ewc_known -3.1% +- 0.8 | ewc_surprise +0.4% +- 1.1
+total vs slow (negative = better): ewc_known +13.2% +- 1.5 | ewc_surprise +17.0% +- 1.6
+surprise-triggered consolidations per world: 18.5 (true switches: 8)
+done 29 s

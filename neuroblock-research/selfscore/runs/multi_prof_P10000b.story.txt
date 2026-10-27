@@ -1,0 +1,19 @@
+=== RUN prof_P10000b | 24 problems | POPULATION 10000 brains | cull rule: mean | cull draw = 0.2 + (0.6 - 0.2) * u^1.0; at least 4000 brains survive every generation ===
+Self-modification: FREE (every random change is kept, no gate). Cull-size distribution: median 39.9%, mean 40.0%, 90th percentile 56%, mass culls (>50%) in 24.9% of generations, (>80%) in 0.0%.
+Refill of empty slots: random collections of the current brains, each slot a random mode: copy 25%, vary 25%, cross 20%, blend 10%, scramble 10%, fresh 10%.
+Input bus 16 lines + 5 task-code lines = 21 inputs, 7 outputs. Brain size cap: 96 hidden nodes. GPU memory free at start: 6.6 GB. W&B: off
+generation 0 population ready (1s); average accuracy of the random starting brains: 0.450
+gen     0 | last cull  50.3% -> kept  4969/10000 | score avg 0.450 best 0.544 | best brain solves  2/24 at 90%+ | brains: 0 hidden nodes avg, T=2.0 | 4320 lineages, 97% distinct functions | experts: E1=22 E2cv=+16.1pp E3cv=17 | 0.9s/gen, 2s total
+    * NEW: problem "moons" is now solved at 90%+ by the best brain (first time in this run)
+    * NEW: problem "moons_noisy15" is now solved at 90%+ by the best brain (first time in this run)
+    * new best score of the run: 0.544
+gen    25 | last cull  41.0% -> kept  5904/10000 | score avg 0.509 best 0.574 | best brain solves  1/24 at 90%+ | brains: 10 hidden nodes avg, T=2.1 | 40 lineages, 96% distinct functions | experts: E1=24 E2cv=+14.2pp E3cv=18 | 1.3s/gen, 14s total
+    * NEW: problem "circles" is now solved at 90%+ by the best brain (first time in this run)
+    * new best score of the run: 0.574
+gen    50 | last cull  20.8% -> kept  7923/10000 | score avg 0.542 best 0.590 | best brain solves  2/24 at 90%+ | brains: 27 hidden nodes avg, T=1.2 | 22 lineages, 93% distinct functions | experts: E1=22 E2cv=+12.5pp E3cv=15 | 1.4s/gen, 31s total
+    * NEW: problem "majority5" is now solved at 90%+ by the best brain (first time in this run)
+    * NEW: problem "majority7" is now solved at 90%+ by the best brain (first time in this run)
+gen    60 | last cull  27.1% -> kept  7293/10000 | score avg 0.555 best 0.595 | best brain solves  2/24 at 90%+ | brains: 33 hidden nodes avg, T=1.0 | 19 lineages, 88% distinct functions | experts: E1=23 E2cv=+9.6pp E3cv=14 | 1.0s/gen, 37s total
+    * new best score of the run: 0.595
+PROFILE (seconds per generation): score (forward pass on the tests) 0.31 | inner life (random self-modification) 0.17 | cull + refill (spawn_children) 0.04 | measure z (diagnostic forward pass) 0.04 | (other) 0.03
+=== RUN prof_P10000b finished: 61 generations, 37s ===

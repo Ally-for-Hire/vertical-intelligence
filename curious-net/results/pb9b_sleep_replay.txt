@@ -1,0 +1,5 @@
+new  : slow2 1.347 | interleaved 1.428 | sleep 1.461 | sleep/interleaved 1.020 | sleep/slow2 1.065
+ret  : slow2 0.817 | interleaved 0.706 | sleep 0.706 | sleep/interleaved 1.006 | sleep/slow2 0.900
+total: slow2 0.504 | interleaved 0.535 | sleep 0.566 | sleep/interleaved 1.044 | sleep/slow2 1.063
+updates per arm (mean): {'slow2': np.float64(10800.0), 'interleaved': np.float64(10799.0), 'sleep': np.float64(10800.0)}
+done 39 s

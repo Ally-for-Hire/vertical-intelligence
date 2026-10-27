@@ -1,0 +1,6 @@
+gradient descent: median cost 115,680 sample-forward-equivalents (5/5 solved)
+{"B": 16, "P": 10, "cull": 0.5}: solved 0/5 | median cost 3,000,000 (25.9x gradient) | 71.5s
+{"B": 16, "P": 10, "cull": 0.8}: solved 0/5 | median cost 3,000,000 (25.9x gradient) | 72.3s
+{"B": 32, "P": 10, "cull": 0.5}: solved 1/5 | median cost 3,000,000 (25.9x gradient) | 31.5s
+{"B": 32, "P": 10, "cull": 0.8}: solved 1/5 | median cost 3,000,000 (25.9x gradient) | 29.6s
+{"B": 64, "P": 10, "cull": 0.5}: solved 1/5 | median cost 3,000,320 (25.9x gradient) | 17.5s

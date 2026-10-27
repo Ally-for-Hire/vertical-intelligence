@@ -1,0 +1,7 @@
+gated  gain +0.1175 +- 0.0106
+both   gain +0.1212 +- 0.0094
+lr     gain +0.0230 +- 0.0042
+init   gain +0.0238 +- 0.0019
+BOTH - GATED paired: +0.0037 +- 0.0015; per-world correlation 0.996
+share of gated gain: lr-only 0.20, init-only 0.20
+done 45 s

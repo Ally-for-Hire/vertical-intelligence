@@ -1,0 +1,32 @@
+reference grades: {'pd': 0.9622904152818851, 'random': 0.03878716809197059}
+block  seed0 gen  0 grade 0.000 off 0.00 lat 0.00 n 1 think 12us
+block  seed0 gen 10 grade 0.195 off 0.47 lat 3.21 n 18 think 71us
+block  seed0 gen 20 grade 0.366 off 0.14 lat 1.21 n 14 think 51us
+block  seed0 gen 30 grade 0.212 off 0.29 lat 1.61 n 4 think 38us
+block  seed0 gen 39 grade 0.824 off 0.00 lat 0.32 n 2 think 12us
+block  seed1 gen  0 grade 0.000 off 0.00 lat 0.00 n 1 think 12us
+block  seed1 gen 10 grade 0.148 off 0.65 lat 3.21 n 17 think 29us
+block  seed1 gen 20 grade 0.131 off 0.65 lat 3.72 n 15 think 33us
+block  seed1 gen 30 grade 0.142 off 0.65 lat 3.81 n 10 think 28us
+block  seed1 gen 39 grade 0.128 off 0.66 lat 3.94 n 13 think 17us
+block  seed2 gen  0 grade 0.064 off 0.75 lat 4.15 n 5 think 48us
+block  seed2 gen 10 grade 0.129 off 0.67 lat 1.95 n 9 think 30us
+block  seed2 gen 20 grade 0.416 off 0.27 lat 1.71 n 21 think 24us
+block  seed2 gen 30 grade 0.783 off 0.01 lat 0.39 n 11 think 15us
+block  seed2 gen 39 grade 0.757 off 0.01 lat 0.45 n 6 think 15us
+plain  seed0 gen  0 grade 0.140 off 0.63 lat 3.07 n 0 think 0us
+plain  seed0 gen 10 grade 0.351 off 0.08 lat 1.30 n 0 think 0us
+plain  seed0 gen 20 grade 0.674 off 0.00 lat 0.61 n 0 think 0us
+plain  seed0 gen 30 grade 0.707 off 0.01 lat 0.56 n 0 think 0us
+plain  seed0 gen 39 grade 0.629 off 0.00 lat 0.71 n 0 think 0us
+plain  seed1 gen  0 grade 0.165 off 0.63 lat 3.09 n 0 think 0us
+plain  seed1 gen 10 grade 0.297 off 0.21 lat 1.53 n 0 think 0us
+plain  seed1 gen 20 grade 0.745 off 0.02 lat 0.48 n 0 think 0us
+plain  seed1 gen 30 grade 0.748 off 0.01 lat 0.47 n 0 think 0us
+plain  seed1 gen 39 grade 0.656 off 0.00 lat 0.65 n 0 think 0us
+plain  seed2 gen  0 grade 0.126 off 0.67 lat 1.95 n 0 think 0us
+plain  seed2 gen 10 grade 0.803 off 0.00 lat 0.36 n 0 think 0us
+plain  seed2 gen 20 grade 0.815 off 0.00 lat 0.33 n 0 think 0us
+plain  seed2 gen 30 grade 0.535 off 0.00 lat 0.89 n 0 think 0us
+plain  seed2 gen 39 grade 0.712 off 0.00 lat 0.54 n 0 think 0us
+done in 577s

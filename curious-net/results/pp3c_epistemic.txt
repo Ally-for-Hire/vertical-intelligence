@@ -1,0 +1,17 @@
+budget 600, 2 noisy TVs of 6:
+   random    noise 0.334 hard 0.334 | error ratio to random: median 1.000
+   lp30      noise 0.081 hard 0.132 | error ratio to random: median 1.013
+   epistemic noise 0.593 hard 0.124 | error ratio to random: median 1.146
+budget 600, 4 noisy TVs of 8:
+   random    noise 0.502 hard 0.250 | error ratio to random: median 1.000
+   lp30      noise 0.139 hard 0.118 | error ratio to random: median 0.963
+   epistemic noise 0.743 hard 0.075 | error ratio to random: median 1.156
+budget 2400, 2 noisy TVs of 6:
+   random    noise 0.334 hard 0.334 | error ratio to random: median 1.000
+   lp30      noise 0.065 hard 0.088 | error ratio to random: median 1.281
+   epistemic noise 0.688 hard 0.136 | error ratio to random: median 1.276
+budget 2400, 4 noisy TVs of 8:
+   random    noise 0.501 hard 0.249 | error ratio to random: median 1.000
+   lp30      noise 0.100 hard 0.069 | error ratio to random: median 1.201
+   epistemic noise 0.799 hard 0.071 | error ratio to random: median 1.272
+done 203 s

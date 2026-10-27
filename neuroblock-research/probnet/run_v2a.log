@@ -1,0 +1,69 @@
+ 0 AND                                pn 0.98 (chance 0.75 mlp 1.00) abstain 0.01 third 0.58 edges 98
+ 1 OR                                 pn 0.99 (chance 0.76 mlp 1.00) abstain 0.00 third 0.71 edges 98
+ 2 XOR                                pn 0.50 (chance 0.51 mlp 1.00) abstain 0.99 third 0.50 edges 98
+ 3 NAND                               pn 0.98 (chance 0.78 mlp 1.00) abstain 0.00 third 0.48 edges 98
+ 4 NOR                                pn 0.99 (chance 0.76 mlp 1.00) abstain 0.00 third 0.93 edges 98
+ 5 XNOR                               pn 0.51 (chance 0.51 mlp 1.00) abstain 0.35 third 0.51 edges 98
+ 6 A AND NOT B                        pn 0.99 (chance 0.73 mlp 1.00) abstain 0.00 third 0.63 edges 98
+ 7 IMPLIES                            pn 0.99 (chance 0.72 mlp 1.00) abstain 0.00 third 0.53 edges 98
+ 8 NOT A                              pn 0.99 (chance 0.51 mlp 1.00) abstain 0.00 third 0.99 edges 98
+ 9 MAJ3                               pn 0.99 (chance 0.51 mlp 1.00) abstain 0.00 third 0.53 edges 97
+10 PARITY3                            pn 0.50 (chance 0.50 mlp 1.00) abstain 0.65 third 0.51 edges 97
+11 MUX (a picks b or c)               pn 0.73 (chance 0.53 mlp 1.00) abstain 0.53 third 0.53 edges 97
+12 AND3                               pn 0.88 (chance 0.88 mlp 1.00) abstain 0.00 third 0.88 edges 97
+13 OR3                                pn 0.99 (chance 0.87 mlp 1.00) abstain 0.00 third 0.59 edges 97
+14 EXACTLY ONE                        pn 0.52 (chance 0.65 mlp 1.00) abstain 0.40 third 0.51 edges 97
+15 A XOR (B AND C)                    pn 0.49 (chance 0.52 mlp 1.00) abstain 0.67 third 0.49 edges 97
+16 (A AND B) OR C                     pn 0.88 (chance 0.63 mlp 1.00) abstain 0.01 third 0.37 edges 97
+17 PARITY4                            pn 0.51 (chance 0.51 mlp 1.00) abstain 0.97 third 0.49 edges 96
+18 PARITY5                            pn 0.49 (chance 0.51 mlp 1.00) abstain 1.00 third 0.49 edges 116
+19 MAJ5                               pn 0.51 (chance 0.51 mlp 1.00) abstain 0.00 third 0.51 edges 116
+20 3 OF 6                             pn 0.57 (chance 0.64 mlp 1.00) abstain 0.00 third 0.36 edges 115
+21 MUX 2-select                       pn 0.51 (chance 0.51 mlp 1.00) abstain 0.07 third 0.49 edges 115
+22 ALL EQUAL 4                        pn 0.13 (chance 0.87 mlp 1.00) abstain 0.00 third 0.13 edges 96
+23 PALINDROME 4                       pn 0.25 (chance 0.75 mlp 1.00) abstain 0.01 third 0.25 edges 96
+24 EVEN ONES of 6                     pn 0.50 (chance 0.51 mlp 1.00) abstain 0.96 third 0.50 edges 115
+25 XOR + 10% noise                    pn 0.50 (chance 0.52 mlp 0.91) abstain 0.67 third 0.50 edges 98
+26 MAJ5 + 10% noise                   pn 0.54 (chance 0.51 mlp 0.90) abstain 0.09 third 0.51 edges 116
+27 AND of 2, 6 junk bits              pn 0.84 (chance 0.77 mlp 1.00) abstain 0.00 third 0.77 edges 113
+28 XOR of 2, 6 junk bits              pn 0.50 (chance 0.50 mlp 1.00) abstain 0.99 third 0.49 edges 113
+29 MAJ3, 5 junk bits                  pn 0.89 (chance 0.52 mlp 1.00) abstain 0.01 third 0.48 edges 113
+30 ONE bit, 10 junk bits              pn 0.99 (chance 0.51 mlp 1.00) abstain 0.00 third 0.73 edges 133
+31 COMPARE 2-bit (<,=,>)              pn 0.33 (chance 0.77 mlp 1.00) abstain 1.00 third 0.34 edges 96
+32 MAX of two 2-bit                   pn 0.26 (chance 0.41 mlp 1.00) abstain 1.00 third 0.24 edges 96
+33 SUM >= 3 of two 2-bit              pn 0.99 (chance 0.61 mlp 1.00) abstain 0.00 third 0.39 edges 96
+34 COUNT ONES of 4                    pn 0.20 (chance 0.36 mlp 1.00) abstain 1.00 third 0.21 edges 96
+35 ADD two 2-bit (7 sums)             pn 0.14 (chance 0.25 mlp 1.00) abstain 1.00 third 0.14 edges 96
+36 HALF PLANE                         pn 0.90 (chance 0.50 mlp 0.92) abstain 0.15 third 0.65 edges 113
+37 DIAGONAL                           pn 0.73 (chance 0.51 mlp 0.92) abstain 0.18 third 0.53 edges 113
+38 XOR QUADRANTS                      pn 0.49 (chance 0.52 mlp 0.82) abstain 0.65 third 0.50 edges 113
+39 CHECKERBOARD 4x4                   pn 0.50 (chance 0.52 mlp 0.70) abstain 0.06 third 0.51 edges 113
+40 CIRCLE                             pn 0.70 (chance 0.69 mlp 0.94) abstain 0.04 third 0.69 edges 113
+41 RING of 3 bands                    pn 0.35 (chance 0.53 mlp 0.76) abstain 1.00 third 0.34 edges 113
+42 STRIPES                            pn 0.99 (chance 0.62 mlp 1.00) abstain 0.00 third 0.54 edges 113
+43 DIAGONAL BAND                      pn 0.50 (chance 0.65 mlp 0.82) abstain 1.00 third 0.50 edges 113
+44 FOUR CORNERS                       pn 0.26 (chance 0.26 mlp 0.82) abstain 1.00 third 0.25 edges 113
+45 HALF PLANE + 10% noise             pn 0.52 (chance 0.53 mlp 0.82) abstain 0.69 third 0.51 edges 113
+46 3D OCTANT PARITY                   pn 0.51 (chance 0.51 mlp 0.77) abstain 0.68 third 0.51 edges 132
+47 BLOBS 2 classes                    pn 0.77 (chance 0.52 mlp 0.97) abstain 0.09 third 0.49 edges 113
+48 BLOBS 3 classes                    pn 0.39 (chance 0.35 mlp 0.79) abstain 0.61 third 0.32 edges 113
+49 BLOBS 4 classes in 4D              pn 0.25 (chance 0.26 mlp 0.94) abstain 1.00 third 0.25 edges 128
+50 TWO MOONS                          pn 0.52 (chance 0.52 mlp 0.99) abstain 0.00 third 0.52 edges 113
+51 SPIRAL arms                        pn 0.77 (chance 0.51 mlp 0.90) abstain 0.22 third 0.54 edges 113
+52 THRESHOLD 6 inputs                 pn 0.68 (chance 0.68 mlp 1.00) abstain 0.00 third 0.68 edges 115
+53 THRESHOLD 8 inputs                 pn 0.90 (chance 0.90 mlp 1.00) abstain 0.00 third 0.90 edges 113
+54 THRESHOLD 3 of 8 matter            pn 0.99 (chance 0.76 mlp 1.00) abstain 0.00 third 0.72 edges 113
+55 3x3 LINE: row/col/none             pn 0.35 (chance 0.36 mlp 0.99) abstain 0.00 third 0.34 edges 112
+56 5x5 SHAPES plus/box/X (5% noise)   pn 0.81 (chance 0.36 mlp 1.00) abstain 0.16 third 0.34 edges 144
+57 LEFT vs RIGHT heavier (4x4)        pn 0.99 (chance 0.51 mlp 1.00) abstain 0.00 third 0.62 edges 128
+58 MIRROR SYMMETRIC 3x3?              pn 0.50 (chance 0.56 mlp 1.00) abstain 0.99 third 0.50 edges 112
+59 CORNERS ON count (3 classes)       pn 0.32 (chance 0.40 mlp 1.00) abstain 0.33 third 0.32 edges 112
+60 NEXT: pattern 110                  pn 0.99 (chance 0.68 mlp 1.00) abstain 0.00 third 1.00 edges 97
+61 NEXT: pattern 1000                 pn 0.99 (chance 0.72 mlp 1.00) abstain 0.00 third 0.99 edges 96
+62 NEXT: pattern 10110                pn 0.99 (chance 0.60 mlp 1.00) abstain 0.00 third 1.00 edges 116
+63 NEXT: alternate 01                 pn 1.00 (chance 0.50 mlp 1.00) abstain 0.00 third 1.00 edges 98
+64 NEXT = XOR of last two             pn 0.50 (chance 0.53 mlp 1.00) abstain 1.00 third 0.51 edges 96
+65 NEXT = bit from 3 ago              pn 0.99 (chance 0.51 mlp 1.00) abstain 0.00 third 0.96 edges 96
+66 NEXT = majority of last 3          pn 0.99 (chance 0.53 mlp 1.00) abstain 0.00 third 0.54 edges 96
+67 NEXT = parity of window of 4       pn 0.50 (chance 0.51 mlp 1.00) abstain 1.00 third 0.50 edges 96
+{"tag": "v2a", "kw": {}, "cls": "GridNet", "mean_acc": 0.6642450980392157, "mean_chance": 0.5704558823529413, "mean_mlp": 0.9654999999999999, "beats_chance": 31, "within_10pts_of_mlp": 22, "mean_fraction_of_headroom": 0.36922487121802156, "seconds": 94.75196552276611}

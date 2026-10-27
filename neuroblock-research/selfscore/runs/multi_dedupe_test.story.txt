@@ -1,0 +1,19 @@
+=== RUN dedupe_test | 24 problems | POPULATION 1000 brains | cull rule: improvement | cull = fixed 15%; at least 850 brains survive every generation ===
+Self-modification: FREE (every random change is kept, no gate). Cull-size distribution: median 15.0%, mean 15.0%, 90th percentile 15%, mass culls (>50%) in 0.0% of generations, (>80%) in 0.0%.
+Refill of empty slots: random collections of the current brains, each slot a random mode: fresh 100%.
+Input bus 16 lines + 5 task-code lines = 21 inputs, 7 outputs. Brain size cap: 96 hidden nodes. GPU memory free at start: 6.8 GB. W&B: off
+Dedupe: brains closer than 0.1914 (fraction of 768 probe answers that differ) to a better-ranked brain are culled and replaced with random brains. Threshold = smallest distance between two brains of a fresh random population of 1000 (derived, not tuned).
+generation 0 population ready (16s); average accuracy of the random starting brains: 0.450
+gen     0 | last cull  15.0% (+0 near-copies) -> kept   850/1000 | score avg 0.451 best 0.520 | best brain solves  0/24 at 90%+ | brains: 0 hidden nodes avg, T=2.0 | 1000 lineages, 100% distinct functions | experts: E1=23 E2cv=+15.5pp E3cv=17 | 1.1s/gen, 18s total
+    * new best score of the run: 0.520
+gen    20 | last cull  15.0% (+0 near-copies) -> kept   850/1000 | score avg 0.454 best 0.538 | best brain solves  0/24 at 90%+ | brains: 4 hidden nodes avg, T=2.0 | 1000 lineages, 100% distinct functions | experts: E1=22 E2cv=+16.7pp E3cv=18 | 0.7s/gen, 27s total
+gen    40 | last cull  15.0% (+1 near-copies) -> kept   849/1000 | score avg 0.454 best 0.533 | best brain solves  0/24 at 90%+ | brains: 9 hidden nodes avg, T=2.1 | 1000 lineages, 100% distinct functions | experts: E1=21 E2cv=+19.0pp E3cv=19 | 0.9s/gen, 40s total
+gen    60 | last cull  15.0% (+0 near-copies) -> kept   850/1000 | score avg 0.455 best 0.548 | best brain solves  0/24 at 90%+ | brains: 14 hidden nodes avg, T=2.2 | 1000 lineages, 100% distinct functions | experts: E1=24 E2cv=+24.0pp E3cv=22 | 1.0s/gen, 55s total
+    * new best score of the run: 0.548
+gen    80 | last cull  15.0% (+1 near-copies) -> kept   849/1000 | score avg 0.453 best 0.547 | best brain solves  2/24 at 90%+ | brains: 18 hidden nodes avg, T=2.4 | 1000 lineages, 100% distinct functions | experts: E1=24 E2cv=+14.7pp E3cv=17 | 1.1s/gen, 72s total
+    * NEW: problem "moons" is now solved at 90%+ by the best brain (first time in this run)
+    * NEW: problem "moons_noisy15" is now solved at 90%+ by the best brain (first time in this run)
+gen   100 | last cull  15.0% (+0 near-copies) -> kept   850/1000 | score avg 0.454 best 0.561 | best brain solves  0/24 at 90%+ | brains: 22 hidden nodes avg, T=2.5 | 1000 lineages, 100% distinct functions | experts: E1=22 E2cv=+17.7pp E3cv=20 | 1.4s/gen, 90s total
+    refill modes, score vs the generation average (percentage points, all generations so far): fresh -0.32
+gen   119 | last cull  15.0% (+0 near-copies) -> kept   850/1000 | score avg 0.453 best 0.556 | best brain solves  1/24 at 90%+ | brains: 26 hidden nodes avg, T=2.5 | 1000 lineages, 100% distinct functions | experts: E1=22 E2cv=+11.1pp E3cv=17 | 1.2s/gen, 107s total
+=== RUN dedupe_test finished: 120 generations, 107s ===

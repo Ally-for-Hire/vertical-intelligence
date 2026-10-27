@@ -1,0 +1,3 @@
+standard: point 0.695 | dendrite / point median 0.957 | sparse / point median 0.938 | sparse / dendrite median 0.975
+pure_interaction: point 0.890 | dendrite / point median 0.950 | sparse / point median 0.949 | sparse / dendrite median 0.995
+done 29 s

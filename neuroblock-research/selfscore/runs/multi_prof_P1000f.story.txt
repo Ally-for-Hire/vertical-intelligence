@@ -1,0 +1,51 @@
+=== RUN prof_P1000f | 24 problems | POPULATION 1000 brains | cull rule: mean | cull draw = 0.2 + (0.6 - 0.2) * u^1.0; at least 400 brains survive every generation ===
+Self-modification: FREE (every random change is kept, no gate). Cull-size distribution: median 39.9%, mean 40.0%, 90th percentile 56%, mass culls (>50%) in 24.9% of generations, (>80%) in 0.0%.
+Refill of empty slots: random collections of the current brains, each slot a random mode: copy 25%, vary 25%, cross 20%, blend 10%, scramble 10%, fresh 10%.
+Input bus 16 lines + 5 task-code lines = 21 inputs, 7 outputs. Brain size cap: 96 hidden nodes. GPU memory free at start: 6.8 GB. W&B: off
+generation 0 population ready (1s); average accuracy of the random starting brains: 0.449
+gen     0 | last cull  50.3% -> kept   497/1000 | score avg 0.449 best 0.525 | best brain solves  0/24 at 90%+ | brains: 0 hidden nodes avg, T=2.0 | 422 lineages, 86% distinct functions | experts: E1=23 E2cv=+19.8pp E3cv=20 | 0.5s/gen, 2s total
+    * new best score of the run: 0.525
+gen    10 | last cull  45.5% -> kept   545/1000 | score avg 0.506 best 0.581 | best brain solves  1/24 at 90%+ | brains: 4 hidden nodes avg, T=2.2 | 40 lineages, 84% distinct functions | experts: E1=22 E2cv=+13.0pp E3cv=18 | 0.2s/gen, 3s total
+    * NEW: problem "moons" is now solved at 90%+ by the best brain (first time in this run)
+    * new best score of the run: 0.581
+gen    20 | last cull  32.6% -> kept   674/1000 | score avg 0.498 best 0.547 | best brain solves  0/24 at 90%+ | brains: 7 hidden nodes avg, T=2.2 | 24 lineages, 87% distinct functions | experts: E1=23 E2cv=+16.3pp E3cv=19 | 0.3s/gen, 4s total
+gen    30 | last cull  45.6% -> kept   544/1000 | score avg 0.517 best 0.570 | best brain solves  1/24 at 90%+ | brains: 13 hidden nodes avg, T=2.3 | 18 lineages, 82% distinct functions | experts: E1=23 E2cv=+13.4pp E3cv=18 | 0.4s/gen, 6s total
+    * NEW: problem "circles" is now solved at 90%+ by the best brain (first time in this run)
+gen    40 | last cull  59.6% -> kept   404/1000 | score avg 0.527 best 0.565 | best brain solves  1/24 at 90%+ | brains: 17 hidden nodes avg, T=2.0 | 12 lineages, 78% distinct functions | experts: E1=24 E2cv=+9.1pp E3cv=15 | 0.4s/gen, 8s total
+    * NEW: problem "majority5" is now solved at 90%+ by the best brain (first time in this run)
+gen    50 | last cull  20.8% -> kept   792/1000 | score avg 0.533 best 0.570 | best brain solves  0/24 at 90%+ | brains: 23 hidden nodes avg, T=1.1 | 4 lineages, 85% distinct functions | experts: E1=22 E2cv=+5.1pp E3cv=12 | 0.3s/gen, 10s total
+    refill modes, score vs the generation average (percentage points, all generations so far): copy +0.67 | vary +0.43 | cross -0.18 | blend +0.44 | scramble -6.01 | fresh -5.94
+gen    60 | last cull  27.1% -> kept   729/1000 | score avg 0.521 best 0.564 | best brain solves  0/24 at 90%+ | brains: 27 hidden nodes avg, T=1.1 | 5 lineages, 78% distinct functions | experts: E1=19 E2cv=+8.9pp E3cv=16 | 0.2s/gen, 11s total
+gen    70 | last cull  50.9% -> kept   491/1000 | score avg 0.565 best 0.598 | best brain solves  1/24 at 90%+ | brains: 30 hidden nodes avg, T=1.1 | 4 lineages, 68% distinct functions | experts: E1=20 E2cv=+8.2pp E3cv=14 | 0.2s/gen, 12s total
+gen    80 | last cull  25.9% -> kept   741/1000 | score avg 0.566 best 0.595 | best brain solves  2/24 at 90%+ | brains: 32 hidden nodes avg, T=1.0 | 3 lineages, 60% distinct functions | experts: E1=21 E2cv=+8.5pp E3cv=11 | 0.1s/gen, 14s total
+    * NEW: problem "majority7" is now solved at 90%+ by the best brain (first time in this run)
+gen    90 | last cull  46.4% -> kept   536/1000 | score avg 0.563 best 0.592 | best brain solves  1/24 at 90%+ | brains: 33 hidden nodes avg, T=1.0 | 3 lineages, 60% distinct functions | experts: E1=20 E2cv=+4.9pp E3cv=11 | 0.1s/gen, 14s total
+gen   100 | last cull  58.3% -> kept   417/1000 | score avg 0.568 best 0.590 | best brain solves  1/24 at 90%+ | brains: 34 hidden nodes avg, T=1.0 | 3 lineages, 60% distinct functions | experts: E1=20 E2cv=+5.6pp E3cv=10 | 0.1s/gen, 15s total
+    refill modes, score vs the generation average (percentage points, all generations so far): copy +0.88 | vary +0.44 | cross +0.24 | blend +0.69 | scramble -8.20 | fresh -8.27
+gen   110 | last cull  46.4% -> kept   536/1000 | score avg 0.565 best 0.596 | best brain solves  1/24 at 90%+ | brains: 37 hidden nodes avg, T=1.0 | 3 lineages, 57% distinct functions | experts: E1=22 E2cv=+6.6pp E3cv=11 | 0.1s/gen, 16s total
+gen   120 | last cull  27.9% -> kept   721/1000 | score avg 0.581 best 0.596 | best brain solves  2/24 at 90%+ | brains: 24 hidden nodes avg, T=1.0 | 2 lineages, 55% distinct functions | experts: E1=16 E2cv=+7.4pp E3cv=14 | 0.1s/gen, 17s total
+gen   130 | last cull  27.6% -> kept   724/1000 | score avg 0.558 best 0.578 | best brain solves  2/24 at 90%+ | brains: 33 hidden nodes avg, T=1.0 | 1 lineages, 40% distinct functions | experts: E1=18 E2cv=+3.6pp E3cv=10 | 0.1s/gen, 18s total
+gen   140 | last cull  30.8% -> kept   692/1000 | score avg 0.580 best 0.592 | best brain solves  2/24 at 90%+ | brains: 47 hidden nodes avg, T=1.0 | 1 lineages, 55% distinct functions | experts: E1=18 E2cv=+2.5pp E3cv=9 | 0.1s/gen, 19s total
+gen   150 | last cull  33.2% -> kept   668/1000 | score avg 0.557 best 0.573 | best brain solves  2/24 at 90%+ | brains: 52 hidden nodes avg, T=1.0 | 1 lineages, 55% distinct functions | experts: E1=19 E2cv=+6.1pp E3cv=12 | 0.1s/gen, 20s total
+    refill modes, score vs the generation average (percentage points, all generations so far): copy +1.06 | vary +0.45 | cross +0.62 | blend +0.91 | scramble -9.78 | fresh -9.79
+gen   160 | last cull  25.1% -> kept   749/1000 | score avg 0.584 best 0.596 | best brain solves  2/24 at 90%+ | brains: 59 hidden nodes avg, T=1.0 | 1 lineages, 55% distinct functions | experts: E1=17 E2cv=+3.6pp E3cv=7 | 0.1s/gen, 21s total
+gen   170 | last cull  33.9% -> kept   661/1000 | score avg 0.596 best 0.605 | best brain solves  2/24 at 90%+ | brains: 64 hidden nodes avg, T=1.0 | 1 lineages, 60% distinct functions | experts: E1=15 E2cv=+7.2pp E3cv=12 | 0.1s/gen, 22s total
+    * new best score of the run: 0.605
+gen   180 | last cull  35.0% -> kept   650/1000 | score avg 0.608 best 0.632 | best brain solves  2/24 at 90%+ | brains: 70 hidden nodes avg, T=1.0 | 1 lineages, 60% distinct functions | experts: E1=14 E2cv=+5.6pp E3cv=10 | 0.1s/gen, 23s total
+    * new best score of the run: 0.632
+gen   190 | last cull  47.2% -> kept   528/1000 | score avg 0.577 best 0.589 | best brain solves  2/24 at 90%+ | brains: 73 hidden nodes avg, T=1.0 | 1 lineages, 61% distinct functions | experts: E1=19 E2cv=+6.0pp E3cv=11 | 0.1s/gen, 23s total
+gen   200 | last cull  44.8% -> kept   552/1000 | score avg 0.583 best 0.591 | best brain solves  2/24 at 90%+ | brains: 79 hidden nodes avg, T=1.0 | 1 lineages, 62% distinct functions | experts: E1=17 E2cv=+4.3pp E3cv=11 | 0.1s/gen, 24s total
+    refill modes, score vs the generation average (percentage points, all generations so far): copy +1.14 | vary +0.42 | cross +0.80 | blend +1.02 | scramble -10.63 | fresh -10.62
+gen   210 | last cull  43.2% -> kept   568/1000 | score avg 0.589 best 0.607 | best brain solves  2/24 at 90%+ | brains: 86 hidden nodes avg, T=1.0 | 1 lineages, 62% distinct functions | experts: E1=20 E2cv=+2.9pp E3cv=10 | 0.1s/gen, 25s total
+gen   220 | last cull  24.8% -> kept   752/1000 | score avg 0.574 best 0.594 | best brain solves  2/24 at 90%+ | brains: 90 hidden nodes avg, T=1.0 | 1 lineages, 56% distinct functions | experts: E1=16 E2cv=+6.1pp E3cv=11 | 0.1s/gen, 26s total
+gen   230 | last cull  35.9% -> kept   641/1000 | score avg 0.567 best 0.586 | best brain solves  2/24 at 90%+ | brains: 93 hidden nodes avg, T=1.0 | 1 lineages, 56% distinct functions | experts: E1=16 E2cv=+4.9pp E3cv=10 | 0.1s/gen, 27s total
+gen   240 | last cull  23.6% -> kept   764/1000 | score avg 0.609 best 0.620 | best brain solves  2/24 at 90%+ | brains: 92 hidden nodes avg, T=1.0 | 1 lineages, 52% distinct functions | experts: E1=16 E2cv=+3.9pp E3cv=9 | 0.1s/gen, 28s total
+gen   250 | last cull  57.6% -> kept   424/1000 | score avg 0.579 best 0.600 | best brain solves  2/24 at 90%+ | brains: 92 hidden nodes avg, T=1.0 | 1 lineages, 57% distinct functions | experts: E1=21 E2cv=+7.4pp E3cv=13 | 0.2s/gen, 29s total
+    refill modes, score vs the generation average (percentage points, all generations so far): copy +1.19 | vary +0.39 | cross +0.92 | blend +1.10 | scramble -11.10 | fresh -11.10
+gen   260 | last cull  58.2% -> kept   418/1000 | score avg 0.573 best 0.589 | best brain solves  2/24 at 90%+ | brains: 92 hidden nodes avg, T=1.0 | 1 lineages, 58% distinct functions | experts: E1=19 E2cv=+6.8pp E3cv=9 | 0.1s/gen, 30s total
+gen   270 | last cull  45.7% -> kept   543/1000 | score avg 0.590 best 0.607 | best brain solves  2/24 at 90%+ | brains: 94 hidden nodes avg, T=1.0 | 1 lineages, 55% distinct functions | experts: E1=19 E2cv=+6.9pp E3cv=11 | 0.1s/gen, 31s total
+gen   280 | last cull  35.9% -> kept   641/1000 | score avg 0.597 best 0.612 | best brain solves  2/24 at 90%+ | brains: 95 hidden nodes avg, T=1.0 | 1 lineages, 51% distinct functions | experts: E1=18 E2cv=+4.7pp E3cv=11 | 0.1s/gen, 32s total
+gen   290 | last cull  40.7% -> kept   593/1000 | score avg 0.607 best 0.626 | best brain solves  2/24 at 90%+ | brains: 95 hidden nodes avg, T=1.0 | 1 lineages, 48% distinct functions | experts: E1=18 E2cv=+1.7pp E3cv=8 | 0.2s/gen, 32s total
+gen   300 | last cull  37.0% -> kept   630/1000 | score avg 0.602 best 0.612 | best brain solves  2/24 at 90%+ | brains: 95 hidden nodes avg, T=1.0 | 1 lineages, 52% distinct functions | experts: E1=18 E2cv=+6.4pp E3cv=12 | 0.1s/gen, 33s total
+    refill modes, score vs the generation average (percentage points, all generations so far): copy +1.23 | vary +0.36 | cross +1.01 | blend +1.15 | scramble -11.45 | fresh -11.45
+=== RUN prof_P1000f finished: 301 generations, 33s ===

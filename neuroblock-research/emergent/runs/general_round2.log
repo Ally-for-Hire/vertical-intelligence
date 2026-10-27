@@ -1,0 +1,17 @@
+xorgauss  n=  82 target 0.940 | default Adam      35,520 | tuned Adam (lr 0.1)     2,400
+moons     n=  82 target 0.975 | default Adam     264,480 | tuned Adam (lr 0.1)     4,800
+circles   n=  82 target 0.980 | default Adam      81,120 | tuned Adam (lr 0.1)     4,320
+spirals   n=  82 target 0.980 | default Adam   1,920,000 | tuned Adam (lr 0.1)    72,960
+blobs3    n=  99 target 0.935 | default Adam      11,520 | tuned Adam (lr 0.03)       960
+checker3  n=  82 target 0.960 | default Adam   1,920,000 | tuned Adam (lr 0.03)   275,040
+parity4   n= 114 target 0.980 | default Adam     109,440 | tuned Adam (lr 0.1)     4,800
+{"B": 8, "P": 40, "cull": 0.9, "init": 0.5}: solved 49/70 | geometric-mean cost 0.52x default Adam, 9.7x tuned Adam | per problem vs default {'xorgauss': 1.07, 'moons': 0.14, 'circles': 0.51, 'spirals': 1.56, 'blobs3': 0.22, 'checker3': 1.56, 'parity4': 0.24} | 150s
+{"B": 8, "P": 40, "cull": 0.9, "init": 0.5, "mirror": true}: solved 50/70 | geometric-mean cost 0.51x default Adam, 9.5x tuned Adam | per problem vs default {'xorgauss': 0.65, 'moons': 0.19, 'circles': 0.4, 'spirals': 1.56, 'blobs3': 0.21, 'checker3': 1.56, 'parity4': 0.37} | 162s
+{"B": 16, "P": 40, "cull": 0.9, "init": 0.5, "mirror": true}: solved 59/70 | geometric-mean cost 0.58x default Adam, 10.8x tuned Adam | per problem vs default {'xorgauss': 0.74, 'moons': 0.29, 'circles': 0.43, 'spirals': 0.81, 'blobs3': 0.42, 'checker3': 1.56, 'parity4': 0.46} | 67s
+{"B": 8, "P": 80, "cull": 0.9, "init": 0.5}: solved 50/70 | geometric-mean cost 0.66x default Adam, 12.3x tuned Adam | per problem vs default {'xorgauss': 0.99, 'moons': 0.19, 'circles': 0.52, 'spirals': 1.56, 'blobs3': 0.44, 'checker3': 1.56, 'parity4': 0.5} | 77s
+{"B": 8, "P": 80, "cull": 0.9, "init": 0.5, "mirror": true}: solved 51/70 | geometric-mean cost 0.67x default Adam, 12.5x tuned Adam | per problem vs default {'xorgauss': 1.35, 'moons': 0.18, 'circles': 0.57, 'spirals': 1.56, 'blobs3': 0.36, 'checker3': 1.56, 'parity4': 0.51} | 80s
+{"B": 8, "P": 80, "cull": 0.95, "init": 0.5}: solved 50/70 | geometric-mean cost 0.64x default Adam, 11.9x tuned Adam | per problem vs default {'xorgauss': 1.37, 'moons': 0.14, 'circles': 0.56, 'spirals': 1.56, 'blobs3': 0.44, 'checker3': 1.56, 'parity4': 0.39} | 80s
+{"B": 16, "P": 40, "cull": 0.95, "init": 0.5}: solved 52/70 | geometric-mean cost 0.65x default Adam, 12.1x tuned Adam | per problem vs default {'xorgauss': 0.83, 'moons': 0.28, 'circles': 0.5, 'spirals': 1.56, 'blobs3': 0.42, 'checker3': 1.56, 'parity4': 0.42} | 71s
+{"B": 4, "P": 160, "cull": 0.9, "init": 0.5}: solved 50/70 | geometric-mean cost 0.97x default Adam, 18.0x tuned Adam | per problem vs default {'xorgauss': 3.35, 'moons': 0.18, 'circles': 1.23, 'spirals': 1.56, 'blobs3': 0.56, 'checker3': 1.56, 'parity4': 0.78} | 82s
+{"B": 4, "P": 160, "cull": 0.95, "init": 0.5}: solved 46/70 | geometric-mean cost 1.82x default Adam, 33.9x tuned Adam | per problem vs default {'xorgauss': 55.21, 'moons': 0.24, 'circles': 3.15, 'spirals': 1.56, 'blobs3': 0.72, 'checker3': 1.56, 'parity4': 0.89} | 98s
+{"B": 8, "P": 80, "cull": 0.95, "init": 0.5, "mirror": true}: solved 50/70 | geometric-mean cost 0.59x default Adam, 11.0x tuned Adam | per problem vs default {'xorgauss': 1.03, 'moons': 0.13, 'circles': 0.51, 'spirals': 1.56, 'blobs3': 0.36, 'checker3': 1.56, 'parity4': 0.44} | 77s

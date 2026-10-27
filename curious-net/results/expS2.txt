@@ -1,0 +1,9 @@
+label positive rate: standard worlds 0.201 (true-parent rate 0.067), pure-interaction worlds 0.172 (true-parent rate 0.079)
+pure_interaction worlds, 48: plain error in ticks 300-1000: 0.842
+  oracle               gain +0.080 +- 0.005
+  single               gain +0.090 +- 0.004
+  infamily             gain +0.092 +- 0.004
+  structured           gain +0.078 +- 0.003
+  structured_oracle    gain +0.080 +- 0.003
+  unstructured         gain +0.018 +- 0.002
+  unstructured_oracle  gain +0.023 +- 0.001

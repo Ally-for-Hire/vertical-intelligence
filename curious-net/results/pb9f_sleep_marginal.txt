@@ -1,0 +1,10 @@
+never      error median 0.8631 | sleeps 0
+every50    error median 0.7537 | sleeps 30
+every100   error median 0.7472 | sleeps 20
+every150   error median 0.7480 | sleeps 15
+every250   error median 0.7574 | sleeps 10
+every500   error median 0.7845 | sleeps 5
+marginal   error median 0.7513 | sleeps 26
+never / best fixed (per world, median) 1.170 | marginal / best fixed 1.012
+best fixed interval per world (counts): {'every50': 0, 'every100': 32, 'every150': 16, 'every250': 0, 'every500': 0}
+done 37 s

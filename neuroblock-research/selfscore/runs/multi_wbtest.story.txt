@@ -1,0 +1,12 @@
+=== RUN wbtest | 24 problems | POPULATION 500 brains | cull rule: mean | cull draw = 0.9 * u^6.0; at least 50 brains survive every generation ===
+Self-modification: FREE (every random change is kept, no gate). Cull-size distribution: median 1.4%, mean 12.8%, 90th percentile 47%, mass culls (>50%) in 9.2% of generations, (>80%) in 2.0%.
+Refill of empty slots: random collections of the current brains, each slot a random mode: copy 25%, vary 25%, cross 20%, blend 10%, scramble 10%, fresh 10%.
+=== RUN wbtest | 24 problems | POPULATION 500 brains | cull rule: mean | cull draw = 0.9 * u^6.0; at least 50 brains survive every generation ===
+Self-modification: FREE (every random change is kept, no gate). Cull-size distribution: median 1.4%, mean 12.8%, 90th percentile 47%, mass culls (>50%) in 9.2% of generations, (>80%) in 2.0%.
+Refill of empty slots: random collections of the current brains, each slot a random mode: copy 25%, vary 25%, cross 20%, blend 10%, scramble 10%, fresh 10%.
+Input bus 16 lines + 5 task-code lines = 21 inputs, 7 outputs. Brain size cap: 96 hidden nodes. GPU memory free at start: 6.8 GB. W&B: run uqi88pdv
+generation 0 population ready (6s); average accuracy of the random starting brains: 0.453
+gen     0 | last cull   1.3% -> kept   493/500 | score avg 0.452 best 0.521 | best brain solves  0/24 at 90%+ | brains: 0 hidden nodes avg, T=2.0 | 488 lineages, 100% distinct functions | experts: E1=23 E2cv=+25.0pp E3cv=22 | 0.5s/gen, 7s total
+    * new best score of the run: 0.521
+gen    10 | last cull   0.2% -> kept   499/500 | score avg 0.462 best 0.530 | best brain solves  1/24 at 90%+ | brains: 3 hidden nodes avg, T=2.1 | 181 lineages, 99% distinct functions | experts: E1=22 E2cv=+25.4pp E3cv=23 | 0.3s/gen, 11s total
+    * NEW: problem "majority5" is now solved at 90%+ by the best brain (first time in this run)

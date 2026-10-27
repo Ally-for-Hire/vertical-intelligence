@@ -1,0 +1,493 @@
+{
+ "rules": {
+  "z": 3.0,
+  "acc_points": 0.02,
+  "time_fraction": 0.15,
+  "neuron_fraction": 0.25
+ },
+ "rows": [
+  {
+   "name": "rho",
+   "conds_mattered": 4,
+   "of": 4,
+   "ever_better": true,
+   "why": [
+    "acc: 0.638 to 0.993 (z 88)",
+    "t: 19.4 to 183 (z 37)",
+    "n: 6.03 to 703 (z 99)"
+   ],
+   "best": [
+    {
+     "t": "1",
+     "n": "1"
+    },
+    {
+     "acc": "0.6",
+     "t": "1",
+     "n": "1"
+    },
+    {
+     "t": "1",
+     "n": "1"
+    },
+    {
+     "acc": "0.6",
+     "t": "1",
+     "n": "1"
+    }
+   ],
+   "group": "candidate",
+   "decision": "Matters and some value beat the start: next question is whether the best value DEPENDS ON THE WORLD (if so, the brain should adjust it itself)."
+  },
+  {
+   "name": "select",
+   "conds_mattered": 4,
+   "of": 4,
+   "ever_better": true,
+   "why": [
+    "n: 11.3 to 14.5 (z 9)"
+   ],
+   "best": [
+    {
+     "acc": "best"
+    },
+    {
+     "acc": "best"
+    },
+    {
+     "acc": "best"
+    }
+   ],
+   "group": "candidate",
+   "decision": "Matters and some value beat the start: next question is whether the best value DEPENDS ON THE WORLD (if so, the brain should adjust it itself)."
+  },
+  {
+   "name": "win",
+   "conds_mattered": 4,
+   "of": 4,
+   "ever_better": true,
+   "why": [
+    "n: 8.77 to 15.9 (z 11)"
+   ],
+   "best": [
+    {
+     "n": "50"
+    },
+    {
+     "t": "100",
+     "n": "100"
+    },
+    {
+     "n": "50"
+    }
+   ],
+   "group": "candidate",
+   "decision": "Matters and some value beat the start: next question is whether the best value DEPENDS ON THE WORLD (if so, the brain should adjust it itself)."
+  },
+  {
+   "name": "eta",
+   "conds_mattered": 4,
+   "of": 4,
+   "ever_better": false,
+   "why": [
+    "t: 31 to 47.9 (z 10)"
+   ],
+   "best": [],
+   "group": "builtin",
+   "decision": "Matters, but the start value (0.5) is already the best in every task: fix it as a constant."
+  },
+  {
+   "name": "lr",
+   "conds_mattered": 4,
+   "of": 4,
+   "ever_better": false,
+   "why": [
+    "n: 10.8 to 18.3 (z 11)"
+   ],
+   "best": [],
+   "group": "builtin",
+   "decision": "Matters, but the start value (0.1) is already the best in every task: fix it as a constant."
+  },
+  {
+   "name": "move",
+   "conds_mattered": 4,
+   "of": 4,
+   "ever_better": false,
+   "why": [
+    "t: 31 to 94.3 (z 40)"
+   ],
+   "best": [],
+   "group": "builtin",
+   "decision": "Matters, and the start value (on) is already the best in every task: make it a built-in behaviour that is always on."
+  },
+  {
+   "name": "prune",
+   "conds_mattered": 4,
+   "of": 4,
+   "ever_better": false,
+   "why": [
+    "n: 11.3 to 24.9 (z 19)"
+   ],
+   "best": [],
+   "group": "builtin",
+   "decision": "Matters, and the start value (on) is already the best in every task: make it a built-in behaviour that is always on."
+  },
+  {
+   "name": "merge",
+   "conds_mattered": 1,
+   "of": 4,
+   "ever_better": false,
+   "why": [
+    "acc: 0.936 to 0.956 (z 3)"
+   ],
+   "best": [],
+   "group": "builtin",
+   "decision": "Matters, and the start value (on) is already the best in every task: make it a built-in behaviour that is always on."
+  },
+  {
+   "name": "min_sep",
+   "conds_mattered": 4,
+   "of": 4,
+   "ever_better": true,
+   "why": [
+    "t: 4.83 to 83.7 (z 29)"
+   ],
+   "best": [
+    {
+     "t": "0.2"
+    },
+    {
+     "t": "0.2"
+    },
+    {
+     "t": "0.2"
+    },
+    {
+     "t": "0.2"
+    }
+   ],
+   "group": "constant",
+   "decision": "The physical size of a neuron, not a design choice. Its best value is \"as small as possible\", so a brain allowed to tune it would just drive it to zero for free speed. Keep it fixed at 0.3 (this is the speed limit assumption)."
+  },
+  {
+   "name": "us_per_unit",
+   "conds_mattered": 4,
+   "of": 4,
+   "ever_better": true,
+   "why": [
+    "t: 7.84 to 124 (z 31)"
+   ],
+   "best": [
+    {
+     "t": "20"
+    },
+    {
+     "t": "20"
+    },
+    {
+     "t": "20"
+    },
+    {
+     "t": "20"
+    }
+   ],
+   "group": "constant",
+   "decision": "Fix at 40 (it only converts distance to microseconds; scaling was exactly linear)."
+  },
+  {
+   "name": "D (inputs)",
+   "conds_mattered": 4,
+   "of": 4,
+   "ever_better": true,
+   "why": [
+    "acc: 0.15 to 0.993 (z 99)",
+    "t: 17.6 to 304 (z 41)",
+    "n: 4.99 to 1.09e+03 (z 99)"
+   ],
+   "best": [
+    {
+     "t": "4",
+     "n": "4"
+    },
+    {
+     "t": "4",
+     "n": "4"
+    },
+    {
+     "t": "4",
+     "n": "4"
+    },
+    {
+     "acc": "16",
+     "t": "4",
+     "n": "4"
+    }
+   ],
+   "group": "world",
+   "decision": "Keep as a test-world control (it is the task, not the brain)."
+  },
+  {
+   "name": "K (classes)",
+   "conds_mattered": 4,
+   "of": 4,
+   "ever_better": true,
+   "why": [
+    "acc: 0.969 to 0.998 (z 5)",
+    "t: 22.2 to 42.6 (z 8)",
+    "n: 5.67 to 28.8 (z 28)"
+   ],
+   "best": [
+    {
+     "t": "3",
+     "n": "5"
+    },
+    {
+     "acc": "8",
+     "t": "3",
+     "n": "5"
+    },
+    {
+     "t": "3",
+     "n": "5"
+    },
+    {
+     "acc": "3",
+     "t": "3",
+     "n": "5"
+    }
+   ],
+   "group": "world",
+   "decision": "Keep as a test-world control (it is the task, not the brain)."
+  },
+  {
+   "name": "drift",
+   "conds_mattered": 4,
+   "of": 4,
+   "ever_better": true,
+   "why": [
+    "acc: 0.956 to 0.993 (z 3)"
+   ],
+   "best": [
+    {
+     "acc": "shift"
+    },
+    {
+     "acc": "shift"
+    }
+   ],
+   "group": "world",
+   "decision": "Keep as a test-world control (it is the task, not the brain)."
+  },
+  {
+   "name": "sigma",
+   "conds_mattered": 4,
+   "of": 4,
+   "ever_better": true,
+   "why": [
+    "acc: 0.396 to 0.995 (z 99)",
+    "t: 29.9 to 239 (z 34)",
+    "n: 8.04 to 872 (z 99)"
+   ],
+   "best": [
+    {
+     "n": "0.06"
+    },
+    {
+     "n": "0.1"
+    },
+    {
+     "n": "0.1"
+    }
+   ],
+   "group": "world",
+   "decision": "Keep as a test-world control (it is the task, not the brain)."
+  },
+  {
+   "name": "zipf (class skew)",
+   "conds_mattered": 4,
+   "of": 4,
+   "ever_better": true,
+   "why": [
+    "t: 22.2 to 34.7 (z 8)"
+   ],
+   "best": [
+    {
+     "t": "2"
+    },
+    {
+     "acc": "2",
+     "t": "2"
+    },
+    {
+     "acc": "2",
+     "t": "2"
+    },
+    {
+     "acc": "2",
+     "t": "2"
+    }
+   ],
+   "group": "world",
+   "decision": "Keep as a test-world control (it is the task, not the brain)."
+  },
+  {
+   "name": "T",
+   "conds_mattered": 2,
+   "of": 4,
+   "ever_better": true,
+   "why": [
+    "n: 11.3 to 14.5 (z 6)"
+   ],
+   "best": [
+    {
+     "t": "12000"
+    }
+   ],
+   "group": "world",
+   "decision": "Keep as a test-world control (it is the task, not the brain)."
+  },
+  {
+   "name": "shift_sd",
+   "conds_mattered": 2,
+   "of": 2,
+   "ever_better": true,
+   "why": [
+    "t: 30.4 to 41.2 (z 7)",
+    "n: 11.2 to 16.5 (z 17)"
+   ],
+   "best": [
+    {
+     "acc": "0.3"
+    }
+   ],
+   "group": "world",
+   "decision": "Keep as a test-world control (it is the task, not the brain)."
+  },
+  {
+   "name": "n_replace",
+   "conds_mattered": 1,
+   "of": 2,
+   "ever_better": false,
+   "why": [
+    "n: 11.8 to 16.2 (z 7)"
+   ],
+   "best": [],
+   "group": "world",
+   "decision": "Keep as a test-world control (it is the task, not the brain)."
+  },
+  {
+   "name": "a0 (rigid on)",
+   "conds_mattered": 4,
+   "of": 4,
+   "ever_better": true,
+   "why": [
+    "t: 35.8 to 53.2 (z 7)"
+   ],
+   "best": [
+    {
+     "t": "50"
+    },
+    {
+     "t": "50"
+    }
+   ],
+   "group": "dropped",
+   "decision": "Drop with its parent switch \"rigid\", which never helped."
+  },
+  {
+   "name": "rigid",
+   "conds_mattered": 4,
+   "of": 4,
+   "ever_better": false,
+   "why": [
+    "t: 31 to 40.5 (z 7)"
+   ],
+   "best": [],
+   "group": "dropped",
+   "decision": "Drop: switching it on only ever made things worse or no better; keep it permanently off."
+  },
+  {
+   "name": "c0 (rigid on)",
+   "conds_mattered": 3,
+   "of": 4,
+   "ever_better": false,
+   "why": [
+    "t: 35.6 to 46.3 (z 3)",
+    "n: 9.96 to 24.7 (z 28)"
+   ],
+   "best": [],
+   "group": "dropped",
+   "decision": "Drop with its parent switch \"rigid\", which never helped."
+  },
+  {
+   "name": "buf (expand on)",
+   "conds_mattered": 0,
+   "of": 4,
+   "ever_better": false,
+   "why": [],
+   "best": [],
+   "group": "dropped",
+   "decision": "Drop with its parent switch \"expand\", which never helped."
+  },
+  {
+   "name": "expand",
+   "conds_mattered": 0,
+   "of": 4,
+   "ever_better": false,
+   "why": [],
+   "best": [],
+   "group": "dropped",
+   "decision": "Drop: no real effect in any task."
+  },
+  {
+   "name": "frac (expand on)",
+   "conds_mattered": 0,
+   "of": 4,
+   "ever_better": false,
+   "why": [],
+   "best": [],
+   "group": "dropped",
+   "decision": "Drop with its parent switch \"expand\", which never helped."
+  },
+  {
+   "name": "gain_frac (expand on)",
+   "conds_mattered": 0,
+   "of": 4,
+   "ever_better": false,
+   "why": [],
+   "best": [],
+   "group": "dropped",
+   "decision": "Drop with its parent switch \"expand\", which never helped."
+  },
+  {
+   "name": "spawn_cost",
+   "conds_mattered": 0,
+   "of": 4,
+   "ever_better": false,
+   "why": [],
+   "best": [],
+   "group": "dropped",
+   "decision": "Drop: no real effect in any task."
+  },
+  {
+   "name": "spawn_len",
+   "conds_mattered": 0,
+   "of": 4,
+   "ever_better": false,
+   "why": [],
+   "best": [],
+   "group": "dropped",
+   "decision": "Drop: no real effect in any task."
+  },
+  {
+   "name": "support (expand on)",
+   "conds_mattered": 0,
+   "of": 4,
+   "ever_better": false,
+   "why": [],
+   "best": [],
+   "group": "dropped",
+   "decision": "Drop with its parent switch \"expand\", which never helped."
+  }
+ ]
+}

@@ -1,0 +1,8 @@
+new    (vs adam, negative = better): adam +0.0% +- 0.0 | neuromod +11.2% +- 2.3 | neuromod_reset -6.6% +- 1.1 | lr2 -4.5% +- 0.8 | lr4 +6.0% +- 1.9
+ret    (vs adam, negative = better): adam +0.0% +- 0.0 | neuromod +28.3% +- 2.9 | neuromod_reset -9.1% +- 0.8 | lr2 -3.2% +- 1.1 | lr4 +19.1% +- 1.8
+steady (vs adam, negative = better): adam +0.0% +- 0.0 | neuromod +28.6% +- 3.2 | neuromod_reset +0.7% +- 0.6 | lr2 +10.4% +- 1.0 | lr4 +62.4% +- 4.6
+total  (vs adam, negative = better): adam +0.0% +- 0.0 | neuromod +27.4% +- 2.3 | neuromod_reset -2.4% +- 0.5 | lr2 +4.2% +- 0.6 | lr4 +38.4% +- 2.2
+reset vs neuromod on NEW: -14.6% +- 1.8; mean resets per world 827
+neuromod TOTAL vs lr2: +22.2% +- 1.9
+neuromod TOTAL vs lr4: -7.4% +- 1.7
+done 35 s

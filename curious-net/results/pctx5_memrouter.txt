@@ -1,0 +1,5 @@
+q=1.0 memory     routing accuracy median 0.968 | test error x oracle median 4.97
+q=1.0 parametric routing accuracy median 0.936 | test error x oracle median 9.84
+q=0.25 memory     routing accuracy median 0.938 | test error x oracle median 10.54
+q=0.25 parametric routing accuracy median 0.792 | test error x oracle median 15.08
+done 8 s

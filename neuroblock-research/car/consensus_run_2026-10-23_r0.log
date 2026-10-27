@@ -1,0 +1,10 @@
+checkpoint               mirror        and_noise            ends5              xor   neurons
+after_mirror      0.927 +-0.051    0.493 +-0.017    0.510 +-0.044    0.502 +-0.005   3.5
+after_and_noise    0.917 +-0.045    0.928 +-0.031    0.626 +-0.048    0.498 +-0.009   3.7
+after_ends5       0.919 +-0.042    0.932 +-0.024    0.939 +-0.022    0.498 +-0.010   3.4
+after_xor         0.902 +-0.051    0.923 +-0.035    0.926 +-0.025    0.517 +-0.021   3.7
+final             0.974 +-0.012    0.964 +-0.015    0.961 +-0.010    0.555 +-0.053   4.7
+best const                0.500            0.750            0.900            0.500
+ceiling                   1.000            1.000            1.000            1.000
+final sweeps used / unresolved: {'mirror': (np.float64(1.85), np.float64(0.0)), 'and_noise': (np.float64(1.88), np.float64(0.0)), 'ends5': (np.float64(1.78), np.float64(0.0)), 'xor': (np.float64(3.4), np.float64(0.002))} retired/run 29.6
+done in 26s

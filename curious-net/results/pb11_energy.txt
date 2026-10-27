@@ -1,0 +1,9 @@
+arm          | training (in-distribution) error vs plain | SHIFTED test error vs plain (mean of per-world ratio - 1, +- SE; median) | mean |activity| / plain | sum|weights| / plain
+plain        | +0.0% +- 0.0 (median +0.0%) | +0.0% +- 0.0 (median +0.0%) | 1.00 | 1.00
+act_0.0001   | +0.0% +- 0.0 (median -0.0%) | +0.0% +- 0.0 (median -0.0%) | 1.00 | 1.00
+act_0.001    | -0.0% +- 0.0 (median -0.0%) | +0.2% +- 0.1 (median -0.0%) | 1.00 | 1.00
+act_0.01     | -0.0% +- 0.0 (median -0.0%) | -0.0% +- 0.3 (median -0.0%) | 0.99 | 0.99
+syn_0.0001   | -0.0% +- 0.0 (median -0.0%) | +0.0% +- 0.1 (median -0.0%) | 1.00 | 1.00
+syn_0.001    | -0.2% +- 0.0 (median -0.2%) | -0.3% +- 0.1 (median -0.2%) | 1.00 | 0.97
+syn_0.01     | -1.6% +- 0.1 (median -1.5%) | -2.8% +- 0.8 (median -2.2%) | 0.95 | 0.71
+done 25 s

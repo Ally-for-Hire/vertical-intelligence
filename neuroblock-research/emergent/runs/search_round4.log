@@ -1,0 +1,47 @@
+gradient descent, H=16: median cost 47,040
+gradient descent, H=32: median cost 22,560
+gradient descent: median cost 115,680 sample-forward-equivalents (5/5 solved)
+{"B": 64, "H": 8, "P": 20, "cull": 0.8, "fit": "ll", "life": true, "recomb": "none"}: solved 5/5 | median cost 229,120 (2.0x gradient) | 1.0s
+{"B": 128, "H": 8, "P": 20, "cull": 0.5, "fit": "ll", "life": true, "recomb": "none"}: solved 4/5 | median cost 322,560 (2.8x gradient) | 1.1s
+{"B": 128, "H": 8, "P": 20, "cull": 0.8, "fit": "ll", "life": true, "recomb": "none"}: solved 5/5 | median cost 212,480 (1.8x gradient) | 0.5s
+{"B": 64, "H": 8, "P": 50, "cull": 0.8, "fit": "ll", "life": true, "recomb": "none"}: solved 5/5 | median cost 134,400 (1.2x gradient) | 0.3s
+{"B": 128, "H": 8, "P": 50, "cull": 0.5, "fit": "ll", "life": true, "recomb": "none"}: solved 4/5 | median cost 460,800 (4.0x gradient) | 0.6s
+{"B": 128, "H": 8, "P": 50, "cull": 0.8, "fit": "ll", "life": true, "recomb": "none"}: solved 5/5 | median cost 428,800 (3.7x gradient) | 0.4s
+{"B": 64, "H": 8, "P": 20, "cull": 0.8, "fit": "ll", "life": true, "recomb": "avg2"}: solved 5/5 | median cost 152,320 (1.3x gradient) | 0.8s
+{"B": 128, "H": 8, "P": 20, "cull": 0.5, "fit": "ll", "life": true, "recomb": "avg2"}: solved 2/5 | median cost 1,500,160 (13.0x gradient) | 1.9s
+{"B": 128, "H": 8, "P": 20, "cull": 0.8, "fit": "ll", "life": true, "recomb": "avg2"}: solved 5/5 | median cost 273,920 (2.4x gradient) | 0.9s
+{"B": 64, "H": 8, "P": 50, "cull": 0.8, "fit": "ll", "life": true, "recomb": "avg2"}: solved 4/5 | median cost 188,800 (1.6x gradient) | 0.6s
+{"B": 128, "H": 8, "P": 50, "cull": 0.5, "fit": "ll", "life": true, "recomb": "avg2"}: solved 1/5 | median cost 1,504,000 (13.0x gradient) | 1.0s
+{"B": 128, "H": 8, "P": 50, "cull": 0.8, "fit": "ll", "life": true, "recomb": "avg2"}: solved 5/5 | median cost 288,000 (2.5x gradient) | 0.3s
+{"B": 64, "H": 16, "P": 20, "cull": 0.5, "fit": "ll", "life": true, "recomb": "none"}: solved 5/5 | median cost 165,120 (1.4x gradient) | 0.6s
+{"B": 64, "H": 16, "P": 20, "cull": 0.8, "fit": "ll", "life": true, "recomb": "none"}: solved 5/5 | median cost 99,840 (0.9x gradient) | 0.7s
+{"B": 128, "H": 16, "P": 20, "cull": 0.5, "fit": "ll", "life": true, "recomb": "none"}: solved 5/5 | median cost 307,200 (2.7x gradient) | 0.5s
+{"B": 128, "H": 16, "P": 20, "cull": 0.8, "fit": "ll", "life": true, "recomb": "none"}: solved 5/5 | median cost 179,200 (1.5x gradient) | 0.5s
+{"B": 64, "H": 16, "P": 50, "cull": 0.5, "fit": "ll", "life": true, "recomb": "none"}: solved 5/5 | median cost 195,200 (1.7x gradient) | 0.3s
+{"B": 64, "H": 16, "P": 50, "cull": 0.8, "fit": "ll", "life": true, "recomb": "none"}: solved 5/5 | median cost 169,600 (1.5x gradient) | 0.2s
+{"B": 128, "H": 16, "P": 50, "cull": 0.5, "fit": "ll", "life": true, "recomb": "none"}: solved 5/5 | median cost 492,800 (4.3x gradient) | 0.4s
+{"B": 128, "H": 16, "P": 50, "cull": 0.8, "fit": "ll", "life": true, "recomb": "none"}: solved 5/5 | median cost 134,400 (1.2x gradient) | 0.1s
+{"B": 64, "H": 16, "P": 20, "cull": 0.5, "fit": "ll", "life": true, "recomb": "avg2"}: solved 5/5 | median cost 117,760 (1.0x gradient) | 0.5s
+{"B": 64, "H": 16, "P": 20, "cull": 0.8, "fit": "ll", "life": true, "recomb": "avg2"}: solved 5/5 | median cost 112,640 (1.0x gradient) | 0.6s
+{"B": 128, "H": 16, "P": 20, "cull": 0.5, "fit": "ll", "life": true, "recomb": "avg2"}: solved 5/5 | median cost 161,280 (1.4x gradient) | 0.4s
+{"B": 128, "H": 16, "P": 20, "cull": 0.8, "fit": "ll", "life": true, "recomb": "avg2"}: solved 5/5 | median cost 273,920 (2.4x gradient) | 0.8s
+{"B": 64, "H": 16, "P": 50, "cull": 0.5, "fit": "ll", "life": true, "recomb": "avg2"}: solved 4/5 | median cost 1,126,400 (9.7x gradient) | 1.3s
+{"B": 64, "H": 16, "P": 50, "cull": 0.8, "fit": "ll", "life": true, "recomb": "avg2"}: solved 5/5 | median cost 131,200 (1.1x gradient) | 0.3s
+{"B": 128, "H": 16, "P": 50, "cull": 0.5, "fit": "ll", "life": true, "recomb": "avg2"}: solved 5/5 | median cost 633,600 (5.5x gradient) | 0.4s
+{"B": 128, "H": 16, "P": 50, "cull": 0.8, "fit": "ll", "life": true, "recomb": "avg2"}: solved 5/5 | median cost 204,800 (1.8x gradient) | 0.1s
+{"B": 64, "H": 32, "P": 20, "cull": 0.5, "fit": "ll", "life": true, "recomb": "none"}: solved 5/5 | median cost 111,360 (1.0x gradient) | 0.5s
+{"B": 64, "H": 32, "P": 20, "cull": 0.8, "fit": "ll", "life": true, "recomb": "none"}: solved 5/5 | median cost 46,080 (0.4x gradient) | 0.5s
+{"B": 128, "H": 32, "P": 20, "cull": 0.5, "fit": "ll", "life": true, "recomb": "none"}: solved 5/5 | median cost 245,760 (2.1x gradient) | 0.4s
+{"B": 128, "H": 32, "P": 20, "cull": 0.8, "fit": "ll", "life": true, "recomb": "none"}: solved 5/5 | median cost 110,080 (1.0x gradient) | 0.3s
+{"B": 64, "H": 32, "P": 50, "cull": 0.5, "fit": "ll", "life": true, "recomb": "none"}: solved 5/5 | median cost 192,000 (1.7x gradient) | 0.3s
+{"B": 64, "H": 32, "P": 50, "cull": 0.8, "fit": "ll", "life": true, "recomb": "none"}: solved 5/5 | median cost 140,800 (1.2x gradient) | 0.2s
+{"B": 128, "H": 32, "P": 50, "cull": 0.5, "fit": "ll", "life": true, "recomb": "none"}: solved 5/5 | median cost 288,000 (2.5x gradient) | 0.3s
+{"B": 128, "H": 32, "P": 50, "cull": 0.8, "fit": "ll", "life": true, "recomb": "none"}: solved 5/5 | median cost 160,000 (1.4x gradient) | 0.2s
+{"B": 64, "H": 32, "P": 20, "cull": 0.5, "fit": "ll", "life": true, "recomb": "avg2"}: solved 5/5 | median cost 249,600 (2.2x gradient) | 0.9s
+{"B": 64, "H": 32, "P": 20, "cull": 0.8, "fit": "ll", "life": true, "recomb": "avg2"}: solved 5/5 | median cost 57,600 (0.5x gradient) | 0.2s
+{"B": 128, "H": 32, "P": 20, "cull": 0.5, "fit": "ll", "life": true, "recomb": "avg2"}: solved 3/5 | median cost 504,320 (4.4x gradient) | 1.3s
+{"B": 128, "H": 32, "P": 20, "cull": 0.8, "fit": "ll", "life": true, "recomb": "avg2"}: solved 5/5 | median cost 212,480 (1.8x gradient) | 0.4s
+{"B": 64, "H": 32, "P": 50, "cull": 0.5, "fit": "ll", "life": true, "recomb": "avg2"}: solved 4/5 | median cost 310,400 (2.7x gradient) | 0.9s
+{"B": 64, "H": 32, "P": 50, "cull": 0.8, "fit": "ll", "life": true, "recomb": "avg2"}: solved 5/5 | median cost 137,600 (1.2x gradient) | 0.2s
+{"B": 128, "H": 32, "P": 50, "cull": 0.5, "fit": "ll", "life": true, "recomb": "avg2"}: solved 4/5 | median cost 569,600 (4.9x gradient) | 0.5s
+{"B": 128, "H": 32, "P": 50, "cull": 0.8, "fit": "ll", "life": true, "recomb": "avg2"}: solved 5/5 | median cost 249,600 (2.2x gradient) | 0.2s

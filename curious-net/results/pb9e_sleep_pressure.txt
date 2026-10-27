@@ -1,0 +1,8 @@
+never      error median 0.8631 | sleeps 0
+every250   error median 0.7574 | sleeps 10
+every500   error median 0.7845 | sleeps 5
+every1000  error median 0.8197 | sleeps 2
+every2000  error median 0.8490 | sleeps 1
+self       error median 1.0225 | sleeps 56
+never / best fixed (per world, median) 1.150 | self / best fixed 1.431
+done 33 s

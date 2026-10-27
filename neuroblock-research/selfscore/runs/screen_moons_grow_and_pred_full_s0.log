@@ -1,0 +1,20 @@
+fatal   : Memory allocation failure
+Traceback (most recent call last):
+  File "~\neuroblock-research\selfscore\run.py", line 100, in <module>
+    h = run(a.problem, a.rule, a.sched, a.seed, a.gens, P=a.P)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "~\AppData\Local\Programs\Python\Python311\Lib\site-packages\torch\utils\_contextlib.py", line 124, in decorate_context
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "~\neuroblock-research\selfscore\run.py", line 48, in run
+    kids = pop.take(torch.arange(P, device=dev).repeat(m)); kids.mutate()         # kid i*? -> parent (i % P)
+                                                            ^^^^^^^^^^^^^
+  File "~\neuroblock-research\selfscore\pop.py", line 73, in mutate
+    op = torch.multinomial(OP_P.to(dev).expand(P, -1), 1)[:, 0]
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+torch.AcceleratorError: CUDA error: unknown error
+Search for `cudaErrorUnknown' in https://docs.nvidia.com/cuda/cuda-runtime-api/group__CUDART__TYPES.html for more information.
+CUDA kernel errors might be asynchronously reported at some other API call, so the stacktrace below might be incorrect.
+For debugging consider passing CUDA_LAUNCH_BLOCKING=1
+Compile with `TORCH_USE_CUDA_DSA` to enable device-side assertions.
+

@@ -1,0 +1,5 @@
+tick    1500 test 0.886 smoothed None best -1.000 since 1 senses 60 stated-conf 0.71 actual-success 0.99 ECE 0.282 sure(train) 0.40 [0.1 min]
+tick    3000 test 0.889 smoothed None best -1.000 since 2 senses 60 stated-conf 0.51 actual-success 1.00 ECE 0.485 sure(train) 0.32 [0.2 min]
+tick    4500 test 0.887 smoothed None best -1.000 since 3 senses 60 stated-conf 0.55 actual-success 1.00 ECE 0.449 sure(train) 0.28 [0.3 min]
+tick    6000 test 0.883 smoothed None best -1.000 since 4 senses 60 stated-conf 0.71 actual-success 1.00 ECE 0.293 sure(train) 0.26 [0.4 min]
+TIME LIMIT best smoothed -1.000

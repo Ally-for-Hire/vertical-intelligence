@@ -1,0 +1,7 @@
+controller   | mean |target| early (0-500) | late (500-1000) | late / oracle (median ratio)
+random       | 0.693 | 0.660 | 1.00
+model_free   | 0.669 | 0.605 | 1.00
+model_based  | 0.638 | 0.534 | 1.00
+oracle       | 0.496 | 0.480 | 1.00
+model_based / model_free early: median 1.00; model_free / random late: median 0.99
+done 14 s

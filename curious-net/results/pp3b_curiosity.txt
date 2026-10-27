@@ -1,0 +1,21 @@
+budget 600, 2 noisy TVs of 6:
+   random   noise 0.333 hard 0.334 | error ratio to random: median 1.000
+   lp10     noise 0.070 hard 0.162 | error ratio to random: median 1.763
+   lp30     noise 0.085 hard 0.124 | error ratio to random: median 1.077
+   lp30abs  noise 0.673 hard 0.115 | error ratio to random: median 1.129
+budget 600, 4 noisy TVs of 8:
+   random   noise 0.502 hard 0.250 | error ratio to random: median 1.000
+   lp10     noise 0.106 hard 0.169 | error ratio to random: median 1.803
+   lp30     noise 0.135 hard 0.114 | error ratio to random: median 1.031
+   lp30abs  noise 0.773 hard 0.067 | error ratio to random: median 1.118
+budget 2400, 2 noisy TVs of 6:
+   random   noise 0.334 hard 0.333 | error ratio to random: median 1.000
+   lp10     noise 0.066 hard 0.109 | error ratio to random: median 1.710
+   lp30     noise 0.066 hard 0.087 | error ratio to random: median 1.523
+   lp30abs  noise 0.795 hard 0.113 | error ratio to random: median 1.505
+budget 2400, 4 noisy TVs of 8:
+   random   noise 0.501 hard 0.249 | error ratio to random: median 1.000
+   lp10     noise 0.100 hard 0.107 | error ratio to random: median 1.559
+   lp30     noise 0.100 hard 0.067 | error ratio to random: median 1.357
+   lp30abs  noise 0.869 hard 0.060 | error ratio to random: median 1.431
+done 43 s

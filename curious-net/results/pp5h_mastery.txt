@@ -1,0 +1,20 @@
+mean error by encounter k (1 = first time) | 24 world sets x 10 problems
+MEDIAN error; k      fresh    librel      libg      libh    oracle   | updates: librel  freeze
+ 1     0.951     1.021     3.797     2.141     0.963   |    1800    1722
+ 2     0.917     0.983     2.220     0.957     0.668   |    1800    1254
+ 3     0.940     1.031     1.735     0.844     0.656   |    1800    1145
+ 4     0.917     0.877     1.382     0.818     0.569   |    1800    1036
+ 5     0.929     0.948     1.186     0.774     0.609   |    1800    1129
+ 6     0.920     0.923     1.016     0.831     0.553   |    1800    1054
+ 7     0.937     0.972     0.994     0.824     0.552   |    1800    1084
+ 8     0.953     0.993     0.957     0.841     0.555   |    1800    1043
+ 9     0.959     0.892     0.876     0.846     0.530   |    1800    1022
+10     0.959     0.925     0.905     0.830     0.518   |    1800    1012
+librel on repeat encounters: reused OWN chunk 0.504, reused ANOTHER problem's chunk 0.130, made a new chunk 0.366; chunks per world set 42.2 (true problems: 10)
+libg on repeat encounters: reused OWN chunk 0.283, reused ANOTHER problem's chunk 0.631, made a new chunk 0.086; chunks per world set 11.6 (true problems: 10)
+libh on repeat encounters: reused OWN chunk 0.345, reused ANOTHER problem's chunk 0.020, made a new chunk 0.634; chunks per world set 66.4 (true problems: 10)
+libh: 1st-encounter median 2.141 (fresh 0.951); 10th/1st 0.39; repeat median 0.837 vs oracle 0.595
+libg median error ratio vs first encounter: k=2 0.58, k=10 0.24; repeat median libg 1.231 vs oracle 0.595
+librel median error ratio vs first encounter: k=2 0.96, k=10 0.91
+10th encounter: freeze/librel median error 1.16, updates 0.56
+done 268 s

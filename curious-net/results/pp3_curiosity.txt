@@ -1,0 +1,6 @@
+strategy     | share of picks on noisy TVs | on hard activities | final learnable error (median ratio to random; mean ratio +- SE)
+random       | 0.333 | 0.334 | 1.000; 1.000 +- 0.000
+roundrobin   | 0.333 | 0.333 | 0.995; 0.994 +- 0.003
+uncertainty  | 0.925 | 0.034 | 2.381; 2.496 +- 0.051
+progress     | 0.070 | 0.162 | 1.508; 1.666 +- 0.039
+done 3 s

@@ -1,0 +1,13 @@
+=== RUN bigtest10k | 24 problems | POPULATION 10000 brains | cull draw each generation ~ uniform(0, 0.9); no wipes possible: at least 1000 brains survive every generation ===
+Input bus 16 lines + 5 task-code lines = 21 inputs, 7 outputs. Brain size cap: 96 hidden nodes. GPU memory free at start: 6.6 GB
+generation 0 population ready (1s); average accuracy of the random starting brains: 0.450
+gen     0 | last cull  44.7% -> kept  5534/10000 | score avg 0.450 best 0.553 | best brain solves  1/24 at 90%+ | brains: 0 hidden nodes avg, T=2.0 | 5282 lineages | 3.4s/gen, 5s total, GPU 1.0 GB peak
+    * NEW: problem "circles" is now solved at 90%+ by the best brain (first time in this run)
+    * new best score of the run: 0.553
+gen     1 | last cull  69.1% -> kept  3086/10000 | score avg 0.466 best 0.549 | best brain solves  0/24 at 90%+ | brains: 1 hidden nodes avg, T=2.0 | 1701 lineages | 3.3s/gen, 8s total, GPU 1.0 GB peak
+gen     2 | last cull   8.0% -> kept  9204/10000 | score avg 0.476 best 0.568 | best brain solves  0/24 at 90%+ | brains: 1 hidden nodes avg, T=2.0 | 1518 lineages | 3.5s/gen, 11s total, GPU 1.0 GB peak
+gen     3 | last cull  11.9% -> kept  8812/10000 | score avg 0.487 best 0.570 | best brain solves  1/24 at 90%+ | brains: 2 hidden nodes avg, T=2.0 | 1172 lineages | 3.7s/gen, 15s total, GPU 1.0 GB peak
+    * NEW: problem "moons_noisy15" is now solved at 90%+ by the best brain (first time in this run)
+gen     4 | last cull  27.7% -> kept  7233/10000 | score avg 0.481 best 0.565 | best brain solves  1/24 at 90%+ | brains: 2 hidden nodes avg, T=2.0 | 710 lineages | 3.9s/gen, 19s total, GPU 1.0 GB peak
+gen     5 | last cull  57.1% -> kept  4293/10000 | score avg 0.495 best 0.568 | best brain solves  1/24 at 90%+ | brains: 3 hidden nodes avg, T=2.0 | 293 lineages | 4.0s/gen, 23s total, GPU 1.0 GB peak
+=== RUN bigtest10k finished: 6 generations, 23s ===

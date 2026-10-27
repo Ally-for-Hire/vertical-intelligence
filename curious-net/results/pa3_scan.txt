@@ -1,0 +1,10 @@
+scan            | fidelity (mean corr with the true brain's readout activity) | share of the full scan's fidelity
+full            | 1.000 +- 0.000 | 1.00
+no_signs        | 0.082 +- 0.019 | 0.08
+binary          | 0.512 +- 0.028 | 0.51
+no_intrinsic    | 0.416 +- 0.037 | 0.42
+no_neuromod     | 0.714 +- 0.020 | 0.71
+full_err5       | 0.994 +- 0.002 | 0.99
+full_err20      | 0.936 +- 0.012 | 0.94
+mean activity sd of the true brain's readout neurons: 0.106
+done 1 s

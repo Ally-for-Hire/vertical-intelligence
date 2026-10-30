@@ -1,5 +1,41 @@
 # Curious-net: working log (newest first)
 
+## 2026-10-30 (X8.1e: signature suggests, early-window error rule vetoes; creation line PARKED)
+
+`vi/x8_1e.py`, P361-P363 registered before the run (24 sets, seeds 85000+; unscored self-test first). W&B run `X8.1e`.
+Verdicts: P361 PASSED (manipulation: 82% of wrong suggestions vetoed), P362 FAILED, P363 FAILED.
+Numbers (median): wrong-routine reuse 0.000 (ERR 0.033); own-problem reuse 0.50 (ERR 0.55); new routine on repeats 0.47; routines 51 (ERR 38.5); repeat error SIG_VETO 1.162 = 1.42x oracle (0.816), FRESH 1.204, ERR 1.986; SIG_VETO beats FRESH in 16 of 24 sets (bar 18).
+Reading: the veto trades one failure for the other. It removes misroutes completely but discards about half of the correct reuses (the right routine, early in an episode, often does not yet beat a fresh learner on the first 50 ticks), so the library fragments again and the net gain over no memory is small (about 4% in error). Across X8.1b-e (four designs, 18 registered predictions on creation), the best creation rule so far reaches parity with a learner that starts fresh each episode, while the oracle beats FRESH by about a third (0.65-0.68x). THREE-STRIKES DIAGNOSIS (parked): in this world a wrong routine costs far more than a right one saves, so a recogniser needs misroute rate near zero AND high reuse at the same time; the signature rule (X8.1d: 0.82 right / 0.12 wrong) and the veto (0.50 right / 0.00 wrong) sit on one trade-off curve, and no registered rule has left it. What would unpark: a confidence that is not just distance (e.g. a score that grows as the routine's early error trajectory is audited during the window, so a right routine is not penalised for a slow start), or a world where memory pays more than 0.65x. The recognition-given result of X8.1 (0.969 accuracy, routines supplied) stands; what fails is bootstrapping the library in this world.
+Limits: toy; one generator; the veto has no tolerance (a hard 'better than fresh' test); no duplicate merging.
+Next: X8.2 is not meaningful until a creation rule beats FRESH (its premise is a working automatic path); the queue moves to X7.7 (Self over sensors, unanswerable situations that look answerable).
+
+## 2026-10-30 (X8.1d: within-problem spread learned from audit-confirmed assignments; FRESH control added)
+
+`vi/x8_1d.py`, P357-P360 registered before the run, AMENDED before scoring after an unscored self-test showed the bootstrap never reached its switch (documented in PREDICTIONS.md; no scored result seen before the amendment). 24 sets, seeds 84000+. W&B run `X8.1d`.
+Verdicts: P357 PASSED, P358 PASSED, P359 FAILED, P360 FAILED.
+Numbers (median): routines SIG 14 / ERR 37 (10 true); own-problem routine reused SIG 0.82 / ERR 0.58; ANOTHER problem's routine reused SIG 0.117 / ERR 0.039; new routine on repeats SIG 0.06 / ERR 0.31. Repeat error (ticks 50-299): oracle 0.871, SIG 1.797 (2.06x), ERR 2.280, FRESH (no memory) 1.345. SIG beats ERR in 16 of 24 sets, beats FRESH in 9.
+Reading: (1) learning the within-problem spread from audit-confirmed assignments fixes both X8.1b's merging and X8.1c's over-creation: the count is near 10, reuse of the right routine is at its bar, and the true-label calibration holds (0.024). (2) The remaining 12% wrong-routine reuse is enough to make the library WORSE than a learner that starts fresh each episode (1.80 vs 1.35): wrong routines are catastrophic, so the value of memory depends on near-zero misrouting, not on average accuracy. (3) The oracle beats FRESH by 0.65x, so memory is worth about 0.47 error units here; the best recogniser so far captures a negative share of it. (4) Fragmentation is largely cured (37 -> 14 routines) but not the cost of misroutes; the P5 failure is still not fixed in the sense that matters (error below the no-memory baseline).
+Limits: toy; one generator; selection bias in the confirmed deviations not measured separately; no duplicate merging; the veto of a suggested routine by a fresh-net comparison (the error rule as a safety check on the signature's pick) is untested.
+Next: X8.1e: signature suggests, the early-window error rule vetoes (reuse only if the suggested routine's frozen error over the first 50 ticks is below a fresh net's), and the arm must beat FRESH.
+
+## 2026-10-30 (X8.1c: novelty variance from the case itself; a redesign after X8.1b)
+
+`vi/x8_1c.py`, P353-P356 registered before the run (24 sets, seeds 83000+; design changed after seeing X8.1b's scored results, disclosed in the registration). W&B run `X8.1c`.
+Verdicts: P353 VOID (manipulation failed), P354, P355 FAILED, P356 FAILED by one set (17 of 24, bar 18).
+Numbers (median): routines SIG 81 / ERR 39.5 (10 true); own-routine reuse SIG 0.21 / ERR 0.59; another's routine SIG 0.00 / ERR 0.03; new routine on repeats SIG 0.79 / ERR 0.33; repeat error SIG 1.195 (1.36x oracle) / ERR 2.18 (2.48x) / oracle 0.88. With true class means, 99.4% of repeat episodes exceed the novelty threshold.
+Reading: measuring familiarity against the case's own sampling noise is far too strict. A problem's episodes differ from one another (different start states) by much more than a 50-tick window's measurement error, so every episode looks new and the library fills with near-duplicates. Together with X8.1b (variance from all signatures: too lax, merged problems) this brackets the right variance: it must be the WITHIN-problem episode-to-episode spread, which needs class labels to estimate. Caution on the error number: with almost no reuse, SIG here behaves like a learner that starts fresh each episode, and it came within 1.36x of the oracle; no no-memory control was run, so neither X8.1b nor X8.1c shows that reusing a library beats starting over in this world. That control is added in X8.1d.
+Limits: toy; one generator; no duplicate merging.
+Next: X8.1d: within-problem spread estimated from audit-confirmed assignments (the episode's audit verdict names the same routine as the one used), with the error-window rule as the bootstrap until 36 within-class degrees of freedom exist; arms add FRESH (no memory) and the manipulation includes 'the oracle beats FRESH'.
+
+## 2026-10-30 (X8.1b: routines created from an empty library, P5 stream)
+
+`vi/x8_1b.py`, P347-P352 registered before the run (24 sets, seeds 82000+; an unscored self-test on set 70 preceded it and was not used to change anything). W&B run `X8.1b`.
+Verdicts: P347 PASSED (manipulation), P348 PASSED (but see below), P349, P350, P351, P352 FAILED.
+Median numbers: routines at the end (10 true problems): SIG_CREATE 8, ERR_CREATE 42. On repeat encounters, own-problem routine reused: SIG 0.56, ERR 0.57; ANOTHER problem's routine reused: SIG 0.42, ERR 0.03; new routine made: SIG 0.02, ERR 0.36. Repeat error (ticks 50-299, evaluator units): oracle 0.86, SIG 7.87 (9.1x), ERR 2.05 (2.4x). SIG lower error in 4 of 24 sets.
+Reading: the two rules fail in OPPOSITE directions. The error-window rule (P5b family) FRAGMENTS (42 routines, as in P5) but rarely misroutes; the signature rule UNDER-CREATES (8 routines) and MERGES distinct problems (42% misreuse), which is the worse failure here because a wrong routine is catastrophic. The P5 failure is therefore NOT fixed by X8.1's recogniser once routines have to be created. Cause of the signature rule's under-creation (registered as attack 1 before the run): the novelty test's variance, until 36 within-class degrees of freedom exist, is the variance of all signatures, which includes between-problem spread, so different problems look familiar. Not yet shown to be the only cause.
+Limits: toy; one novelty rule; no merging of duplicates; the audit-verdict relabel changed few labels (not measured separately).
+Next: X8.1c, a variance for the novelty test measured from the case itself (the spread of the signature across disjoint sub-windows of the same first 50 ticks, scaled to the window), which contains no between-problem spread; same stream design, fresh seeds; also report the sub-window variance's calibration (false-creation rate on repeats).
+
 ## 2026-10-30 (X8.1: recognition learned from audit verdicts, P5 world, stored routines GIVEN)
 
 `vi/x8_1.py`, P341-P346 registered before the run (24 world sets, seeds 81000+, ~minutes on 14 workers; an unscored self-test on set 74 preceded it and changed nothing). W&B run `X8.1`.

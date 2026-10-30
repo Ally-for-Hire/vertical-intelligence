@@ -394,3 +394,32 @@ _r("x81_sets_better", 18, "DERIVED", "x8_1", "P343 sign test: 18 of 24 sets, one
 _r("x81_label_tol", 0.05, "DERIVED", "x8_1", "P344 tolerance between audit-trained and true-label signature classifier")
 _r("x81_floor", 0.894, "DERIVED", "x8_1", "P345 bar: T13 recognition floor a* of the reference prices (MODEL.md)")
 _r("x81_err_ratio", 1.10, "DERIVED", "x8_1", "P346 bar: error within 10% of the true-identity oracle")
+
+# ---- X8.1b: routine creation from an empty library on the P5 stream ---------------------------------------------------
+_r("x81b_seed0", 82000, "USER", "x8_1b", "fresh seed block for the X8.1b scored run")
+_r("x81b_novel_q", 0.999, "DERIVED", "x8_1b", "novelty: chi-square quantile of the signature distance (0.1% false-creation rate per episode)")
+_r("x81b_dof_pooled", 36, "DERIVED", "x8_1b", "within-class degrees of freedom needed before the pooled variance replaces the global one (= signature dimension); X8.1b/c only")
+_r("x81b_oracle_gain", 0.7, "DERIVED", "x8_1b", "P347 bar: oracle error at 10th encounter vs 1st (P5 oracle 0.54)")
+_r("x81b_max_routines", 15, "DERIVED", "x8_1b", "P348 bar: 1.5 x the 10 true problems")
+_r("x81b_reuse", 0.85, "DERIVED", "x8_1b", "P349 bar")
+_r("x81b_reuse_gain", 0.2, "DERIVED", "x8_1b", "P349 margin over ERR_CREATE")
+_r("x81b_misreuse", 0.05, "DERIVED", "x8_1b", "P350 bar")
+_r("x81b_err_ratio", 1.5, "DERIVED", "x8_1b", "P351 bar")
+_r("x81b_window", 50, "WORLD", "x8_1b", "ticks seen before a routine is chosen or created (as P5 REC)")
+
+# ---- X8.1c: novelty variance measured from the case itself ------------------------------------------------------------
+_r("x81c_seed0", 83000, "USER", "x8_1c", "fresh seed block for the X8.1c scored run")
+_r("x81c_blocks", 5, "DERIVED", "x8_1c", "blocks the 50-tick window is cut into for the case's own standard error (50 / 10)")
+_r("x81c_false_alarm", 0.05, "DERIVED", "x8_1c", "P353 bar: tolerated false-creation share with true class means (target 0.001, allowance for autocorrelation)")
+_r("x81c_min_routines", 8, "DERIVED", "x8_1c", "P354 lower bar")
+_r("x81c_max_routines", 14, "DERIVED", "x8_1c", "P354 upper bar")
+_r("x81c_own", 0.8, "DERIVED", "x8_1c", "P355 bar")
+
+# ---- X8.1d: within-problem spread learned from audit-confirmed assignments ----------------------------------------------
+_r("x81d_seed0", 84000, "USER", "x8_1d", "fresh seed block for the X8.1d scored run")
+_r("x81d_oracle_vs_fresh", 0.8, "DERIVED", "x8_1d", "P357b bar: memory must cut repeat error to at most 0.8 of a learner with no memory")
+_r("x81d_dof_min", 8, "DERIVED", "x8_1d", "pooled within-class dof before the signature rule takes over: relative spread of the pooled variance sqrt(2/nu) <= 0.5")
+_r("x81e_seed0", 85000, "USER", "x8_1e", "fresh seed block for the X8.1e scored run")
+_r("x81e_veto_hit", 0.6, "DERIVED", "x8_1e", "P361 bar: share of wrong suggestions the fresh-net comparison must catch")
+_r("x81e_own", 0.75, "DERIVED", "x8_1e", "P362 bar")
+_r("x81e_max_routines", 20, "DERIVED", "x8_1e", "P363 upper bar")

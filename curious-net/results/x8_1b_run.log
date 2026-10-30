@@ -1,0 +1,10 @@
+workers 15
+{"n_routines": {"SIG_CREATE": 8.0, "ERR_CREATE": 42.0}, "own": {"SIG_CREATE": 0.5611111111111111, "ERR_CREATE": 0.5722222222222222}, "mis": {"SIG_CREATE": 0.4166666666666667, "ERR_CREATE": 0.027777777777777776}, "made": {"SIG_CREATE": 0.022222222222222223, "ERR_CREATE": 0.3611111111111111}, "err": {"SIG_CREATE": 7.870326698505505, "ERR_CREATE": 2.0471360822066313, "ORACLE": 0.8639866977322004}, "mastery": {"SIG_CREATE": 0.5253998066102419, "ERR_CREATE": 0.6844873317843478, "ORACLE": 0.6007893139390004}}
+P347 PASSED | ORACLE error 10th/1st encounter 0.601 (bar <= 0.7)
+P348 PASSED | routines for 10 true problems: SIG_CREATE 8.0, ERR_CREATE 42.0; SIG fewer in 24 of 24 sets
+P349 FAILED | repeat episodes reusing own problem's routine: SIG 0.561, ERR 0.572; paired gain 0.011; made a new routine on repeats: SIG 0.022, ERR 0.361
+P350 FAILED | SIG 0.417, ERR 0.028 (bar <= 0.05)
+P351 FAILED | repeat error ticks 50-299: ORACLE 0.864, SIG 7.870 (9.11x), ERR 2.047 (2.37x)
+P352 FAILED | SIG_CREATE lower error in 4 of 24 sets
+wandb: [wandb.login()] Loaded credentials for https://api.wandb.ai from ~\_netrc.
+wandb: WARNING Using a boolean value for 'reinit' is deprecated. Use 'return_previous' or 'finish_previous' instead.

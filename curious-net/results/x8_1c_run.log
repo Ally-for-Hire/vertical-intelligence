@@ -1,0 +1,8 @@
+workers 15
+{"n_routines": {"SIG_CREATE": 81.0, "ERR_CREATE": 39.5}, "own": {"SIG_CREATE": 0.2111111111111111, "ERR_CREATE": 0.5888888888888889}, "mis": {"SIG_CREATE": 0.0, "ERR_CREATE": 0.027777777777777776}, "made": {"SIG_CREATE": 0.788888888888889, "ERR_CREATE": 0.3333333333333333}, "err": {"SIG_CREATE": 1.1949843950683097, "ERR_CREATE": 2.178590729752946, "ORACLE": 0.8797810868625235}, "mastery": {"SIG_CREATE": 0.8682861765549669, "ERR_CREATE": 0.6656372743805677, "ORACLE": 0.6816747238148808}}
+P353 VOID | share of repeat episodes whose own problem (true class mean) exceeds the 0.999 chi-square threshold: 0.994 (bar <= 0.05)
+P354 FAILED | SIG_CREATE 81.0, ERR_CREATE 39.5 routines
+P355 FAILED | own 0.211 (ERR 0.589), another's 0.000 (ERR 0.028), new on repeat 0.789 (ERR 0.333)
+P356 FAILED | ORACLE 0.880, SIG 1.195 (1.36x), ERR 2.179 (2.48x); SIG better in 17 of 24 sets
+wandb: [wandb.login()] Loaded credentials for https://api.wandb.ai from ~\_netrc.
+wandb: WARNING Using a boolean value for 'reinit' is deprecated. Use 'return_previous' or 'finish_previous' instead.

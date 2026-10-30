@@ -1,0 +1,7 @@
+workers 16
+{"n_routines": {"SIG_CREATE": 51.0, "ERR_CREATE": 38.5}, "own": {"SIG_CREATE": 0.5, "ERR_CREATE": 0.55}, "mis": {"SIG_CREATE": 0.0, "ERR_CREATE": 0.03333333333333333}, "made": {"SIG_CREATE": 0.4722222222222222, "ERR_CREATE": 0.3277777777777778}, "err": {"SIG_CREATE": 1.1617816512283128, "ERR_CREATE": 1.9855098142875232, "ORACLE": 0.8158184577429256}, "mastery": {"SIG_CREATE": 0.6124311101685982, "ERR_CREATE": 0.6822054423042205, "ORACLE": 0.5662822614519529}}
+P361 PASSED | 41 of 50 wrong familiar-looking suggestions vetoed = 0.820 (bar >= 0.6)
+P362 FAILED | own 0.500, another's 0.000, new on repeat 0.472; ERR own 0.550, another's 0.033
+P363 FAILED | ORACLE 0.816, SIG 1.162 (1.42x), ERR 1.986, FRESH 1.204; SIG beats FRESH in 16 of 24 sets; routines 51.0 (ERR 38.5)
+wandb: [wandb.login()] Loaded credentials for https://api.wandb.ai from ~\_netrc.
+wandb: WARNING Using a boolean value for 'reinit' is deprecated. Use 'return_previous' or 'finish_previous' instead.

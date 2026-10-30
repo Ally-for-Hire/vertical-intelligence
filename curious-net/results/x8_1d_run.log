@@ -1,0 +1,8 @@
+workers 15
+{"n_routines": {"SIG_CREATE": 14.0, "ERR_CREATE": 37.0}, "own": {"SIG_CREATE": 0.8222222222222222, "ERR_CREATE": 0.5777777777777777}, "mis": {"SIG_CREATE": 0.11666666666666667, "ERR_CREATE": 0.03888888888888889}, "made": {"SIG_CREATE": 0.06111111111111111, "ERR_CREATE": 0.3111111111111111}, "err": {"SIG_CREATE": 1.7965790436627194, "ERR_CREATE": 2.2801218750984504, "ORACLE": 0.8705477159302819}, "mastery": {"SIG_CREATE": 0.45620833341377187, "ERR_CREATE": 0.758477799410904, "ORACLE": 0.7163123830083179}}
+P357 PASSED | (a) true-label exceed share 0.024 (bar <= 0.05); (b) ORACLE repeat error 0.871 vs FRESH 1.345 (ratio 0.65, bar <= 0.8)
+P358 PASSED | SIG_CREATE 14.0, ERR_CREATE 37.0 routines
+P359 FAILED | own 0.822 (ERR 0.578), another's 0.117 (ERR 0.039), new on repeat 0.061 (ERR 0.311)
+P360 FAILED | ORACLE 0.871, SIG 1.797 (2.06x), ERR 2.280, FRESH 1.345; SIG beats ERR in 16 sets, beats FRESH in 9 of 24
+wandb: [wandb.login()] Loaded credentials for https://api.wandb.ai from ~\_netrc.
+wandb: WARNING Using a boolean value for 'reinit' is deprecated. Use 'return_previous' or 'finish_previous' instead.

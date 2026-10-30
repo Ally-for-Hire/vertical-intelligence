@@ -1,0 +1,7 @@
+workers 6
+P326 PASSED | inside/outside 0.83/0.30; junk 0.26; held 0.25; SET train utility 1.000, held abstain 0.00
+P327 PASSED | REFRESH_SET held abstain 0.69, utility -0.388 vs SET -1.256; difference [0.864, 0.845, 0.905]; REFRESH_ANS abstain 0.92
+P328 FAILED | seen abstain 0.34; seen utility 0.427 vs REFRESH_ANS 0.203; difference [0.218, 0.18, 0.246]
+P329 PASSED | novel abstain 0.67, utility -0.309 vs SET -1.141; difference [0.775, 0.689, 0.866]
+P330 FAILED | held [0.304, 0.247, 0.331]; seen [-0.213, -0.233, -0.192]; SET_6000 held -0.655, seen 0.653
+P331 PASSED | REFRESH_SET minus plain ANS on seen [0.207, 0.171, 0.229]; plain ANS seen 0.229

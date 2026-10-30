@@ -14,6 +14,8 @@ starts.
 - [[wiki/experiment-plan]] - one test per findings-map item (36), all in one shared world W0 against one baseline B0, so passing blocks can be combined (X9). Order: build W0, then 'for me' (X0.x).
 - [[wiki/literature-map]] - published experiments per section, verified/unverified, corrections to chat claims, gaps nobody has tested.
 - [[wiki/dialogue-prediction-is-not-the-whole-story]] - Dialogue 1 (ongoing): the user's argument with Claude about whether prediction is intelligence; framework of randomness, simulation, drive, emotions, parts, Self; source of U6-U8, Q7-Q8.
+- [[wiki/audit-2026-10-28]] - AUDIT of all past experiments: what is VOID and must be redone, what is relabelled, redo order. Read before citing or publishing any earlier result.
+- [[wiki/path-to-pre-quantum]] - thought experiment: the proof ladder from correlation to underlying principles toward the pre-quantum test; which rungs are proven, what each must show before use (rule 'earn every component').
 - [[wiki/inbox]] - where the user drops new theorems, tests and ideas; status per item; "Next up" line.
   lines and where every kind of record goes, the experiment lifecycle, evidence rules, session
 

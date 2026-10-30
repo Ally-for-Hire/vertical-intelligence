@@ -1,0 +1,6 @@
+P314 PASSED | inside/outside 0.84/0.28; junk 0.23; real sensors' accuracy in the unanswerable-held context 0.25
+P315 FAILED | abstain rate 0.00 [diagnostic, on its own training cases: abstain 0.00, utility 1.000] (SOLVONLY 0.00); utility -1.247 vs -1.241; difference [-0.003, -0.024, 0.012]
+P316 FAILED | seen abstain rate 0.00; utility 0.212 vs SOLVONLY 0.571; difference [-0.358, -0.376, -0.314]
+P317 FAILED | novel abstain rate 0.00 (SOLVONLY 0.00); utility -1.169 vs -1.145; difference [-0.039, -0.177, 0.021]; vs best rule [-1.169, -1.258, -1.045]
+P318 FAILED | SET12 minus ANS12 pooled over held and novel [-0.878, -0.954, -0.818]; RAW comparison held [0.006, -0.015, 0.018], novel [-0.013, -0.112, 0.111]
+P319 PASSED | SET12 minus RAW on seen [0.1, 0.071, 0.139]; utilities 0.212 vs 0.095

@@ -1,0 +1,127 @@
+{
+ "summary": {
+  "blobs3|adam|default|new": {
+   "n": 20,
+   "solved": 20,
+   "median_cost": 13440.0,
+   "median_cost_solved": 13440.0,
+   "test_at_stop_median": 0.9441250562667847
+  },
+  "blobs3|adam|tuned|new": {
+   "n": 20,
+   "solved": 20,
+   "median_cost": 1536.0,
+   "median_cost_solved": 1536.0,
+   "test_at_stop_median": 0.9520000219345093
+  },
+  "blobs3|adam|tuned|old": {
+   "n": 20,
+   "solved": 20,
+   "median_cost": 3840.0,
+   "median_cost_solved": 3840.0,
+   "test_at_stop_median": 0.9537500739097595
+  },
+  "blobs3|evo|default|new": {
+   "n": 20,
+   "solved": 20,
+   "median_cost": 7040.0,
+   "median_cost_solved": 7040.0,
+   "test_at_stop_median": 0.9423750340938568
+  },
+  "blobs3|evo|tuned|new": {
+   "n": 20,
+   "solved": 20,
+   "median_cost": 7040.0,
+   "median_cost_solved": 7040.0,
+   "test_at_stop_median": 0.9451250433921814
+  },
+  "blobs3|evo|tuned|old": {
+   "n": 20,
+   "solved": 20,
+   "median_cost": 5120.0,
+   "median_cost_solved": 5120.0,
+   "test_at_stop_median": 0.9472500681877136
+  },
+  "checker3|adam|default|new": {
+   "n": 20,
+   "solved": 5,
+   "median_cost": 3000000.0,
+   "median_cost_solved": 2834880.0,
+   "test_at_stop_median": 0.9647500514984131
+  },
+  "checker3|adam|tuned|new": {
+   "n": 20,
+   "solved": 20,
+   "median_cost": 523200.0,
+   "median_cost_solved": 523200.0,
+   "test_at_stop_median": 0.9640000462532043
+  },
+  "checker3|adam|tuned|old": {
+   "n": 20,
+   "solved": 20,
+   "median_cost": 468000.0,
+   "median_cost_solved": 468000.0,
+   "test_at_stop_median": 0.9652500748634338
+  },
+  "checker3|evo|default|new": {
+   "n": 20,
+   "solved": 0,
+   "median_cost": 3000000.0,
+   "median_cost_solved": null,
+   "test_at_stop_median": null
+  },
+  "checker3|evo|tuned|new": {
+   "n": 20,
+   "solved": 0,
+   "median_cost": 3000000.0,
+   "median_cost_solved": null,
+   "test_at_stop_median": null
+  },
+  "checker3|evo|tuned|old": {
+   "n": 20,
+   "solved": 0,
+   "median_cost": 3000000.0,
+   "median_cost_solved": null,
+   "test_at_stop_median": null
+  },
+  "circles|adam|default|new": {
+   "n": 20,
+   "solved": 20,
+   "median_cost": 77280.0,
+   "median_cost_solved": 77280.0,
+   "test_at_stop_median": 0.991750031709671
+  },
+  "circles|adam|tuned|new": {
+   "n": 20,
+   "solved": 20,
+   "median_cost": 3840.0,
+   "median_cost_solved": 3840.0,
+   "test_at_stop_median": 0.999750018119812
+  },
+  "circles|adam|tuned|old": {
+   "n": 20,
+   "solved": 20,
+   "median_cost": 2640.0,
+   "median_cost_solved": 2640.0,
+   "test_at_stop_median": 0.9953750669956207
+  },
+  "circles|evo|default|new": {
+   "n": 20,
+   "solved": 20,
+   "median_cost": 53440.0,
+   "median_cost_solved": 53440.0,
+   "test_at_stop_median": 0.9936250448226929
+  },
+  "circles|evo|tuned|new": {
+   "n": 20,
+   "solved": 20,
+   "median_cost": 43200.0,
+   "median_cost_solved": 43200.0,
+   "test_at_stop_median": 0.9928750693798065
+  },
+  "circles|evo|tuned|old": {
+   "n": 20,
+   "solved": 20,
+   "median_cost": 29440.0,
+   "median_cost_solved": 29440.0,
+   "test_at_stop_median": 0.

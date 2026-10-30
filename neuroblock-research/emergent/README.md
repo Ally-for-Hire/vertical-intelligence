@@ -1,5 +1,7 @@
 # Emergent neural-net behaviour from pure random weights + external culling
 
+> **AUDIT NOTE 2026-10-28 (see curious-net `paper/AUDIT_2026-10-28.md`, V6/V7).** This README predates series 3 and X6.5-X6.9 and still states the pre-registered target 0.90 (the runs used 0.95). The headline ratios were selected and scored on the same seeds (winner's curse: the same setting on fresh seeds is 0.65-0.74x default Adam, not 0.51x), the stop rule reads test accuracy with unequal peek intervals, and Adam was tuned less than the evolutionary optimizer. Treat 'matches default Adam' as the strongest supportable wording until the benchmark is repaired (R-V7).
+
 User's goal (2026-10-26): "emergent neural network behaviour from pure random weights and biases using external culling as a mechanism ... continue until we get something at some level of efficiency that produces neural net behaviour using internal randomness and external culling. test on 1 problem."
 
 ## The one problem: `xorgauss` (chosen by the assistant)

@@ -15,6 +15,8 @@ if os.environ.get("SIDEREAL") == "1":   # E9b: per-planet NSSDCA fact sheets (se
     PLANETS = dict(Mercury=(57.909, 87.969), Venus=(108.210, 224.701), Earth=(149.598, 365.256), Mars=(227.956, 686.980), Jupiter=(778.479, 4332.589), Saturn=(1432.041, 10755.699), Uranus=(2867.043, 30685.400), Neptune=(4514.953, 60189.018))
     PLUTO = (5869.656, 90560.0)
 MOONS = dict(Io=(0.4218, 1.762732), Europa=(0.6711, 3.525463), Ganymede=(1.0704, 7.155588), Callisto=(1.8827, 16.690440))   # a in 10^6 km
+if os.environ.get("MOONS") == "NSSDC":   # E9c (audit V4): sidereal periods from the NSSDC Jovian Satellite Fact Sheet, https://nssdc.gsfc.nasa.gov/planetary/factsheet/joviansatfact.html, fetched 2026-10-28 (the JPL mean-elements table lists 1.762732 / 3.525463 for Io / Europa)
+    MOONS = dict(Io=(0.4218, 1.769138), Europa=(0.6711, 3.551181), Ganymede=(1.0704, 7.154553), Callisto=(1.8827, 16.689017))
 
 
 def bic(rss, n, k):
@@ -60,4 +62,4 @@ if __name__ == "__main__":
     print(f"implied M_sun / M_jupiter = (c_moons / c_planets)^2 = {(cm / cp) ** 2:.1f} (literature ~1047, from memory)")
     for name, (x, y) in MOONS.items():
         print(f"  {name:9s} residual vs per-body law {100 * (cm * x ** 1.5 / y - 1):+.2f}%")
-    json.dump(dict(lib=lib, p=p, se=se, pluto_err=float(pl / PLUTO[1] - 1), moons_p=pm, moons_se=sem, dbic_hole=float(b_one - b_two), mass_ratio=float((cm / cp) ** 2)), open("../results/e9_kepler%s.json" % ("_sidereal" if os.environ.get("SIDEREAL") == "1" else ""), "w"), indent=1)
+    json.dump(dict(lib=lib, p=p, se=se, pluto_err=float(pl / PLUTO[1] - 1), moons_p=pm, moons_se=sem, dbic_hole=float(b_one - b_two), mass_ratio=float((cm / cp) ** 2), max_abs_moon_resid_pct=float(max(abs(100 * (cm * x ** 1.5 / y - 1)) for x, y in MOONS.values()))), open("../results/e9_kepler%s.json" % (("_sidereal" if os.environ.get("SIDEREAL") == "1" else "") + ("_nssdc" if os.environ.get("MOONS") == "NSSDC" else "")), "w"), indent=1)

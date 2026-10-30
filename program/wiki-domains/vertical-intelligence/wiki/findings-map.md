@@ -75,8 +75,30 @@ principles in miniature, not facts about brains or LLMs. Ids point to `curious-n
   - **What decides survival is attending to every need, not how they are combined:** the learner
     that ignores one need (food only) dies 11 to 15 times more often when needs conflict (155 vs
     11 to 15 deaths per 10k) and 4.7 times more often in the gentle world. The data side of "no part
-    left behind" (U10) and of a neglected part's warning (U16). Untested: how this scales with
-    many variables of different scales (idea I9).
+    left behind" (U10) and of a neglected part's warning (U16). Scaling with many variables: X0.8 below.
+  - **X0.8 (= I9, 2026-10-27; 48 worlds, N = 2, 4, 6 essential variables with scales spread 10x;
+    P254-P258):** ignoring needs costs more as they multiply (food only 205 -> 324 deaths per 10k;
+    P257 PASSED), but three theory predictions about HOW to combine needs FAILED, two of them reversed:
+    the raw equal-weight sum (109 at N = 6) was better than the sum normalised by each variable's scale
+    (131; P254), and the weakest-need-first margin, which needs no designer numbers, was worse than both
+    (153; P255, P256). With default settings the margin ties food-only at N = 6 (229 vs 221): it pays only
+    when the object touches the weakest variable, so with many needs its signal is sparse. **Confound
+    found:** in this world a variable's scale multiplies both the units of its change AND its dynamics, so
+    the raw sum weights the fast, dangerous variables most (SUM spread its deaths over all variables;
+    the others piled 41-53% on the fastest). Units vs rates was separated in X0.9 (2026-10-28, 48 worlds x N = 2, 4, 6; P259-P262): when units are unrelated to urgency the raw sum is the WORST combiner (141 vs 89 deaths per 10k with units divided out, at 6 needs), so X0.8's 'raw sum beat the normalised sum' was an artefact of unit-urgency coupling. The weakest-need-first rule needs no units and beats the raw sum when units mislead (-30 [-43, -13]) but trails the unit-removed sum and designer setpoints at 6 needs and is setting-sensitive. P261 (raw sum hurt more when units are anti-coupled) FAILED, reversed, confounded by rate heterogeneity hurting every arm. What holds in all three worlds: attending to every need beats ignoring them.
+  - **X1.3 (2026-10-28, the author's interest: an entity whose whole existence is prediction and internal models; 48 worlds; P275-P281):** with no food or goal, an entity whose only needs are prediction-based (vitality that dies if predictions fail; a hidden need refilled only by real structure learned, felt as boredom, that dies at zero) and whose reward is the relief of those needs **avoids both the dark room and the noise** (0 deaths in 48 of 48 worlds vs 6.7 for the same entity ignoring boredom, 8.3 for surprise minimisation, 21.7 for chance; dark-room share 31% vs 91%). Entities that care only about being right retreat to the dark room and die of boredom: U12 in miniature. **Hostile reading:** the boredom signal is exact (the world hands it the bits learned) while the designer learning-progress arms estimate progress from noisy errors, so 'beats the given drive' shows signal quality, not framing; depth is cheap to find (chance learns more bits than the informed reference). Next: X1.4 (exact-bits designer control, noisy boredom, sustained-streak depth).
+  - **X1.4 (2026-10-28, 48 worlds; P288-P293) resolves X1.3's confound in an unexpected direction:** a designer arm rewarded only by the EXACT bits learned (no vitality, no boredom) survives as well as the vitality-plus-boredom entity (0 deaths in 48 of 48 worlds); so in this world the signal's exactness, not the framing, does the work. Noisy, 10-step-averaged boredom degrades gracefully: death-free worlds 100% / 98% / 58% at noise sd 0.02 / 0.05 / 0.10 (medians hid it; P293 failed as registered), and every level still beats ignoring boredom. Tuned learning-progress windows did not help (the estimated-progress drives stay at 3-5 deaths per 10k). Next: X1.5, larger noise and a boredom computed from the entity's own prediction errors.
+    The genuinely *hidden* need (a variable whose level the learner cannot observe) remains untested.
+  - **X0.10 (2026-10-28, the author's request; 48 worlds; P263-P270):** a hidden need that only
+    non-survival *depth* can fill, with the entity given only a rising boredom warning. The entity
+    that treats boredom relief as reward **stays alive and keeps the hidden need full** (5 deaths per
+    10k vs 102 for chance and 23 for a circle-only entity; hidden level 1.00 vs 0.46 for the same
+    learner ignoring boredom). Circle-only entities, learned or informed, die of the hidden need in
+    every world, so depth is genuinely required. **Hostile reading:** the gap to the ignore-boredom
+    learner is +0.40 at tuned settings but only +0.06 at default settings (direction robust, size
+    not); and chance finds the ladder faster than either learner, so this world shows boredom relief
+    *sustaining* the hidden need, not learned *discovery* of depth. P269 (fewer hidden-need deaths)
+    failed just short. Next: X0.11, depth that must be searched. First experiment on W&B.
   - **X0.2 (2026-10-27, 48 worlds per world type; P239-P243) tests U17 (comfort and growth are one
     hunger):** a single quantity, expected change for me with uncertainty-driven sampling and a known
     threat penalty, **is sufficient to produce the secure-base pattern** with no weight and no switch:

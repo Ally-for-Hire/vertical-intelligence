@@ -1,0 +1,12 @@
+workers 14
+w 10 {'ERR': 0.794, 'SIG_AUD': 0.963, 'SIG_TRUE': 0.981, 'SIG_SHUF': 0.087, 'ORACLE': 1.0} {'ERR': 57.057, 'SIG_AUD': 6.272, 'SIG_TRUE': 1.995, 'SIG_SHUF': 143.593, 'ORACLE': 1.275}
+w 25 {'ERR': 0.863, 'SIG_AUD': 0.975, 'SIG_TRUE': 0.988, 'SIG_SHUF': 0.081, 'ORACLE': 1.0} {'ERR': 56.387, 'SIG_AUD': 8.853, 'SIG_TRUE': 1.844, 'SIG_SHUF': 123.498, 'ORACLE': 1.169}
+w 50 {'ERR': 0.894, 'SIG_AUD': 0.969, 'SIG_TRUE': 0.988, 'SIG_SHUF': 0.075, 'ORACLE': 1.0} {'ERR': 26.409, 'SIG_AUD': 5.905, 'SIG_TRUE': 1.203, 'SIG_SHUF': 214.42, 'ORACLE': 1.034}
+P341 PASSED | w=50 accuracy SIG_TRUE 0.988 (bar >= 0.5), SIG_SHUF 0.075 (bar <= 0.2), chance 0.1
+P342 PASSED | verdict equals the true problem in 0.960 of episodes (median over sets; bar 0.9)
+P343 PASSED | w=50 accuracy SIG_AUD 0.969 vs ERR 0.894; median paired gain 0.050; better in 21 of 24 sets
+P344 PASSED | SIG_TRUE 0.988 minus SIG_AUD 0.969 = 0.019 (bar <= 0.05)
+P345 PASSED | SIG_AUD 0.969 vs floor 0.894
+P346 FAILED | error ticks 50-299: ORACLE 1.034, SIG_AUD 5.905 (5.711x), ERR 26.409 (25.542x)
+wandb: [wandb.login()] Loaded credentials for https://api.wandb.ai from ~\_netrc.
+wandb: WARNING Using a boolean value for 'reinit' is deprecated. Use 'return_previous' or 'finish_previous' instead.

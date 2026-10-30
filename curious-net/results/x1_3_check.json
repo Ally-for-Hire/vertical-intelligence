@@ -1,0 +1,141 @@
+{
+ "mode": "check",
+ "seconds": 0.2,
+ "result": {
+  "ALL": {
+   "deaths_per_10k": 0.0,
+   "deaths_V": 0.0,
+   "deaths_H": 0.0,
+   "mean_H_late": 0.991,
+   "mean_V_late": 0.993,
+   "share": [
+    0.41,
+    0.06,
+    0.18,
+    0.15,
+    0.2
+   ],
+   "bits": 10540.0
+  },
+  "IGN": {
+   "deaths_per_10k": 8.333,
+   "deaths_V": 0.0,
+   "deaths_H": 8.333,
+   "mean_H_late": 0.3,
+   "mean_V_late": 0.922,
+   "share": [
+    0.91,
+    0.06,
+    0.01,
+    0.01,
+    0.01
+   ],
+   "bits": 784.0
+  },
+  "UR": {
+   "deaths_per_10k": 8.333,
+   "deaths_V": 0.0,
+   "deaths_H": 8.333,
+   "mean_H_late": 0.246,
+   "mean_V_late": 0.949,
+   "share": [
+    0.91,
+    0.06,
+    0.01,
+    0.01,
+    0.01
+   ],
+   "bits": 876.0
+  },
+  "LP": {
+   "deaths_per_10k": 3.333,
+   "deaths_V": 0.0,
+   "deaths_H": 3.333,
+   "mean_H_late": 0.576,
+   "mean_V_late": 0.995,
+   "share": [
+    0.82,
+    0.09,
+    0.06,
+    0.01,
+    0.01
+   ],
+   "bits": 1164.0
+  },
+  "LPO": {
+   "deaths_per_10k": 3.333,
+   "deaths_V": 0.0,
+   "deaths_H": 3.333,
+   "mean_H_late": 0.306,
+   "mean_V_late": 0.973,
+   "share": [
+    0.8,
+    0.13,
+    0.02,
+    0.02,
+    0.02
+   ],
+   "bits": 1716.0
+  },
+  "ORACLE": {
+   "deaths_per_10k": 0.0,
+   "deaths_V": 0.0,
+   "deaths_H": 0.0,
+   "mean_H_late": 0.928,
+   "mean_V_late": 1.0,
+   "share": [
+    0.89,
+    0.06,
+    0.01,
+    0.01,
+    0.03
+   ],
+   "bits": 1613.0
+  },
+  "RANDOM": {
+   "deaths_per_10k": 21.667,
+   "deaths_V": 21.667,
+   "deaths_H": 0.0,
+   "mean_H_late": 0.917,
+   "mean_V_late": 0.249,
+   "share": [
+    0.1,
+    0.6,
+    0.11,
+    0.1,
+    0.1
+   ],
+   "bits": 6726.0
+  },
+  "DARKONLY": {
+   "deaths_per_10k": 20.0,
+   "deaths_V": 0.0,
+   "deaths_H": 20.0,
+   "mean_H_late": 0.249,
+   "mean_V_late": 0.875,
+   "share": [
+    1.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0
+   ],
+   "bits": 0.0
+  },
+  "NOISEONLY": {
+   "deaths_per_10k": 36.667,
+   "deaths_V": 36.667,
+   "deaths_H": 0.0,
+   "mean_H_late": 0.366,
+   "mean_V_late": 0.247,
+   "share": [
+    0.0,
+    1.0,
+    0.0,
+    0.0,
+    0.0
+   ],
+   "bits": 0.0
+  }
+ }
+}

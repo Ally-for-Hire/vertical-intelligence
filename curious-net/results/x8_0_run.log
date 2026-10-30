@@ -1,0 +1,8 @@
+T9 ok {'worst_beaten_se': 0.0, 'worst_curve_se': np.float64(2.0783113461844733), 'bite_se': 108.68688011809465, 'bite_ok': True}
+T11 FAIL {'worst_gain_se': np.float64(3.075100842703006), 'sign_violations': 0, 'points': 125, 'exact_ok': True, 'delta_ref': 0.04736842105263158}
+T12 FAIL {'ok': False, 'worst_closed_error': 0.06816893819928722, 'worst_flat_excess': 0.0, 'min_bite_share': 0.2357745036016543, 'bite_ok': True}
+T13 ok {'a_star': 0.8940158615717375, 'crossing': 0.8941842239781133, 'slope': 1.386931607142855, 'slope_closed': 1.387, 'bite_ok': True, 'gain_plus': np.float64(0.06938450000000004), 'gain_minus': np.float64(-0.06969394999999995)}
+T14 FAIL {'ok': False, 'n_star': 20, 'G': 0.09, 'Rbe_sim': 1.0, 'Rbe_closed': 42.22222222222222}
+T15 ok {'ok': True, 'abstain_refresh': 1.0, 'abstain_fixed': 0.0}
+T16 ok {'ok': True, 'max_identity_error': 2.220446049250313e-16, 'median_acc_gap_autograd_minus_local': 0.0030000000000000027}
+{'P332': True, 'P333': np.True_, 'P334': np.False_, 'P335': False, 'P336': np.True_, 'P337': False, 'P338': True, 'P339': True}

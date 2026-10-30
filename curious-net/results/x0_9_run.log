@@ -1,0 +1,49 @@
+wandb: [wandb.login()] Loaded credentials for https://api.wandb.ai from ~\_netrc.
+wandb: WARNING Using a boolean value for 'reinit' is deprecated. Use 'return_previous' or 'finish_previous' instead.
+Traceback (most recent call last):
+  File "~\curious-net\vi\x0_9.py", line 216, in <module>
+    main(sys.argv[1], n)
+  File "~\curious-net\vi\x0_9.py", line 208, in main
+    log_wandb(out["result"])
+  File "~\curious-net\vi\x0_9.py", line 177, in log_wandb
+    tk.table("Which need caused the deaths (share of deaths by need, ascending unit; U2: first entry = fastest need)", ["Settings | needs | world | arm", "Share by need, smallest unit first"],
+  File "~\curious-net\vi\track.py", line 49, in table
+    if self.ok: self.run.log({title: self.wandb.Table(columns=columns, data=rows)})
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "~\AppData\Local\Programs\Python\Python311\Lib\site-packages\wandb\sdk\wandb_run.py", line 329, in wrapper
+    return func(self, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "~\AppData\Local\Programs\Python\Python311\Lib\site-packages\wandb\sdk\wandb_run.py", line 387, in wrapper_fn
+    return func(self, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "~\AppData\Local\Programs\Python\Python311\Lib\site-packages\wandb\sdk\wandb_run.py", line 374, in wrapper
+    return func(self, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "~\AppData\Local\Programs\Python\Python311\Lib\site-packages\wandb\sdk\wandb_run.py", line 1998, in log
+    self._log(data=data, step=step, commit=commit)
+  File "~\AppData\Local\Programs\Python\Python311\Lib\site-packages\wandb\sdk\wandb_run.py", line 1709, in _log
+    self._partial_history_callback(data, step, commit)
+  File "~\AppData\Local\Programs\Python\Python311\Lib\site-packages\wandb\sdk\wandb_run.py", line 329, in wrapper
+    return func(self, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "~\AppData\Local\Programs\Python\Python311\Lib\site-packages\wandb\sdk\wandb_run.py", line 1540, in _partial_history_callback
+    self._interface.publish_partial_history(
+  File "~\AppData\Local\Programs\Python\Python311\Lib\site-packages\wandb\sdk\interface\interface.py", line 694, in publish_partial_history
+    data = history_dict_to_json(run, data, step=user_step, ignore_copy_err=True)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "~\AppData\Local\Programs\Python\Python311\Lib\site-packages\wandb\sdk\data_types\utils.py", line 57, in history_dict_to_json
+    payload[key] = val_to_json(
+                   ^^^^^^^^^^^^
+  File "~\AppData\Local\Programs\Python\Python311\Lib\site-packages\wandb\sdk\data_types\utils.py", line 161, in val_to_json
+    val.bind_to_run(run, key, namespace)
+  File "~\AppData\Local\Programs\Python\Python311\Lib\site-packages\wandb\sdk\data_types\table.py", line 622, in bind_to_run
+    super().bind_to_run(*args, **kwargs)
+  File "~\AppData\Local\Programs\Python\Python311\Lib\site-packages\wandb\sdk\data_types\base_types\media.py", line 141, in bind_to_run
+    file_path = _wb_filename(key, step, id_, extension)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "~\AppData\Local\Programs\Python\Python311\Lib\site-packages\wandb\sdk\data_types\base_types\media.py", line 46, in _wb_filename
+    key = util.make_file_path_upload_safe(str(key))
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "~\AppData\Local\Programs\Python\Python311\Lib\site-packages\wandb\util.py", line 359, in make_file_path_upload_safe
+    raise ValueError(
+ValueError: Path Which need caused the deaths (share of deaths by need, ascending unit; U2: first entry = fastest need) is invalid. Please remove invalid filename characters (\, :, *, ?, ", <, >, |)

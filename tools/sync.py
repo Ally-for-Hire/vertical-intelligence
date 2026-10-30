@@ -32,7 +32,8 @@ if not LOCAL.exists(): sys.exit(f'missing {LOCAL.name}: the private redaction li
 _cfg = json.loads(LOCAL.read_text(encoding='utf-8'))
 _home = str(HOME)
 REDACT = sorted([tuple(x) for x in _cfg['replace']] + [(_home.replace('\\', '\\\\'), '~'), (_home, '~'), (_home.replace('\\', '/'), '~'),
-                 ('/' + _home[0].lower() + _home[2:].replace('\\', '/'), '~')], key=lambda ab: -len(ab[0]))      # local paths become ~
+                 ('/' + _home[0].lower() + _home[2:].replace('\\', '/'), '~'),
+                 (_home[:8] + _home[8:].replace('\\', '/'), '~')], key=lambda ab: -len(ab[0]))      # local paths become ~ (last entry: the mixed form drive:\Users/name that Windows tools sometimes print)
 PRIVATE = set(_cfg['private'])                                   # drafts kept out of the public copy
 TEXT_EXT = {'.md', '.py', '.txt', '.json', '.log', '.csv', '.html', '.js', '.ps1', '.stdout', '.gitignore', '.toml', '.yaml', '.yml', '.wb', '.done', ''}
 

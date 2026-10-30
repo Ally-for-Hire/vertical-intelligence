@@ -1,0 +1,7 @@
+P307 PASSED | accuracy inside/outside contexts 0.83/0.29; junk 0.25; best single real 0.63; oracle 0.992
+P308 PASSED | K=8 minus K=1 [0.1688, 0.1507, 0.1905]; minus K=4 [0.0382, 0.0165, 0.0502]; curve {'SET1': 0.3279999941587448, 'SET2': 0.38500000536441803, 'SET4': 0.4337500035762787, 'SET8': 0.49150000512599945, 'SET12': 0.48399999737739563}; non-decreasing: True
+P309 PASSED | K=12 minus K=8 [0.0097, -0.0015, 0.0255]
+P310 PASSED | SET12 minus RAW [0.1425, 0.117, 0.1695]; median utilities SET12 0.484, RAW 0.374
+P311 PASSED | SET12 minus best rule [0.31, 0.218, 0.366]; SET12 abstains 0.00; medians 0.304
+P312 FAILED | SET12 minus best rule [-1.0835, -1.196, -0.949]; SET12 abstains 0.00; median utilities -1.127
+P313 PASSED | SET12 minus ANS12 [0.0897, 0.0615, 0.107]

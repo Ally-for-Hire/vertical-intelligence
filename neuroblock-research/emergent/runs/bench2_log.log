@@ -1,0 +1,33 @@
+wandb: [wandb.login()] Loaded credentials for https://api.wandb.ai from ~\_netrc.
+wandb: WARNING Using a boolean value for 'reinit' is deprecated. Use 'return_previous' or 'finish_previous' instead.
+Traceback (most recent call last):
+  File "~\neuroblock-research\emergent\bench2.py", line 239, in <module>
+    {"selftest": lambda: selftest(), "target": lambda: print(make_targets(n)), "tune": lambda: tune(n), "score": lambda: score(n), "report": lambda: print(json.dumps(report(), indent=1, default=float)[:3000]), "log": log_wandb}[mode]()
+  File "~\neuroblock-research\emergent\bench2.py", line 231, in log_wandb
+    tk.table("Evolution cost divided by Adam cost", ["Settings | rule", "Problem", "Ratio (above 1 = evolution slower)", "Lower end of 95% range", "Upper end", "Both solve at least half / number of problems"], rr)
+  File "~/curious-net/vi\track.py", line 49, in table
+    if self.ok: self.run.log({title: self.wandb.Table(columns=columns, data=rows)})
+                                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "~\AppData\Local\Programs\Python\Python311\Lib\site-packages\wandb\sdk\data_types\table.py", line 283, in __init__
+    self._init_from_list(data, columns, optional, dtype)
+  File "~\AppData\Local\Programs\Python\Python311\Lib\site-packages\wandb\sdk\data_types\table.py", line 325, in _init_from_list
+    self.add_data(*row)
+  File "~\AppData\Local\Programs\Python\Python311\Lib\site-packages\wandb\sdk\data_types\table_decorators.py", line 41, in wrapper
+    return method(self, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "~\AppData\Local\Programs\Python\Python311\Lib\site-packages\wandb\sdk\data_types\table_decorators.py", line 57, in wrapper
+    res = method(self, *args, **kwargs)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "~\AppData\Local\Programs\Python\Python311\Lib\site-packages\wandb\sdk\data_types\table.py", line 545, in add_data
+    result_type = self._get_updated_result_type(data)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "~\AppData\Local\Programs\Python\Python311\Lib\site-packages\wandb\sdk\data_types\table.py", line 569, in _get_updated_result_type
+    raise TypeError(
+TypeError: Data row contained incompatible types:
+{'Settings | rule': 'tuned|new', 'Problem': 'GEOMETRIC MEAN over problems both methods solve', 'Ratio (above 1 = evolution slower)': 12.473429612316027, 'Lower end of 95% range': None, 'Upper end': None, 'Both solve at least half / number of problems': 6} of type {'Settings | rule': String, 'Problem': String, 'Ratio (above 1 = evolution slower)': Number, 'Lower end of 95% range': None, 'Upper end': None, 'Both solve at least half / number of problems': Number} is not assignable to {'Settings | rule': None or String, 'Problem': None or String, 'Ratio (above 1 = evolution slower)': None or Number, 'Lower end of 95% range': None or Number, 'Upper end': None or Number, 'Both solve at least half / number of problems': Boolean or None}
+Key 'Both solve at least half / number of problems':
+	Number not assignable to Boolean or None
+		Number not assignable to Boolean
+	and
+		Number not assignable to None
+CHAIN_DONE

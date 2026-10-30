@@ -1,0 +1,525 @@
+{
+ "summary": {
+  "blobs3|adam|default|new": {
+   "n": 20,
+   "solved": 20,
+   "median_cost": 13440.0,
+   "median_cost_solved": 13440.0,
+   "test_at_stop_median": 0.9441250562667847
+  },
+  "blobs3|adam|tuned|new": {
+   "n": 20,
+   "solved": 20,
+   "median_cost": 1536.0,
+   "median_cost_solved": 1536.0,
+   "test_at_stop_median": 0.9520000219345093
+  },
+  "blobs3|adam|tuned|old": {
+   "n": 20,
+   "solved": 20,
+   "median_cost": 3840.0,
+   "median_cost_solved": 3840.0,
+   "test_at_stop_median": 0.9537500739097595
+  },
+  "blobs3|evo|default|new": {
+   "n": 20,
+   "solved": 20,
+   "median_cost": 7040.0,
+   "median_cost_solved": 7040.0,
+   "test_at_stop_median": 0.9423750340938568
+  },
+  "blobs3|evo|tuned|new": {
+   "n": 20,
+   "solved": 20,
+   "median_cost": 7040.0,
+   "median_cost_solved": 7040.0,
+   "test_at_stop_median": 0.9451250433921814
+  },
+  "blobs3|evo|tuned|old": {
+   "n": 20,
+   "solved": 20,
+   "median_cost": 5120.0,
+   "median_cost_solved": 5120.0,
+   "test_at_stop_median": 0.9472500681877136
+  },
+  "checker3|adam|default|new": {
+   "n": 20,
+   "solved": 5,
+   "median_cost": 3000000.0,
+   "median_cost_solved": 2834880.0,
+   "test_at_stop_median": 0.9647500514984131
+  },
+  "checker3|adam|tuned|new": {
+   "n": 20,
+   "solved": 20,
+   "median_cost": 523200.0,
+   "median_cost_solved": 523200.0,
+   "test_at_stop_median": 0.9640000462532043
+  },
+  "checker3|adam|tuned|old": {
+   "n": 20,
+   "solved": 20,
+   "median_cost": 468000.0,
+   "median_cost_solved": 468000.0,
+   "test_at_stop_median": 0.9652500748634338
+  },
+  "checker3|evo|default|new": {
+   "n": 20,
+   "solved": 0,
+   "median_cost": 3000000.0,
+   "median_cost_solved": null,
+   "test_at_stop_median": null
+  },
+  "checker3|evo|tuned|new": {
+   "n": 20,
+   "solved": 0,
+   "median_cost": 3000000.0,
+   "median_cost_solved": null,
+   "test_at_stop_median": null
+  },
+  "checker3|evo|tuned|old": {
+   "n": 20,
+   "solved": 0,
+   "median_cost": 3000000.0,
+   "median_cost_solved": null,
+   "test_at_stop_median": null
+  },
+  "circles|adam|default|new": {
+   "n": 20,
+   "solved": 20,
+   "median_cost": 77280.0,
+   "median_cost_solved": 77280.0,
+   "test_at_stop_median": 0.991750031709671
+  },
+  "circles|adam|tuned|new": {
+   "n": 20,
+   "solved": 20,
+   "median_cost": 3840.0,
+   "median_cost_solved": 3840.0,
+   "test_at_stop_median": 0.999750018119812
+  },
+  "circles|adam|tuned|old": {
+   "n": 20,
+   "solved": 20,
+   "median_cost": 2640.0,
+   "median_cost_solved": 2640.0,
+   "test_at_stop_median": 0.9953750669956207
+  },
+  "circles|evo|default|new": {
+   "n": 20,
+   "solved": 20,
+   "median_cost": 53440.0,
+   "median_cost_solved": 53440.0,
+   "test_at_stop_median": 0.9936250448226929
+  },
+  "circles|evo|tuned|new": {
+   "n": 20,
+   "solved": 20,
+   "median_cost": 43200.0,
+   "median_cost_solved": 43200.0,
+   "test_at_stop_median": 0.9928750693798065
+  },
+  "circles|evo|tuned|old": {
+   "n": 20,
+   "solved": 20,
+   "median_cost": 29440.0,
+   "median_cost_solved": 29440.0,
+   "test_at_stop_median": 0.991625040769577
+  },
+  "moons|adam|default|new": {
+   "n": 20,
+   "solved": 20,
+   "median_cost": 271200.0,
+   "median_cost_solved": 271200.0,
+   "test_at_stop_median": 0.9775000214576721
+  },
+  "moons|adam|tuned|new": {
+   "n": 20,
+   "solved": 20,
+   "median_cost": 3840.0,
+   "median_cost_solved": 3840.0,
+   "test_at_stop_median": 0.9932500422000885
+  },
+  "moons|adam|tuned|old": {
+   "n": 20,
+   "solved": 20,
+   "median_cost": 2400.0,
+   "median_cost_solved": 2400.0,
+   "test_at_stop_median": 0.9886250197887421
+  },
+  "moons|evo|default|new": {
+   "n": 20,
+   "solved": 20,
+   "median_cost": 85760.0,
+   "median_cost_solved": 85760.0,
+   "test_at_stop_median": 0.9830000400543213
+  },
+  "moons|evo|tuned|new": {
+   "n": 20,
+   "solved": 20,
+   "median_cost": 28800.0,
+   "median_cost_solved": 28800.0,
+   "test_at_stop_median": 0.987125039100647
+  },
+  "moons|evo|tuned|old": {
+   "n": 20,
+   "solved": 20,
+   "median_cost": 22720.0,
+   "median_cost_solved": 22720.0,
+   "test_at_stop_median": 0.9796250462532043
+  },
+  "parity4|adam|default|new": {
+   "n": 20,
+   "solved": 20,
+   "median_cost": 106080.0,
+   "median_cost_solved": 106080.0,
+   "test_at_stop_median": 1.0
+  },
+  "parity4|adam|tuned|new": {
+   "n": 20,
+   "solved": 20,
+   "median_cost": 2880.0,
+   "median_cost_solved": 2880.0,
+   "test_at_stop_median": 1.0
+  },
+  "parity4|adam|tuned|old": {
+   "n": 20,
+   "solved": 20,
+   "median_cost": 1680.0,
+   "median_cost_solved": 1680.0,
+   "test_at_stop_median": 1.0
+  },
+  "parity4|evo|default|new": {
+   "n": 20,
+   "solved": 20,
+   "median_cost": 95680.0,
+   "median_cost_solved": 95680.0,
+   "test_at_stop_median": 1.0
+  },
+  "parity4|evo|tuned|new": {
+   "n": 20,
+   "solved": 20,
+   "median_cost": 44160.0,
+   "median_cost_solved": 44160.0,
+   "test_at_stop_median": 1.0
+  },
+  "parity4|evo|tuned|old": {
+   "n": 20,
+   "solved": 20,
+   "median_cost": 37440.0,
+   "median_cost_solved": 37440.0,
+   "test_at_stop_median": 1.0
+  },
+  "spirals|adam|default|new": {
+   "n": 20,
+   "solved": 13,
+   "median_cost": 2590080.0,
+   "median_cost_solved": 2421120.0,
+   "test_at_stop_median": 0.9812500476837158
+  },
+  "spirals|adam|tuned|new": {
+   "n": 20,
+   "solved": 20,
+   "median_cost": 33120.0,
+   "median_cost_solved": 33120.0,
+   "test_at_stop_median": 0.9885000586509705
+  },
+  "spirals|adam|tuned|old": {
+   "n": 20,
+   "solved": 20,
+   "median_cost": 29280.0,
+   "median_cost_solved": 29280.0,
+   "test_at_stop_median": 0.9821250438690186
+  },
+  "spirals|evo|default|new": {
+   "n": 20,
+   "solved": 13,
+   "median_cost": 2681920.0,
+   "median_cost_solved": 2247680.0,
+   "test_at_stop_median": 0.9847500324249268
+  },
+  "spirals|evo|tuned|new": {
+   "n": 20,
+   "solved": 18,
+   "median_cost": 2057920.0,
+   "median_cost_solved": 1872640.0,
+   "test_at_stop_median": 0.9858750402927399
+  },
+  "spirals|evo|tuned|old": {
+   "n": 20,
+   "solved": 18,
+   "median_cost": 1438400.0,
+   "median_cost_solved": 1370560.0,
+   "test_at_stop_median": 0.9815000295639038
+  },
+  "xorgauss|adam|default|new": {
+   "n": 20,
+   "solved": 20,
+   "median_cost": 34560.0,
+   "median_cost_solved": 34560.0,
+   "test_at_stop_median": 0.9416250586509705
+  },
+  "xorgauss|adam|tuned|new": {
+   "n": 20,
+   "solved": 20,
+   "median_cost": 2880.0,
+   "median_cost_solved": 2880.0,
+   "test_at_stop_median": 0.9510000348091125
+  },
+  "xorgauss|adam|tuned|old": {
+   "n": 20,
+   "solved": 20,
+   "median_cost": 1920.0,
+   "median_cost_solved": 1920.0,
+   "test_at_stop_median": 0.9456250369548798
+  },
+  "xorgauss|evo|default|new": {
+   "n": 20,
+   "solved": 20,
+   "median_cost": 34240.0,
+   "median_cost_solved": 34240.0,
+   "test_at_stop_median": 0.9390000402927399
+  },
+  "xorgauss|evo|tuned|new": {
+   "n": 20,
+   "solved": 20,
+   "median_cost": 29440.0,
+   "median_cost_solved": 29440.0,
+   "test_at_stop_median": 0.9396250545978546
+  },
+  "xorgauss|evo|tuned|old": {
+   "n": 20,
+   "solved": 20,
+   "median_cost": 22080.0,
+   "median_cost_solved": 22080.0,
+   "test_at_stop_median": 0.9381250441074371
+  }
+ },
+ "ratios": {
+  "tuned|new": {
+   "per": {
+    "xorgauss": {
+     "ratio": 10.222222222222221,
+     "ci": [
+      8.11111111111111,
+      11.333333333333334
+     ],
+     "both_solve_half": true
+    },
+    "moons": {
+     "ratio": 7.5,
+     "ci": [
+      5.331666666666666,
+      13.933333333333334
+     ],
+     "both_solve_half": true
+    },
+    "circles": {
+     "ratio": 11.25,
+     "ci": [
+      7.333333333333333,
+      15.666666666666666
+     ],
+     "both_solve_half": true
+    },
+    "spirals": {
+     "ratio": 62.13526570048309,
+     "ci": [
+      39.09461805555556,
+      84.57471264367815
+     ],
+     "both_solve_half": true
+    },
+    "blobs3": {
+     "ratio": 4.583333333333333,
+     "ci": [
+      3.0555555555555554,
+      8.541666666666666
+     ],
+     "both_solve_half": true
+    },
+    "checker3": {
+     "ratio": 5.73394495412844,
+     "ci": [
+      5.411255411255412,
+      6.6277836691410394
+     ],
+     "both_solve_half": false
+    },
+    "parity4": {
+     "ratio": 15.333333333333334,
+     "ci": [
+      12.43888888888889,
+      24.22222222222222
+     ],
+     "both_solve_half": true
+    }
+   },
+   "geomean": 12.473429612316027,
+   "n_problems": 6
+  },
+  "tuned|old": {
+   "per": {
+    "xorgauss": {
+     "ratio": 11.5,
+     "ci": [
+      8.333333333333334,
+      17.142857142857142
+     ],
+     "both_solve_half": true
+    },
+    "moons": {
+     "ratio": 9.466666666666667,
+     "ci": [
+      6.666666666666667,
+      14.78055555555554
+     ],
+     "both_solve_half": true
+    },
+    "circles": {
+     "ratio": 11.151515151515152,
+     "ci": [
+      8.820512820512821,
+      19.77962962962962
+     ],
+     "both_solve_half": true
+    },
+    "spirals": {
+     "ratio": 49.12568306010929,
+     "ci": [
+      33.17370892018779,
+      96.66434343434337
+     ],
+     "both_solve_half": true
+    },
+    "blobs3": {
+     "ratio": 1.3333333333333333,
+     "ci": [
+      1.0833333333333333,
+      1.6666666666666667
+     ],
+     "both_solve_half": true
+    },
+    "checker3": {
+     "ratio": 6.410256410256411,
+     "ci": [
+      5.605381165919282,
+      6.742179072276159
+     ],
+     "both_solve_half": false
+    },
+    "parity4": {
+     "ratio": 22.285714285714285,
+     "ci": [
+      17.5,
+      33.0
+     ],
+     "both_solve_half": true
+    }
+   },
+   "geomean": 11.000618835332837,
+   "n_problems": 6
+  },
+  "default|new": {
+   "per": {
+    "xorgauss": {
+     "ratio": 0.9907407407407407,
+     "ci": [
+      0.5957446808510638,
+      1.6410493827160493
+     ],
+     "both_solve_half": true
+    },
+    "moons": {
+     "ratio": 0.31622418879056047,
+     "ci": [
+      0.19839490968801313,
+      0.46017699115044247
+     ],
+     "both_solve_half": true
+    },
+    "circles": {
+     "ratio": 0.6915113871635611,
+     "ci": [
+      0.5938697318007663,
+      0.9672820708031967
+     ],
+     "both_solve_half": true
+    },
+    "spirals": {
+     "ratio": 1.0354583642204103,
+     "ci": [
+      0.8042642178207017,
+      1.193659281894576
+     ],
+     "both_solve_half": true
+    },
+    "blobs3": {
+     "ratio": 0.5238095238095238,
+     "ci": [
+      0.4,
+      0.64
+     ],
+     "both_solve_half": true
+    },
+    "checker3": {
+     "ratio": 1.0,
+     "ci": [
+      1.0,
+      1.0
+     ],
+     "both_solve_half": false
+    },
+    "parity4": {
+     "ratio": 0.9019607843137255,
+     "ci": [
+      0.6434782608695652,
+      1.562691131498471
+     ],
+     "both_solve_half": true
+    }
+   },
+   "geomean": 0.6879254163248004,
+   "n_problems": 6
+  }
+ },
+ "cross": {
+  "evo_tuned_over_adam_default": {
+   "per": {
+    "xorgauss": 0.8518518518518519,
+    "moons": 0.10619469026548672,
+    "circles": 0.5590062111801242,
+    "spirals": 0.794539164813442,
+    "blobs3": 0.5238095238095238,
+    "parity4": 0.416289592760181
+   },
+   "geomean": 0.4540405351788949
+  }
+ },
+ "curse": {
+  "adam": 1.118489990473198,
+  "evo": 1.480692849913408
+ },
+ "verdicts": {
+  "P282": {
+   "passed": true,
+   "evidence": "geometric-mean ratio 12.47 over 6 problems; 6 with the 95% range above 1"
+  },
+  "P283": {
+   "passed": false,
+   "evidence": "tuned evolution / default Adam = 0.45"
+  },
+  "P284": {
+   "passed": true,
+   "evidence": "evolution held-out cost / tuning-seed cost = 1.48 (Adam 1.12)"
+  },
+  "P286": {
+   "passed": false,
+   "evidence": "old rule / new rule ratio of ratios = 0.88 over 6 problems"
+  },
+  "P287": {
+   "passed": true,
+   "evidence": "evolution solved 0/20 on checker3"
+  }
+ }
+}

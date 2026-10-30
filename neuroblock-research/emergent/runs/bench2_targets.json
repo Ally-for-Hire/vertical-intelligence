@@ -1,0 +1,9 @@
+{
+ "xorgauss": 0.935,
+ "moons": 0.975,
+ "circles": 0.98,
+ "spirals": 0.98,
+ "blobs3": 0.94,
+ "checker3": 0.965,
+ "parity4": 0.98
+}

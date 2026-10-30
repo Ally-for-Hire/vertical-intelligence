@@ -246,6 +246,36 @@ domain's pages with ids, not left only in the course repo.
 **Every piece of work.** Failures, voids, design flaws and corrections are kept and labelled;
 a mistaken number is fixed by a CORRECTION entry, not an edit. Remembered constants are not
 used: fetch or measure. Toy-world results are described as principles in miniature, never as
+
+**Defend every result (author, 2026-10-28, standing).** Expect pushback from sceptical researchers and
+write every experiment so it survives it. Before a result is recorded as anything but VOID, the entry
+must contain, in plain language:
+1. **Fairness proof.** Every arm has the same learner, inputs, compute, seeds and tuning budget;
+   the baseline was tuned on its own objective and the default is also reported; the only thing
+   that differs is named. Show the check (parity runs, matched seeds, equal tuning grids), not a
+   claim of it.
+2. **Attack list.** The three strongest objections a hostile reviewer would raise (confound, world
+   designed to favour the result, tuning on the scored seeds, unobserved difference between arms,
+   a shortcut that makes the task easy) with, for each, the test or control that answers it, or the
+   admission that it is unanswered and what would answer it.
+3. **Own-goal check.** Look for ways the world or arm design produced the result by construction
+   (X0.8's scale-rate coupling and X0.10's persistent skills are examples). A world is calibrated
+   only against manipulation checks and derivations, never against the score of the arm we hope
+   wins; when a design is changed after looking at results, say so and re-register.
+4. **Plain explanations.** Every arm, metric and verdict has a one-sentence reason a non-specialist
+   can follow, and a figure or table of the raw per-world data, not only medians.
+5. **Null and reversed outcomes** are reported with the same prominence as wins.
+
+**Earn every component (author, 2026-10-28, standing).** The model under construction may use anything already proven; to expand it or change it, the new component must FIRST be independently proven to work in isolation: registered prediction, fair baseline with the same tuning budget, manipulation check, own-goal check, fresh seeds. Only then may it be combined with other proven parts, and the combination is itself tested against its parts. 'Proven' is read through the 2026-10-28 audit ([[audit-2026-10-28]]): KEEP, or CAVEAT with its limit stated; VOID-REDO items are not available as building blocks until redone. The register of usable pieces is curious-net `paper/PROVEN_PIECES.md`; the ladder of abilities still to be earned is [[path-to-pre-quantum]].
+
+**Weights & Biases (author, 2026-10-28, standing).** Every experiment is instrumented through W&B
+with straightforward names and explanations so that fellow researchers who are not specialists can
+read the data: plain-English run, arm and metric names (with units and 'lower/higher is better'),
+a run description that states the question, the world and what each arm means, per-world results
+as tables, and the verdict per prediction. Project `vertical-intelligence`, account on this PC's
+wandb login, PRIVATE until the author decides otherwise (making it public is a publishing action:
+ask first). Shared helper: curious-net `vi/track.py`. Raw JSON in `results/` stays the record of
+truth; W&B is the readable view of it.
 facts about brains or LLMs.
 
 ## 6. Speed rules (keeping it moving and on task)

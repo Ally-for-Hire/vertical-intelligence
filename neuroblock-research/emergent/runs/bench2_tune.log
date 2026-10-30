@@ -1,0 +1,14 @@
+adam|xorgauss {'cfg': {'lr': 0.03, 'bs': 16, 'gain': 1.0}, 'median_cost_tune': 2880.0, 'stage1_solved': 42, 'n_configs': 42}
+adam|moons {'cfg': {'lr': 0.3, 'bs': 16, 'gain': 0.5}, 'median_cost_tune': 3840.0, 'stage1_solved': 38, 'n_configs': 42}
+adam|circles {'cfg': {'lr': 0.3, 'bs': 16, 'gain': 1.0}, 'median_cost_tune': 3840.0, 'stage1_solved': 41, 'n_configs': 42}
+adam|spirals {'cfg': {'lr': 0.3, 'bs': 32, 'gain': 1.0}, 'median_cost_tune': 25920.0, 'stage1_solved': 21, 'n_configs': 42}
+adam|blobs3 {'cfg': {'lr': 0.1, 'bs': 128, 'gain': 0.5}, 'median_cost_tune': 1536.0, 'stage1_solved': 42, 'n_configs': 42}
+adam|checker3 {'cfg': {'lr': 0.01, 'bs': 32, 'gain': 1.0}, 'median_cost_tune': 457920.0, 'stage1_solved': 11, 'n_configs': 42}
+adam|parity4 {'cfg': {'lr': 0.3, 'bs': 16, 'gain': 1.0}, 'median_cost_tune': 1920.0, 'stage1_solved': 35, 'n_configs': 42}
+evo|xorgauss {'cfg': {'P': 40, 'B': 16, 'cull': 0.9, 'init': 0.5, 'mirror': True}, 'median_cost_tune': 23040.0, 'stage1_solved': 47, 'n_configs': 54}
+evo|moons {'cfg': {'P': 40, 'B': 16, 'cull': 0.9, 'init': 0.25, 'mirror': False}, 'median_cost_tune': 46080.0, 'stage1_solved': 54, 'n_configs': 54}
+evo|circles {'cfg': {'P': 40, 'B': 16, 'cull': 0.9, 'init': 1.0, 'mirror': True}, 'median_cost_tune': 32640.0, 'stage1_solved': 51, 'n_configs': 54}
+evo|spirals {'cfg': {'P': 40, 'B': 16, 'cull': 0.9, 'init': 1.0, 'mirror': True}, 'median_cost_tune': 551040.0, 'stage1_solved': 2, 'n_configs': 54}
+evo|blobs3 {'cfg': {'P': 80, 'B': 8, 'cull': 0.95, 'init': 0.5, 'mirror': True}, 'median_cost_tune': 3840.0, 'stage1_solved': 54, 'n_configs': 54}
+evo|checker3 {'cfg': {'P': 40, 'B': 16, 'cull': 0.8, 'init': 0.25, 'mirror': False}, 'median_cost_tune': 3000000.0, 'stage1_solved': 0, 'n_configs': 54}
+evo|parity4 {'cfg': {'P': 40, 'B': 16, 'cull': 0.9, 'init': 1.0, 'mirror': False}, 'median_cost_tune': 20480.0, 'stage1_solved': 54, 'n_configs': 54}

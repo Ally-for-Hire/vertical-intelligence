@@ -19,11 +19,54 @@ measurements of that time, works out on its own that something like quantum theo
 on a laptop. The results are principles shown in miniature, not claims about real brains or
 about large AI systems.
 
-## Latest update: 27 October 2026
+## For sponsors and collaborators
 
-**At a glance: 250 pre-registered predictions, 111 passed, 131 failed, 0 awaiting results** (8 more were voided or not applicable).
+This program is looking for an **advisor of record**, **GPU time** for its first real-model stage,
+and **two to five collaborators** with defined first tasks. What it offers in return: a public,
+reproducible, pre-registered body of work (every success rule committed before the run, failures
+reported next to passes, a published self-audit), a readable onboarding path, and co-authorship on
+the first preprint.
+
+- Two-page summary: [`program-brief.md`](program/wiki-domains/vertical-intelligence/wiki/program-brief.md)
+- Roles and first tasks for new people: [`join.md`](program/wiki-domains/vertical-intelligence/wiki/join.md)
+- The plan for sponsorship and team building: [`sponsorship-and-team.md`](program/wiki-domains/vertical-intelligence/wiki/sponsorship-and-team.md)
+- The audit of our own results, including what was voided: [`audit-2026-10-28.md`](program/wiki-domains/vertical-intelligence/wiki/audit-2026-10-28.md)
+
+**Contributor portal.** People with a key from the author can read this repository, ask questions answered from its text, and propose experiments from a phone or computer. Access is by a key the author issues; see [`portal/README.md`](portal/README.md) for how it runs and [`contrib/queue/README.md`](contrib/queue/README.md) for what a proposal is. Proposals are only queued: the author registers and runs them under the protocol.
+
+## Latest update: 30 October 2026
+
+**At a glance: 352 pre-registered predictions, 168 passed, 170 failed, 0 awaiting results** (14 more were voided or are resolution rules).
 Every success rule is written down *before* an experiment runs, and every failure is kept and
 reported next to the successes.
+
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="curious-net/results/figures/vi_x13_prediction_life_dark.png">
+  <img alt="Horizontal bars of deaths per 10,000 ticks, median of 48 simulated worlds, lower is better: the entity that lives on prediction and feels boredom 0 (highlighted), informed reference 0, learning progress with optimism 3.3, learning progress 5.0, the same entity ignoring its boredom 6.7, minimise surprise 8.3, stays in the dark room 20.0, random choices 21.7, stays in the noise 36.7." src="curious-net/results/figures/vi_x13_prediction_life_light.png" width="900">
+</picture>
+
+<details><summary>Data behind the chart (experiment X1.3, median of 48 worlds)</summary>
+
+| Agent | Deaths per 10,000 ticks | Hidden need (boredom) level, late | Prediction health, late |
+|---|---|---|---|
+| **Lives on prediction, feels boredom (the entity)** | **0.0** | **0.99** | **0.99** |
+| Informed reference (ceiling) | 0.0 | 0.93 | 1.00 |
+| Learning progress + optimism (designed drive) | 3.3 | 0.31 | 0.95 |
+| Learning progress (designed drive) | 5.0 | 0.30 | 0.95 |
+| Same entity, ignores its boredom | 6.7 | 0.26 | 0.93 |
+| Minimise surprise | 8.3 | 0.27 | 0.93 |
+| Stays in the dark room | 20.0 | 0.25 | 0.88 |
+| Random choices | 21.7 | 0.92 | 0.25 |
+| Stays in the noise | 36.7 | 0.37 | 0.25 |
+
+The entity has no food and no goal. It dies if its predictions fail (the noise kills that way) or if
+it learns nothing new (the dark room kills that way); the only thing it feels about the second need
+is a rising boredom. Treating boredom relief as reward kept it out of both traps in every world.
+The follow-up X1.4 showed that an exact "bits learned" signal alone does the same, so in this world
+the exactness of the signal, not the framing, does the work; a noisy, lagged boredom signal degrades
+gracefully (death-free worlds 100% / 98% / 58% at noise 0.02 / 0.05 / 0.10) and still beats ignoring it.
+
+</details>
 
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="curious-net/results/figures/vi_x12_optimism_dark.png">
@@ -235,8 +278,25 @@ The food-only learner is tuned on food, its own objective; with default settings
 - **Also finished:** adding optimism about untried regions to learning progress (X1.2) fixed the slow
   discovery X1.1 exposed: stay where the error is falling, move on when it stops, and try what you
   have not tried.
-- **Next:** open. The sequenced experiments and their follow-ups are complete; the author chooses the
-  next direction (candidates are listed in the research notebook's inbox).
+- **Finished 28 to 30 October:** a full **audit** of every past result against the program's fairness
+  rules (several marked void and queued for redo; the evolution benchmark rebuilt as BENCH2: tuned
+  evolution is about 12.5x costlier than tuned Adam on held-out seeds, replacing the earlier, more
+  flattering ratios). **Prediction-only life** (X1.3, X1.4): an entity with no food or goal, whose
+  only needs are "my predictions must not fail" and a hidden need refilled only by real learning (felt
+  as rising boredom), had 0 deaths in 48 worlds while entities that ignore boredom, minimise surprise or
+  act at random died 6.7 to 21.7 times per 10,000 ticks; an exact "bits learned" signal alone does the
+  same, and a noisy boredom signal degrades gracefully. A **hidden need that only depth can fill**
+  (X0.10): boredom relief as reward keeps the hidden need full (1.00 vs 0.46 when ignored). **Units
+  versus urgency** (X0.9): a raw-unit sum of needs is the worst combiner when units do not track urgency.
+  **Kepler redone** (E9c) on a second NASA source after a 0.4 to 0.7% disagreement between sources was
+  found: all four predictions passed. The **Self line** began (X7.2 to X7.6): a small supervisor reading
+  several sensor networks' complete internal states beats the best single sensor and the best hand rule
+  (0.917 vs 0.841) and ignores junk sensors, but with few labels it memorises and loses doubt; refreshing
+  the labels of unanswerable cases restores doubt at a competence cost. A proof loop on the combined
+  model's theorems (X8.0) and routine recognition learned from audit verdicts (X8.1, 96%) followed;
+  creating routines from scratch reached only parity with no memory and is parked (X8.1b to e).
+- **Next:** the Self line on real data and real small models (needs GPU), the audit's redo list, and
+  the first real-data step of the proof ladder toward the pre-quantum test (the Balmer series).
 
 ## What has been found so far
 
@@ -244,27 +304,36 @@ Each result has an id (like C43) and a confidence letter: **R** = replicated on 
 **S** = supported once, **P** = partly supported, **D** = a diagnosis only, **N** = not supported.
 
 - **Learning transfers in proportion to shared structure.** A learner that has seen related
-  problems solves new ones up to 7.5x faster; on unrelated problems it gains nothing, as it should (C43, R).
-- **Less is more, repeatedly.** Giving a learner an "energy budget" for its connections cuts its
-  error in unfamiliar situations by 12.8% while using 5% of the connections (C41, R). Focused
-  models and sparse connections win in other tests too (C47, C50).
+  problems solves new ones up to 7.5x faster; on unrelated problems it gains nothing, as it should
+  (C43, R; caveat from the audit: the generator's building blocks match the learner's hypothesis
+  class, so this shows the dose-response, not discovery of unknown structure).
+- **Less is more, when the truth is sparse.** Giving a learner an "energy budget" for its connections
+  cuts its error in unfamiliar situations by 12.8% while using 5% of the connections (C41, R).
+  Focused models and sparse connections win in other tests too (C47, C50). The audit relabelled this
+  from a general claim to one that holds when the underlying rule is itself sparse.
 - **Curiosity's proven job is avoiding what cannot be learned**, rather than choosing between
-  learnable things (C40). **Motivation plus curiosity** beats either one alone (C52, R).
+  learnable things (C40). The earlier result that motivation plus curiosity beats either alone
+  (C52) was **voided by the audit** (missing equal-compute control) and is queued for redo.
 - **Order of teaching matters.** Easy-to-hard lessons are 2.4x cheaper than random order (C53, R).
   A student taught only correct facts is confidently wrong outside them (C31, S).
 - **Knowing "which situation am I in?"** is the shared bottleneck behind several abilities:
   mastery, using specialised parts, and memory (C44-C46, D).
 - **A brain's wiring diagram gets you about halfway.** Using the real fruit-fly connectome,
   whether each connection excites or inhibits matters most (C42, R).
-- **Laws from real data.** Kepler's third law was rediscovered from real NASA planetary data,
-  and deliberately wrong theories were rejected (C57).
-- **Evolution without calculus.** Starting from pure random networks, blind random changes plus
-  "survival of the fittest" solve learning problems with no gradient descent (the calculus-based
-  method that trains modern AI). On seven test problems it solved 60 of 70 runs within its
-  budget, at about 0.6x the cost of gradient descent with standard settings, but still about 11x
-  behind well-tuned gradient descent; one problem (a 3x3 checkerboard) it never solves. These are
-  the repaired numbers from X6.5, which replaced an earlier, more flattering 0.5x and 9x.
-  Current question: how could nature have optimized life before anything like gradient descent existed?
+- **Laws from real data.** Kepler's third law was rediscovered from real NASA planetary data
+  (exponent 1.4978) and from moon data on a second NASA source (1.5002), and deliberately wrong
+  theories were rejected (C57, E9c). Along the way a 0.4 to 0.7% disagreement between two NASA
+  sources for two moons' periods was found.
+- **Evolution without calculus, measured fairly.** Starting from pure random networks, blind random
+  changes plus "survival of the fittest" solve learning problems with no gradient descent (the
+  calculus-based method that trains modern AI). Under the rebuilt benchmark (BENCH2, 2026-10-28:
+  validation-based stopping, equal tuning budgets, held-out seeds) tuned evolution is about **12.5x
+  costlier than tuned Adam** on six small problems; against Adam's default settings it is 0.69x,
+  which reflects Adam's poor defaults on tiny problems; one problem (a 3x3 checkerboard) evolution
+  never solves. This replaces the earlier 0.6x / 11x and 0.5x / 9x figures, whose benchmark the
+  audit found to have stopped on the test set and tuned the two sides unequally. Selection with no
+  grader at all (food shared among correct answerers) still finds solutions, at about 26x the cost of
+  ranked culling (X6.7).
 - **Attending to every need is what keeps a creature alive.** In simulated worlds a creature that
   ignores one of its two needs dies 2 to 14 times more often in a gentle world and 11 to 15 times
   more often when the needs conflict; how the needs are combined (a sum, hand-picked targets, "weakest

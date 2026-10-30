@@ -1,0 +1,482 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Vertical Intelligence - contributor portal</title>
+<link rel="manifest" href="/static/manifest.webmanifest">
+<link rel="apple-touch-icon" sizes="180x180" href="/static/apple-touch-icon.png">
+<meta name="theme-color" content="#fafaf8" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#161615" media="(prefers-color-scheme: dark)">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="VI portal">
+<meta name="apple-mobile-web-app-status-bar-style" content="default">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 512 512'%3E%3Crect width='512' height='512' rx='96' fill='%231a56b8'/%3E%3Cpath d='M96 400V112h64l96 190 96-190h64v288h-56V230l-72 140h-64l-72-140v170z' fill='%23fff'/%3E%3C/svg%3E">
+<style>
+:root{--bg:#fafaf8;--fg:#1b1b1a;--mut:#5c5c58;--card:#fff;--bd:#cfcfc8;--acc:#1a56b8;--accfg:#fff;--code:#efeee9;--ok:#13602e;--warn:#8a5200;--bad:#a1241c;--nav:56px}
+@media (prefers-color-scheme:dark){:root{--bg:#161615;--fg:#ecece8;--mut:#a5a5a0;--card:#1e1e1d;--bd:#44443f;--acc:#7fb0ff;--accfg:#10151f;--code:#262624;--ok:#73d391;--warn:#f0b35a;--bad:#ff8f86}}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--fg);font:16px/1.5 system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;padding-left:env(safe-area-inset-left);padding-right:env(safe-area-inset-right);-webkit-text-size-adjust:100%}
+a{color:var(--acc)}
+:focus-visible{outline:3px solid var(--acc);outline-offset:2px}
+header{padding:calc(10px + env(safe-area-inset-top)) 14px 10px;border-bottom:1px solid var(--bd);display:flex;flex-direction:column;gap:8px}
+h1{font-size:1.1rem;margin:0}
+.keybox{display:flex;flex-wrap:wrap;gap:8px;align-items:center}
+#key{flex:1 1 180px;min-width:0}
+#budget{font-size:.9rem;color:var(--mut);flex-basis:100%}
+input,textarea,select,button{font:inherit;font-size:16px;color:var(--fg);background:var(--card);border:1px solid var(--bd);border-radius:8px;padding:10px 12px;min-height:44px}
+textarea{width:100%;min-height:7em;resize:vertical}
+select{width:100%}
+button{cursor:pointer;touch-action:manipulation}
+button.primary{background:var(--acc);color:var(--accfg);border-color:var(--acc);font-weight:600;min-width:44px}
+button:disabled{opacity:.55;cursor:not-allowed}
+label{display:block;font-weight:600;margin:14px 0 4px}
+#strip{padding:6px 14px;font-size:.85rem;color:var(--mut);border-bottom:1px solid var(--bd);display:flex;flex-wrap:wrap;gap:2px 16px}
+#strip b{color:var(--fg)}
+/* tabs: bottom nav on phones */
+[role=tablist]{position:fixed;left:0;right:0;bottom:0;z-index:20;display:flex;background:var(--card);border-top:1px solid var(--bd);padding:0 env(safe-area-inset-right) env(safe-area-inset-bottom) env(safe-area-inset-left)}
+[role=tab]{flex:1;min-height:var(--nav);border:none;border-radius:0;background:transparent;font-size:.95rem;border-top:4px solid transparent}
+[role=tab][aria-selected=true]{border-top-color:var(--acc);color:var(--acc);font-weight:700;text-decoration:underline}
+main{padding:14px 14px calc(var(--nav) + env(safe-area-inset-bottom) + 24px);max-width:1300px;margin:0 auto}
+[role=tabpanel][hidden]{display:none}
+.note{border-left:4px solid var(--bd);background:var(--card);padding:8px 12px;margin:10px 0;font-size:.92rem;color:var(--mut)}
+.msg{padding:10px 12px;border:1px solid var(--bd);border-radius:8px;background:var(--card);margin:10px 0;overflow-wrap:anywhere}
+.msg.err{border-color:var(--bad);color:var(--bad)}
+.msg.err::before{content:"Error: ";font-weight:700}
+.read{display:block}
+#filesbtn{width:100%;margin-bottom:10px}
+#side{position:fixed;inset:0;z-index:30;background:var(--bg);padding:calc(12px + env(safe-area-inset-top)) 14px calc(12px + env(safe-area-inset-bottom));display:none;flex-direction:column}
+#side.open{display:flex}
+#side .sidehead{display:flex;justify-content:space-between;align-items:center;gap:8px}
+#filelist{list-style:none;margin:8px 0 0;padding:0;flex:1;overflow:auto;border:1px solid var(--bd);border-radius:8px;background:var(--card)}
+#filelist li button{display:block;width:100%;text-align:left;border:none;border-radius:0;border-bottom:1px solid var(--bd);background:transparent;font-size:.9rem;word-break:break-all}
+#filelist li button[aria-current=true]{background:var(--acc);color:var(--accfg);font-weight:700}
+#filelist li button[aria-current=true]::before{content:"> "}
+#hits{max-height:35vh;overflow:auto}
+.hit{padding:8px 10px;border-bottom:1px solid var(--bd);font-size:.9rem}
+.hit a{display:inline-block;padding:6px 0}
+.hit small{color:var(--mut)}
+#docbar{display:flex;gap:8px;align-items:center;flex-wrap:wrap;margin-bottom:8px}
+#docpath{font-family:ui-monospace,Consolas,monospace;font-size:.88rem;word-break:break-all;flex:1 1 200px}
+.md{background:var(--card);border:1px solid var(--bd);border-radius:8px;padding:4px 14px 12px;overflow-wrap:anywhere}
+.md pre{background:var(--code);padding:10px;border-radius:6px;overflow:auto}
+.md code{background:var(--code);padding:1px 4px;border-radius:4px;font-family:ui-monospace,Consolas,monospace;font-size:.9em}
+.md pre code{padding:0;background:none}
+.md table{border-collapse:collapse;display:block;overflow:auto}
+.md th,.md td{border:1px solid var(--bd);padding:4px 8px;text-align:left}
+.md th{background:var(--code)}
+.md blockquote{margin:8px 0;padding-left:12px;border-left:4px solid var(--bd);color:var(--mut)}
+.md a,#answer a{padding:2px 0}
+#answer{white-space:pre-wrap;overflow-wrap:anywhere}
+.qwrap{overflow-x:auto}
+table.q{border-collapse:collapse;width:100%;background:var(--card)}
+table.q th,table.q td{border:1px solid var(--bd);padding:10px;text-align:left}
+table.q th button{border:none;background:none;padding:0 4px;font-weight:700}
+table.q tbody tr{cursor:pointer}
+.badge{display:inline-block;border:1px solid currentColor;border-radius:99px;padding:0 9px;font-size:.8rem;font-weight:700;white-space:nowrap}
+.badge::before{margin-right:4px}
+.st-proposed{color:var(--warn)}.st-proposed::before{content:"\25CB"}
+.st-registered{color:var(--acc)}.st-registered::before{content:"\25D0"}
+.st-running{color:var(--acc)}.st-running::before{content:"\25B6"}
+.st-done{color:var(--ok)}.st-done::before{content:"\2713"}
+.st-declined{color:var(--bad)}.st-declined::before{content:"\2715"}
+.row{display:flex;gap:10px;flex-wrap:wrap;align-items:center;margin-top:12px}
+.row button.primary{flex:1 1 140px}
+.sr{position:absolute;left:-9999px}
+@media (min-width:768px){
+  header{flex-direction:row;justify-content:space-between;align-items:center;padding-left:16px;padding-right:16px}
+  #budget{flex-basis:auto}
+  [role=tablist]{position:static;justify-content:flex-start;gap:4px;padding:8px 16px 0;border-top:none;border-bottom:1px solid var(--bd);background:transparent}
+  [role=tab]{flex:0 0 auto;min-height:44px;border:1px solid var(--bd);border-bottom:none;border-radius:8px 8px 0 0;margin-bottom:-1px;padding:0 18px}
+  [role=tab][aria-selected=true]{background:var(--acc);color:var(--accfg);border-color:var(--acc)}
+  main{padding:16px}
+  .read{display:grid;grid-template-columns:minmax(260px,340px) 1fr;gap:16px}
+  #filesbtn,#closeside{display:none}
+  #side{position:static;display:flex;padding:0;background:transparent;z-index:auto}
+  #filelist{max-height:70vh;flex:none}
+  .row button.primary{flex:0 0 auto}
+  table.q tbody tr:hover{background:var(--code)}
+}
+</style>
+</head>
+<body>
+<header>
+  <h1>Vertical Intelligence - contributor portal</h1>
+  <div class="keybox">
+    <label for="key" class="sr">Portal key</label>
+    <input id="key" type="password" placeholder="Paste your key" autocomplete="off" autocapitalize="off" spellcheck="false">
+    <button id="savekey" type="button">Use key</button>
+    <button id="forget" type="button">Forget key</button>
+    <span id="budget" role="status" aria-live="polite"></span>
+  </div>
+</header>
+<div id="strip" aria-label="Repository status">Loading status...</div>
+<nav role="tablist" aria-label="Portal sections">
+  <button role="tab" id="tab-read" aria-controls="p-read" aria-selected="true">Read</button>
+  <button role="tab" id="tab-ask" aria-controls="p-ask" aria-selected="false" tabindex="-1">Ask</button>
+  <button role="tab" id="tab-propose" aria-controls="p-propose" aria-selected="false" tabindex="-1">Propose</button>
+  <button role="tab" id="tab-queue" aria-controls="p-queue" aria-selected="false" tabindex="-1">Queue</button>
+</nav>
+<main>
+<section role="tabpanel" id="p-read" aria-labelledby="tab-read">
+  <div class="nokey msg" hidden>Enter your key (at the top) to read the repository.</div>
+  <div class="read">
+    <button id="filesbtn" type="button" aria-controls="side" aria-expanded="false">Browse files and search</button>
+    <div id="side">
+      <div class="sidehead"><label for="filter" style="margin:0">Filter files / search passages</label><button id="closeside" type="button">Close</button></div>
+      <input id="filter" type="search" style="width:100%;margin-top:6px" placeholder="e.g. boredom, X1.3, P-draft">
+      <div id="hits" aria-live="polite"></div>
+      <ul id="filelist" aria-label="Files"></ul>
+    </div>
+    <div>
+      <div id="docbar"><span id="docpath">No file selected</span><button id="copypath" type="button" hidden>Copy path</button><span id="copied" role="status"></span></div>
+      <div id="doc" class="md" tabindex="-1"><p>Select a file with "Browse files and search".</p></div>
+    </div>
+  </div>
+</section>
+<section role="tabpanel" id="p-ask" aria-labelledby="tab-ask" hidden>
+  <div class="nokey msg" hidden>Enter your key (at the top) to ask questions.</div>
+  <p class="note">Answers are generated by Claude from the repository's text only; all results are principles in miniature from toy worlds.</p>
+  <label for="question">Your question</label>
+  <textarea id="question" placeholder="e.g. Why did the dark-room test (X1.1) fail for minimising surprise?"></textarea>
+  <div class="row"><button id="askbtn" class="primary" type="button">Ask</button><span id="askstat" role="status"></span></div>
+  <div id="askerr" class="msg err" hidden></div>
+  <h2 style="font-size:1.05rem">Answer</h2>
+  <div id="answer" class="msg" aria-live="polite">(nothing yet)</div>
+</section>
+<section role="tabpanel" id="p-propose" aria-labelledby="tab-propose" hidden>
+  <div class="nokey msg" hidden>Enter your key (at the top) to propose an experiment.</div>
+  <p class="note">The portal never runs experiments. It writes your proposal into the queue; the author registers and runs it under the research protocol.</p>
+  <label for="idea">Your idea</label>
+  <textarea id="idea" placeholder="What do you want tested, and why?"></textarea>
+  <label for="section">Findings-map section</label>
+  <select id="section">
+    <option value="0">0 - Value and the self</option>
+    <option value="1">1 - Drive (curiosity, boredom, motivation)</option>
+    <option value="2">2 - Representation and building blocks</option>
+    <option value="3">3 - Parts, routing and the Self</option>
+    <option value="4">4 - Memory and change over time</option>
+    <option value="5">5 - Learning from the world</option>
+    <option value="6">6 - Randomness, variation and selection</option>
+    <option value="7">7 - Energy and substrate</option>
+    <option value="8">8 - Time and order</option>
+    <option value="method">method - how to experiment</option>
+  </select>
+  <label for="success">What would count as success</label>
+  <textarea id="success" placeholder="A measurable outcome, and what result would count as failure."></textarea>
+  <div class="row"><button id="draftbtn" class="primary" type="button">Draft with Claude</button><span id="draftstat" role="status"></span></div>
+  <div id="drafterr" class="msg err" hidden></div>
+  <div id="draftbox" hidden>
+    <label for="title">Title</label>
+    <input id="title" style="width:100%" maxlength="120">
+    <label for="draft">Draft (editable markdown)</label>
+    <textarea id="draft" style="min-height:22em;font-family:ui-monospace,Consolas,monospace"></textarea>
+    <div class="row"><button id="submitbtn" class="primary" type="button">Submit to queue</button><span id="submitstat" role="status"></span></div>
+    <div id="submiterr" class="msg err" hidden></div>
+    <div id="submitok" class="msg" hidden></div>
+  </div>
+</section>
+<section role="tabpanel" id="p-queue" aria-labelledby="tab-queue" hidden>
+  <div class="nokey msg" hidden>Enter your key (at the top) to see the queue.</div>
+  <p class="note">Statuses: proposed, registered, running, done, declined. Only the author changes them. Tap a row to open it.</p>
+  <div id="queueerr" class="msg err" hidden></div>
+  <div class="qwrap">
+  <table class="q">
+    <thead><tr><th scope="col">Title</th><th scope="col">Status</th><th scope="col">By</th><th scope="col"><button id="sortdate" type="button" aria-label="Sort by date">Date <span id="sortarrow" aria-hidden="true">&#9660;</span></button></th></tr></thead>
+    <tbody id="qbody"></tbody>
+  </table>
+  </div>
+</section>
+</main>
+<script>
+"use strict";
+const $=id=>document.getElementById(id);
+const KEYNAME="vi_portal_key";
+let files=[],fileSet=new Set(),current=null,queue=[],sortDesc=true,searchTimer=null,searchSeq=0;
+const mobile=()=>window.matchMedia("(max-width:767px)").matches;
+
+/* ---------- helpers ---------- */
+function esc(s){return String(s).replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/>/g,"&gt;").replace(/"/g,"&quot;")}
+function getKey(){return localStorage.getItem(KEYNAME)||""}
+function hasKey(){return !!getKey()}
+function showErr(el,e){el.textContent=e&&e.message?e.message:String(e);el.hidden=false}
+function fmtTime(t){if(!t)return"unknown";const d=new Date(t);return isNaN(d)?String(t):d.toLocaleString()}
+async function errorFrom(res){
+  let msg="HTTP "+res.status,body=null;
+  try{body=await res.json()}catch(_){}
+  if(body){
+    const d=body.detail!==undefined?body.detail:(body.message||body.error||body);
+    msg=typeof d==="string"?d:JSON.stringify(d);
+  }
+  if(res.status===401)msg="Key rejected (401). "+msg;
+  else if(res.status===402)msg="Token budget exhausted (402). "+msg;
+  else if(res.status===429)msg="Rate limit reached (429), wait a moment. "+msg;
+  return new Error(msg);
+}
+async function api(path,opts){
+  opts=opts||{};
+  const h=Object.assign({"X-Portal-Key":getKey()},opts.headers||{});
+  if(opts.json!==undefined){h["Content-Type"]="application/json";opts.body=JSON.stringify(opts.json)}
+  const res=await fetch(path,{method:opts.method||"GET",headers:h,body:opts.body});
+  if(!res.ok)throw await errorFrom(res);
+  return opts.raw?res:res.json();
+}
+
+/* ---------- tiny markdown renderer ---------- */
+function resolvePath(base,u){
+  if(u[0]==="/")return u.slice(1);
+  const parts=(base||"").split("/").slice(0,-1);
+  for(const seg of u.split("/")){if(seg===".."){parts.pop()}else if(seg&&seg!==".")parts.push(seg)}
+  return parts.join("/");
+}
+function inline(s,base){
+  const codes=[];
+  s=s.replace(/`([^`]+)`/g,(_,c)=>{codes.push(c);return"\u0000"+(codes.length-1)+"\u0000"});
+  s=esc(s);
+  s=s.replace(/\[([^\]]+)\]\(([^)\s]+)\)/g,(_,t,u)=>{
+    u=u.replace(/&amp;/g,"&");
+    if(/^(https?:|mailto:)/i.test(u))return'<a href="'+esc(u)+'" rel="noopener noreferrer" target="_blank">'+t+'</a>';
+    if(u[0]==="#")return t;
+    return'<a href="#" data-path="'+esc(resolvePath(base,u.split("#")[0]))+'">'+t+'</a>';
+  });
+  s=s.replace(/\*\*([^*]+)\*\*/g,"<strong>$1</strong>").replace(/(^|[\s(])\*([^*\s][^*]*)\*/g,"$1<em>$2</em>").replace(/(^|[\s(])_([^_\s][^_]*)_(?=[\s).,;:]|$)/g,"$1<em>$2</em>");
+  return s.replace(/\u0000(\d+)\u0000/g,(_,i)=>"<code>"+esc(codes[+i])+"</code>");
+}
+function cells(l){return l.trim().replace(/^\||\|$/g,"").split("|").map(c=>c.trim())}
+const LI=/^\s*([-*+]|\d+\.)\s+/;
+function render(md,base){
+  md=md.replace(/^---\n[\s\S]*?\n---\n/,"");
+  const L=md.replace(/\r/g,"").split("\n"),out=[];let i=0;
+  while(i<L.length){
+    const l=L[i];
+    if(/^```/.test(l)){const b=[];i++;while(i<L.length&&!/^```/.test(L[i]))b.push(L[i++]);i++;out.push("<pre><code>"+esc(b.join("\n"))+"</code></pre>");continue}
+    const m=l.match(/^(#{1,6})\s+(.*)$/);
+    if(m){out.push("<h"+m[1].length+">"+inline(m[2],base)+"</h"+m[1].length+">");i++;continue}
+    if(/^\s*(---|\*\*\*)\s*$/.test(l)){out.push("<hr>");i++;continue}
+    if(/^\s*\|/.test(l)&&i+1<L.length&&/^\s*\|?\s*:?-{2,}/.test(L[i+1])){
+      const h=cells(l);i+=2;let t="<table><thead><tr>"+h.map(c=>"<th>"+inline(c,base)+"</th>").join("")+"</tr></thead><tbody>";
+      while(i<L.length&&/^\s*\|/.test(L[i])){t+="<tr>"+cells(L[i]).map(c=>"<td>"+inline(c,base)+"</td>").join("")+"</tr>";i++}
+      out.push(t+"</tbody></table>");continue}
+    if(LI.test(l)){
+      const ord=/^\s*\d+\./.test(l);let t=ord?"<ol>":"<ul>";
+      while(i<L.length&&LI.test(L[i])){
+        let item=L[i].replace(LI,"");i++;
+        while(i<L.length&&/^\s+\S/.test(L[i])&&!LI.test(L[i]))item+=" "+L[i++].trim();
+        t+="<li>"+inline(item,base)+"</li>";
+      }
+      out.push(t+(ord?"</ol>":"</ul>"));continue}
+    if(/^>\s?/.test(l)){const b=[];while(i<L.length&&/^>\s?/.test(L[i]))b.push(L[i++].replace(/^>\s?/,""));out.push("<blockquote>"+inline(b.join(" "),base)+"</blockquote>");continue}
+    if(/^\s*$/.test(l)){i++;continue}
+    if(/^\s*<\/?(picture|source|img|details|summary|br|p|div)/i.test(l)){i++;continue} // skip raw HTML
+    const p=[];
+    while(i<L.length&&!/^\s*$/.test(L[i])&&!/^(#{1,6}\s|```|>\s?|\s*\|)/.test(L[i])&&!LI.test(L[i])&&!/^\s*<\/?(picture|source|img|details|summary)/i.test(L[i]))p.push(L[i++]);
+    if(!p.length){i++;continue}
+    out.push("<p>"+inline(p.join(" "),base)+"</p>");
+  }
+  return out.join("\n");
+}
+
+/* ---------- key / budget / status ---------- */
+function applyKeyState(){
+  const k=hasKey();
+  document.querySelectorAll(".nokey").forEach(e=>e.hidden=k);
+  ["askbtn","draftbtn","submitbtn","filter"].forEach(id=>$(id).disabled=!k);
+}
+async function loadBudget(){
+  const b=$("budget");
+  if(!hasKey()){b.textContent="No key set";return}
+  try{
+    const m=await api("/api/me");
+    b.textContent=m.name+": "+m.remaining_tokens.toLocaleString()+" of "+m.budget_tokens.toLocaleString()+" tokens left; "+m.daily_remaining.toLocaleString()+" left today";
+  }catch(e){b.textContent="Key problem: "+e.message}
+}
+async function loadStatus(){
+  try{
+    const r=await fetch("/api/status");if(!r.ok)throw new Error("HTTP "+r.status);
+    const s=await r.json();
+    $("strip").innerHTML="<span>HEAD <b>"+esc(String(s.head||"").slice(0,8))+"</b></span><span>"+esc(s.register_line||s.register_counts||"")+"</span><span>Latest log: <b>"+esc(s.latest_log_heading||s.latest_log||"")+"</b></span><span>updated "+esc(fmtTime(s.indexed_at))+" ("+(s.files|0)+" files, "+(s.chunks|0)+" passages)</span>";
+  }catch(e){$("strip").textContent="Status unavailable: "+e.message}
+}
+async function loadAll(){
+  applyKeyState();loadBudget();
+  if(!hasKey()){files=[];renderFiles();renderQueue();return}
+  try{files=await api("/api/files");fileSet=new Set(files);renderFiles()}catch(e){$("filelist").innerHTML="<li class='hit'>"+esc(e.message)+"</li>"}
+  loadQueue();
+}
+$("savekey").onclick=()=>{const v=$("key").value.trim();if(v){localStorage.setItem(KEYNAME,v);$("key").value=""}loadAll()};
+$("key").addEventListener("keydown",e=>{if(e.key==="Enter")$("savekey").click()});
+$("forget").onclick=()=>{localStorage.removeItem(KEYNAME);$("key").value="";files=[];queue=[];loadAll()};
+
+/* ---------- tabs ---------- */
+const tabs=["read","ask","propose","queue"];
+function showTab(n,focus){
+  tabs.forEach(t=>{const sel=t===n;$("tab-"+t).setAttribute("aria-selected",sel);$("tab-"+t).tabIndex=sel?0:-1;$("p-"+t).hidden=!sel});
+  if(focus)$("tab-"+n).focus();
+  if(n!=="read")setSide(false);
+  if(n==="queue"&&hasKey())loadQueue();
+  window.scrollTo(0,0);
+}
+tabs.forEach((t,i)=>{
+  $("tab-"+t).onclick=()=>showTab(t);
+  $("tab-"+t).addEventListener("keydown",e=>{
+    let j=null;
+    if(e.key==="ArrowRight")j=(i+1)%tabs.length;else if(e.key==="ArrowLeft")j=(i+tabs.length-1)%tabs.length;
+    else if(e.key==="Home")j=0;else if(e.key==="End")j=tabs.length-1;
+    if(j!==null){e.preventDefault();showTab(tabs[j],true)}
+  });
+});
+
+/* ---------- Read ---------- */
+function setSide(open){
+  $("side").classList.toggle("open",open);
+  $("filesbtn").setAttribute("aria-expanded",open);
+  if(open&&mobile())$("filter").focus();
+  else if(!open&&mobile()&&document.activeElement&&$("side").contains(document.activeElement))$("filesbtn").focus();
+}
+$("filesbtn").onclick=()=>setSide(true);
+$("closeside").onclick=()=>setSide(false);
+document.addEventListener("keydown",e=>{if(e.key==="Escape"&&$("side").classList.contains("open"))setSide(false)});
+function renderFiles(){
+  const q=$("filter").value.trim().toLowerCase();
+  const list=files.filter(f=>!q||f.toLowerCase().includes(q));
+  $("filelist").innerHTML=list.length?list.map(f=>'<li><button type="button" data-path="'+esc(f)+'"'+(f===current?' aria-current="true"':"")+">"+esc(f)+"</button></li>").join(""):"<li class='hit'>"+(hasKey()?"No matching files.":"No files (no key).")+"</li>";
+}
+async function openFile(path){
+  showTab("read");setSide(false);
+  $("docpath").textContent=path;$("copypath").hidden=false;$("copied").textContent="";
+  $("doc").innerHTML="<p>Loading...</p>";
+  current=path;renderFiles();
+  if(!hasKey()){$("doc").innerHTML="<p>Enter your key to read files.</p>";return}
+  try{
+    const f=await api("/api/file?path="+encodeURIComponent(path));
+    $("doc").innerHTML=/\.md$/i.test(path)?render(f.markdown,path):"<pre><code>"+esc(f.markdown)+"</code></pre>";
+    $("doc").focus({preventScroll:true});
+  }catch(e){$("doc").innerHTML='<p style="color:var(--bad)">Error: '+esc(e.message)+"</p>"}
+}
+document.addEventListener("click",e=>{
+  const a=e.target.closest("[data-path]");
+  if(a&&a.tagName!=="TR"){e.preventDefault();openFile(a.dataset.path)}
+});
+$("copypath").onclick=async()=>{
+  try{await navigator.clipboard.writeText(current);$("copied").textContent="Copied"}catch(_){$("copied").textContent="Copy failed; select the path manually"}
+};
+$("filter").addEventListener("input",()=>{
+  renderFiles();clearTimeout(searchTimer);
+  const q=$("filter").value.trim();
+  if(q.length<3){$("hits").innerHTML="";return}
+  searchTimer=setTimeout(async()=>{
+    const seq=++searchSeq;
+    try{
+      const r=await api("/api/search?q="+encodeURIComponent(q));
+      if(seq!==searchSeq)return;
+      $("hits").innerHTML=r.length?"<div class='hit'><b>Passages</b></div>"+r.slice(0,8).map(h=>'<div class="hit"><a href="#" data-path="'+esc(h.path)+'">'+esc(h.path)+"</a> <small>"+esc(h.heading||"")+" (score "+Number(h.score).toFixed(2)+")</small><br>"+esc(String(h.text).slice(0,220))+"...</div>").join(""):"<div class='hit'>No passages found.</div>";
+    }catch(e){if(seq===searchSeq)$("hits").innerHTML="<div class='hit' style='color:var(--bad)'>Error: "+esc(e.message)+"</div>"}
+  },350);
+});
+
+/* ---------- Ask ---------- */
+function linkCites(text){
+  return esc(text).replace(/[A-Za-z0-9_.\-\/]+\.(?:md|txt|py|json|csv)\b/g,m=>{
+    const p=m.replace(/^\.?\//,"");
+    if(fileSet.size&&!fileSet.has(p)){
+      const hit=files.find(f=>f.endsWith("/"+p));
+      return hit?'<a href="#" data-path="'+esc(hit)+'">'+m+"</a>":m;
+    }
+    return'<a href="#" data-path="'+esc(p)+'">'+m+"</a>";
+  });
+}
+function sseText(chunk){
+  // One SSE event: an optional "event:" line plus "data:" lines. The backend sends unnamed events whose
+  // data is a JSON string of answer text, plus "sources" (a list of paths), "done" ({usage, remaining})
+  // and "error" ({message}); only the unnamed text and an error message belong in the answer.
+  let out="",ev="";
+  for(const line of chunk.split("\n")){
+    if(line.startsWith("event:")){ev=line.slice(6).trim();continue}
+    if(!line.startsWith("data:"))continue;
+    let d=line.slice(5);if(d.startsWith(" "))d=d.slice(1);
+    if(d==="[DONE]"||ev==="sources"||ev==="done")continue;
+    try{const j=JSON.parse(d);d=typeof j==="string"?j:(ev==="error"?"\n[error: "+(j.message||j.error||"unknown")+"]":(j.text!==undefined?j.text:(j.delta!==undefined?(j.delta.text||j.delta):"")))}catch(_){}
+    out+=d;
+  }
+  return out;
+}
+$("askbtn").onclick=async()=>{
+  const q=$("question").value.trim();
+  $("askerr").hidden=true;
+  if(!q){showErr($("askerr"),"Type a question first.");return}
+  if(!hasKey()){showErr($("askerr"),"Enter your key first.");return}
+  $("askbtn").disabled=true;$("askstat").textContent="Answering...";
+  const ans=$("answer");ans.textContent="";let text="";
+  try{
+    const res=await api("/api/ask",{method:"POST",json:{question:q},raw:true});
+    const sse=(res.headers.get("content-type")||"").includes("event-stream");
+    const rd=res.body.getReader(),dec=new TextDecoder();let buf="";
+    for(;;){
+      const {done,value}=await rd.read();
+      if(done)break;
+      const s=dec.decode(value,{stream:true});
+      if(sse){buf+=s.replace(/\r/g,"");let k;while((k=buf.indexOf("\n\n"))>=0){text+=sseText(buf.slice(0,k));buf=buf.slice(k+2)}}
+      else text+=s;
+      ans.innerHTML=linkCites(text);
+    }
+    if(sse&&buf)text+=sseText(buf);
+    ans.innerHTML=linkCites(text)||"(empty answer)";
+    loadBudget();
+  }catch(e){showErr($("askerr"),e);if(!text)ans.textContent="(no answer)"}
+  $("askbtn").disabled=!hasKey();$("askstat").textContent="";
+};
+
+/* ---------- Propose ---------- */
+$("draftbtn").onclick=async()=>{
+  $("drafterr").hidden=true;
+  const idea=$("idea").value.trim(),success=$("success").value.trim();
+  if(!idea||!success){showErr($("drafterr"),"Fill in the idea and what would count as success.");return}
+  $("draftbtn").disabled=true;$("draftstat").textContent="Drafting...";
+  try{
+    const r=await api("/api/propose/draft",{method:"POST",json:{idea,section:$("section").value,success}});
+    $("draft").value=r.markdown;
+    const h=r.markdown.match(/^#\s+(.+)$/m)||r.markdown.match(/^title:\s*(.+)$/m);
+    if(!$("title").value)$("title").value=h?h[1].replace(/^["']|["']$/g,"").slice(0,120):idea.slice(0,80);
+    $("draftbox").hidden=false;$("submitok").hidden=true;
+    const u=r.usage,n=u&&typeof u==="object"?Object.values(u).filter(v=>typeof v==="number").reduce((a,b)=>a+b,0):u;
+    $("draftstat").textContent=n?"Draft ready (tokens used: "+n+")":"Draft ready";
+    loadBudget();
+  }catch(e){showErr($("drafterr"),e);$("draftstat").textContent=""}
+  $("draftbtn").disabled=!hasKey();
+};
+$("submitbtn").onclick=async()=>{
+  $("submiterr").hidden=true;$("submitok").hidden=true;
+  const title=$("title").value.trim(),markdown=$("draft").value;
+  if(!title||!markdown.trim()){showErr($("submiterr"),"Title and draft are both required.");return}
+  $("submitbtn").disabled=true;$("submitstat").textContent="Submitting...";
+  try{
+    const r=await api("/api/propose/submit",{method:"POST",json:{title,markdown}});
+    const ok=$("submitok");ok.innerHTML="Submitted. Written to <a href='#' data-path='"+esc(r.path)+"'>"+esc(r.path)+"</a>, commit <code>"+esc(String(r.commit||"").slice(0,10))+"</code>. The author will review it; it is not run until registered.";
+    ok.hidden=false;loadQueue();
+  }catch(e){showErr($("submiterr"),e)}
+  $("submitbtn").disabled=!hasKey();$("submitstat").textContent="";
+};
+
+/* ---------- Queue ---------- */
+async function loadQueue(){
+  $("queueerr").hidden=true;
+  if(!hasKey()){queue=[];renderQueue();return}
+  try{queue=await api("/api/queue");renderQueue()}catch(e){showErr($("queueerr"),e)}
+}
+function renderQueue(){
+  const q=queue.slice().sort((a,b)=>{const x=String(a.date||""),y=String(b.date||"");return sortDesc?y.localeCompare(x):x.localeCompare(y)});
+  $("sortarrow").textContent=sortDesc?"▼":"▲";
+  $("qbody").innerHTML=q.length?q.map(r=>{
+    const st=String(r.status||"proposed").toLowerCase();
+    return'<tr tabindex="0" data-path="'+esc(r.path)+'"><td><a href="#" data-path="'+esc(r.path)+'">'+esc(r.title||r.path)+"</a></td><td><span class='badge st-"+esc(st.replace(/[^a-z]/g,""))+"'>"+esc(st)+"</span></td><td>"+esc(r.proposed_by||"")+"</td><td>"+esc(r.date||"")+"</td></tr>";
+  }).join(""):'<tr><td colspan="4">'+(hasKey()?"The queue is empty.":"Enter your key to see the queue.")+"</td></tr>";
+}
+$("sortdate").onclick=()=>{sortDesc=!sortDesc;renderQueue()};
+$("qbody").addEventListener("click",e=>{const tr=e.target.closest("tr[data-path]");if(tr&&!e.target.closest("a"))openFile(tr.dataset.path)});
+$("qbody").addEventListener("keydown",e=>{if(e.key==="Enter"&&e.target.matches("tr[data-path]"))openFile(e.target.dataset.path)});
+
+loadStatus();setInterval(loadStatus,60000);loadAll();
+</script>
+</body>
+</html>

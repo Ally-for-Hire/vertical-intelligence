@@ -1,2 +1,4 @@
 tools/redact.local.json
 __pycache__/
+portal/data/
+portal/.env

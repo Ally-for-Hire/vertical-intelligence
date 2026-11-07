@@ -28,17 +28,15 @@ Allowed without asking: sync, scan, commit and push to the public remote's `main
 creating or deleting repos or branches; any push to the private archive; adding personal or
 third-party material to the public tree. The charter ([[research-protocol]] section 4) records the same.
 
-## 2. The two repos
+## 2. The repos (reorganized 2026-11-07)
 
 | Repo | Visibility | Role | Local |
 |---|---|---|---|
-| `vertical-intelligence` | **public** | The program's public face: charter, plan, findings, code, figures. Redacted snapshot | the public clone's branch `public`, remote `public`, branch `main` |
-| `vertical-learning` | private | Unredacted archive from the first snapshot (2026-10-26) | the same clone's branch `main`, remote `origin`; never push the `public` branch there and never push `main` to the public remote |
+| `vertical-intelligence-private` | private | **Canonical, unredacted**: all code (experiments by family under `experiments/`, `core/`), results, register (`paper/`), and a copy of this wiki domain in `program/`. Full git history of the former curious-net and neuroblock-research repos | `~/vertical-intelligence` (branch `main`, remote `origin`) |
+| `vertical-intelligence` | **public** | The program's public face. Redacted snapshot of the repo above | `~/vertical-intelligence-public` (branch `public`, remote `public`, branch `main`) |
+| `curious-net`, `neuroblock-research`, `vertical-learning` | private | Read-only archives of the former separate repos (kept, not retired) | their old local folders |
 
-The canonical sources are the working repos (curious-net, neuroblock-research) and this wiki's
-vertical-intelligence, curious-net and neuroblock-research domains. Everything in the public repo except
-four root documents (README.md, AGENTS.md, CREDITS.md, CLAUDE.md) and `tools/` is copied by
-`tools/sync.py`, redacted, and never edited by hand.
+Edit the canonical repo (`vertical-intelligence`) and this wiki first; refresh its `program/` copy with `python tools/sync.py --program`. Everything in the public repo is copied by `tools/sync.py` from the canonical repo and this domain, redacted, and never edited by hand; `README.md`, `AGENTS.md`, `CREDITS.md`, `CLAUDE.md` are written in the canonical repo and copied with the rest. Never push the public clone's `main` branch (it tracks the old archive) and never push `public` to a private remote.
 
 ## 3. Procedure (each publish)
 
@@ -85,20 +83,9 @@ treatment (verbatim in the private wiki, summary in the public tree). Older comm
 still contain the earlier verbatim file; clearing them needs a history rewrite and a force-push, which
 is done only on the author's explicit request.
 
-## 6. The private archive (`vertical-learning`)
+## 6. The archives
 
-What it holds: the first unredacted snapshot (2026-10-26) plus later refreshes of the same files. A
-file-by-file comparison on 2026-10-27 found **no file in it that is not also in a canonical source**,
-apart from its six root files (README, AGENTS, CREDITS, CLAUDE, SNAPSHOT, `tools/sync.py`), which now
-live in the public repo. What was folded into this wiki: the credits ([[credits]]), the publishing
-procedure (this page), the findings summary ([[findings-map]], curious-net `synthesis`).
-
-**Not retired, on purpose.** Until 2026-10-27 curious-net and neuroblock-research had no git remote,
-so this private repo was the only offsite copy of their code and raw results. They now have their own
-private remotes (`Ally-for-Hire/curious-net` and `Ally-for-Hire/neuroblock-research`, branch `master`;
-created 2026-10-27 at the author's request). Committed history is backed up there; uncommitted working
-files are not, so commit work you want kept. This archive's `main` is out of date; do not delete,
-archive or rewrite it without asking.
+Before 2026-11-07 there were three private repos: `curious-net` and `neuroblock-research` (created 2026-10-27 at the author's request, branch `master`) and `vertical-learning` (the first unredacted snapshot, 2026-10-26, branch `main`; it held no file that was not in a canonical source apart from its root files). They were merged into `vertical-intelligence-private` with history kept (both histories imported as subtree merges, then every file `git mv`'d into its family folder, so `git log --follow` works across the move). The three old repos are left as they were and are not to be deleted, archived or rewritten without asking. Uncommitted working files are not backed up anywhere: commit work you want kept.
 
 ## 7. Cadence
 

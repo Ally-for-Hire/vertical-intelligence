@@ -12,4 +12,4 @@ Theorem three: transformer models are stupid. Anything trained on its own, on a 
 
 I am trying to prove vertical intelligence, and I'm trying to create it by combining biology, psychology, and good computer science. Right now, I'm at the foundational stage. I'm doing experiments. I'm trying different models of thinking. I'm trying what we know works and adding my own insight to it. This is the current direction of the project, but I believe a set of instructions are needed so that everything stays documented and prepared and easier to digest."
 
-Earlier statements of the same program: `domains/curious-net/raw/2026-10-22-vision-statement.md`, `~/neuroblock-research/FOUNDATIONS.md`.
+Earlier statements of the same program: `raw/2026-10-22-vision-statement.md`, `~/neuroblock-research/FOUNDATIONS.md`.

@@ -1,0 +1,4 @@
+CLONE 0.8 {'room': 1, 'levels': 5, 'exam': 0.87, 'tiers': [0.9601170303453954, None, 0.8914670755966486, 0.8565246173132818, 0.7829609887308143], 'solved': 0.0, 'reach': -1, 'n_rec': 0, 'links': 7.0, 'units': 39, 'weights': 2379, 'weights_per_level': 475.8, 'first10': 0.98, 'last10': 0.77, 'seconds': 6.8}
+CLONE 0.8 {'room': 2, 'levels': 10, 'exam': 0.84, 'tiers': [0.9424670966512717, 0.8418661520233379, 0.7863017704561495, 0.7519424420337422, 0.7935632127962351], 'solved': 0.0, 'reach': -1, 'n_rec': 0, 'links': 7.67, 'units': 76, 'weights': 4636, 'weights_per_level': 463.6, 'first10': 0.95, 'last10': 0.8, 'seconds': 20.4}
+CLONE 0.8 {'room': 3, 'levels': 15, 'exam': 0.77, 'tiers': [None, None, 0.7477054342734731, 0.777171456294574, 0.7960318898069757], 'solved': 0.0, 'reach': -1, 'n_rec': 0, 'links': 8.0, 'units': 110, 'weights': 6710, 'weights_per_level': 447.33, 'first10': 0.93, 'last10': 0.76, 'seconds': 45.6}
+CLONE 0.8 total 48 s

@@ -45,10 +45,10 @@ four root documents (README.md, AGENTS.md, CREDITS.md, CLAUDE.md) and `tools/` i
 1. **Record first** in the canonical places ([[research-protocol]] section 2): LOG, PREDICTIONS, QUEUE,
    [[findings-map]], [[experiment-plan]], [[inbox]], wiki log. Publish after a result is recorded, never
    mid-run (partial run files would be copied).
-2. **Figures.** `python curious-net/vi/figures.py` (builds from the result files). Open every PNG, light
+2. **Figures.** `python core/figures.py` (builds from the result files). Open every PNG, light
    and dark, and look at it: clipped text, label collisions, hairline artifacts.
 3. **README "Latest update" block** (public clone): the at-a-glance line from
-   `python curious-net/vi/register_counts.py`, one figure per new milestone, what finished, what is
+   `python core/register_counts.py`, one figure per new milestone, what finished, what is
    running, what is next. A claim that a new result supersedes is corrected in the README in the same
    publish, and the commit message says so.
 4. **Dry run:** `python tools/publish.py`. It refuses unless the branch, the remote and its PUBLIC

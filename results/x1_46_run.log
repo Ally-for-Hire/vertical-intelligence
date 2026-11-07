@@ -1,0 +1,8 @@
+world 960000: chose sin (pilot tanh 0.93, sin 0.99, relu 0.93) exam 0.960 corr2 [1.0, 1.0, 0.97, 0.94, 0.91] deep99 1
+world 960001: chose sin (pilot tanh 0.94, sin 1.00, relu 0.94) exam 0.989 corr2 [1.0, 1.0, 0.99, 0.98, 0.97] deep99 2
+world 960002: chose sin (pilot tanh 0.93, sin 1.00, relu 0.93) exam 0.689 corr2 [1.0, 0.4, 0.31, 0.2, 0.15] deep99 0
+world 960003: chose sin (pilot tanh 0.94, sin 0.99, relu 0.94) exam 0.668 corr2 [0.96, 0.6, 0.21, 0.16, 0.15] deep99 0
+world 960004: chose sin (pilot tanh 0.94, sin 1.00, relu 0.95) exam 0.647 corr2 [0.82, 0.78, 0.43, 0.15, 0.12] deep99 0
+world 960005: chose sin (pilot tanh 0.92, sin 0.99, relu 0.92) exam 0.923 corr2 [0.99, 0.98, 0.93, 0.83, 0.74] deep99 0
+chose sin in 6/6 worlds; median exam 0.806; worlds with an exact deep concept 2/6
+2141 s

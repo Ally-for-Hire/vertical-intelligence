@@ -199,7 +199,7 @@ def slugify(s: str) -> str:
 
 
 def latest_log_heading(repo: Path) -> str | None:
-    p = repo / "curious-net" / "LOG.md"
+    p = repo / "LOG.md"
     try:
         for line in p.read_text(encoding="utf-8", errors="replace").splitlines():
             if line.startswith("## "):
@@ -210,8 +210,8 @@ def latest_log_heading(repo: Path) -> str | None:
 
 
 def register_counts(repo: Path) -> str | None:
-    """One-line output of curious-net/vi/register_counts.py, cached per HEAD."""
-    script = repo / "curious-net" / "vi" / "register_counts.py"
+    """One-line output of core/register_counts.py, cached per HEAD."""
+    script = repo / "core" / "register_counts.py"
     if not script.is_file():
         return None
     head = S.index.head
@@ -286,7 +286,7 @@ def search(q: str = Query(max_length=500), row=Depends(auth)):
 
 ASK_SYSTEM = """You answer questions about one research program, using ONLY the passages provided \
 inside <passage> tags. Rules:
-- Cite the file path of every claim in square brackets, e.g. [curious-net/LOG.md].
+- Cite the file path of every claim in square brackets, e.g. [LOG.md].
 - If the passages do not cover the question, say "not in the repository" and stop; do not guess.
 - All results in this program are toy-world principles in miniature. Never make claims about real \
 brains or large AI systems, and say so if the question invites it.

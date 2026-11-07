@@ -34,15 +34,27 @@ the first preprint.
 
 **Contributor portal.** People with a key from the author can read this repository, ask questions answered from its text, and propose experiments from a phone or computer. Access is by a key the author issues; see [`portal/README.md`](portal/README.md) for how it runs and [`contrib/queue/README.md`](contrib/queue/README.md) for what a proposal is. Proposals are only queued: the author registers and runs them under the protocol.
 
-## Latest update: 30 October 2026
+## Latest update: 7 November 2026
 
-**At a glance: 352 pre-registered predictions, 168 passed, 170 failed, 0 awaiting results** (14 more were voided or are resolution rules).
+**At a glance: 487 pre-registered predictions, 224 passed, 232 failed, 0 awaiting results** (31 more were voided, withdrawn or are resolution rules).
+**How much those numbers mean:** a row-by-row feasibility audit of 377 of them (P199-P567) asked whether each test could have passed at all.
+About 60% could genuinely pass or fail; 16% could not fail by construction, 3% were impossible by construction, 14% were too noisy or did not measure
+what they claimed, and 7% were never run. The tests of the program's biggest goals (discovery from nothing, the "vertical" comparison in X1.10-X1.17,
+graded doubt in X7.7) mostly could not answer their question as designed, and those findings are written up next to the results:
+[`paper/FEASIBILITY_AUDIT_2026-11-07.md`](paper/FEASIBILITY_AUDIT_2026-11-07.md).
+**The repository was reorganized the same day:** every experiment now sits under `experiments/<family>/` (value and the self, boredom and prediction, the Self and doubt,
+learning to learn, deep discovery, and three older families), with shared code in `core/` and a single list of all experiments in
+[`experiment-registry.md`](program/wiki-domains/vertical-intelligence/wiki/experiment-registry.md). Earlier figures and numbers below are from 30 October 2026.
+
+### 30 October 2026
+
+**At the time: 352 pre-registered predictions, 168 passed, 170 failed, 0 awaiting results** (14 more were voided or are resolution rules).
 Every success rule is written down *before* an experiment runs, and every failure is kept and
 reported next to the successes.
 
 <picture>
-  <source media="(prefers-color-scheme: dark)" srcset="curious-net/results/figures/vi_x13_prediction_life_dark.png">
-  <img alt="Horizontal bars of deaths per 10,000 ticks, median of 48 simulated worlds, lower is better: the entity that lives on prediction and feels boredom 0 (highlighted), informed reference 0, learning progress with optimism 3.3, learning progress 5.0, the same entity ignoring its boredom 6.7, minimise surprise 8.3, stays in the dark room 20.0, random choices 21.7, stays in the noise 36.7." src="curious-net/results/figures/vi_x13_prediction_life_light.png" width="900">
+  <source media="(prefers-color-scheme: dark)" srcset="results/figures/vi_x13_prediction_life_dark.png">
+  <img alt="Horizontal bars of deaths per 10,000 ticks, median of 48 simulated worlds, lower is better: the entity that lives on prediction and feels boredom 0 (highlighted), informed reference 0, learning progress with optimism 3.3, learning progress 5.0, the same entity ignoring its boredom 6.7, minimise surprise 8.3, stays in the dark room 20.0, random choices 21.7, stays in the noise 36.7." src="results/figures/vi_x13_prediction_life_light.png" width="900">
 </picture>
 
 <details><summary>Data behind the chart (experiment X1.3, median of 48 worlds)</summary>
@@ -69,8 +81,8 @@ gracefully (death-free worlds 100% / 98% / 58% at noise 0.02 / 0.05 / 0.10) and 
 </details>
 
 <picture>
-  <source media="(prefers-color-scheme: dark)" srcset="curious-net/results/figures/vi_x12_optimism_dark.png">
-  <img alt="Horizontal bars on a log scale of ticks to learn a newly opened learnable region: perfect learner 16, learning progress with optimism 16 (highlighted, 53 percent of the time in the traps), seeking surprise with optimism 17 (96 percent in the traps), random 58, plain learning progress 336, minimizing surprise 575, plain seeking surprise 578." src="curious-net/results/figures/vi_x12_optimism_light.png" width="900">
+  <source media="(prefers-color-scheme: dark)" srcset="results/figures/vi_x12_optimism_dark.png">
+  <img alt="Horizontal bars on a log scale of ticks to learn a newly opened learnable region: perfect learner 16, learning progress with optimism 16 (highlighted, 53 percent of the time in the traps), seeking surprise with optimism 17 (96 percent in the traps), random 58, plain learning progress 336, minimizing surprise 575, plain seeking surprise 578." src="results/figures/vi_x12_optimism_light.png" width="900">
 </picture>
 
 <details><summary>Data behind the chart (experiment X1.2, median of 48 worlds)</summary>
@@ -93,8 +105,8 @@ the traps; seeking surprise finds it just as fast and then camps in the noise. O
 </details>
 
 <picture>
-  <source media="(prefers-color-scheme: dark)" srcset="curious-net/results/figures/vi_x11_dark_room_dark.png">
-  <img alt="Stacked bars of where each drive spends its time after a second learnable region opens. Minimizing surprise: 92 percent in the dark room. Seeking surprise: 92 percent in the unlearnable noise. Chasing learning progress: 27 percent in the dark room, about 4 percent in the noise, 69 percent in the learnable regions. Choosing at random: 25, 25 and 50 percent." src="curious-net/results/figures/vi_x11_dark_room_light.png" width="900">
+  <source media="(prefers-color-scheme: dark)" srcset="results/figures/vi_x11_dark_room_dark.png">
+  <img alt="Stacked bars of where each drive spends its time after a second learnable region opens. Minimizing surprise: 92 percent in the dark room. Seeking surprise: 92 percent in the unlearnable noise. Chasing learning progress: 27 percent in the dark room, about 4 percent in the noise, 69 percent in the learnable regions. Choosing at random: 25, 25 and 50 percent." src="results/figures/vi_x11_dark_room_light.png" width="900">
 </picture>
 
 <details><summary>Data behind the chart (experiment X1.1, median of 48 worlds)</summary>
@@ -114,8 +126,8 @@ Curiosity needs an "optimism about the untried" ingredient as well.
 </details>
 
 <picture>
-  <source media="(prefers-color-scheme: dark)" srcset="curious-net/results/figures/vi_x02_secure_base_dark.png">
-  <img alt="Line chart of the share of threat ticks spent exploring in three worlds. The one-signal agent (highlighted) explores 9.8 percent of threat ticks under mild threat, 0.6 percent under medium threat and none under severe threat. Random exploring stays near 2 percent in every world; two-drive agents are at 3.8 and 0 percent in the mild world and 0 in the others." src="curious-net/results/figures/vi_x02_secure_base_light.png" width="900">
+  <source media="(prefers-color-scheme: dark)" srcset="results/figures/vi_x02_secure_base_dark.png">
+  <img alt="Line chart of the share of threat ticks spent exploring in three worlds. The one-signal agent (highlighted) explores 9.8 percent of threat ticks under mild threat, 0.6 percent under medium threat and none under severe threat. Random exploring stays near 2 percent in every world; two-drive agents are at 3.8 and 0 percent in the mild world and 0 in the others." src="results/figures/vi_x02_secure_base_light.png" width="900">
 </picture>
 
 <details><summary>Data behind the chart (experiment X0.2, median of 48 worlds per type)</summary>
@@ -136,8 +148,8 @@ three worlds. So one hunger is enough, but not shown to be better.
 </details>
 
 <picture>
-  <source media="(prefers-color-scheme: dark)" srcset="curious-net/results/figures/vi_x69_growth_dark.png">
-  <img alt="Bar chart of how many times cheaper than the plain evolutionary search four fixed rates of growing a network by copying a hidden unit were: 10 percent of children 1.16, 30 percent 1.03, 50 percent 1.23 (highlighted), every child 1.17, against a pass line of 1.25. None passed; on spirals alone the gains were 1.16 to 1.43 times; the checkerboard stayed unsolved." src="curious-net/results/figures/vi_x69_growth_light.png" width="900">
+  <source media="(prefers-color-scheme: dark)" srcset="results/figures/vi_x69_growth_dark.png">
+  <img alt="Bar chart of how many times cheaper than the plain evolutionary search four fixed rates of growing a network by copying a hidden unit were: 10 percent of children 1.16, 30 percent 1.03, 50 percent 1.23 (highlighted), every child 1.17, against a pass line of 1.25. None passed; on spirals alone the gains were 1.16 to 1.43 times; the checkerboard stayed unsolved." src="results/figures/vi_x69_growth_light.png" width="900">
 </picture>
 
 <details><summary>Data behind the chart (experiment X6.9, 70 runs per arm)</summary>
@@ -157,8 +169,8 @@ grow its own parts helps a little; it is not the missing ingredient.
 </details>
 
 <picture>
-  <source media="(prefers-color-scheme: dark)" srcset="curious-net/results/figures/vi_x68_stones_dark.png">
-  <img alt="Bar chart of runs solved out of 20 within a budget of 10,000,000: direct 10, fixed ramp 4, self-paced ramp 10 (highlighted), mixed stages 0. Spirals were solved in 10 of 10 runs by the direct and self-paced arms; the checkerboard was solved in none of the 40 ramp runs." src="curious-net/results/figures/vi_x68_stones_light.png" width="900">
+  <source media="(prefers-color-scheme: dark)" srcset="results/figures/vi_x68_stones_dark.png">
+  <img alt="Bar chart of runs solved out of 20 within a budget of 10,000,000: direct 10, fixed ramp 4, self-paced ramp 10 (highlighted), mixed stages 0. Spirals were solved in 10 of 10 runs by the direct and self-paced arms; the checkerboard was solved in none of the 40 ramp runs." src="results/figures/vi_x68_stones_light.png" width="900">
 </picture>
 
 <details><summary>Data behind the chart (experiment X6.8, 10 runs per problem per arm)</summary>
@@ -177,8 +189,8 @@ registered pass rule (more runs solved, or 1.5x cheaper).
 </details>
 
 <picture>
-  <source media="(prefers-color-scheme: dark)" srcset="curious-net/results/figures/vi_x67_nograder_dark.png">
-  <img alt="Horizontal bar chart on a log scale of the cost to reach 95 percent accuracy on a noisy XOR: tuned gradient descent 3,840; graded cull 51,520; default gradient descent 54,240; the energy world with nothing ranking anything 1,367,392 (highlighted, solved 17 of 20). Three arms were not solved: the energy world with literal units went extinct in 20 of 20 runs, unlimited food exploded in 20 of 20, and random search solved none." src="curious-net/results/figures/vi_x67_nograder_light.png" width="900">
+  <source media="(prefers-color-scheme: dark)" srcset="results/figures/vi_x67_nograder_dark.png">
+  <img alt="Horizontal bar chart on a log scale of the cost to reach 95 percent accuracy on a noisy XOR: tuned gradient descent 3,840; graded cull 51,520; default gradient descent 54,240; the energy world with nothing ranking anything 1,367,392 (highlighted, solved 17 of 20). Three arms were not solved: the energy world with literal units went extinct in 20 of 20 runs, unlimited food exploded in 20 of 20, and random search solved none." src="results/figures/vi_x67_nograder_light.png" width="900">
 </picture>
 
 <details><summary>Data behind the chart (experiment X6.7, 20 runs per arm)</summary>
@@ -201,8 +213,8 @@ run; the literal reading of the units collapsed, so the energy scale matters.
 </details>
 
 <picture>
-  <source media="(prefers-color-scheme: dark)" srcset="curious-net/results/figures/vi_x66_machinery_dark.png">
-  <img alt="Bar chart of how many times cheaper than the plain evolutionary search each self-improving mechanism was: keep going the parent's way 0.79, mix two parents 1.07, grow by copying a unit 1.22 (highlighted), all three together 1.07, against a pass line of 1.25. None passed, and the genes behind them mostly did not evolve." src="curious-net/results/figures/vi_x66_machinery_light.png" width="900">
+  <source media="(prefers-color-scheme: dark)" srcset="results/figures/vi_x66_machinery_dark.png">
+  <img alt="Bar chart of how many times cheaper than the plain evolutionary search each self-improving mechanism was: keep going the parent's way 0.79, mix two parents 1.07, grow by copying a unit 1.22 (highlighted), all three together 1.07, against a pass line of 1.25. None passed, and the genes behind them mostly did not evolve." src="results/figures/vi_x66_machinery_light.png" width="900">
 </picture>
 
 <details><summary>Data behind the chart (experiment X6.6, 70 runs per arm)</summary>
@@ -221,8 +233,8 @@ faster, with a gene that did not evolve: the *capacity* to grow helped; its evol
 </details>
 
 <picture>
-  <source media="(prefers-color-scheme: dark)" srcset="curious-net/results/figures/vi_x07_needs_dark.png">
-  <img alt="Two bar charts of deaths per 10,000 ticks by learner type, lower is better. In a gentle world the learner that watches only food dies 9.3 times, others between 0.7 and 4.0; in a trade-off world where needs conflict, food only dies 155.3 times against 10.7 to 14.7 for learners that watch both needs." src="curious-net/results/figures/vi_x07_needs_light.png" width="900">
+  <source media="(prefers-color-scheme: dark)" srcset="results/figures/vi_x07_needs_dark.png">
+  <img alt="Two bar charts of deaths per 10,000 ticks by learner type, lower is better. In a gentle world the learner that watches only food dies 9.3 times, others between 0.7 and 4.0; in a trade-off world where needs conflict, food only dies 155.3 times against 10.7 to 14.7 for learners that watch both needs." src="results/figures/vi_x07_needs_light.png" width="900">
 </picture>
 
 <details><summary>Data behind the chart (experiment X0.7, median of 48 simulated worlds per column)</summary>
@@ -243,8 +255,8 @@ The food-only learner is tuned on food, its own objective; with default settings
 </details>
 
 <picture>
-  <source media="(prefers-color-scheme: dark)" srcset="curious-net/results/figures/vi_x06_deaths_dark.png">
-  <img alt="Horizontal bar chart of deaths per 10,000 ticks by learner type, lower is better: perfect policy 0, adds both needs together 0.7, hand-picked targets 3.3, food only 9.3, learns its own sense of survival 16.0 (highlighted), only 'dying is bad' 38.3, random choices 85.0." src="curious-net/results/figures/vi_x06_deaths_light.png" width="780">
+  <source media="(prefers-color-scheme: dark)" srcset="results/figures/vi_x06_deaths_dark.png">
+  <img alt="Horizontal bar chart of deaths per 10,000 ticks by learner type, lower is better: perfect policy 0, adds both needs together 0.7, hand-picked targets 3.3, food only 9.3, learns its own sense of survival 16.0 (highlighted), only 'dying is bad' 38.3, random choices 85.0." src="results/figures/vi_x06_deaths_light.png" width="780">
 </picture>
 
 <details><summary>Data behind the chart (experiment X0.6, median of 48 simulated worlds)</summary>
@@ -357,18 +369,18 @@ If you are reading for the ideas, start here:
    imagination, boredom, wholeness).
 4. [`program/wiki-domains/vertical-intelligence/wiki/experiment-plan.md`](program/wiki-domains/vertical-intelligence/wiki/experiment-plan.md):
    every planned experiment and what would count as success.
-5. [`neuroblock-research/emergent/README.md`](neuroblock-research/emergent/README.md): the
+5. [`experiments/emergent-optimizers/emergent/README.md`](experiments/emergent-optimizers/emergent/README.md): the
    "evolution without calculus" experiments in one page.
 
-If you want to see the raw work, each line's `LOG.md` records every experiment in order, failures included.
+If you want to see the raw work, `LOG.md` records every experiment in order, failures included.
 
 ## How it is organized
 
 | Folder | What is inside |
 |---|---|
 | `program/` | The research notebook: charter, plan, findings, literature, and the author's own statements in `raw/` (word for word, except personal reflections, which are summarized) |
-| `curious-net/` | The main experimental code: curiosity, teaching, self-doubt, discovering laws from data, and `vi/` (the newest experiments, X0.x) |
-| `neuroblock-research/` | The earlier line: a brain-like simulator with parts, sleep and mastery, plus the evolution experiments in `emergent/` |
+| `experiments/` | All experiments, in families: value and the self, boredom and prediction, the Self and doubt, learning to learn, deep discovery, self-gate and calibration, emergent optimizers, the energy-limited brain simulator. Each family folder has a README |
+| `core/`, `paper/`, `results/` | Shared code, the prediction register and write-ups, run outputs and figures |
 | `tools/` | `sync.py` refreshes this repository from the working copies; `publish.py` checks it for anything that should not go public and publishes it |
 
 ## Words used in the notes
@@ -387,9 +399,9 @@ If you want to see the raw work, each line's `LOG.md` records every experiment i
 ## Running the code
 
 Python 3.11 with numpy, scipy, torch and matplotlib. Run scripts from their folder; the top of
-each script says how (for example `python emergent/confirm.py` inside `neuroblock-research/`
+each script says how (for example `python confirm.py` inside `experiments/emergent-optimizers/emergent/`
 reproduces the main evolution result in a couple of minutes). Raw third-party data is not
-included; sources are listed in `curious-net/paper/LITERATURE.md`. AI agents working on the
+included; sources are listed in `paper/LITERATURE.md`. AI agents working on the
 repository should start at [`AGENTS.md`](AGENTS.md).
 
 ## Credits

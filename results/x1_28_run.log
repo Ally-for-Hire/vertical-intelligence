@@ -1,0 +1,12 @@
+DIG_MDL {'last': 0.586, 'prev': 0.582, 'solved': 0.133, 'rec_mid_d0': 0.155, 'rec_mid_d2': 0.0, 'rec_end_d0': 0.31, 'rec_end_d1': 0.0, 'rec_end_d2': 0.0, 'size': 243.0, 'nodes': 27.0, 'sub': 0.0} curve 0.509 0.550 0.587 0.582 0.586
+DIG_GROW {'last': 0.712, 'prev': 0.695, 'solved': 0.1, 'rec_mid_d0': 0.125, 'rec_mid_d2': 0.0, 'rec_end_d0': 0.211, 'rec_end_d1': 0.0, 'rec_end_d2': 0.0, 'size': 8776.5, 'nodes': 204.5, 'sub': 108.0} curve 0.616 0.673 0.699 0.695 0.712
+DIG_BUDGET {'last': 0.649, 'prev': 0.623, 'solved': 0.067, 'rec_mid_d0': 0.0, 'rec_mid_d2': 0.0, 'rec_end_d0': 0.0, 'rec_end_d1': 0.0, 'rec_end_d2': 0.0, 'size': 600.0, 'nodes': 24.0, 'sub': 7.0} curve 0.590 0.635 0.631 0.623 0.649
+DIG_GROW_RAND {'last': 0.73, 'prev': 0.701, 'solved': 0.1, 'rec_mid_d0': 0.143, 'rec_mid_d2': 0.0, 'rec_end_d0': 0.174, 'rec_end_d1': 0.0, 'rec_end_d2': 0.0, 'size': 8255.0, 'nodes': 201.0, 'sub': 101.0} curve 0.625 0.689 0.699 0.701 0.730
+FLAT {'last': 0.743, 'prev': 0.709, 'solved': 0.167, 'rec_mid_d0': 0.388, 'rec_mid_d2': 0.0, 'rec_end_d0': 0.571, 'rec_end_d1': 0.0, 'rec_end_d2': 0.0, 'size': 2961.0, 'nodes': 329.0, 'sub': 0.0} curve 0.640 0.710 0.732 0.709 0.743
+P493 FAILED | -0.0317 [-0.0467, -0.0241]
+P494 FAILED | -0.0138 [-0.0181, -0.0057]
+P495 PASSED | +0.1077 [+0.0837, +0.1274]
+P496 PASSED | +0.0656 [+0.0533, +0.0874]
+P497 FAILED | +0.0000 [+0.0000, +0.0000]
+P498 FAILED | +0.0140 [-0.0048, +0.0575]
+662 s

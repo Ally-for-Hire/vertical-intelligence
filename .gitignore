@@ -1,4 +1,13 @@
-tools/redact.local.json
 __pycache__/
+data/
+results/wandb_local/
+
+results/progress/
+results/info_history.jsonl
+results/x1_*_cells/
+results/x1_29_worlds/
+results/_pilot34_*.log
+*.pyc
+tools/redact.local.json
 portal/data/
 portal/.env

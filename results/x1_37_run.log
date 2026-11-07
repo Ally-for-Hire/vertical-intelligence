@@ -1,0 +1,13 @@
+g 0.8 N 60: exam 0.886 n90 1 worlds with a deep concept at corr2>=0.99: 0/3 median max corr2 0.869 25s
+g 1.2 N 60: exam 0.407 n90 0 worlds with a deep concept at corr2>=0.99: 0/3 median max corr2 0.566 17s
+g 2.0 N 60: exam 0.233 n90 1 worlds with a deep concept at corr2>=0.99: 0/3 median max corr2 0.061 12s
+g 0.8 N 200: exam 0.911 n90 2 worlds with a deep concept at corr2>=0.99: 0/3 median max corr2 0.909 60s
+g 1.2 N 200: exam 0.570 n90 1 worlds with a deep concept at corr2>=0.99: 0/3 median max corr2 0.662 41s
+g 2.0 N 200: exam 0.167 n90 0 worlds with a deep concept at corr2>=0.99: 0/3 median max corr2 0.084 17s
+  g 2.0: SATURATED at N=200 (failed route)
+g 0.8 N 600: exam 0.946 n90 1 worlds with a deep concept at corr2>=0.99: 0/3 median max corr2 0.853 226s
+g 1.2 N 600: exam 0.478 n90 1 worlds with a deep concept at corr2>=0.99: 0/3 median max corr2 0.311 217s
+  g 1.2: SATURATED at N=600 (failed route)
+g 0.8 N 2000: exam 0.875 n90 1 worlds with a deep concept at corr2>=0.99: 0/3 median max corr2 0.589 953s
+  g 0.8: SATURATED at N=2000 (failed route)
+2647 s

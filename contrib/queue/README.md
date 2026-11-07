@@ -3,7 +3,7 @@
 Each file here is one **proposal**: an experiment idea from a key-holder, written by the contributor
 portal (`portal/README.md`) as `<date>-<slug>.md` and committed. A proposal is a request, not a
 result. **Nothing here runs until the author registers it as a P-number in
-`curious-net/paper/PREDICTIONS.md`**; the portal never executes anything.
+`paper/PREDICTIONS.md`**; the portal never executes anything.
 
 ## Frontmatter
 ```

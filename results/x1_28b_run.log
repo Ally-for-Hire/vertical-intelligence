@@ -1,0 +1,15 @@
+choose_0     last R2 0.730 size 8255 nodes 201  vs default +0.0138 [+0.0057, +0.0181]
+choose_20    last R2 0.726 size 8978 nodes 211  vs default +0.0130 [+0.0085, +0.0226]
+choose_40    last R2 0.712 size 8776 nodes 204  (default)
+choose_50    last R2 0.686 size 8524 nodes 196  vs default -0.0091 [-0.0193, -0.0003]
+par_0        last R2 0.705 size 5686 nodes 182  vs default +0.0105 [-0.0040, +0.0197]
+par_4        last R2 0.715 size 10640 nodes 209  vs default +0.0044 [-0.0016, +0.0083]
+hid_3        last R2 0.717 size 5094 nodes 210  vs default +0.0092 [+0.0036, +0.0176]
+hid_12       last R2 0.713 size 15626 nodes 200  vs default -0.0013 [-0.0092, +0.0061]
+mdl_025      last R2 0.599 size 374 nodes 40  vs default +0.0041 [-0.0059, +0.0151]
+mdl_05       last R2 0.586 size 243 nodes 27  (default)
+mdl_1        last R2 0.561 size 126 nodes 14  vs default -0.0124 [-0.0222, -0.0055]
+budget_300   last R2 0.615 size 445 nodes 21  vs default -0.0101 [-0.0330, +0.0003]
+budget_600   last R2 0.649 size 600 nodes 24  (default)
+budget_1200  last R2 0.684 size 1194 nodes 40  vs default +0.0400 [+0.0200, +0.0497]
+2347 s

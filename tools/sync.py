@@ -1,6 +1,9 @@
-"""Refresh this repo from the canonical working repos. One command, no arguments:
+"""Refresh a copy of the program. Two uses, chosen by where it runs:
 
-    python tools/sync.py
+    python tools/sync.py            (in the PUBLIC clone, branch `public`) copy the unified repo and the wiki domain, redacted
+    python tools/sync.py --program  (in the unified repo) refresh program/ from the wiki domain, unredacted
+
+The public use:
 
 Copies every tracked or untracked-but-not-ignored file of each source (git ls-files -co --exclude-standard), minus
 run debris (EXCLUDE). This repo is public, so every text file passes through REDACT (account names, family names,
@@ -14,24 +17,22 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parent.parent
 HOME = Path.home()
 WIKI = HOME / 'Documents' / 'Knowledge-Wiki'
-# (destination folder in this repo, source repo root, sub-path inside the source or '')
-SOURCES = [
-    ('curious-net', HOME / 'curious-net', ''),
-    ('neuroblock-research', HOME / 'neuroblock-research', ''),
-    ('program/wiki-domains/vertical-intelligence', WIKI, 'domains/vertical-intelligence'),
-    ('program/wiki-domains/curious-net', WIKI, 'domains/curious-net'),
-    ('program/wiki-domains/neuroblock-research', WIKI, 'domains/neuroblock-research'),
-]
+# (destination folder in the copy, source repo root, sub-path inside the source or '')
+PROGRAM_ONLY = '--program' in sys.argv
+UNIFIED = HOME / 'vertical-intelligence'
+WIKI_SRC = ('program/wiki-domains/vertical-intelligence', WIKI, 'domains/vertical-intelligence')
+SOURCES = [WIKI_SRC] if PROGRAM_ONLY else [('.', UNIFIED, ''), WIKI_SRC]
+SKIP_TOP = {'program'}      # in the public copy program/ comes from the wiki source, not from the unified repo's own copy
 EXCLUDE_EXT = {'.err', '.out', '.pt', '.tmp', '.pyc'}           # run stderr/stdout dumps, resume checkpoints, temp files, bytecode
-EXCLUDE_DIRS = {'__pycache__', 'wandb', 'data'}                  # caches; curious-net/data holds third-party raw data (not redistributed)
+EXCLUDE_DIRS = {'__pycache__', 'wandb', 'data'}                  # caches; experiments/self-gate-and-calibration/data holds third-party raw data (not redistributed)
 MAX_BYTES = 95 * 1024 * 1024                                     # GitHub rejects files over 100 MB
 # This repo is public. The private terms (account names, family names) live in tools/redact.local.json, which is gitignored
 # and never published: {"replace": [["term", "replacement"], ...], "private": ["path/in/this/repo", ...]}. The sync refuses to run without it.
 LOCAL = Path(__file__).with_name('redact.local.json')
-if not LOCAL.exists(): sys.exit(f'missing {LOCAL.name}: the private redaction list (see the comment above); refusing to publish unredacted files')
-_cfg = json.loads(LOCAL.read_text(encoding='utf-8'))
+if not PROGRAM_ONLY and not LOCAL.exists(): sys.exit(f'missing {LOCAL.name}: the private redaction list (see the comment above); refusing to publish unredacted files')
+_cfg = {'replace': [], 'private': []} if PROGRAM_ONLY else json.loads(LOCAL.read_text(encoding='utf-8'))
 _home = str(HOME)
-REDACT = sorted([tuple(x) for x in _cfg['replace']] + [(_home.replace('\\', '\\\\'), '~'), (_home, '~'), (_home.replace('\\', '/'), '~'),
+REDACT = [] if PROGRAM_ONLY else sorted([tuple(x) for x in _cfg['replace']] + [(_home.replace('\\', '\\\\'), '~'), (_home, '~'), (_home.replace('\\', '/'), '~'),
                  ('/' + _home[0].lower() + _home[2:].replace('\\', '/'), '~'),
                  (_home[:8] + _home[8:].replace('\\', '/'), '~')], key=lambda ab: -len(ab[0]))      # local paths become ~ (last entry: the mixed form drive:\Users/name that Windows tools sometimes print)
 PRIVATE = set(_cfg['private'])                                   # drafts kept out of the public copy
@@ -64,7 +65,8 @@ def sync_one(dest, repo, sub):
     out = ROOT / dest; seen, new, changed, big, redacted = set(), 0, 0, [], 0
     for f in files:
         rel = f[len(sub) + 1:] if sub else f
-        if not wanted(rel) or f'{dest}/{rel}' in PRIVATE: continue
+        full = rel if dest == '.' else f'{dest}/{rel}'
+        if not wanted(rel) or full in PRIVATE or (dest == '.' and rel.split('/')[0] in SKIP_TOP): continue
         src = repo / f
         if not src.is_file(): continue                           # deleted in the working tree but still tracked
         if src.stat().st_size > MAX_BYTES: big.append(rel); continue
@@ -73,8 +75,8 @@ def sync_one(dest, repo, sub):
         new += not dst.exists(); changed += dst.exists()
         dst.parent.mkdir(parents=True, exist_ok=True); dst.write_bytes(data)
     for p in PRIVATE:                                            # a private draft never stays in the public copy (the canonical file is untouched)
-        if p.startswith(dest + '/') and (ROOT / p).exists(): (ROOT / p).unlink(); seen.add(p[len(dest) + 1:])
-    stale = sorted(str(p.relative_to(out)).replace('\\', '/') for p in out.rglob('*') if p.is_file()
+        if (dest == '.' or p.startswith(dest + '/')) and (ROOT / p).exists(): (ROOT / p).unlink(); seen.add(p if dest == '.' else p[len(dest) + 1:])
+    stale = [] if dest == '.' else sorted(str(p.relative_to(out)).replace('\\', '/') for p in out.rglob('*') if p.is_file()
                    and str(p.relative_to(out)).replace('\\', '/') not in seen and wanted(str(p.relative_to(out)).replace('\\', '/')))
     return dict(dest=dest, source=f'{repo.name}/{sub}' if sub else repo.name, head=head, dirty=dirty, new=new, changed=changed, big=big, stale=stale, redacted=redacted)
 
@@ -90,7 +92,7 @@ def main():
     for r in rows:
         if r['big']: lines += ['', f"Skipped (over 95 MB) in `{r['dest']}/`: " + ', '.join(f'`{b}`' for b in r['big'])]
         if r['stale']: lines += ['', f"Stale in `{r['dest']}/` (no longer in the source; kept, never deleted): " + ', '.join(f'`{s}`' for s in r['stale'])]
-    (ROOT / 'SNAPSHOT.md').write_text('\n'.join(lines) + '\n', encoding='utf-8')
+    if not PROGRAM_ONLY: (ROOT / 'SNAPSHOT.md').write_text('\n'.join(lines) + '\n', encoding='utf-8')
     for r in rows: print(f"{r['dest']}: {r['new']} new, {r['changed']} updated, {len(r['stale'])} stale, {len(r['big'])} too big (source {r['head']}, {r['dirty']} uncommitted)")
 
 

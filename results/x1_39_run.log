@@ -1,0 +1,26 @@
+g 0.8 hid 6 act tanh: exam 0.946 n90 1 deep99 worlds 0/3 median max corr2 0.853 170s
+g 0.8 hid 6 act sin: exam 0.946 n90 1 deep99 worlds 0/3 median max corr2 0.755 258s
+g 0.8 hid 24 act tanh: exam 0.888 n90 1 deep99 worlds 0/3 median max corr2 0.769 628s
+g 0.8 hid 24 act sin: exam 0.921 n90 1 deep99 worlds 0/3 median max corr2 0.682 668s
+g 1.2 hid 6 act tanh: exam 0.478 n90 1 deep99 worlds 0/3 median max corr2 0.311 176s
+g 1.2 hid 6 act sin: exam 0.647 n90 1 deep99 worlds 1/3 median max corr2 0.666 209s
+g 1.2 hid 24 act tanh: exam 0.708 n90 1 deep99 worlds 0/3 median max corr2 0.743 651s
+g 1.2 hid 24 act sin: exam 0.960 n90 5 deep99 worlds 2/3 median max corr2 0.996 598s
+g 2.0 hid 6 act tanh: exam 0.290 n90 0 deep99 worlds 0/3 median max corr2 0.065 81s
+g 2.0 hid 6 act sin: exam 0.398 n90 1 deep99 worlds 0/3 median max corr2 0.258 60s
+g 2.0 hid 24 act tanh: exam 0.192 n90 0 deep99 worlds 0/3 median max corr2 0.040 111s
+g 2.0 hid 24 act sin: exam 0.419 n90 1 deep99 worlds 0/3 median max corr2 0.213 149s
+3917 s
+g 0.8 hid 6 act tanh: exam 0.946 n90 1 deep99 worlds 0/3 median max corr2 0.853 170s
+g 0.8 hid 6 act sin: exam 0.946 n90 1 deep99 worlds 0/3 median max corr2 0.755 258s
+g 0.8 hid 24 act tanh: exam 0.888 n90 1 deep99 worlds 0/3 median max corr2 0.769 628s
+g 0.8 hid 24 act sin: exam 0.921 n90 1 deep99 worlds 0/3 median max corr2 0.682 668s
+g 1.2 hid 6 act tanh: exam 0.478 n90 1 deep99 worlds 0/3 median max corr2 0.311 176s
+g 1.2 hid 6 act sin: exam 0.647 n90 1 deep99 worlds 1/3 median max corr2 0.666 209s
+g 1.2 hid 24 act tanh: exam 0.708 n90 1 deep99 worlds 0/3 median max corr2 0.743 651s
+g 1.2 hid 24 act sin: exam 0.960 n90 5 deep99 worlds 2/3 median max corr2 0.996 598s
+g 2.0 hid 6 act tanh: exam 0.290 n90 0 deep99 worlds 0/3 median max corr2 0.065 81s
+g 2.0 hid 6 act sin: exam 0.398 n90 1 deep99 worlds 0/3 median max corr2 0.258 60s
+g 2.0 hid 24 act tanh: exam 0.192 n90 0 deep99 worlds 0/3 median max corr2 0.040 111s
+g 2.0 hid 24 act sin: exam 0.419 n90 1 deep99 worlds 0/3 median max corr2 0.213 149s
+3 s

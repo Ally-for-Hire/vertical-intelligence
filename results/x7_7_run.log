@@ -1,0 +1,9 @@
+workers 6
+P364 PASSED | inside/outside 0.83/0.30; junk 0.24; sensors on s=0 look-alike accuracy 0.25, confidence 0.77 vs 0.78 on answerable; SET train utility 1.000
+P365 FAILED | REFRESH_SET abstain s=0 0.39 vs answerable 0.62; gap 0.23
+P366 PASSED | REFRESH_SET abstain s=0 0.82, answerable 0.26; REFRESH_ANS 0.86/0.75; gap difference [0.452, 0.398, 0.486]; RAW_REFRESH 0.82/0.21
+P367 FAILED | REFRESH_SET abstain at s=0.75 0.82, utility -0.026; GRADED utility -0.082; difference [-0.056, -0.088, -0.043]
+P368 FAILED | abstain over s=0,0.25,0.5,0.75,1 = 0.58, 0.58, 0.58, 0.57, 0.59; answerable 0.18
+P369 PASSED | seen utility 1500 0.568 vs 300 0.372; difference [0.21, 0.173, 0.243]; abstain s=0 at 1500 0.74
+wandb: [wandb.login()] Loaded credentials for https://api.wandb.ai from ~\_netrc.
+wandb: WARNING Using a boolean value for 'reinit' is deprecated. Use 'return_previous' or 'finish_previous' instead.

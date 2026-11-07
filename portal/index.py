@@ -18,9 +18,11 @@ EXCLUDED_PARTS = {"portal", ".git", "wandb"}
 PATTERNS = [
     "README.md",
     "program/**/*.md",
-    "curious-net/LOG.md",
-    "curious-net/paper/*.md",
-    "neuroblock-research/**/*.md",
+    "AGENTS.md",
+    "LOG.md",
+    "HANDOFF.md",
+    "paper/*.md",
+    "experiments/**/*.md",
 ]
 
 

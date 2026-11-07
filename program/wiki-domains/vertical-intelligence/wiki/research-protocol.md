@@ -16,10 +16,11 @@ interpretation and can be overruled by the user, never silently.
 Five-line summary: the program tries to prove "vertical intelligence" (a learner that gets
 better at producing information from information, knows its limits, and grows parts as needed)
 by combining biology, psychology and computer science. It is at the foundational stage: many
-small, pre-registered experiments on toy worlds, 149 registered predictions so far across two
-code lines. Givens U1-U19; agenda Q1-Q10 (Q10 is the current direction). The user supplies theorems, tests and ideas through [[inbox]]; the assistant does
+small, pre-registered experiments on toy worlds, 358 registered predictions so far (2026-10-31) across two
+code lines. Givens U1-U19; agenda Q1-Q13 (Q10 is the research direction). The user supplies theorems, tests and ideas through [[inbox]]; the assistant does
 everything else under section 4's autonomy grant, to the requirements in section 5, and never
-deletes a result.
+deletes a result. **Standing priority since 2026-10-30: getting a sponsor and a team
+([[sponsorship-and-team]], section 9 below); every session moves one item there.**
 
 ## 0. How the user works with this
 
@@ -80,9 +81,9 @@ Ideas are **I-numbers** in the inbox. Pieces keep their existing C/CTX/B/E ids.
   thinking; using what is known to work and adding the user's own insight.
 
 Earlier givens still in force unless the user retracts them: the Dream
-([[domains/curious-net/wiki/the-dream]]), the end-goal vision
-([[domains/curious-net/wiki/vision-and-roadmap]]), the foundations in
-`neuroblock-research/FOUNDATIONS.md`. Final exam (user, Oct 22): a model given only
+([[wiki/the-dream]]), the end-goal vision
+([[wiki/vision-and-roadmap]]), the foundations in
+`experiments/energy-brain-simulator/FOUNDATIONS.md`. Final exam (user, Oct 22): a model given only
 pre-quantum science proposes that quantum theory must exist.
 
 ### Testable readings (assistant; for the user to correct)
@@ -120,7 +121,7 @@ moves. Assistant notes on each (what the evidence already says, a handle to atta
 - **Q6. What are the base foundations of intelligence and how can we use them?** Current
   candidates from the register (hypothesis level): sparsity, context inference, paired
   mechanisms, transfer proportional to shared structure, check when unsure (see
-  [[domains/curious-net/wiki/synthesis]]). Each "use" is a transformer or architecture change
+  [[wiki/synthesis]]). Each "use" is a transformer or architecture change
   tested against a plain baseline with zero-experience parity.
 
 **Definition of vertical intelligence (assistant, proposed; user to confirm):** each new
@@ -136,16 +137,18 @@ shared structure (C43 already shows this dose-response).
 | The user's words (theorems, redirects) | `domains/<line>/raw/YYYY-MM-DD-*.md` | Verbatim, append-only, dated. Personal reflections: verbatim only in the private wiki; a summary goes in the public tree ([[publishing]] section 5) |
 | Intake of new theorems / tests / ideas | [[domains/vertical-intelligence/wiki/inbox]] | Processed top to bottom; status column |
 | Open research questions (Q-numbers) | inbox Questions table; notes in section 1 here | A question closes only with ids of the results that answer it |
-| Code and experiment scripts | `~/curious-net` (current), `~/neuroblock-research` (older), course repo for growth | One script per experiment, named after its id |
+| Code and experiment scripts | `~/vertical-intelligence/` (current), `~/vertical-intelligence/` (older), course repo for growth | One script per experiment, named after its id |
 | Per-iteration narrative | repo `LOG.md` (newest first) | One entry per iteration: id, script, seeds, numbers, verdicts, reading, limits, literature ties |
 | Pre-registered predictions | repo `paper/PREDICTIONS.md` (P-numbers) | Written BEFORE the run; verdict appended after |
 | What to run next | repo `paper/QUEUE.md` | Ordered; each item names the question and the U-theorem it serves |
-| Pieces and their status | repo `paper/PIECES.md`; wiki [[domains/curious-net/wiki/pieces-inventory]] | Confidence letter per piece |
-| Durable synthesis | [[domains/curious-net/wiki/synthesis]] and this page | Current-state, compact, cites ids |
+| Pieces and their status | repo `paper/PIECES.md`; wiki [[wiki/pieces-inventory]] | Confidence letter per piece |
+| Durable synthesis | [[wiki/synthesis]] and this page | Current-state, compact, cites ids |
 | Cross-session timeline | `Knowledge-Wiki/log.md` | One entry per session or iteration |
 | Literature | repo `paper/LITERATURE.md`; wiki related-work pages | Mark `[u]` if not read in full |
 | Independent review | repo `paper/FABLE_REVIEW.md` | Corrections go in LOG as CORRECTION entries |
 | Published snapshot (for other agents and readers) | **Public** GitHub repo `Ally-for-Hire/vertical-intelligence` (branch `main`), local clone `~/vertical-learning` (branch `public`; the older private repo `Ally-for-Hire/vertical-learning` keeps the unredacted history); human entry `README.md`, agent entry `AGENTS.md` | Never edited directly: edit the canonical repos and wiki, then `python tools/sync.py` (copies, never deletes, redacts private terms via the gitignored `tools/redact.local.json`, writes `SNAPSHOT.md`); then `python tools/publish.py` (dry run) and `--push "message"` (standing grant, see [[publishing]]). Anything written in the canonical repos can become public: no secrets, account names or third-party drafts outside the redaction list |
+
+| Sponsorship, funding and recruiting | [[sponsorship-and-team]] (plan and status tracker), [[program-brief]] (the pitch), [[join]] (roles and first tasks); people's names only in private `raw/2026-10-30-sponsor-contacts.md` and e-mail drafts | Drafts only; the user sends. Every claim in a pitch traces to a register id |
 
 Do not create a second home for any of these. If a record does not fit, add a row here first.
 
@@ -196,7 +199,7 @@ file that holds a result.
 **Compute (user, 2026-10-27, supersedes the one-thread default and the 30-minute GPU ask-first):**
 all machine-usage restrictions are lifted; use as many threads and runs as useful, but keep a 15%
 margin so the PC does not crash: total CPU <= 85%, free RAM >= 15% of total, GPU memory <= 85%
-(including the desktop's ~11%; NeuroBlock `NB_GPU_FRAC` <= 0.7). `curious-net/vi/budget.py`
+(including the desktop's ~11%; NeuroBlock `NB_GPU_FRAC` <= 0.7). `core/budget.py`
 computes the worker count and GPU fraction from the live load. The limits on pushing, public
 actions, money and focus-stealing (srcds) are unchanged.
 
@@ -207,6 +210,12 @@ checks (branch, remote, PUBLIC visibility, and a scan for private terms, secrets
 paths). Still ask first: force pushes or history rewrites, changing a repo's visibility, creating
 or deleting repos or branches, any push to the old private archive, and anything that would put
 personal or third-party material into the public tree. Procedure and quality bar: [[publishing]].
+
+**Every route (author, 2026-11-02, standing):** 'whenever a decision must be made, you must try every single route and record outcomes before finishing.' Discrete design choices become arms of one registered run (or consecutive batches if too many); continuous knobs get a small registered grid; all outcomes are recorded, including the losing routes. Do not ask the author to pick between routes.
+
+**Least compute for the most information, with ALL the information (author, 2026-11-03, permanent for all vertical learning):** never spend compute that adds no information - cache finished units (resume, never redo), stop a run when it saturates (core/_info_watch.py: 30 s snapshots, STALE after 5 min without new information -> stop with core/ctl.py, record as a failed/saturated route), no duplicate or dominated arms, cheapest design that still answers. But never trade away coverage: when there are several routes, every route gets its best shot (enough compute to reach its own saturation, e.g. X1.29's ~10x budget), because a starved route tells us nothing about the idea. Rule of thumb: coverage is fixed (all routes, each at its best), compute is minimised (stop at saturation).
+
+**Stopping early on a decided theory (author, 2026-11-03):** runs test registered predictions; once all of a run's predictions are decided the run stops. To keep this defensible to a reviewer or board: the stopping rule is registered before looking (curious-net paper/PREDICTIONS.md, 'Early-stopping disclosure'), interim looks use a stricter range (99%, at least 6 units) than a full run (95%), every look is logged, every early stop is reported as 'decided at n units' with the ranges at the stop, and no headline claim rests on a stopped run alone.
 
 **Reporting.** Each session ends with: outcome in one paragraph, verdicts with ids, what
 changed in belief (or "nothing"), the one question for the user if there is one, and the next
@@ -274,7 +283,7 @@ read the data: plain-English run, arm and metric names (with units and 'lower/hi
 a run description that states the question, the world and what each arm means, per-world results
 as tables, and the verdict per prediction. Project `vertical-intelligence`, account on this PC's
 wandb login, PRIVATE until the author decides otherwise (making it public is a publishing action:
-ask first). Shared helper: curious-net `vi/track.py`. Raw JSON in `results/` stays the record of
+ask first). Shared helper: curious-net `core/track.py`. Raw JSON in `results/` stays the record of
 truth; W&B is the readable view of it.
 facts about brains or LLMs.
 
@@ -352,3 +361,22 @@ U-theorem it serves. If the inbox has unprocessed items, intake them first (sect
 **End.** Section 5 requirements met for everything touched; inbox statuses updated; queue
 head and "Next up" written; wiki and repo committed; if a result was recorded, publish per [[publishing]] (the public repo is pushed under the standing grant; nothing else without asking); report per
 section 4. Reading-only sessions log as `Wiki: log-only`.
+
+## 9. Sponsorship and team (standing priority, user, 2026-10-30)
+
+The user's direction: "reorganize everything and update EVERYTHING into focusing on getting a sponsor
+and people to work on this." The user already has a capstone project; this program needs its own team
+and resources. Consequences:
+
+- **Every session** moves at least one item in [[sponsorship-and-team]] section 6 (the status tracker)
+  and keeps [[program-brief]] current when a result changes a number quoted there.
+- **The public repo is the sponsor's first screen.** A recorded result is not finished until the
+  README's "For sponsors and collaborators" block and the at-a-glance counts are current and no
+  audit-flagged claim stands uncorrected ([[publishing]] section 4).
+- **New work is chosen for sponsorability as well as science:** prefer the audit redo list (bounded
+  first tasks for recruits), the Self line (the pitch's centre), and the first real-data ladder rung.
+- **Ask-first lines unchanged:** the assistant drafts e-mails, briefs and applications; the user sends
+  them; no contacting people, spending money, or public actions beyond the standing publish grant.
+  People's names stay in private raw notes, never in synced pages.
+- **Deferred by the user (2026-10-30):** the Anthropic AI for Science application waits until an
+  advisor is named.

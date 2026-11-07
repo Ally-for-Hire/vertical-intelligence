@@ -1,0 +1,7 @@
+g 0.8 hid 6 act mix: exam 0.918 n90 2 deep99 worlds 0/3 median max corr2 0.919 520s
+g 0.8 hid 24 act mix: exam 0.945 n90 1 deep99 worlds 0/3 median max corr2 0.732 2534s
+g 1.2 hid 6 act mix: exam 0.619 n90 1 deep99 worlds 1/3 median max corr2 0.587 391s
+g 1.2 hid 24 act mix: exam 0.698 n90 1 deep99 worlds 1/3 median max corr2 0.619 1875s
+g 2.0 hid 6 act mix: exam 0.356 n90 1 deep99 worlds 0/3 median max corr2 0.071 154s
+g 2.0 hid 24 act mix: exam 0.193 n90 0 deep99 worlds 0/3 median max corr2 0.050 508s
+6717 s

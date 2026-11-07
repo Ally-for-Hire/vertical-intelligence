@@ -1,0 +1,7 @@
+problem 10 R2 last10 0.507 nodes 7 0 s
+problem 20 R2 last10 0.365 nodes 10 0 s
+problem 30 R2 last10 0.459 nodes 25 3 s
+problem 40 R2 last10 0.668 nodes 46 4 s
+problem 50 R2 last10 0.606 nodes 65 4 s
+g 0.8 refit 0 exam 0.775 links 2.75 nodes 65 size 197 4 s
+corr^2 per level [0.865, 0.817, 0.48, 0.395, 0.393]

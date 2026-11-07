@@ -26,8 +26,8 @@ number is a cue to change the question, not the knobs.
 
 Confidence letters (curious-net): **R** replicated, **S** supported, **P** partial, **D**
 diagnosis only, **N** not supported as tested. NeuroBlock uses VERIFIED / PARTIAL / UNTESTED
-(`neuroblock-research/publication/CLAIMS_LEDGER.md`). All results come from toy worlds:
-principles in miniature, not facts about brains or LLMs. Ids point to `curious-net/LOG.md`,
+(`experiments/energy-brain-simulator/publication/CLAIMS_LEDGER.md`). All results come from toy worlds:
+principles in miniature, not facts about brains or LLMs. Ids point to `LOG.md`,
 `paper/PIECES.md` and the NeuroBlock logs.
 
 ## 0. Value and the self: what makes something "better or worse for me" (current direction)
@@ -37,7 +37,7 @@ principles in miniature, not facts about brains or LLMs. Ids point to `curious-n
   (wholeness first).
 - **What experiments tell us:**
   - **Energy as viability (X6.7, 2026-10-27):** a population whose only pressure is staying alive on limited food found a solution without any grader (17/20); too little energy buffer against the noise of one step drove it extinct in 20/20 (see section 6).
-  - **X0.1 (2026-10-26, 48 worlds; curious-net `vi/x0_1.py`, P199-P203):** one gradient-descent
+  - **X0.1 (2026-10-26, 48 worlds; curious-net `experiments/value-and-self/x0_1.py`, P199-P203):** one gradient-descent
     learner, with only the value signal varied. Value defined through the self (drive reduction,
     HOMEO) gives **need-dependent valence**: it takes energy-for-damage food when starving and
     refuses it when full (need slope 0.86 vs 0.14 linear, 0.01 food-only; P200 PASSED). It beats
@@ -129,6 +129,101 @@ principles in miniature, not facts about brains or LLMs. Ids point to `curious-n
     S/P).
   - **Motivation plus curiosity** beats either alone: filter by learnability, then persist on
     the hardest learnable thing (C52, R). This is the closest existing result to U15.
+  - **X1.40-X1.42 (family-free cell, depth; 2026-11-03/04).** A cell whose units mix tanh/sin/relu/identity recovers an exact deep concept in 1 of 3 worlds at g = 1.2 (the sine cell: 2 of 3) but loses the sine cell's accuracy (exam 0.70 vs 0.96); an L1 penalty on the output weights to let the learner choose its own activations did not recover it (0 of 3 worlds). So the X1.39 win is, so far, about handing over the rule's family, not discovering it. In one world (capped refit) the sine cell recovers the same 2 exact levels in rooms 1-4 (5 to 20 levels) and nothing new in deeper rooms (exam 0.97 to 0.68): no depth scaling seen; a memory-light refit that does not change results is needed to replicate. Detail: curious-net LOG.md.
+  - **X1.37-X1.39 (labels, capacity, family; 2026-11-03).** More labels per problem (60 to 6000) and a bigger cell (6 to 96 hidden units) did NOT give exact deep recovery; the tanh cell fits better without finding the concepts (g = 2.0 corr^2 stays ~0.06). Putting a sine inside the cell (the world's rule is a sine of a sum) at g = 1.2, 24 hidden units gave exam 0.96 and exact deep concepts (corr^2 >= 0.99) in 2 of 3 worlds, 5 of 5 levels at corr^2 >= 0.9: the first exact recovery. Caveat: sin hands over the rule's family; a family-free version (choose among activations by measured help) is the open test. g = 2.0 only reaches corr^2 ~0.2-0.26. Detail: curious-net LOG.md.
+  - **X1.36 (one shared tied cell, compute ladder, 2026-11-03).** One tiny net reused at every depth and refit jointly on all its uses: at g = 0.8 exam R^2 rises from ~0.73 (no refit) to 0.87-0.90 (30-600 refit steps) with ~390 weights in the deepest room (decided up); at g = 1.2 and 2.0 compute does nothing because the first step from the parent is not learnable at 60 labels, so the cell never starts. No concept recovered at corr^2 >= 0.99. Detail: curious-net LOG.md.
+  - **X1.35 (puzzle room, one-rule deep world with thin ties, 2026-11-03).** Choosing a parent by measured help (try every known function) or reusing a learned computation with a new parent and input rotation (clone) cuts the functions linked per problem from 7-8 to about 2 while raising the exam score (g = 0.8: 0.86 vs 0.80 in the deepest room). Correlation-chosen parents do nothing; pooled refinement adds accuracy (up to +0.2 at g = 1.2, room 1) but not simplification. At g = 2.0 the routes that 'simplify' do so by not learning. No route recovers an exact concept beyond level 0: gains are better approximations, not discovered rules. Many-candidate routes need an evidence bar that grows with the number of candidates (else ~300 chance functions are accepted). Detail: curious-net LOG.md.
+- **X1.29 (huge compute, random as a choice, 2026-11-03).** 10x compute lifts every arm (+0.02 to +0.10 R^2, 9 of 10 clear) and closes the gap between 'bigger is better' and the flat learner (0.797 vs 0.770), but concepts built on other concepts appear only by luck: 6 of 120 arm-world cases, depth 1 only, 3 of 12 worlds, none deeper. Compute alone does not produce depth. All-random labels are the right default; learning each problem both ways and keeping the better ('auto') adds +0.03 on 'bigger is better'; choosing inputs never helps. Detail: curious-net LOG.md.
+- **X1.30 (a goal of SIMPLE, 2026-11-03).** Simple is cheap down to about 100 weights and 1.6 links per problem (R^2 0.56-0.59, 75% of the 8000-weight model), then falls off a cliff; charges of 4+ bits per weight give an empty model. No single reading of simple wins: the trade-off front spans FLAT, REUSE, MDL, NODE and LINKS arms, and rank orders by weights, links and speed disagree. Detail: curious-net LOG.md.
+- **X1.28b (every route of the digger, 2026-11-03).** Restraint costs accuracy and freedom helps: starting budget 1200 beats 600 by +0.040 R^2; all-random inputs beat 40 chosen by +0.014; 50 chosen is worse (-0.009); smaller concept nodes (3 hidden) match the default at 42% fewer weights; a heavier per-weight charge (1x) is worse (-0.012). Parents 0/2/4 and hidden 12 do not differ. No route beats the flat learner (0.743). Interactions untested. Detail: curious-net LOG.md.
+- **X1.28 (2026-11-02, 48 noise-free worlds; P495-P496 PASSED, 4 FAILED): dig until stone (author I22), all three readings of 'total
+    model size'. Bigger-is-better 0.71 R^2 > budget 0.65 > smallest description 0.59; the plain flat learner 0.74. NO arm recovers a single
+    concept built on another (0%): stone is hit at the first composed concept.** Choosing inputs by disagreement hurts (-0.014).
+  - **X1.27 (2026-11-02, 48 fixed worlds; P489-P492 all FAILED): concept nodes (tiny 2-layer nets) are linked ~1,600 times per stream
+    but deep problems stay at ~28%.** A 2-layer node CAN express a deep concept (X1.26), but cannot LEARN it from one problem's 60
+    points of a mixture; consolidation was a no-op. Points to identifiability per problem, the target of X1.28 (noise-free, chosen inputs).
+  - **X1.26 (2026-11-02, 48 fixed worlds; 3 of 4 PASSED): THE DEPTH GAP IS AT THE NODE. Fitted directly on clean data, one flat node
+    expresses a 2+-deep concept at R^2 0.15, a tiny 2-layer net at 0.99; the learner only approximates deep concepts by many nodes (pool
+    R^2 0.82).** Reuse count does not help; 4x data lifts deep problems 0.29 -> 0.40. Next: nodes that are tiny 2-layer nets.
+  - **X1.25 (2026-11-02, 48 fixed worlds; P482-P483 PASSED tiny, P484 FAILED): consolidation (author's 'sleep': all nodes re-trained on
+    every stored problem that uses them, every 30 problems) lifts deep problems by only +0.5 points (0.278 -> 0.283).** Node type, data per
+    update and consolidation all fail to explain the deep gap; next: measure whether deep concepts are identifiable at all.
+  - **X1.24 (2026-11-02, 48 fixed worlds; P478-P481 all FAILED): products and bends built on any existing nodes are linked heavily (most
+    links) but deep problems stay at ~29% of the ceiling; offered every step they cost base problems.** The plateau is not a missing node
+    type; candidate cause: nodes are only ever trained on one problem's 60 points. Next: consolidation (the author's 'sleep') across
+    all stored problems that use a node.
+  - **X1.23 (2026-11-02, 48 fixed worlds; P476, P477 PASSED): THE PLATEAU IS DEPTH. After the plateau, problems on base concepts reach
+    88% of their ceiling; problems with a concept 2+ levels deep (two thirds of all problems) only 29%.** Memory helps most where depth
+    is needed (+12 vs +5 points). Next: depth built on any existing nodes (products, bends, mixes), chosen by measured help.
+  - **X1.22 (2026-11-02, 48 fixed worlds x 240; P473, P475 PASSED): in a fixed world the learner climbs for ~120 problems then flattens
+    at ~40% of the ceiling (47% with twice the examples); the plateau arrives at the same time at both data sizes, so it is likely
+    representational (one layer of nodes vs concepts built on concepts).** Memory's advantage grows with more data.
+  - **X1.21 (2026-11-02, 48 loops x 400; P468 PASSED, P469-P471 FAILED): a fixed internal probe (re-score the stage's first 20 problems)
+    makes stagnation detectable: stages 40-150. First stage climbs 27.7% -> 36.5% of the ceiling; later stages start higher and plateau
+    ~35-37%. Memory advantage ~+9 points, not growing.** Next: what sets the plateau. Worlds: `curious-net/worlds/x1_21/`.
+  - **X1.20 (2026-11-02, 48 loops x 400; P464 PASSED, P465-P467 FAILED): stagnation window 30 -> stages ~60; whole-loop share 0.35 vs
+    no memory 0.26 (+9 points); advantage jumps after the first expansion then holds ~+10.** Detector still fires at its minimum (per-problem
+    noise); no in-stage trend. Next: a low-noise internal progress signal. Worlds: `curious-net/worlds/x1_20/`.
+  - **X1.19 (2026-11-02, 48 loops x 240 problems; P460 PASSED, P461-P463 FAILED): constant train-and-expand loop (expand by 12 concepts when
+    the learner's own progress stalls). The learner holds a constant ~30% of the ceiling while the world grows 24 -> 96 concepts; no-memory
+    control drifts 26% -> 22%; advantage +5 -> +8 points after expansions (slope n.s.).** Stages ~30 problems (noisy detector) are too short
+    for in-stage mastery. Worlds saved for reuse: `curious-net/worlds/x1_19/` (wstream.load).
+  - **X1.18 (2026-11-02, 360 worlds; P454-P459 ALL PASSED): FIRST CLEAN VERTICAL RESULT. In a finite fixed world (24 concepts, nothing
+    new for 60 problems) the flat learner reaches more of its ceiling later (32.6% -> 37.3%) while the same learner with no memory stays
+    flat (27.6% -> 27.7%): experience effect +3.8 points.** After one expansion (12 concepts built on old ones) prior knowledge absorbs the new
+    concepts better (+7 points). Generalization 0.66 vs no memory 0.35 vs plain network 0.24. The X1.16/X1.17 declines came from the worlds.
+  - **X1.17 VOID (author ruling: the world must not expand during a run).** Kept for the record: **(2026-11-02, 360 worlds; 1 of 6 PASSED): the near-infinite world (`core/winf.py`: nothing ever repeats, endless
+    compositional concepts) is much harder** (flat later 1.17, generalization 0.61; plain network 0.67 / 0.19). Every learner reaches less
+    of its ceiling later (-6 points) even with no growing evidence charge, so that cause is rejected; a confirm-only bar is worse.
+    Next diagnostic: does a fresh learner also decline (world) or only experienced ones (experience hurts)?
+  - **X1.16 (2026-11-02, 360 worlds; P442-P447, 1 of 6 PASSED): depth grown only on stagnation is rarely used and adds nothing; depth
+    always on offer hurts.** FAIR vertical (share of each problem's own ceiling): ceilings are equal early and late, yet every learner
+    reaches LESS later (flat 0.57 -> 0.54, plain network 0.41 -> 0.33): no learner here gets better with experience (corrects X1.15).
+    Suspect: the evidence bar log2(#candidates) grows with what the learner knows (untested; X1.17).
+  - **X1.15 (2026-11-02, 360 fresh worlds; P436-P440 PASSED, P441 FAILED): the flat learner optimised (`core/flat.py`, `OPT`).**
+    Tuned on separate worlds: +0.30 bits on later, end and generalization (0.93 -> 1.26, +34%); vs plain network +0.87. Gain is mostly
+    statistics (readout ridge 0.001 -> 3, patience, best-of-4 new nodes); specificity bonus and old-problem re-checks confirmed essential.
+    Vertical drop is real, not confounding (X1.16 correction). New base for growing complexity.
+  - **X1.14 (2026-11-02, 540 worlds; P429-P435, 2 of 7 PASSED): decreasing reward for consistently used nodes (2^-recent use).** With
+    the distance reward: more nodes (28 vs 19), old problems +0.16, generalization unchanged. Alone: hurts the flat learner (-0.08
+    generalization) by cutting reuse of nodes that are used often because they are useful. Flat X1.9 still best (0.96).
+  - **X1.13 (2026-11-02, 360 worlds; P423-P428, 1 of 6 PASSED): paying more the less direct the assistance makes links reach twice as
+    far, but the learner then shares 20 nodes across unrelated problems instead of building 84, they get retrained in opposite directions,
+    and everything drops** (final 1.05 vs 1.61, generalization 0.77 vs 0.93). Lesson X1.9-X1.13: many specific nodes reused only where
+    they truly help generalize best; next: let distant problems USE a node but never retrain it (X1.13b).
+  - **X1.12 (2026-11-02, 720 worlds; P416-P422, 2 of 7 PASSED): confirmed links (help on two separate halves) halve the nodes and add
+    +0.05 bits, but generalize WORSE to new combinations (0.76 vs 0.85): correct-for-now is not useful-for-later.** Frontier bonus: +33
+    nodes, no effect. The one-layer learner generalizes best (0.94); every tree drifts over the stream (shared trunk retrained by every
+    problem). All beat the plain network (0.40).
+  - **X1.11 (2026-11-02, 360 worlds; P410-P415, 3 of 6 PASSED): a precision reward (1/error, exponential near 100%) behaves like
+    the depth reward**: ~19 nodes per problem, -0.10 bits vs the unshaped tree. A bigger reward only lowers the bar against a fixed cost,
+    so more lucky gains get in. Self-weighting positive for the third time (+0.03). Lever to test next: confirm gains on fresh points.
+  - **X1.10 (2026-11-02, 360 worlds; P403-P409, 4 of 7 PASSED): the author's tree (enter at the base, grow, only used nodes learn,
+    reward x 2^(nodes used) with no ceiling, internal self-weighting).** The uncapped depth reward makes problems use ~21 nodes where ~9
+    do better (later bits 1.27 vs 1.40) and later problems get worse: tiny measured gains on few points are mostly luck. Self-weighting
+    (+0.04) and use-only updates (+0.03) help a little. Beats the plain network (+0.53) but loses to X1.9's flat learner (-0.20): it forgets.
+  - **X1.9 (2026-11-02, 2880 worlds; P395-P402, 7 of 8 PASSED; X1.8 withdrawn): training only the fewest nodes (author) protects old
+    problems, but barely (+0.03 bits), and costs 0.25 bits against training every linked node** (final 1.74 vs 2.01; none trained 1.47).
+    With stored examples and re-fitted readouts, moving shared nodes hardly hurts old problems: learning, not forgetting, is the limit
+    here. With equal re-fits for all arms the rule still beats the plain network by ~1 bit (X1.7 correction does not overturn it).
+  - **X1.7 (2026-11-02, 1440 worlds; P381-P387 all PASSED; author's rule I21): growing by connecting, with every link paid by its exact
+    measured help, works, and the specificity bonus does the work.** Later-problem bits: rule 1.39 vs help only 1.23 vs no reuse 1.02 vs plain
+    network 1.16 (which forgot: 0.51 at the end vs 1.47). Newcomer bonus alone ~0. Bonuses paid on existence: 3.6x the nodes, worse;
+    connect-everything collapses. Gets better at new problems with experience and old problems improve as nodes arrive. Nodes did NOT
+    become cleaner concepts (match fell slightly): the bonus wins by linking more. Open: better links or just more links (X1.7b).
+  - **X1.47 (2026-11-04, 48 worlds; P563-P567; author's request I29): the X1.6 learner does NOT map a purely linear world, so
+    X1.6's ladder had no mastered base rung.** 6 outputs, each linear, hidden rule a stack of 1-5 linear layers, no noise. The
+    tanh learner gets close in range (worst-output R^2 ~0.99; 0.85 of tasks mastered after 10 meta-learned steps, 0.55 after
+    4000 Adam steps) and masters NONE out of range (input sd 3: R^2 0.77-0.82). Same net without tanh: 1.00 in and out; least
+    squares 1.00. Depth of the linear rule does not matter. Lesson: gate each rung (in AND out of range) before climbing; the
+    tanh units, not the optimizer, are what stop the network holding the line. Next candidate: linear skip path, re-gate.
+  - **X1.6 (2026-11-01, 48 worlds; P376-P380; author's request I20): training a network's learning machinery on its rate of
+    gaining structure is NOT a climber.** Meta-SGD, equal tasks and compute. Rewarding bits held on unseen points raised
+    structure overall by piling it on the easiest rung (rung 1: 2.80 vs 1.72 bits) and gave up harder and never-trained rungs
+    (rungs 4-5: 0.17 vs 0.44, no better than untrained; P376 FAILED). Rewarding 'complexity' on the points it saw is a trap: it
+    memorises noise and loses real structure (P378 PASSED). One fixed-goal rung transferred as well as all rungs (P379 FAILED, U3
+    not supported here). Lesson: a growth drive needs a headroom term (what is LEFT to gain), i.e. U12 and boredom, or it drifts
+    down to cheap structure. Next candidate X1.6b.
   - **X1.1 (2026-10-27, 48 worlds; P244-P248): the dark room is real for a surprise-minimising drive.**
     With a perfectly predictable room, an unlearnable noise region and learnable regions (one opening
     halfway), minimising surprise (the program's first design rule) parked in the dark room 93% of
@@ -243,7 +338,7 @@ principles in miniature, not facts about brains or LLMs. Ids point to `curious-n
     + a 50% cull solve noisy XOR 5/5 (linear: 0.515), with at least 280x fewer evaluations than
     random search, which never got there (emergent attempts 1-2). With a smooth score it matches
     **default** Adam on fresh seeds (0.90x), but is still about **12x slower than tuned Adam**
-    (series 2). Series 3 reported 0.51x default / 9.4x tuned on 7 problems at a 3e6 budget; **X6.5 repaired the benchmark (budget 1e7, 70 runs per setting): 60/70 solved, best setting 0.60x default Adam / 11.2x tuned (80% cull: 0.87x / 16.2x); all 10 unsolved runs are checker3, which neither setting solves even at 1e7 (its cost is a lower bound); default Adam also fails spirals and checker3 in 20,000 steps, so those two ratios compare censored costs; parity: all 58 and 59 runs solved under 3e6 reproduce bit-identically.**
+    (series 2). Series 3 reported 0.51x default / 9.4x tuned on 7 problems at a 3e6 budget; X6.5 then reported 0.60x default / 11.2x tuned at 1e7. **SUPERSEDED (audit 2026-10-28, [[audit-2026-10-28]]): series 2/3 and X6.5 stopped on the test set, tuned the two sides unequally and quoted tuning-seed numbers (winner's curse); they are VOID as headlines. The repaired benchmark BENCH2 (2026-10-28, P282-P287; validation-based equal-interval stop, equal tuning grids, held-out seeds) gives: tuned evolution about 12.5x costlier than tuned Adam on six problems; default vs default 0.69x; evolution unable on checker3; evolution's tuning-seed cost inflated 1.48x. The X6.6/X6.9 gains of 1.2-1.3x are indistinguishable from seed-set noise under the same standard.**
   - Greedy rules (undo + barred change types, the separate stack) are **worse** than noise on
     all weights: they stall where no single change helps (attempts 3-4).
   - Random-cull multi-problem brains plateaued at the **linear ceiling** (0.55-0.61 vs 0.973 for a

@@ -1,0 +1,17 @@
+g 0.8 hid 6 refit 150: exam 0.946 n90 1 deep99 worlds 0/3 median max corr2 0.853 399s
+g 0.8 hid 6 refit 600: exam 0.943 n90 1 deep99 worlds 0/3 median max corr2 0.852 406s
+g 0.8 hid 24 refit 150: exam 0.888 n90 1 deep99 worlds 0/3 median max corr2 0.769 705s
+g 0.8 hid 24 refit 600: exam 0.888 n90 1 deep99 worlds 0/3 median max corr2 0.588 708s
+g 0.8 hid 96 refit 150: exam 0.864 n90 1 deep99 worlds 0/1 median max corr2 0.712 2464s
+~\AppData\Local\Programs\Python\Python311\Lib\site-packages\numpy\_core\fromnumeric.py:3824: RuntimeWarning: Mean of empty slice
+  return _methods._mean(a, axis=axis, dtype=dtype,
+~\AppData\Local\Programs\Python\Python311\Lib\site-packages\numpy\_core\_methods.py:142: RuntimeWarning: invalid value encountered in scalar divide
+  ret = ret.dtype.type(ret / rcount)
+g 0.8 hid 96 refit 600: exam nan n90 nan deep99 worlds 0/0 median max corr2 nan nans
+g 1.2 hid 6 refit 150: exam 0.478 n90 1 deep99 worlds 0/3 median max corr2 0.311 171s
+g 1.2 hid 6 refit 600: exam 0.478 n90 1 deep99 worlds 0/3 median max corr2 0.311 170s
+g 1.2 hid 24 refit 150: exam 0.708 n90 1 deep99 worlds 0/3 median max corr2 0.743 424s
+g 1.2 hid 24 refit 600: exam 0.708 n90 1 deep99 worlds 0/3 median max corr2 0.791 399s
+g 1.2 hid 96 refit 150: exam 0.468 n90 0 deep99 worlds 0/3 median max corr2 0.521 762s
+g 1.2 hid 96 refit 600: exam nan n90 nan deep99 worlds 0/0 median max corr2 nan nans
+3006 s
